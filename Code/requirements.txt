@@ -1,0 +1,5 @@
+pandas
+numpy
+xlrd
+factor_analyzer
+matplotlib
