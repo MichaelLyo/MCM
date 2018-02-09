@@ -70,7 +70,7 @@
  
 \par Nowadays, with the development of technology and the deterioration of environment, many countries, especially the Uinted States, began to value the clean and renewable energy, such as natural gas and electricity. Meanwhile, traditional energy, such as gasoline and coal, still plays an important role in economics. And it is obvious that the usage of the clean and renewable energy will support the future of mankind.
 \par In the United States, an interstate compact is an agreement between two or more states. Frequently, these agreements create a new governmental agency which is responsible for administering or improving some shared resource such as a seaport or public transportation infrastructure.\cite{1} In 1970, the Western Interstate Energy Compact was formed, which was devoted to foster cooperation to develop and manage the nuclear technology. Recently, California, Arizona, New Mexico, and Texas wish to form a new interstate energy compact focused on increased usage of cleaner, renewable energy sources. 
-\par To inform a set of goals for the new interstate energy compact, we will analysize the data file that provides 50 years of data in 605 variables on each of these four states’ energy production and consumption, along with some demographic and economic information.
+\par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. To inform a set of goals for the new interstate energy compact, we will analysize the data file and model.
 
 
 
@@ -148,9 +148,14 @@ $L_{ij}$&The shortes path length of ~$Node~i$~ and ~$Node~j$\\
 
 
 
-\section{Problem A : Information Flow and Filter Model}
-\par After analyzing the problem, we found two key points. One is \textbf{\emph{describing the flow of information}}, the other is \textbf{\emph{finding a way to filter out the information that can be used as news}}.
-\par The concept of \textbf{\emph{information flow}} in an information theoretical context is the transfer of information from a variable $x$ to a variable $y$ in a given process\cite{RA}. When we chat face to face, when we use Facebook or Twitter, when we write letters to friends in the distance, we are all in the transmission of information. There are many ways to spread information. Under these circumstances, the change of the information flow is very complicated. So we build a well time-applicability model including various transmission routes to describe the flow of information. And the part of the Information Flow Model graph is drawn in Figure \ref{fig:Schematic_Diagram_of_Information_Flow_and_Filter_Network_Model} as follows.
+\section{Problem A : Energy profile for each of the four states}
+\par Factor Analysis is a multivariate statistical analysis method, which is based on the internal dependencies of the correlation matrix of the indicator. It attributes some of the variables that have complex relationship to a few irrelevant factors.\cite{2} We will use the method to deal with the problem A.
+
+\par  By observing the given data, we can find that the MSNs are five-character codes, and the parts of the characters have generally have the meaning as follows.
+First and second characters: describes an energy source (for example, NG for natural gas, MG for motor gasoline)	
+Third and fourth characters: describes an energy sector or an energy activity (for example, RC for residential consumption, PR for production)	
+Fifth character: describes a type of data (for example, P for data in physical unit, B for data in billion Btu)	\cite{3}
+By simply analyzing the relationship between the fifth characters and the Units, we can find that 
 
 \begin{figure}[h]%[!hptb] 
     \centering 
@@ -732,13 +737,14 @@ where the ~$E_k$~ is the dissemination efficiency of the network of the ~$k^{th}
 % 应尽可能使用英文格式
 %
 \bibitem{1}
-Wikipedia, Interstate compact. \url{https://en.wikipedia.org/wiki/Interstate_compact}. 2017
+Wikipedia, Interstate compact. \url{https://en.wikipedia.org/wiki/Interstate_compact}. 2018
 
-\bibitem{2}Lamport ,  Leslie ,   \LaTeX{}: `` A Document Preparation System '' , 
-Addison-Wesley Publishing Company ,  1986.
+\bibitem{2}
+Wikipedia, Factor analysis. \url{https://en.wikipedia.org/wiki/Factor_analysis#Type_of_factor_analysis}. 2018
 
-\bibitem{RA}
-Wikipedia, Information flow (information theory). \url{https://en.wikipedia.org/wiki/Information_flow_(information_theory)}. 2016
+\bibitem{3}
+U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-2015 (complete). \url{https://www.eia.gov/state/seds/seds-data-complete.php}. 2017
+
 \bibitem{RB}
 Jure Leskovec, Andrej Krevl. {SNAP Datasets}: {Stanford} Large Network Dataset Collection. \url{http://snap.stanford.edu/data}. jun,2014.
 
