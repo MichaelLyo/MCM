@@ -7,9 +7,18 @@ from matplotlib import cm
 
 DATA_SOURCE = "./models/ds.xlsx"
 FACTOR_NUMBER = 2
+EXCLUDE_MSN = ["CLHCB", "CLICB", "CLTCB", "CLTXB", "DFTCB", "DFTXB", "DKEIB", "ELISB", "ELISB", "ELNIB", "ESTXB",
+               "FFTCB", "GETCB", "GETXB", "HYTCB", "HYTXB", "JFACB", "JFTCB", "KSTCB", "KSTXB", "LGTCB", "LGTXB",
+               "LOTCB", "LOTXB", "LUTCB", "LUTXB", "MGTCB", "MGTXB", "MMTCB", "NGTXB", "NNCCB", "NNEIB", "NNICB",
+               "NNRCB", "NNTCB", "P1ICB", "P1TCB", "P1TXB", "PAACB", "PACCB", "PAEIB", "PAICB", "PARCB", "PATCB",
+               "PATXB", "PCICB", "PCTCB", "PMTCB", "POICB", "POTCB", "POTXB", "RECCB", "REEIB", "REICB", "RERCB",
+               "RETCB", "RFTCB", "RFTXB", "SFTCB", "SOCCB", "SOICB", "SORCB", "SOTCB", "SOTXB", "TEACB", "TECCB",
+               "TEEIB", "TEESB", "TEICB", "TERCB", "TETCB", "TETXB", "TNACB", "TNCCB", "TNICB", "TNRCB", "TNTXB",
+               "WDCCB", "WDICB", "WDTCB", "WSICB", "WSTCB", "WWCCB", "WWEIB", "WWI4B", "WWICB", "WWTCB", "WWTXB",
+               "WYTCB", "WYTXB"]
 
 
-def create_purify(year: int, state: str):
+def create_purify(year: int, state: str, filename):
     def add_suffix_b_names(x):
         x['MSN_data'] = x['MSN'].str.slice(0, 4) + 'B'
         return x
@@ -26,10 +35,10 @@ def create_purify(year: int, state: str):
     # Using groupBy to purify the group
     df_purify = df_msn_suffix_p.groupby('unit').filter(lambda x: len(x) > 1)
     df_msn_group = df_purify.groupby('unit').apply(add_suffix_b_names)
-
+    df_msn_group = df_msn_group[~df_msn_group['MSN_data'].isin(EXCLUDE_MSN)]
     # Get the handled dataframe
     df_data_2005_CA_plus = df_msn_group.set_index('MSN_data').join(df_data_2005_CA.set_index('MSN_data'), how="inner")
-    df_data_2005_CA_plus.to_csv('./purify.csv')
+    df_data_2005_CA_plus.to_csv(filename)
     return df_data_2005_CA_plus
 
 
@@ -96,11 +105,19 @@ def paint():
 
 
 if __name__ == '__main__':
-    df = pd.read_csv('./purify.csv') if os.path.exists('./purify.csv') else create_purify(2005, 'CA')
-    unit_list = list(df['unit'].unique())
-    groups = [{"name": name, "group": group} for name, group in df.groupby(['unit'])]
-    loading_matrix, factor_eigval_matrix = get_loading_matrix(groups)
-    df_weight = get_weights(loading_matrix, factor_eigval_matrix)
-
-    df_final = df_weight[['sum', 'name', 'weight']]
-    paint()
+    df_final = pd.DataFrame()
+    STATES = ['CA', 'TX', 'NM', 'AZ']
+    for state in STATES:
+        for year in range(2009, 2010):
+            filename = './data/{}-{}.csv'.format(year, state)
+            df = pd.read_csv(filename) if os.path.exists(filename) else create_purify(year, state, filename)
+            unit_list = list(df['unit'].unique())
+            groups = [{"name": name, "group": group} for name, group in df.groupby(['unit'])]
+            loading_matrix, factor_eigval_matrix = get_loading_matrix(groups)
+            df_weight = get_weights(loading_matrix, factor_eigval_matrix)
+            if len(df_final) == 0:
+                df_final = pd.DataFrame(columns=['year', 'state'] + list(df_weight['name']))
+            df_final.loc[len(df_final)] = [year, state] + list(df_weight['weight'])
+    df_final = df_final.rename(columns={"Million cubic feet": "natural gas", "Million kilowatthours": "electricity",
+                                        "Thousand barrels": "fuel oil", "Thousand short tons": "coal coke"})
+    df_final.to_csv('./data/A-final.csv', index=False)
