@@ -70,7 +70,7 @@
  
 \par Nowadays, with the development of technology and the deterioration of environment, many countries, especially the Uinted States, began to value the clean and renewable energy, such as natural gas and electricity. Meanwhile, traditional energy, such as gasoline and coal, still plays an important role in economics. And it is obvious that the usage of the clean and renewable energy will support the future of mankind.
 \par In the United States, an interstate compact is an agreement between two or more states. Frequently, these agreements create a new governmental agency which is responsible for administering or improving some shared resource such as a seaport or public transportation infrastructure.\cite{1} In 1970, the Western Interstate Energy Compact was formed, which was devoted to foster cooperation to develop and manage the nuclear technology. Recently, California, Arizona, New Mexico, and Texas wish to form a new interstate energy compact focused on increased usage of cleaner, renewable energy sources. 
-\par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. To inform a set of goals for the new interstate energy compact, we will analysize the data file and model.
+\par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. In order to inform a set of goals for the new interstate energy compact, we will analysize the data file and model.
 
 
 
@@ -99,7 +99,7 @@
 \section{Assumption}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
-    \item Information will be spread stably except for special situation.
+    \item In factor analysis, we suppose the corresponding valuables as the main factors when cumulative percentage is over 0.65 .
     \item Information network and evolution network are universal and suitable for each kind of media.
     \item The information network is affected  only by the factors that have been recognized.
     \item In the process of information dissemination, we assume that the network edge is directed.
@@ -202,84 +202,110 @@ Thouesand short tons: coal coke
 Million kilowatthours: electricity
 Million cubic feet: natural gas
 \par Besides, there are many relationships among MSNs. According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables, so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
+\par In probem A, we will analysize the data processed in 2009, and obtain the 2009 energy profile for each of the four states.
 
 \subsection{Factor Analysis Model}
 
-\paragraph{Factor loading matrix}
+\paragraph{4.2.1 Factor loading matrix}
 \textrm{\\}
-\par By using the data processed, we obtain R, which is the correlation coefficient matrix of natural gas, electricity, fule oil and coal coke.
-
-R666666@
-
-\par We can obtain 
+\par Hear, we take California as an example to show the process of modeling. By using the data processed, we obtain R, which is the correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.
+\begin{gather*}
+    \centering
+R=\begin{pmatrix} 1 & -0.389890 & 0.432474 & -0.004734 \\ -0.389890 & 1 & -0.094940 &-0.158034 \\ 0.432474 & -0.094940 & 1 & -0.016881 \\ -0.004734 & -0.158034 & -0.016881 & 1\end{pmatrix}\\
+\end{gather*}
+\par Then we can obtain 
 \[
-\lambda_1=666, \lambda_2=666, \lambda_3=666, \lambda_4=666,
+\lambda_1=1.638729, \lambda_2=0.454611, \lambda_3=1.089176, \lambda_4=0.817484
 \]
 which are the eigenvalue of R.
 \par Meanwhile, we obtain the eigenvector matrix for the eigenvalues of R.
-
-U=666666
-
+\begin{gather*}
+    \centering
+U=\begin{pmatrix} -0.666575 & 0.728151 & -0.131346 & -0.090683 \\ 0.281798 & 0.050295 & -0.698391 & -0.655981 \\ -0.423756 & -0.393132 & 0.443861 & -0.684737 \\ -0.544701 & -0.559209 & -0.545881 & 0.304303\end{pmatrix}\\
+\end{gather*}
 \par Simply, the overall percentage and cumulative percentage of eigenvalues are as follows.
-
-666666
-
-\par Therefore, 666. According to assumption 1, the main factors are 666, the corresponding eigenvalues are 666. Then we take out their corresponding eigenvectors from U, and we can obtain the factor loading matrix
-
-A=666
-
-the first row of A is 
-666
+\begin{table}[!hbp]
+    \centering 
+    \begin{tabular}{|c|c|c|}
+\hline
+Eigenvalue & Overall percentage & Cumulative percentage \\
+\hline
+\lambda_1=1.638729 & 0.409682 & 0.409682 \\
+\hline
+\lambda_3=1.089176 & 0.272294 & 0.681976 \\
+\hline
+\lambda_4=0.817484 & 0.204371 & 0.886347 \\
+\hline
+\lambda_2=0.454611 & 0.113653 & 1.000000 \\
+\hline
+\end{tabular}
+\caption{Percentage}
+\end{table}
+\par Therefore, the cumulative percentage of $\lambda_1$ and $\lambda_3$ is 0.681976 colse to 0.7.
+\par According to assumption 1, the main factors are natural gas and fuel oil, the corresponding eigenvalues are $\lambda_1$ and $\lambda_3$. Then we take out their corresponding eigenvectors from U, and we can obtain the factor loading matrix
+\begin{gather*}
+    \centering
+A=\begin{pmatrix} 0.856438 & -0.145463 \\ -0.657207 & -0.429761 \\ 0.673909 & -0.408171 \\ 0.138447 & 0.846592\end{pmatrix}\\
+\end{gather*}
+the first row of A is
+\begin{equation}
+    \centering
+$\sqrt{ \lambda_1 }$*U[ ,1]
+\end{equation}
 the second row of A is
-666
+\begin{equation}
+    \centering
+$\sqrt{ \lambda_3 }$*U[ ,3]
+\end{equation}
 
-\paragraph{Factors and weights}
+\paragraph{4.2.2 Factors and weights}
 \textrm{\\}
 \par According to the factor loading matrix A, we can get the factor analysis model is
-666
-666
-666
-666
-
-The definition of the weight of variable is
-666\cite{5}
-
-Therefore, we can obtain the the weight of natural gas, electricity, flue oil and coal coke.
+\begin{equation}
+    \centering
+     natural gas=0.856438*f_1-0.145463*f_2
+\end{equation}
+\begin{equation}
+    \centering
+ electricity=-0.657207*f_1-0.429761*f_2
+\end{equation}
+\begin{equation}
+    \centering
+ fuel oil=0.673909*f_1-0.408171*f_2
+\end{equation}
+\begin{equation}
+    \centering
+coal coke=0.138447*f_1+0.846592*f_2
+\end{equation}
+\par The definition of the weight of variables is\cite{5}
+\begin{equation}
+    \centering
+w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i }*100\%
+\end{equation}
+\begin{equation}
+    \centering
+\theta_i=A[i,1]*0.409682+A[i,2]*0.272294+A[i,3]*0.204371+A[i,4]*0.113653
+\end{equation}
+\pra Therefore, we can obtain the the weight of natural gas, electricity, fuel oil and coal coke.
 \[
-w_1=666, w_2=666, w_3=666, w_4=666.
+w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
 \]
-\begin{figure}[h]%[!hptb] 
-    \centering 
-    \includegraphics[width=0.5\textwidth]{./Pic/Information_Disseminate_Crosscutting_Structure_Diagram.png}
-    % 图片标题
-    \caption{The information disseminate crosscutting structure diagram. Information dissemination is ~$3D$~, the nodes spread at the next time may become an independent source of information.}
-    \label{fig:Information_Disseminate_Crosscutting_Structure_Diagram}  
-\end{figure}
 
-
-
-
-
-
-
-
-
-
-\paragraph{Transformation of the states of nodes}
+\paragraph{4.2.3 Analysis of the factor analysis model}
 \textrm{\\}
-\par In order to study the state changes of the network nodes quantitatively, and analyze the transformation of the network structure with time. We divide the nodes into $4$ classes:
-
-\begin{enumerate}%[(1)]
-\renewcommand{\labelenumi}{(\theenumi)}
-    \item The nodes in the ~$S$~ state are the nodes which haven't received information yet.
-    
-    \item The nodes in the ~$I$~ state are the nodes which have received information and can continue to spread it.
-    \item The nodes in the ~$IR$~ state are the nodes which have received information and do not spread information at the current time.
-    \item The nodes in the ~$R$~ state are the nodes which have received information and cann't continue to spread it.
-\end{enumerate}
-\emph{Assume that nodes can spread information only one time, that is, after spreading a message, the ~$I$~state of the nodes turn into the ~$R$~ state.
-}
-
+\par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, fuel oil, coal coke, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal coke, and a negative factor for natural gas, electricity, fuel oil. 
+\par By the model above, we can obtain the weights of variables of the four states as follows.
+\begin{figure}[!hptb] 
+    \centering 
+    \includegraphics[width=1.0\textwidth]{weights.jpg}
+    \caption{Weights of variables of the four states}
+\end{figure}
+\begin{figure}[!hptb] 
+    \centering 
+    \includegraphics[width=0.8\textwidth]{1-1.png}
+    \caption{Weights of energy classification in 2009}
+\end{figure}
+According to Figure 4, the contribution rates of four energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
 
 \paragraph{The attributes of each part of the network}
 \textrm{\\}
