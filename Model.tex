@@ -128,6 +128,8 @@ $w_1$&The weight of natural gas.\\
 $w_2$&The weight of electricity.\\ 
 $w_3$&The weight of fuel oil.\\ 
 $w_4$&The weight of coal coke.\\ 
+$\eta_1$&The proportion of renewable energy in total energy.\\
+$\eta_2$&The proportion of different sector in renewable energy usage.\\
 % $T_n$&The discrete time series of the node checking information.\\ 
 % $p_{in}$& The probability of ~$Node~i$~ to check information at the moment of $T_n$.\\
 % $q_{in}$&The probability that information is able to continue to spread\\
@@ -260,11 +262,6 @@ w_1=666, w_2=666, w_3=666, w_4=666.
 
 
 
-
-
-
-
-
 \paragraph{Transformation of the states of nodes}
 \textrm{\\}
 \par In order to study the state changes of the network nodes quantitatively, and analyze the transformation of the network structure with time. We divide the nodes into $4$ classes:
@@ -344,59 +341,47 @@ where the ~$b _i,b _j,b _k$~ are the independent random variable, ~$b _i$~ is th
 \par The formula above has 4 independent random variables. Because of the absence of specific screening data, we can not make a further analysis of the model. We can only give the preliminary model above.
 
 
-\subsection{Information Flow and Filter Model Simulation}
+\subsection{Renewable energy profile}
 
-\par In the above, we have set up a good information flow and filter model. To verify the reliability of the model, we simulate it.
-\subsubsection{Simulation assumptions and data sources}
-\par Assumptions are as follows.
-\begin{itemize}
-\item Assuming that the same information is unilaterally circulated, the network model we bulit is directed graph.
-\item Our simulation is based on the Twitter's social network, and the data we analyze is the Twitter user's follows data\cite{RB}.
-\item Taking into account the convenience of access to the Internet and the rapid transmission of information, we assume that once the users have received a message, they have already obtained the information successfully.
-\item Taking into account the \emph{freedom of speech} and \emph{information security} in the United States, in this simulation, we do not consider the feedback role of information filter in information dissemination.
-\item We define ~$\lambda_i=1$~.
-\end{itemize}
+\par In the previous section, we have set up a good factor analysis model for energy classification. It dose help us build the profile of the states' energy, but it dosen't pay much attention to the difference between renewable energy and non-renewable energy. So in this part, we analyze the data set and give the profile of renewable energy in four states.
+\subsubsection{Renewable energy usage percentage}
+\par To get a preliminary understanding of the renewable energy usage in four states, we decide to get the proportion of renewable energy in total energy in the first step.
 
+\par What's important is that, we find that there are some specific MSNs and formulas in the reference \cite{4} which can describe the usage of renewable energy clearly and precisely. MSN RETCB is a good example, which represents renewable energy sources total consumed in a state.
+\par Then we search for the MSN in the given data and find every state have have this MSN. So this is indeed the representative MSN variable of the usage of renewable energy in every states. And then we find the TETCB MSN stands for the total energy consumed in a state. So we get the equation like this
 
-
-
-\subsubsection{Simulation process}
-\par The process of information flow and filter model simulation as follows.
-\begin{enumerate}%[(1)]
-\renewcommand{\labelenumi}{(\theenumi)}
-    \item Basic preparation and data processing.
-    \item According to the discrete time series ~$T_n$~, we evolute the process of information dissemination.
-    \item Determine the ~$N_n$~ as the number of nodes that have received information at the moment ~$T_n$~, and the ~$Q_n$~ as the number of nodes that have received information at this time.
-    \item We use Twitter 2012's social network data. The data consist of 81306 nodes and 1768149 edges. Through the selection of different information sources, we begin to simulate the process of information dissemination, and use the ~$Q_n$~ to measure the range of information dissemination at different times.
-    \item Summary and graphical data results.
-\end{enumerate}
-
-\subsubsection{Simulation results}
-
-\par After taking simulation, we can obtain some results as follows.
-
+\begin{equation}
+    \eta_1=\frac{RETCB}{TETCB}
+\end{equation}
 
 \begin{figure}[h]%[!hptb] 
     \centering 
-    \includegraphics[width=0.53\textwidth]{./Pic/aa_3.jpg}
+    \includegraphics[width=0.6\textwidth]{./Pic/1-2.png}
     % 图片标题
-    \caption{The network information diffusion simulation figure. ~$Q$~ is the diffusion ratio. Three curves are included in the graph, respectively, taking the maximum degree nodes, the minimum degree nodes and a node arbitrarily as the information source.}
-    \label{fig:aa_3}  
+    \caption{The proportion of renewable energy in total energy in four states in the year of 2009.}
+    \label{fig:1-2}  
 \end{figure}
-\par From the Figure \ref{fig:aa_3}, maximum degree node's spread is faster than the other two types of nodes at the beginning of the information spread. Minimum node's diffusion rate is the slowest. Meanwhile, the coverage ratio of the three sources is increasing exponentially in the medium term (about 20 times). After the evolution of about 100 times, the coverage ratio of the three sources tends to grow slowly, eventually approaching 100\%.
-\par After analyzing the dissemination characteristics of different information sources, we select the maximum degree node as the information source, analyze it, and make the data we got visualization. The results are in Figure \ref{fig:Social_Network_Information_Dissemination_Simulation_Diagram} as follows.
+\par After calculating with the formula, we get the results of $\eta_1$, which can be seen in figure \ref{fig:1-2}
+
+\subsubsection{Renewable energy usage in different sector}
+\par There are many factors that influence the usage of energy in a state. So it is reasonable to search for the situation of renewable energy usage in different sector in every state.
+\par Similar to the previous section, we find that there are some MSNs that describe the renewable energy in certain sector and formulas that calculate for the value of it. Take transportation sector for example, MSN REACB stands for renewable energy sources consumed by the transportation sector, so the sector's percentage in renewable energy consumption can be calculated through the formula
+
+\begin{equation}
+    \eta_2=\frac{REACB}{RETCB} \times 100\%
+\end{equation}
 
 \begin{figure}[h]%[!hptb] 
     \centering 
-    \includegraphics[width=0.6\textwidth]{./Pic/Social_Network_Information_Dissemination_Simulation_Diagram.png}
+    \includegraphics[width=0.6\textwidth]{./Pic/1-3.png}
     % 图片标题
-    \caption{The social network information dissemination simulation diagram. The subgraph at the top left of the graph is the network structure diagram after the first transmission. The other three subgraph graphs are arranged according to the time of transmission.}
-    \label{fig:Social_Network_Information_Dissemination_Simulation_Diagram}  
+    \caption{The proportion of different sector in renewable usage in four states in the year of 2009.}
+    \label{fig:1-3}  
 \end{figure}
+\par After calculating with the formula, we get the results of $\eta_2$ , which can be seen in figure \ref{fig:1-3}
 
-\par From the Figure \ref{fig:Social_Network_Information_Dissemination_Simulation_Diagram}, at the beginning of the communication, each node is clearly visible. Since we do not consider the cross transmission of the same message, the message source can only continue to spread the message to the new nodes. This mode of communication will make the information show explosive growth, until all the nodes in the region have been informed. The last subgraph includes many different clusters of different colors and each cluster contains a huge number of nodes. This is the state of the network after the information disseminate reaches steady state.
 
-\par After making information flow and filter model simulation, we verify the reliability of the network model, which has good adaptability and robustness.
+
 
 
 
@@ -808,8 +793,10 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
 \bibitem{5}
 Tang Mengling, Wang zhanling, and Li Zhijian. Using Model of Fcator Analysis to Calculate Weight and to Evaluate Water Quality[J]. Xingtai Vocational and Technical College, 2005.
 
-\bibitem{RC}
-Wikipedia, Information filtering system. \url{https://en.wikipedia.org/wiki/Information_filtering_system}. 2016
+\bibitem{L1}
+U.S. Energy Information Administration, Renewable Energy Explained. \url{https://www.eia.gov/energyexplained/?page=renewable_home}. 2017
+
+
 
 \bibitem{RE}
 Stanovich K E. What Intelligence Tests Miss:The Psychology of Rational Thought[M]. Yale University Press, 2009.
