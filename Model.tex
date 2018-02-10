@@ -169,7 +169,7 @@ $w_4$&The weight of coal coke.\\
     \item Fifth character: describes a type of data (for example, P for data in physical unit, B for data in billion Btu).	\cite{3}
 \end{itemize}
 
-\par As described above, the first part and the second part of the MSN code represent for certain specific meanings. However, in our analysis process, we are more concerned about the general classification of these MSN codes. 
+\par As described above, the first part and the second part of the MSN code represent for certain specific meanings. However, in our analysis process, we are more concerned about the general classification of these MSN codes. 
 
 \begin{figure}[h]%[!hptb] 
     \centering 
@@ -183,7 +183,7 @@ $w_4$&The weight of coal coke.\\
     B=KP~~~~~,~~~~~V=BD
 \end{equation}
 
-\par From the equation we can get the conclusion that B is a key factor between the two equations and can build a connection between them. And we find that all MSNs whose fifth character is B have the same unit Billion Btu, which can be an excellent representative of the MSNs who have the same prefix. So we filter the 605 MSNs and find 215 MSNs' suffix is B. At this stage we have reduced the 605 kinds of MSNs into 215. Every kind of the 215 MSNs contains several MSNs with different suffix but the same prefix.
+\par From the equation we can get the conclusion that B is a key factor between the two equations and can build a connection between them. And we find that all MSNs whose fifth character is B have the same unit Billion Btu, which can be an excellent representative of the MSNs who have the same prefix. So we filter the 605 MSNs and find 215 MSNs' suffix is B. At this stage we have reduced the 605 kinds of MSNs into 215. Every kind of the 215 MSNs contains several MSNs with different suffix but the same prefix.
 
 \subsubsection {MSN classification analysis}
 
@@ -196,25 +196,58 @@ $w_4$&The weight of coal coke.\\
 \end{figure}
 
 \par In order to classify the 215 MSNs more clearly, we look into everyone of the division and find that a large percent of the kinds have the suffix P, which represents the standardized physical units. Physical units naturally represents for the energy classification in the real physical world, and there are mainly 4 kinds of standardized physical units in the data set as can be seen in figure \ref{fig:classification_by_unit}, so it is reasonable to classify the data into 4 groups according to the units.
+\par According to the analysis above, we suppose the four units as the following representatives.
+Thousand barrels: fule oil
+Thouesand short tons: coal coke
+Million kilowatthours: electricity
+Million cubic feet: natural gas
+\par Besides, there are many relationships among MSNs. According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables, so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
 
 \subsection{Factor Analysis Model}
 
-\paragraph{Basic theory of society's information network}
+\paragraph{Factor loading matrix}
 \textrm{\\}
-\par The definition of the Information Flow Network is 
-\begin{equation}
-G=(V,E)~~~~~~~\forall  v,u\in V , u\leftarrow v, \forall e=(u,v)\in E 
-\end{equation}
-where ~$v$~ and ~$u$~ are the nodes of ~$G$~, and ~$e$~ stands for the edge. Meanwhile, the ~$e$~ can also represent that ~$u$~ can receive information from ~$v$~. There is information interaction between ~$u$~ and ~$v$~. We also define ~$\mid V\mid$~ as the number of nodes and ~$\mid E\mid$~ as the total number of edges.
+\par By using the data processed, we obtain R, which is the correlation coefficient matrix of natural gas, electricity, fule oil and coal coke.
 
-\paragraph{Dynamic transmission mechanism}
+R666666@
+
+\par We can obtain 
+\[
+\lambda_1=666, \lambda_2=666, \lambda_3=666, \lambda_4=666,
+\]
+which are the eigenvalue of R.
+\par Meanwhile, we obtain the eigenvector matrix for the eigenvalues of R.
+
+U=666666
+
+\par Simply, the overall percentage and cumulative percentage of eigenvalues are as follows.
+
+666666
+
+\par Therefore, 666. According to assumption 1, the main factors are 666, the corresponding eigenvalues are 666. Then we take out their corresponding eigenvectors from U, and we can obtain the factor loading matrix
+
+A=666
+
+the first row of A is 
+666
+the second row of A is
+666
+
+\paragraph{Factors and weights}
 \textrm{\\}
-\par Information source is usually a point or several points from the beginning and gradually spreads to the entire network. Assume that the information is propagated from the information source point ~$A$~, ~$A_j$~ is the ~$j_{th}$~ node that receive information from ~$A_i$~ ($j=i+1,i\geqslant 0$) and the propagation velocity ~$V=1$~. The number of ~$A$'s~ neighboring nodes ~$N(t)$~. ~$A_j$~ obtaining the information is in the sphere ~$D$~ with ~$A_i$~ as the origin and time ~$t$~ as the radius. After ~$A_1$~ gains the information, namely, the sub information source, they will become independent source of information, and spread the message to the other nodes independently.
+\par According to the factor loading matrix A, we can get the factor analysis model is
+666
+666
+666
+666
 
+The definition of the weight of variable is
+666\cite{5}
 
-
-
-
+Therefore, we can obtain the the weight of natural gas, electricity, flue oil and coal coke.
+\[
+w_1=666, w_2=666, w_3=666, w_4=666.
+\]
 \begin{figure}[h]%[!hptb] 
     \centering 
     \includegraphics[width=0.5\textwidth]{./Pic/Information_Disseminate_Crosscutting_Structure_Diagram.png}
@@ -768,14 +801,15 @@ Wikipedia, Factor analysis. \url{https://en.wikipedia.org/wiki/Factor_analysis#T
 \bibitem{3}
 U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-2015 (complete). \url{https://www.eia.gov/state/seds/seds-data-complete.php}. 2017
 
-\bibitem{RB}
-Jure Leskovec, Andrej Krevl. {SNAP Datasets}: {Stanford} Large Network Dataset Collection. \url{http://snap.stanford.edu/data}. jun,2014.
+\bibitem{4}
+U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-2015 (complete). \url{https://www.eia.gov/state/seds/sep_use/notes/use_a.pdf}. 2017.
+
+\bibitem{5}
+Tang Mengling, Wang zhanling, and Li Zhijian. Using Model of Fcator Analysis to Calculate Weight and to Evaluate Water Quality[J]. Xingtai Vocational and Technical College, 2005.
 
 \bibitem{RC}
 Wikipedia, Information filtering system. \url{https://en.wikipedia.org/wiki/Information_filtering_system}. 2016
 
-\bibitem{RD}
-Schwarz J, Morris M. Augmenting web pages and search results to support credibility assessment[C]//Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 2011: 1245-1254.
 \bibitem{RE}
 Stanovich K E. What Intelligence Tests Miss:The Psychology of Rational Thought[M]. Yale University Press, 2009.
 
