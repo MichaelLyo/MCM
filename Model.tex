@@ -156,33 +156,49 @@ $w_4$&The weight of coal coke.\\
 
 
 \section{Problem A : Energy profile for each of the four states}
-\par Factor Analysis is a multivariate statistical analysis method, which is based on the internal dependencies of the correlation matrix of the indicator. It attributes some of the variables that have complex relationship to a few irrelevant factors.\cite{2} We will use the method to deal with the problem A.
+\par Factor Analysis is a multivariate statistical analysis method, which is based on the internal dependencies of the correlation matrix of the indicator. It attributes some of the variables that have complex relationship to a few irrelevant factors.\cite{2} We will use this method to deal with problem A in the section.
 
-\par  By observing the given data, we can find that the MSNs are five-character codes, and the parts of the characters have generally have the meaning as follows.
-First and second characters: describes an energy source (for example, NG for natural gas, MG for motor gasoline)	
-Third and fourth characters: describes an energy sector or an energy activity (for example, RC for residential consumption, PR for production)	
-Fifth character: describes a type of data (for example, P for data in physical unit, B for data in billion Btu)	\cite{3}
-By simply analyzing the relationship between the fifth characters and the Units, we can find that 
+\subsection{MSN Analysis}
+\subsubsection {MSN character analysis}
+
+\par  By observing the given data and acquiring knowledge from reference materials, we can conclude that the MSNs are usually five-character codes, and the three parts of the characters generally represent the following meanings.
+
+\begin{itemize}
+    \item First and second characters: describes an energy source (for example, NG for natural gas, MG for motor gasoline);
+    \item Third and fourth characters: describes an energy sector or an energy activity (for example, RC for residential consumption, PR for production);
+    \item Fifth character: describes a type of data (for example, P for data in physical unit, B for data in billion Btu).	\cite{3}
+\end{itemize}
+
+\par As described above, the first part and the second part of the MSN code represent for certain specific meanings. However, in our analysis process, we are more concerned about the general classification of these MSN codes. 
 
 \begin{figure}[h]%[!hptb] 
     \centering 
-    \includegraphics[width=0.8\textwidth]{./Pic/Schematic_Diagram_of_Information_Flow_and_Filter_Network_Model.pdf}
+    \includegraphics[width=0.8\textwidth]{./Pic/msn_5.png}
     % 图片标题
-    \caption{The schematic diagram of information flow and filter model. The information source spreads the information. The information dissemination has two ways to spread it. One is the \textbf{\emph{interpersonal communication}}, the other is the \textbf{\emph{across-platform communication}}. The former method is oral communication, and not restricted by the information filters. The latter includes internet, newspaper, etc.. They are constrained by the filter, which generates different feedback for different information.}
-    \label{fig:Schematic_Diagram_of_Information_Flow_and_Filter_Network_Model}  
+    \caption{The meaning of a MSN code, emphasizing the fifth character. Reference \url{https://www.eia.gov/state/seds/sep_use/notes/use_a.pdf}}
+    \label{fig:msn_5}  
+\end{figure}
+\par We also found that the fifth character has six values at most, which can be seen in figure \ref{fig:msn_5}. Thus we start to focus more on the analysis of the fifth character. After comparing the units of the six and calculating, we find the relationship between these six symbols are
+\begin{equation}
+    B=KP~~~~~,~~~~~V=BD
+\end{equation}
+
+\par From the equation we can get the conclusion that B is a key factor between the two equations and can build a connection between them. And we find that all MSNs whose fifth character is B have the same unit Billion Btu, which can be an excellent representative of the MSNs who have the same prefix. So we filter the 605 MSNs and find 215 MSNs' suffix is B. At this stage we have reduced the 605 kinds of MSNs into 215. Every kind of the 215 MSNs contains several MSNs with different suffix but the same prefix.
+
+\subsubsection {MSN classification analysis}
+
+\begin{figure}[!h]%[!hptb] 
+    \centering 
+    \includegraphics[width=0.8\textwidth]{./Pic/classification_by_unit.png}
+    % 图片标题
+    \caption{Classification by unit in the suffix P.}
+    \label{fig:classification_by_unit}  
 \end{figure}
 
+\par In order to classify the 215 MSNs more clearly, we look into everyone of the division and find that a large percent of the kinds have the suffix P, which represents the standardized physical units. Physical units naturally represents for the energy classification in the real physical world, and there are mainly 4 kinds of standardized physical units in the data set as can be seen in figure \ref{fig:classification_by_unit}, so it is reasonable to classify the data into 4 groups according to the units.
 
+\subsection{Factor Analysis Model}
 
-
-
-
-
-\par About the other key point, the Information filtering system is a system that removes redundant or unwanted information from an information stream using (semi)automated or computerized methods prior to presentation to a human user\cite{RC}. Any online or offline information is part of larger and more complex ecologies, in which the false information and the truth are mixed together. In order to dig out useful information, we need to create a review mechanism. Part of the Information Filter Model graph is drawn in Figure \ref{fig:Schematic_Diagram_of_Information_Flow_and_Filter_Network_Model} above. In the Figure \ref{fig:Schematic_Diagram_of_Information_Flow_and_Filter_Network_Model}, we stipulate that the message filter has two kinds of effects caused by the review of information: when the message is not audited, it will inhibit communication of information sources and slowing the spreading speed; when a message passes the audit, the spreading speed will be enhanced.
-
-
-\subsection{Information Flow Model}
-\subsubsection {Theoretical Model of Information Flow}
 \paragraph{Basic theory of society's information network}
 \textrm{\\}
 \par The definition of the Information Flow Network is 
@@ -264,7 +280,7 @@ where
 \item ~$\alpha$~ is the cumulative credibility of information sources. ~$\beta$~ is the cumulative number of strong relationship of information sources.
 \end{itemize}
 
-\par In the model we have established, the node is human. Under this circumstance, if we need to study node attribute, we have to take into account different types of people. The biggest difference among the different groups is the age structure. Different nodes have different age structures, so there are different node attributes. The influence has been drawn in Figure \ref{fig:information_flow_model} as follows.
+\par In the model we have established, the node is human. Under this circumstance, if we need to study node attribute, we have to take into account different types of people. The biggest difference among the different groups is the age structure. Different nodes have different age structures, so there are different node attributes. 
 
 
 
