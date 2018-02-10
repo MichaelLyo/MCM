@@ -208,7 +208,7 @@ Million cubic feet: natural gas
 
 \subsection{Factor Analysis Model}
 
-\paragraph{4.2.1 Factor loading matrix}
+\subsubsection{Factor loading matrix}
 \textrm{\\}
 \par Hear, we take California as an example to show the process of modeling. By using the data processed, we obtain R, which is the correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.
 \begin{equation}
@@ -262,7 +262,7 @@ the second row of A is
 \sqrt{\lambda_3} \times U[ ,3]
 \end{equation}
 
-\paragraph{4.2.2 Factors and weights}
+\subsubsection{Factors and weights}
 \textrm{\\}
 \par According to the factor loading matrix A, we can get the factor analysis model is
 \begin{equation}
@@ -297,7 +297,7 @@ w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i } \times 100\%
 w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
 \]
 
-\paragraph{4.2.3 Analysis of the factor analysis model}
+\subsubsection{Summary of the factor analysis model}
 
 \textrm{\\}
 \par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, fuel oil, coal coke, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal coke, and a negative factor for natural gas, electricity, fuel oil. 
@@ -313,68 +313,6 @@ w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
     \caption{Weights of energy classification in 2009}
 \end{figure}
 According to Figure 4, the contribution rates of four energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
-
-\paragraph{The attributes of each part of the network}
-\textrm{\\}
-
-\begin{itemize}
-\item Network structure attribute: the characteristic attributes of different networks are embodied in the different number of nodes and different number of edges. Node degree is different, resulting in the transmission efficiency of the node is different, the speed of the network is different.
-\item Node attribute: the degree of nodes is different, resulting in the probability of the node to receive the message is different, the probability of the spread of the message is also different.
-\item Attribute of the information itself: the attribute of information itself is mainly reflected in the importance of the information and the correlation degree of the information.
-\end{itemize}
-
-\subsubsection{Example of Information Flow Network Model (Internet)}
-\par In order to better explain the theoretical model we have constructed, we build an example model, which takes the Internet as a single media of dissemination.
-\paragraph{Construction of realistic network model}
-\textrm{\\}
-\par After analyzing the theoretical model, we will set up the concrete social's information flow model in Internet.
-\par We establish a social network, which is a \textbf{\emph{directed}} graph
-\begin{equation}
-G_I=(V_I,E_I)~~~~~~~\forall  v_I,u_I\in V_I , \forall e_I=(u_I,v_I)\in E_I
-\end{equation}
-where ~$v_I$~ and ~$u_I$~ are the nodes of ~$G_I$~, representing the \emph{people or group in society network}. And ~$e_I$~ stands for the edge, representing the \emph{transmission route between people or groups}. Meanwhile, the ~$e_I$~ can also represent that ~$u_I$~ can receive information from ~$v_I$~, the same as ~$u_I\leftarrow v_I$~. We also define ~$\mid V_I\mid$~ as the number of people or groups and ~$\mid E_I\mid$~ as the total number of transmission route.
-\par The discrete time series of the node checking information is ~$T_n,n=1,2,3...$~, the probability of ~$Node~i$~ to check information at the moment of ~$T_n$~ is ~$p_{in},i=1,2,3...,\mid V_I\mid$~; ~$p_{in}\in [0,1]$~ is an independent random variable.
-\par Assuming that at the moment of ~$T_n$~, the node has received a message, then the probability that information is able to continue to spread is ~$q_{in}$~
-\begin{equation}
-q_{in}=p_{in} \times [(1-(1-\lambda_{i})^m)/e^{\alpha +\beta}]
-\end{equation}
-
-where 
-\begin{itemize}
-\item ~$\lambda_{i}$~ is influenced by the information attribute factors and the subjective factors of nodes, standing for the probability of node's retransmission or comments after receiving the message.
-\item ~$m$~ represents the ~$Node~i$~ has accepted the cumulative number of information at the moment of ~$T_n$~. 
-\item ~$\alpha$~ is the cumulative credibility of information sources. ~$\beta$~ is the cumulative number of strong relationship of information sources.
-\end{itemize}
-
-\par In the model we have established, the node is human. Under this circumstance, if we need to study node attribute, we have to take into account different types of people. The biggest difference among the different groups is the age structure. Different nodes have different age structures, so there are different node attributes. 
-
-
-
-\par We find that not only the attributes of the nodes can affect the propagation of information, but also the properties of the network structure will play a very important role. Different times have different modes of transmission, in the 1870s, newspapers were delivered by trains and stories were passed by telegraph; in the 1970s, when televisions were in most homes; in the 1990s, when households began connecting to the early internet; in the 2010s, when we can carry a connection to the world on our phones. The main difference between different modes of transmission is the spread speed of the media, which can affect the structure of the network. Therefore, we have to take the transmission modes into account. 
-
-\par In this example,the information source is people or groups, spreading the information. The information dissemination has two ways to spread it. One is the \textbf{\emph{interpersonal communication}}, the other is the \textbf{\emph{across-platform communication}}. The former method is oral communication. The latter includes different ways.
-
-
-
-\subsection{Information Filter Model}
-\par The presence of incorrect and misleading content on the Web can have serious consequences for people who increasingly rely on the internet as their information source for topics such as health, politics, and financial advice\cite{RD}. Under these circumstances, we have to establish a model of information filter to screen for real, valuable messages.
-\par In order to solve this problem, we set up an information value evaluation model. The schematic diagram of evaluation index classification is Figure \ref{fig:The_schematic_diagram_of_evaluation_index_classification} as follows.
-
-
-\begin{figure}[h]%[!hptb] 
-    \centering 
-    \includegraphics[width=0.6\textwidth]{./Pic/The_schematic_diagram_of_evaluation_index_classification.pdf}
-    % 图片标题
-    \caption{The schematic diagram of evaluation index classification. The center node has 4 screening indexes, each index has different subindexes.}
-    \label{fig:The_schematic_diagram_of_evaluation_index_classification}  
-\end{figure}
-
-\par After selecting good evaluation indexes, we will quantify the various evaluation indexes to measure the information and screen out the valuable information. The screening index calculation formula is as follows.
-\begin{equation}
-\omega=e^{-a(t-t_s)} \times b _i \times b _j \times b _k \times b_h
-\end{equation}
-where the ~$b _i,b _j,b _k$~ are the independent random variable, ~$b _i$~ is the relationship degree with current hot spots, the ~$b _j$~ is the degree of public concern about the information, and ~$b _k$~ is the response degree. What's more,~$b_h$~ represents the  information internal factor index. ~$t$~ is the current time, ~$t_s$~ is the release time. ~$a$~ stands for the time factor.
-\par The formula above has 4 independent random variables. Because of the absence of specific screening data, we can not make a further analysis of the model. We can only give the preliminary model above.
 
 
 \subsection{Renewable energy profile}
