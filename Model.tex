@@ -211,20 +211,22 @@ Million cubic feet: natural gas
 \paragraph{4.2.1 Factor loading matrix}
 \textrm{\\}
 \par Hear, we take California as an example to show the process of modeling. By using the data processed, we obtain R, which is the correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.
-\begin{gather*}
+\begin{equation}
     \centering
-R=\begin{pmatrix} 1 & -0.389890 & 0.432474 & -0.004734 \\ -0.389890 & 1 & -0.094940 &-0.158034 \\ 0.432474 & -0.094940 & 1 & -0.016881 \\ -0.004734 & -0.158034 & -0.016881 & 1\end{pmatrix}\\
-\end{gather*}
+R=\begin{pmatrix} 1 & -0.389890 & 0.432474 & -0.004734 \\ -0.389890 & 1 & -0.094940 &-0.158034 \\ 0.432474 & -0.094940 & 1 & -0.016881 \\ -0.004734 & -0.158034 & -0.016881 & 1\end{pmatrix}
+\end{equation}
+
+
 \par Then we can obtain 
 \[
 \lambda_1=1.638729, \lambda_2=0.454611, \lambda_3=1.089176, \lambda_4=0.817484
 \]
 which are the eigenvalue of R.
 \par Meanwhile, we obtain the eigenvector matrix for the eigenvalues of R.
-\begin{gather*}
+\begin{equation}
     \centering
-U=\begin{pmatrix} -0.666575 & 0.728151 & -0.131346 & -0.090683 \\ 0.281798 & 0.050295 & -0.698391 & -0.655981 \\ -0.423756 & -0.393132 & 0.443861 & -0.684737 \\ -0.544701 & -0.559209 & -0.545881 & 0.304303\end{pmatrix}\\
-\end{gather*}
+U=\begin{pmatrix} -0.666575 & 0.728151 & -0.131346 & -0.090683 \\ 0.281798 & 0.050295 & -0.698391 & -0.655981 \\ -0.423756 & -0.393132 & 0.443861 & -0.684737 \\ -0.544701 & -0.559209 & -0.545881 & 0.304303\end{pmatrix}
+\end{equation}
 \par Simply, the overall percentage and cumulative percentage of eigenvalues are as follows.
 \begin{table}[!hbp]
     \centering 
@@ -232,32 +234,32 @@ U=\begin{pmatrix} -0.666575 & 0.728151 & -0.131346 & -0.090683 \\ 0.281798 & 0.0
 \hline
 Eigenvalue & Overall percentage & Cumulative percentage \\
 \hline
-\lambda_1=1.638729 & 0.409682 & 0.409682 \\
+$\lambda_1$=1.638729 & 0.409682 & 0.409682 \\
 \hline
-\lambda_3=1.089176 & 0.272294 & 0.681976 \\
+$\lambda_3$=1.089176 & 0.272294 & 0.681976 \\
 \hline
-\lambda_4=0.817484 & 0.204371 & 0.886347 \\
+$\lambda_4$=0.817484 & 0.204371 & 0.886347 \\
 \hline
-\lambda_2=0.454611 & 0.113653 & 1.000000 \\
+$\lambda_2$=0.454611 & 0.113653 & 1.000000 \\
 \hline
 \end{tabular}
 \caption{Percentage}
 \end{table}
 \par Therefore, the cumulative percentage of $\lambda_1$ and $\lambda_3$ is 0.681976 colse to 0.7.
 \par According to assumption 1, the main factors are natural gas and fuel oil, the corresponding eigenvalues are $\lambda_1$ and $\lambda_3$. Then we take out their corresponding eigenvectors from U, and we can obtain the factor loading matrix
-\begin{gather*}
+\begin{equation}
     \centering
-A=\begin{pmatrix} 0.856438 & -0.145463 \\ -0.657207 & -0.429761 \\ 0.673909 & -0.408171 \\ 0.138447 & 0.846592\end{pmatrix}\\
-\end{gather*}
+A=\begin{pmatrix} 0.856438 & -0.145463 \\ -0.657207 & -0.429761 \\ 0.673909 & -0.408171 \\ 0.138447 & 0.846592\end{pmatrix}
+\end{equation}
 the first row of A is
 \begin{equation}
     \centering
-$\sqrt{ \lambda_1 }$*U[ ,1]
+\sqrt{\lambda_1} \times U[ ,1]
 \end{equation}
 the second row of A is
 \begin{equation}
     \centering
-$\sqrt{ \lambda_3 }$*U[ ,3]
+\sqrt{\lambda_3} \times U[ ,3]
 \end{equation}
 
 \paragraph{4.2.2 Factors and weights}
@@ -265,30 +267,32 @@ $\sqrt{ \lambda_3 }$*U[ ,3]
 \par According to the factor loading matrix A, we can get the factor analysis model is
 \begin{equation}
     \centering
-     natural gas=0.856438*f_1-0.145463*f_2
+     natural gas=0.856438 \times f_1-0.145463 \times f_2
 \end{equation}
 \begin{equation}
     \centering
- electricity=-0.657207*f_1-0.429761*f_2
+ electricity=-0.657207 \times f_1-0.429761 \times f_2
 \end{equation}
 \begin{equation}
     \centering
- fuel oil=0.673909*f_1-0.408171*f_2
+ fuel oil=0.673909 \times f_1-0.408171 \times f_2
 \end{equation}
 \begin{equation}
     \centering
-coal coke=0.138447*f_1+0.846592*f_2
+coal coke=0.138447 \times f_1+0.846592 \times f_2
 \end{equation}
 \par The definition of the weight of variables is\cite{5}
 \begin{equation}
     \centering
-w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i }*100\%
+w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i } \times 100\%
 \end{equation}
 \begin{equation}
     \centering
-\theta_i=A[i,1]*0.409682+A[i,2]*0.272294+A[i,3]*0.204371+A[i,4]*0.113653
+\theta_i=A[i,1] \times 0.409682+A[i,2] \times 0.272294+A[i,3] \times 0.204371+A[i,4] \times 0.113653
 \end{equation}
-\pra Therefore, we can obtain the the weight of natural gas, electricity, fuel oil and coal coke.
+
+\par Therefore, we can obtain the the weight of natural gas, electricity, fuel oil and coal coke.
+
 \[
 w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
 \]
@@ -367,7 +371,7 @@ where
 
 \par After selecting good evaluation indexes, we will quantify the various evaluation indexes to measure the information and screen out the valuable information. The screening index calculation formula is as follows.
 \begin{equation}
-\omega=e^{-a(t-t_s)}*b _i*b _j*b _k*b_h
+\omega=e^{-a(t-t_s)} \times b _i \times b _j \times b _k \times b_h
 \end{equation}
 where the ~$b _i,b _j,b _k$~ are the independent random variable, ~$b _i$~ is the relationship degree with current hot spots, the ~$b _j$~ is the degree of public concern about the information, and ~$b _k$~ is the response degree. What's more,~$b_h$~ represents the  information internal factor index. ~$t$~ is the current time, ~$t_s$~ is the release time. ~$a$~ stands for the time factor.
 \par The formula above has 4 independent random variables. Because of the absence of specific screening data, we can not make a further analysis of the model. We can only give the preliminary model above.
