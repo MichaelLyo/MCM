@@ -83,9 +83,9 @@
 
 \par In regard with Problem B, 
 
-\par It's closely followed by Problem C that asks for the forecast about the communication networks' relationships and attributes around the year 2050. 
+\par For problem C, 
 
-\par Problem D requires us to explore how public interest and opinion can be change by applying the theories and concepts of information influence on networks. 
+\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the Problem A, B, and C to establish regression equations. 
 
 \subsubsection{Part \uppercase\expandafter{\romannumeral2}}
 \par It is suggested in the Problem A that,
@@ -208,11 +208,11 @@ Thouesand short tons: coal coke
 Million kilowatthours: electricity
 Million cubic feet: natural gas
 \par Besides, there are many relationships among MSNs. According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables, so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
-\par In probem A, we will analysize the data processed in 2009, and obtain the 2009 energy profile for each of the four states.
+\par In probem A, we will analysize the data processed in 2009, and obtain the 2009 energy profile for each of the four states, which is based on usage and production.
 
 \subsection{Profile of four kinds of energy}
 
-\subsubsection{Factor loading matrix}
+\subsubsection{Factor analysis model}
 \textrm{\\}
 \par Hear, we take California as an example to show the process of modeling. By using the data processed, we obtain R, which is the correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.
 \begin{equation}
@@ -266,7 +266,7 @@ the second row of A is
 \sqrt{\lambda_3} \times U[ ,3]
 \end{equation}
 
-\subsubsection{Factors and weights}
+\subsubsection{Results of factor analysis}
 \textrm{\\}
 \par According to the factor loading matrix A, we can get the factor analysis model is
 \begin{equation}
@@ -301,7 +301,7 @@ w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i } \times 100\%
 w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
 \]
 
-\subsubsection{Summary of the factor analysis model}
+\subsubsection{Profiles of four kinds of energy}
 
 \textrm{\\}
 \par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, fuel oil, coal coke, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal coke, and a negative factor for natural gas, electricity, fuel oil. 
@@ -315,8 +315,9 @@ w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
     \centering 
     \includegraphics[width=0.8\textwidth]{./Pic/1-1.png}
     \caption{Weights of energy classification in 2009}
+    \label{fit:1-1}
 \end{figure}
-According to Figure 4, the contribution rates of four energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
+\par According to \ref{fit:1-1}, the contribution rates of the four kinds of energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
 
 
 \subsection{Renewable energy profile}
@@ -553,14 +554,14 @@ where the ~$E_k$~ is the dissemination efficiency of the network of the ~$k^{th}
 
 
 \section{Problem D : Prediction of energy profile in 2025 and 2050}
-\par Based on the consequences of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the socres of the four states in 2025 and 2050.
+\par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the socres of the four states in 2025 and 2050.
 \subsection{Regression analysis model}  
 \subsubsection{Regression equations}
 \par In problem D, the policy about energy of each state will not change until 2050. According to Figure \ref{fit:B-level}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores have a sudden chaneg after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the socres of California and Texas from 2005 to 2009 to build the regression equations.
 \par The regression equations are
 \begin{equation}
     \centering
-CA=e^{-0.32186 \times year+648.59297}+50
+CA=e^{-0.34649 \times year+697.98712}+50
 \end{equation}
 \begin{equation}
     \centering
@@ -568,15 +569,14 @@ TX=100-CA-NM-AZ
 \end{equation}
 \begin{equation}
     \centering
-NM=0.03880 \times year-76.97412
+NM=0.05263 \times year-104.64807
 \end{equation}
 \begin{equation}
     \centering
-AZ=e^{-0.09645 \times year+195.78165}
+AZ=e^{-0.10513 \times year+213.24602}
 \end{equation}
-\par The $R^{2}$ of each regression are greater than 0.54, even over 0.8. Therefore, the results of the regressions are good.
+\par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, the results of the regressions are good.
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
-
 \subsubsection{Scores of the four states in future}
 \par According to the regression equations, we can obtain the socres of the four states in 2025 and 2050 are as follows.
 \begin{table}[!hbp]
@@ -596,8 +596,16 @@ Arizona & 1.60063 & 0.14358 \\
 \end{tabular}
 \caption{Scores of four states in 2025 and 2050}
 \end{table}
-\par Besides, we can calculate scores in every year from 2025 to 2050, so that we can draw a line chart.
-666666666666
+\par Besides, we draw the graph of the regression equations as follows.
+\begin{figure}[h]%[!hptb] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{./Pic/D-scores.png}
+    \caption{Scores of the four states from 1960 to 2050}
+    \label{fig:D-scores}  
+\end{figure}
+
+
+
 \subsubsection{Analysis of the results}
 \par From 2025 to 2050, socre of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the socre of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows with a slow rate.
 \par Therefore, compare to other states, the levels of renewable energy usage of the four states are as follows.
