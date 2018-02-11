@@ -365,102 +365,43 @@ According to Figure 4, the contribution rates of four energy are very close in C
 
 \section{Problem B : Profile evolution \& Energy usage comparison among four states}
 
-\par In order to verify our model's reliability, we have to build a short term prediction model to predict the information communication situation for today by using data from the past, and compare them with today's reality.
-\subsection{Short Term Prediction Model of Information Dissemination}
-\par In this chapter, we first describe the theoretical model of the building, and then build a realistic model of information dissemination.
-\subsubsection{Model preparation}
-\paragraph{Node distinction}
-\text{\\}
+
+\par We have set up a good model for energy profile evaluation at one certain year, and now in this part, we will improve the model and take time factor into consideration to get the energy profile evolution results of four states. Besides,
+we introduce a new model Analytic Hierarchy Process (AHP) and its improved version to deal with the analysis of possible influential factors of similarities and differences among the four states.
+
+
+\subsection{Evolution of energy profile}
+\par On the basis of the model of Problem A, we try to bring time factor into the model and get the evolution result of the profile. 
+
+\subsubsection{Model improvement with time factor}
+\par Along with how to bring time factor into the model, we have a basic solution of calculating the result of the model of each year and then displaying the result in a line chart. 
+
+\begin{figure}[h]%[!hptb] 
+    \centering 
+    \includegraphics[width=0.9\textwidth]{./Pic/part-2-CA.png}
+    % 图片标题
+    \caption{Evolution of energy profile of CA (1960-2009).}
+    \label{fig:part-2-CA}  
+\end{figure}
+
+\par Take California as an example, we firstly use the factor analysis model to classify the energy into 4 kinds and divide them by 5 sectors, and according to step-counting principle, we get 4$\times$5 groups of basic energy profile unit. For everyone in the 20 units, we build a line chart to describe the trend as the year changes and put all of them into one diagram to have a more intuitive comparison, as can been seen in figure \ref{fig:part-2-CA}.  
+\par Results of other states can been seen in the Appendix. 
+
+\subsubsection{Brief analysis of the evolution above}
+\par There are indeed some advantages of this model evolution, which are as follows
 \begin{itemize}
-\item Isolated node: there is no connection with other nodes at a certain time, and the next moment it may be linked to other nodes in a certain probability.
-\item Isolated cluster: there is no connection with other clusters at some point in the next moment, which may be related to other clusters at a certain probability. And there are interconnected nodes in the cluster.
-\item Large scale network cluster: cluster network is composed of many nodes or clusters, and there are direct or indirect links between nodes or clusters in the network.
+    \item Comparison between different classification of energy is well organized and can be seen directly and clearly.
+    \item Different sectors have different impacts on energy usage, and this model can show the difference obviously.
+    \item It is intelligible to see the trend of the energy usage changes over time.
+    \item We can easily get to the conclusion that some sharp changes in the line chart are possibly caused by policy reform.  
 \end{itemize}
-\textbf{\emph{Assuming there is no absolute isolated node or cluster, any node or cluster is directly or indirectly connected with other nodes or clusters.}}
-
-
-
-\subsubsection{}
-\par Next, we build the realistic network model by steps.
-\paragraph{(1) Constructing a dissemination network}
-\text{\\}
-\par We define that there are $N_r$ nodes and ~$M_r$~directed edge in the network. Meanwhile, we classify the nodes according to the node's own attribute and introduce the influence factor ~$\gamma _i$~, which would change with the change of the node itself. The ~$\gamma _i$~ represents the new attention degree of a certain node in the unit time ~$\Delta t$~.
-
-\begin{equation}
-\gamma _i=\frac{\Delta D_i}{\Delta t}
-\end{equation}
-\emph{where ~$D_i$~ stands for the degree of Node ~$i$~.}
-\paragraph{(2) Adding the new people or group to the network}
-\text{\\}
-\par In each of the identified time series, the new node has two different ways to join the network.
-\par One is establishing the connection relationship with the existing node freely. The probability of being associated with an already existing node is ~$p_i$~,
-\begin{equation}
-p_i=\frac{D_i+\gamma _i}{{\sum\limits_{i=0}^{N_r}}(D_i+\gamma _i)}
-\end{equation}
-\par The other is receiving the invitation, in accordance with the principle of common neighbor selection node to establish a connection. After the connection is established, according to the principle of preferential connection, the node will connect with the other nodes. 
-\par The probability of connecting with the node ~$i$~ is ~$q_i$~, 
-\begin{equation}
-q_i=\lambda \beta _i+(1-\lambda ){\frac{{{D_i} + {\lambda _i}}}{{\sum\limits_{i = 0}^{{N_r}} {({D_i} + {\lambda _i})} }}}  
-\end{equation}
-where ~$\lambda\in {0,1}$~ stands for whether the node is invited. If not, ~$\lambda$~ taken ~$0$~, ~$\beta _i \in [0,1]$~ represents the probability of common adjacent nodes to promote the evolution.
-
-\begin{equation}
-\beta_i={\frac{g_{ij}}{G}}
-\end{equation}
-
-where ~$g_{ij}$~ stands for the number of having same neighbor between ~$Node~i$~ and ~$Node~j$~; ~$G$~ is the total neighbor number of ~$Node~i$~.
-\paragraph{(3) Adding the new relationship to the network}
-\text{\\}
-\par For the existing nodes in the network, the probability of the link between the two nodes is ~$O_i$~,
-
-
-\begin{equation}
-{O_i} = ({\beta _i} + \frac{{{D_i} + {\lambda _i}}}{{\sum\limits_{i = 0}^{{N_r}} {({D_i} + {\lambda _i})} }})/2
-\end{equation}
-
-
-
-where ~$\beta_i$~ is the probability of common adjacent nodes to promote the evolution.
-
-
-
-
-
-\paragraph{(4) Determine the upper limit of the relationship}
-\text{\\}
-\par Taking into account the actual factors, people's energy is limited. So there is an upper bound on the degree of the node. Before a degree does not reach the ceiling ~$I$~, the broken link probability between nodes is very small.
-\par We assume that ~$k$~ is the number of other nodes, which are followed by a certain node. Then the probability of breaking one link is ~$Z_k$~,
-
-\begin{equation}
-{Z_k}=1-\lambda \beta _k+(1-\lambda ){\frac{{{D_k} + {\lambda _k}}}{{\sum\limits_{k = 0}^{{N_r}} {({D_k} + {\lambda _k})} }}}=1-q_k
-\end{equation}
-
-
-
-\paragraph{(5) Calculation of model evaluation index}
-\text{\\}
-\par In order to network structure, we ought to select several evaluation index. After choosing, the calculation formulas of model evaluation index are as follows:
-\begin{equation}
-AD=\frac{1}{N}{\sum\limits_{i}^{}}{K_i}
-\end{equation}
-where the ~$AD$~ stands for the average degree, ~$K$~ is the degree of nodes.
-\begin{equation}
-L=\frac{1}{n(n-1)}{\sum\limits_{i+1}^{}}{d_{ij}}
-\end{equation}
-where the ~$L$~ is the average path, $n$ is the number of nodes, and $d_{ij}$ is the shortest distance.
-\begin{equation}
-C_i=\frac{2l_i}{k_i(k_i-1)}{\sum\limits_{i+1}^{}}{d_{ij}}
-\end{equation}
-where ~$C_i$~ represents for the average clustering, ~$K_i$~ is the degree of ~$Node~i$~ and ~$l_i$~ is the actual variable between the adjacent points of the ~$Node~i$~.
-
-
-
-
-
-
-
-
-
+\par However, we have to say it is undeniable that this evolution model has its disadvantages, which are as follows
+\begin{itemize}
+    \item There 
+    \item Opinion Leader: Determine the nature of the event in the network, and predict the future trend of the event.
+    \item Internet Marketer Group: Internet Marketer Group is a certain scale of the people. They have a certain influence on the event of large-scale nodes in the network. This kind of influence is not related to the distance.
+\end{itemize}
+\par In order to improve the shortcomings, we build a new model, named Analytic Hierarchy Process (AHP), to satisfy the demand of the governors.
 
 
 \subsection{AHP model}
@@ -785,6 +726,37 @@ Wikipedia, Quantum information science. \url{https://en.wikipedia.org/wiki/Quant
 \end{thebibliography}
 
 
+\newpage%另起一页书写
+\begin{appendices}  
+    \section*{Simulation Code}  
+    some text in Appendix A  
+    \section*{Other figures}
+
+\begin{figure}[h]%[!hptb] 
+    \centering 
+    \includegraphics[width=0.9\textwidth]{./Pic/part-2-AZ.png}
+    % 图片标题
+    \caption{Evolution of energy profile of AZ (1960-2009).}
+    \label{fig:part-2-AZ}  
+\end{figure}
+
+\begin{figure}[h]%[!hptb] 
+    \centering 
+    \includegraphics[width=0.9\textwidth]{./Pic/part-2-NM.png}
+    % 图片标题
+    \caption{Evolution of energy profile of NM (1960-2009).}
+    \label{fig:part-2-NM}  
+\end{figure}
+
+\begin{figure}[h]%[!hptb] 
+    \centering 
+    \includegraphics[width=0.9\textwidth]{./Pic/part-2-TX.png}
+    % 图片标题
+    \caption{Evolution of energy profile of TX (1960-2009).}
+    \label{fig:part-2-TX}  
+\end{figure}
+    some text in Appendix B  
+\end{appendices}  
 
 
 \end{document}
