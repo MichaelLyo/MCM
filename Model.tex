@@ -120,16 +120,20 @@ In the section, we use some symbols for constructing the model as follows.
     \textbf{Symbol} & \makecell[c]{\textbf{Description}}\\
     \hline
 $R$&The correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.\\ 
-$\lambda_i$&The eigenvalue of R, i = 1, 2, 3, 4.\\
+$\lambda_i$&The eigenvalue of R, i=1,2,3,4.\\
 $U$&The Eigenvector matrix for the eigenvalues of R.\\ 
 $A$&The factor loading matrix.\\
-$f_i$&Factor, i = 1, 2.\\ 
+$f_i$&Factor, i=1,2.\\ 
 $w_1$&The weight of natural gas.\\ 
 $w_2$&The weight of electricity.\\ 
 $w_3$&The weight of fuel oil.\\ 
 $w_4$&The weight of coal coke.\\ 
 $\eta_1$&The proportion of renewable energy in total energy.\\
 $\eta_2$&The proportion of different sector in renewable energy usage.\\
+$Y$&The level of renewable energy usage.\\ 
+$X_i$&Geography(i=1), commerce(i=2), electricity(i=3), industry(i=4), population(i=5), i=1,2,3,4,5.\\ 
+$C,B_i$&The pairwise comparison matrixs, i=1,2,3,4,5.\\
+$\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\ 
 % $T_n$&The discrete time series of the node checking information.\\ 
 % $p_{in}$& The probability of ~$Node~i$~ to check information at the moment of $T_n$.\\
 % $q_{in}$&The probability that information is able to continue to spread\\
@@ -206,7 +210,7 @@ Million cubic feet: natural gas
 \par Besides, there are many relationships among MSNs. According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables, so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
 \par In probem A, we will analysize the data processed in 2009, and obtain the 2009 energy profile for each of the four states.
 
-\subsection{Factor Analysis Model}
+\subsection{Profile of four kinds of energy}
 
 \subsubsection{Factor loading matrix}
 \textrm{\\}
@@ -376,7 +380,7 @@ According to Figure 4, the contribution rates of four energy are very close in C
 
 
 
-\subsubsection{Realistic network model construction}
+\subsubsection{}
 \par Next, we build the realistic network model by steps.
 \paragraph{(1) Constructing a dissemination network}
 \text{\\}
@@ -459,72 +463,62 @@ where ~$C_i$~ represents for the average clustering, ~$K_i$~ is the degree of ~$
 
 
 
-\subsection{Model Simulation Process}
-\par When the initial number of nodes is much smaller than the size of the final network, we are convinced that the number of initial nodes has no influence on the evolution of the network. So we chose the initial number of nodes is ~$3$~, and these ~$3$~ nodes constitute a complete graph. Meanwhile, We define a time period. In this period of time, we will add several nodes to the network randomly (up to no more than 10). The probability of being invited to joining the network and joined the network spontaneously is both 50 percent.
-\par After joining the network, the newly added nodes are connected with the nodes which already exist in the network according to the probability of ~$p_1$~ and ~$p_2$~. In each time period, for the nodes which have already existed in the network, connect two unlinked nodes in accordance with the probability of ~$q_1$~, break the edge in accordance with the probability of ~$q_2$~.
-\par In order to find the answer, we need to continue fitting and determine the value of ~$p_1, p_2, q_1, q_2$~. For simplicity, we assign fixed values to the ~$p_1$~and ~$p_2$~ after a small range of tests. Futhermore, in the subsequent simulation, the ~$p_1$~and ~$p_2$~ will be considered as fixed values.
-\par We select the reference index is the average degree ~$AD$~ of the network, and then use the \textbf{\emph{least squares method}} to take regression analysis, determining the parameters which have the smallest error .
-\par The specific process of model simulation is
-
-\begin{enumerate}%[(1)]
-\renewcommand{\labelenumi}{(\theenumi)}
-    \item In the evolution of the network, when the network evolute to a state where has the same size with the existing referenced network, we mark this time as an observation point. At the end of evolution, we would compare the measured values of these observation points with the actual indicators of the existing reference network, and calculate the \textbf{\emph{square sum of errors}}.
-    \item Erase data, and repeat the first step of the experiment 100 times.
-    \item After determining the parameters, we would make five simulation in each network size comparison point. And then, make the calculation of the each index to obtain the average value and get the final simulation data.
-\end{enumerate}
-
-\subsection{Forecast \& Validation Results}
-\par After the simulation of the model, we have obtained the data, and then compare it with the actual data. The results are as follows.
-\subsubsection{Forecast Results}
-\par Several results of forecast are listed in the Table \ref{tab:addlabel} as follows.
-
-\begin{table}[htbp]
-  \centering
-  \caption{The Forecast Date of Information Network's Characterization (2010-2014)}
-    \begin{tabular}{cccc}
-    \toprule
-    year  & simulate average degree & simulate average clustering & simulated ASPL \\
-    \midrule
-    2001  & 13.01939492 & 0.419213291 & 4.801293321 \\
-    2002  & 16.19395812 & 0.429192399 & 4.56234903 \\
-    2003  & 19.94393111 & 0.435029123 & 4.423443242 \\
-    2004  & 21.49283818 & 0.441919291 & 4.39919291 \\
-    2005  & 22.89182849 & 0.450203023 & 4.311232131 \\
-    2006  & 24.19294829 & 0.458049292 & 4.19191011 \\
-    2007  & 24.94812912 & 0.462838322 & 4.16991911 \\
-    2008  & 25.39181938 & 0.46478866 & 4.156568507 \\
-    2009  & 25.59182389 & 0.467667754 & 4.151586061 \\
-    2010  & 25.89182383 & 0.47086898 & 4.14725192 \\
-    2011  & 26.10592911 & 0.472843919 & 4.141046295 \\
-    2012  & 26.34929111 & 0.473818239 & 4.139822779 \\
-    2013  & 26.72394393 & 0.47581239 & 4.132812418 \\
-    2014  & 27.12939219 & 0.478923844 & 4.110359 \\
-    2015  & 28.12939321 & 0.481192393 & 4.098181283 \\
-    \bottomrule
-    \end{tabular}%
-  \label{tab:addlabel}%
-\end{table}%
-\textbf{\emph{ASPL: average shortest path length}}
-
-
-\par From the data we obtain above, the \emph{Average Euclidean Distance} is ~$1.784$~. 
-\par From Table \ref{tab:addlabel} above, we find that under the condition of having errors, the growth of forecast data is relatively slow. Therefore, we can conclude that in the relatively stable society, the network structure is in the occurrence of slow evolution. Meanwhile, the network model we established can adapt to the change of time.
-
-
-\subsubsection{Validation Results}
-
-\par The forecast data and the real data comparison chart is drawn in the Figure\ref{fig:P2} as follows.
-
-\begin{figure}[h]%[!hptb] 
+\subsection{AHP model}
+\par We will use the analytic hierarchy process(AHP) to build a model, then we can obtain scores of the use of renewable energy of the four states, so that we can analysize the difference between the four states. When we build the model, we discuss geography, commerce, electricity, industry, and population, which are five sectors. 6666666666666666666 
+\subsubsection{Establishment of AHP model}
+\par We suppose Y, which is the use level of renewable energy as the target, and $X_i$, which represents the five sectors as the standard. Therefore, we have the analytic hierarchy model as follows.\cite{6}
+\begin{figure}[!hptb] 
     \centering 
-    \includegraphics[width=1\textwidth]{./Pic/P2.jpg}
-    % 图片标题
-    \caption{Simulation results and actual data comparison chart. We compare the \textbf{\emph{Average degree, Average clustering and Average shortest path length}}.}
-    \label{fig:P2}  
+    \includegraphics[width=1.0\textwidth]{AHP.pdf}
+    \caption{AHP model}
+\end{figure}
+\par In order to analysize the closeness between each of the sectors and Y, we analysize the given data to obtain and then use the total of the renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, which is the pairwise comparison matrix of the five sectors under Y. Simply, we can calculate $\lambda_m$(C), which is the maximum of the eigenvalues of C. Here, n is equal to 4 and RI is equal to 1.12.\cite{6} If C can not pass the check of consistency
+\begin{equation}
+    \centering
+    CI=\frac{ \lambda_m(C)-n }{ n-1 }
+\end{equation}
+\begin{equation}
+        \centering
+    CR=\frac{ CI }{ RI }<0.1 
+\end{equation}
+we recalculate C until C pass the check of consistency. Then we calculate $\beta$, the eigenvector of $\lambda_m$(C), which meets the conditions that the sum of the coordinates of the eigenvector is 1 and the coordinates is greater than 0, called weight vector.
+\par Similarly, we can also obtain $B_i$, which is the pairwise comparison matrix of the four states under $X_i$, and $\beta_i$, which is the weight vector of $X_i$.
+\par We define W as follows.
+\begin{equation}
+    \centering
+U=\begin{pmatrix} \beta_1 & \beta_2 & \beta_3 & \beta_4\end{pmatrix}
+\end{equation}
+\par Finally, we can obtain the scores of the four states.
+\begin{equation}
+    \centering
+    CA=\sum_{i=1}^{5}\beta[i] \times U[i,1]
+\end{equation}
+\begin{equation}
+    \centering
+    TX=\sum_{i=1}^{5}\beta[i] \times U[i,2]
+\end{equation}
+\begin{equation}
+    \centering
+    NM=\sum_{i=1}^{5}\beta[i] \times U[i,3]
+\end{equation}
+\begin{equation}
+    \centering
+    AZ=\sum_{i=1}^{5}\beta[i] \times U[i,4]
+\end{equation}
+
+\subsubsection{Consequences of AHP model}
+\par Firstly, we divide the given data by year, and calculate the the scores of the four states in 2009 as follows.
+\[
+    CA=36.38638038, TX=31.69066312, NM=15.07891825, AZ=16.84403825
+\]
+Clearly, the score of California and Texas is much greater than New Mexico and Arizona.
+Then we calculate the scores of the four states in every year, and draw a line chart as follows.
+\begin{figure}[!hptb] 
+    \centering 
+    \includegraphics[width=0.8\textwidth]{1-2.png}
+    \caption{Line chart}
 \end{figure}
 
-
-\par From Figure \ref{fig:P2} above, and compare with the real data, with we can draw the conclusion: Under the condition of having errors, we believe that the simulation data and the real data fitting degree are very high, the changing trends of various indicators are the same. Therefore, as far as we are considered, the model is reliable and can predict the change of network structure in a short time.
 
 
 
@@ -767,13 +761,13 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
 \bibitem{5}
 Tang Mengling, Wang zhanling, and Li Zhijian. Using Model of Fcator Analysis to Calculate Weight and to Evaluate Water Quality[J]. Xingtai Vocational and Technical College, 2005.
 
-\bibitem{L1}
+\bibitem{RC}
 U.S. Energy Information Administration, Renewable Energy Explained. \url{https://www.eia.gov/energyexplained/?page=renewable_home}. 2017
 
 
 
-\bibitem{RE}
-Stanovich K E. What Intelligence Tests Miss:The Psychology of Rational Thought[M]. Yale University Press, 2009.
+\bibitem{6}
+Kevin Fasusi. Using Analytic Hierarchy With Supplychainpy. \url{http://www.supplychainpy.org/2016/10/26/Analytic-Hierarchy.html}. 2016.
 
 \bibitem{RG}
 Wikipedia, Barack Obama on social media. \url{https://en.wikipedia.org/wiki/Barack_Obama_on_social_media}. 2016
