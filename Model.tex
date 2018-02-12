@@ -12,7 +12,7 @@
 %\usepackage[XXX,nosheet]{MCMPackage}%这个参数形式可去掉summary sheet首页。
 \problem{C}  %选题
 
-\title{Energy Production}%在此插入论文标题
+\title{Energy Compact Focused On Interstate Energy Structure}%在此插入论文标题
 \date{\today}
 
 %设置段落之间的距离，若不需要删除或者注释掉即可。
@@ -32,7 +32,7 @@
 \begin{abstract}
 
 
-\par With the depletion of existing energy on the planet, the usage of energy especially renewable energy (REU) has become a more and more widespread concern. This paper establishes a series of models to help govenors understand the usage of renewable energy and build interstate energy compact.
+\par With the depletion of existing energy on the planet, the usage of energy especially renewable energy (REU) has become a more and more widespread concern. This paper establishes a series of models to help govenors understand the REU among four states and build interstate energy compact.
 
 \par In the \textbf{\emph{Energy Profile Model}}, we analyze each state's own energy profile based on factors such as the proportion of renewable energy and the weight of the primary energy, along with the main sectors in which energy be consumed. Through analyzing the classification criteria of MSN, we \textbf{\emph{dig into the data}} and get production and consumption of each kind of energy, which represent the energy's usage in sectors or in total, and the correlation coefficient between them is taken as a factor of factor analysis method, then we calculate and simulate the whole model and get the results.
 
@@ -71,13 +71,10 @@
 \par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. In order to inform a set of goals for the new interstate energy compact, we will analyze the given data and model.
 
 
-
-
-
-\subsection{Problem Restatement and Analysis}
+\subsection{Problem Restatement}
 %这一部分写问题分析以及我们要解决的问题
-\subsubsection{Probelms of Part \uppercase\expandafter{\romannumeral1}}
-\par For Problem A, in order to lay the foundation of analyzing , we are required to create an energy profile for each of the four states. Meanwhile, the profiles should be created on the analysis of the given data.
+% \subsubsection{Part \uppercase\expandafter{\romannumeral1}}
+\par For Problem A, in order to lay the foundation of analyzing, we are required to create an energy profile for each of the four states. Meanwhile, the profiles should be created on the analysis of the given data.
 
 \par In regard to Problem B, 
 
@@ -85,12 +82,12 @@
 
 \par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B, C and the given data to establish regression equations or other models.
 
-\subsubsection{Problems of Part \uppercase\expandafter{\romannumeral2}}
-\par It is suggested in the Problem A that, we need to build a target model, which is based on the problems of Part $\uppercase\expandafter{\romannumeral1}$ to give the four states goals for the new four-state energy compact.
+% \subsubsection{Part \uppercase\expandafter{\romannumeral2}}
+\par It is suggested in the Problem A that,
 
 \par As for Problem B, we are supposed to give some suggestions to the governors, so that they will know that the actions they should take to meet the goals.
 
-\subsubsection{Part \uppercase\expandafter{\romannumeral3}}
+% \subsubsection{Part \uppercase\expandafter{\romannumeral3}}
 \par On the basis of the analysis and models in the two parts before, we prepare the state profiles of 2009, our predictions towards energy usage and some recommendations on adopting goals for the energy compact.
 
 
@@ -114,15 +111,15 @@ In the section, we use some symbols for constructing the model as follows.
     \toprule[2pt]
     \textbf{Symbol} & \makecell[c]{\textbf{Description}}\\
     \hline
-$R$&The correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.\\ 
+$R$&The correlation coefficient matrix of natural gas, electricity, petroleum products and coal.\\ 
 $\lambda_i$&The eigenvalue of R, i=1,2,3,4.\\
 $U$&The Eigenvector matrix for the eigenvalues of R.\\ 
 $A$&The factor loading matrix.\\
 $f_i$&Factor, i=1,2.\\ 
 $w_1$&The weight of natural gas.\\ 
 $w_2$&The weight of electricity.\\ 
-$w_3$&The weight of fuel oil.\\ 
-$w_4$&The weight of coal coke.\\ 
+$w_3$&The weight of petroleum products.\\ 
+$w_4$&The weight of coal.\\ 
 $\eta_1$&The proportion of renewable energy in total energy.\\
 $\eta_2$&The proportion of different sector in renewable energy usage.\\
 $Y$&The level of renewable energy usage.\\ 
@@ -179,7 +176,7 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 
 \begin{figure}[h]%[!hptb]
     \centering 
-    \includegraphics[width=0.8\textwidth]{./Pic/msn_5.png}
+    \includegraphics[width=0.65\textwidth]{./Pic/msn_5.png}
     % 图片标题
     \caption{The meaning of a MSN code, emphasizing the fifth character. Reference \url{https://www.eia.gov/state/seds/sep_use/notes/use_a.pdf}}
     \label{fig:msn_5}  
@@ -196,44 +193,64 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 \subsubsection {MSN classification analysis by energy unit}
 
 
+\par In order to classify the 215 MSNs more clearly, we look into everyone of the division and find that a large percent of the kinds have the suffix P, which represents the standardized physical units. Physical units naturally represent for the energy classification in the real physical world, and there are mainly \textbf{4 kinds of standardized physical units} in the data set as can be seen in figure \ref{tab:energy-unit}, so it is reasonable to classify the data into 4 groups according to the units.
+% \par According to the analysis above, we suppose the four units as the following representatives.
 
-\par In order to classify the 215 MSNs more clearly, we look into everyone of the division and find that a large percent of the kinds have the suffix P, which represents the standardized physical units. Physical units naturally represent for the energy classification in the real physical world, and there are mainly \textbf{4 kinds of standardized physical units} in the data set as can be seen in figure \ref{fig:classification_by_unit}, so it is reasonable to classify the data into 4 groups according to the units.
-\par According to the analysis above, we suppose the four units as the following representatives.
-\par \textbf{fule oil}: Thousand barrels;
-\textbf{coal coke}: Thousand short tons;
-\textbf{electricity}: Million kilowatt-hours;
-\textbf{natural gas}: Million cubic feet.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline Energy name & Unit\\
+        \hline Petroleum product & Thousand barrels\\
+        \hline Coal & Thousand short tons\\
+        \hline Electricity & Million kilowatthours\\
+        \hline Natural gas & Million cubic feet\\
+        \hline
+    \end{tabular}
+    \caption{Energy name and unit reference table}\label{tab:energy-unit}
+\end{table}
 
-\begin{figure}[!h]%[!hptb] 
-    \centering 
-    \includegraphics[width=0.8\textwidth]{./Pic/classification_by_unit.png}
-    \caption{Classification by unit in the suffix P.}
-    \label{fig:classification_by_unit}  
-\end{figure}
+
+% \par Fule oil related MSN are: ABICP, ARICP, ARTCP, ARTXP, AVACP, AVTCP, AVTXP, CLTXP, COICP, DFACP, DFCCP, DFICP, DFRCP, DFTCP, DFTXP, DKEIP, EMTCP, ENACP, ENCCP, ENICP, ENPRP, ENTCP, ESTXP, FNICP, FOICP, FSICP, JFACP, JFTCP, JFTXP, JKACP, JKTCP, JNACP, JNTCP, KSCCP, KSICP, KSRCP, KSTCP, KSTXP, LGACP, LGCCP, LGICP, LGRCP, LGTCP, LGTXP, LUACP, LUICP, LUTCP, LUTXP, MBICP, MGACP, MGCCP, MGICP, MGTCP, MGTXP, MSICP, NAICP, P1ICP, P1TCP, P1TXP, PAACP, PACCP, PAEIP, PAICP, PAPRP, PARCP, PATCP, PATXP, PCCCP, PCEIP, PCICP, PCTCP, PLICP, POICP, POTCP, POTXP, PPICP, RFACP, RFCCP, RFEIP, RFICP, RFTCP, RFTXP, SGICP, SNICP, UOICP, USICP and WXICP;
+% \par coal related MSN are: CCEXP, CCIMP, CCNIP, CLACP, CLCCP, CLEIP, CLICP, CLKCP, CLOCP, CLPRP, CLRCP and CLTCP;
+% \par Electricity related MSN are: ELEXP, ELIMP, ELNIP, ESACP, ESCCP, ESICP, ESRCP, ESTCP, GEEGP, HYCCP, HYEGP, HYICP, HYTCP, HYTXP, NUEGP, NUETP, SOEGP and WYEGP;
+% \par Natural gas related MSN are: NGACP, NGCCP, NGEIP, NGICP, NGLPP, NGMPP, NGPZP, NGRCP, NGTCP, NGTXP and NGVHP.
+
+
+% \par \textbf{fule oil}: Thousand barrels;
+% \textbf{coal}: Thousand short tons;
+% \textbf{electricity}: Million kilowatt-hours;
+% \textbf{natural gas}: Million cubic feet.
+
+% \begin{figure}[!h]%[!hptb] 
+%     \centering 
+%     \includegraphics[width=0.8\textwidth]{./Pic/classification_by_unit.png}
+%     \caption{Classification by unit in the suffix P.}
+%     \label{fig:classification_by_unit}  
+% \end{figure}
 
 % 4.2
 \subsection{Factor analysis function}
 
-\par There are many relationships among MSNs. To simplify the complex dependencies between the four energy classification, we used factor analysis to establish an optimal model to analyze the actual weights of the four types of energy sources by following steps\cite{2}:
+\par There are many relationships among MSNs. To simplify the complex dependencies between the four energy classification, we used factor analysis to establish an optimal model to analyze the actual weights of the four types of energy sources.
 
 % \par According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
-\begin{enumerate}[Step 1:]
-\item Standardize data samples.
+% \begin{enumerate}[Step 1:]
+% \item Standardize data samples.
 
-\item Calculate the correlation matrix R of the sample.
+% \item Calculate the correlation matrix R of the sample.
 
-\item Find the eigenvalues and eigenvectors of the correlation matrix R.
+% \item Find the eigenvalues and eigenvectors of the correlation matrix R.
 
-\item According to the cumulative contribution rate of the system to determine the number of the main factor.
+% \item According to the cumulative contribution rate of the system to determine the number of the main factor.
 
-\item Calculate the factor load matrix A.
+% \item Calculate the factor load matrix A.
 
-\item Determine the factor model.
+% \item Determine the factor model.
 
-\item Based on the above calculation results, the system is analyzed.
-\end{enumerate}
+% \item Based on the above calculation results, the system is analyzed.
+% \end{enumerate}
 
-\par By using the given data, we can obtain R, which is the correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.
+\par By using the given data, we can obtain R, which is the correlation coefficient matrix of natural gas, electricity, petroleum products and coal.
 \begin{equation}
     \centering
 R=\begin{pmatrix} 1 & r_{12} & r_{13} & r_{14} \\ r_{21} & 1 & r_{23} & r_{24} \\ r_{31} & r_{32} & 1 & r_{34} \\ r_{41} & r_{42} & r_{43} & 1\end{pmatrix}
@@ -300,11 +317,11 @@ the second row of A is
 \end{equation}
 \begin{equation}
     \centering
-    \text{fuel oil}=a_{31} \times f_1+a_{32} \times f_2
+    \text{petroleum products}=a_{31} \times f_1+a_{32} \times f_2
 \end{equation}
 \begin{equation}
     \centering
-    \text{coal coke}=a_{41} \times f_1+a_{42} \times f_2
+    \text{coal}=a_{41} \times f_1+a_{42} \times f_2
 \end{equation}
 \par The definition of the weight of variables is\cite{5}
 \begin{equation}
@@ -316,7 +333,7 @@ w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i } \times 100\%
 \theta_i=A[i,1] \times \lambda_1+A[i,2] \times \lambda_2+A[i,3] \times \lambda_3+A[i,4] \times \lambda_4
 \end{equation}
 
-\par Therefore, we can obtain the weight of natural gas, electricity, fuel oil and coal coke, which are between 0\% and 100\%.
+\par Therefore, we can obtain the weight of natural gas, electricity, petroleum products and coal, which are between 0\% and 100\%.
 
 \[
 w_1, w_2, w_3, w_4.
@@ -325,16 +342,17 @@ w_1, w_2, w_3, w_4.
 % 4.2.2
 \subsubsection{Profiles of four kinds of energy}
 
-\par From the point of the factor analysis model, we can obtain the weights of variables of the four states in 2009 as follows.
+\par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, petroleum products, coal, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal, and a negative factor for natural gas, electricity, petroleum products. 
+    So we can obtain the weights of variables of the four states in 2009 as the following figure:
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.8\textwidth]{./Pic/1-1.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/1-1.png}
     \caption{Weights of energy classification in 2009}
     \label{fig:1-1}
 \end{figure}
 
-\par According to figure \ref{fig:1-1}, the contribution rates of the four kinds of energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
+\par According to figure \ref{fig:1-1}, the contribution rates of the four kinds of energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
 
 % 4.3
 \subsection{Renewable energy profile}
@@ -357,7 +375,7 @@ So this is indeed the representative MSN variable of the usage of renewable ener
 
 \begin{figure}[H]%[!hptb] 
     \centering 
-    \includegraphics[width=0.6\textwidth]{./Pic/1-2.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/1-2.png}
     % 图片标题
     \caption{The proportion of renewable energy in total energy of four states in 2009.}
     \label{fig:1-2}  
@@ -412,13 +430,11 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 \subsubsection{Model improvement with time factor}
 \par Along with how to bring time factor into the model, we have a basic solution of calculating the result of the model of each year and then displaying the result in a line chart. 
 
-\par Take California as an example, we firstly use the factor analysis model to classify the energy into 4 kinds and divide them by 5 sectors, and according to step-counting principle, we get 4$\times$5 groups of basic energy profile unit. For everyone in the 20 units, we build a line chart to describe the trend as the year changes and put all of them into one diagram to have a more intuitive comparison, as can be seen in figure \ref{fig:part-2-CA}.  
-\par Results of other states can be seen in the Appendix. % TODO: which appendix?
+\par Take California as an example, we firstly use the factor analysis model to classify the energy into 4 kinds and divide them by 5 sectors, and according to step-counting principle, we get 4$\times$5 groups of basic energy profile unit. For everyone in the 20 units, we build a line chart to describe the trend as the year changes and put all of them into one diagram to have a more intuitive comparison, as can be seen in figure \ref{fig:part-2-CA}. And results of results of other states can be seen in the Appendix. % TODO: which appendix?
 
-% TODO: 图片错位
 \begin{figure}[H]%[!hptb] 
     \centering 
-    \includegraphics[width=0.9\textwidth]{./Pic/part-2-CA.png}
+    \includegraphics[width=0.9\textwidth]{./Pic/B-classify-CA.png}
     % 图片标题
     \caption{Evolution of energy profile of CA (1960-2009).}
     \label{fig:part-2-CA}  
@@ -488,27 +504,21 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 
 \par We will recalculate C until C pass the check of consistency. Then we calculate $\beta$, the eigenvector of $\lambda_m$(C), which meets the conditions that the sum of the coordinates of the eigenvector is 1 and the coordinates are greater than 0, called weight vector.
 \par Similarly, we can also obtain $B_i$, which is the pairwise comparison matrix of the four states under $X_i$, and $\beta_i$, which is the weight vector of $X_i$.
-\par We define W as follows: % TODO: follows?
+\par We define U as follows: % TODO: follows?
 \begin{equation}
     \centering
 U=\begin{pmatrix} \beta_1 & \beta_2 & \beta_3 & \beta_4\end{pmatrix}
 \end{equation}
 \par Finally, we can obtain the scores based on the total energy usage of the four states:
+
 \begin{equation}
-    \centering
-    CA=\sum_{i=1}^{5}\beta[i] \times U[i,1]
-\end{equation}
-\begin{equation}
-    \centering
-    TX=\sum_{i=1}^{5}\beta[i] \times U[i,2]
-\end{equation}
-\begin{equation}
-    \centering
-    NM=\sum_{i=1}^{5}\beta[i] \times U[i,3]
-\end{equation}
-\begin{equation}
-    \centering
-    AZ=\sum_{i=1}^{5}\beta[i] \times U[i,4]
+    \label{AHP_result}
+    \begin{array}{l}
+    \displaystyle CA=\sum_{i=1}^{5}\beta[i] \times U[i,1] \\
+    \displaystyle TX=\sum_{i=1}^{5}\beta[i] \times U[i,2] \\
+    \displaystyle NM=\sum_{i=1}^{5}\beta[i] \times U[i,3] \\
+    \displaystyle AZ=\sum_{i=1}^{5}\beta[i] \times U[i,4]
+    \end{array}
 \end{equation}
 
 % 5.2.3
@@ -521,7 +531,7 @@ Clearly, the score of California and Texas is much greater than New Mexico and A
 Then we calculate the scores of the four states in every year and draw a line chart as follows.
 \begin{figure}[!hptb] 
     \centering 
-    \includegraphics[width=0.8\textwidth]{./Pic/B-level-predict.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/B-level-predict.png}
     \caption{Scores based on the total renewable energy usage from 1960 to 2009}
     \label{fig:B-level-predict}
 \end{figure}
@@ -532,7 +542,7 @@ Then we calculate the scores of the four states in every year and draw a line ch
 \par When we talk about the analytic hierarchy model based on per capita renewable energy usage, we just need to change CA, TX, NM, AZ to CA, TX, NM, AZ divided by the total population of each state. Therefore, similarly, we can obtain the scores based on the per capita energy usage of the four states in each year from 1960 to 2009, and draw the line chart as follows.
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.8\textwidth]{./Pic/B-level-percapita.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/B-level-percapita.png}
     \caption{Scores based on the per capita renewable energy usage from 1960 to 2009}
     \label{fig:B-level-percapita}
 \end{figure}
@@ -544,7 +554,7 @@ Then we calculate the scores of the four states in every year and draw a line ch
 \par We have taken the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and obtain figure \ref{fig:B-percent}.
 \begin{figure}[H]%[!hptb] 
     \centering 
-    \includegraphics[width=0.7\textwidth]{./Pic/B-percent.png}
+    \includegraphics[width=0.8\textwidth]{./Pic/B-percent.png}
     % 图片标题
     \caption{The proportion of renewable energy usage of different sectors of four states in 2009}
     \label{fig:B-percent}  
@@ -586,55 +596,75 @@ Then we calculate the scores of the four states in every year and draw a line ch
 
 \par We have compared the profile of four states in the previous section a lot, so in this part, we focus on setting up a series of criteria and choosing the best profile of them. 
 
+\subsection{Model Construction}
+\par Let $\phi_i$ represents the proportion of each state , $\Phi_i$ represents the per capita renewable energy usage proportion of each state in 2009, then the biggest value of them can be described as
+
+\begin{equation}
+    \phi_{max} = MAX({\phi_i|i=1,2,3,4})
+\end{equation}
+\begin{equation}
+    \Phi_{max} = MAX({\Phi_i|i=1,2,3,4})
+\end{equation}
+
+\par Let $\kappa_i$ be the gradient of every state, then 
+
+\begin{equation}
+    \kappa = \frac{\Delta \phi_i}{\Delta year}
+\end{equation}
+\begin{equation}
+    \kappa_{max} = MAX({\kappa_i | i=1,2,3,4})
+\end{equation}
+
+\par Let $\mu_i$ be the gradient of every state, then 
+\begin{equation}
+    \mu = \frac{\Delta \Phi_i}{\Delta year}
+\end{equation}
+\begin{equation}
+    \mu_{max} = MAX({\mu_i | i=1,2,3,4})
+\end{equation}
+
 \subsection{Best profile in renewable energy usage amount}
 
-\par Based on the result of Problem B, we can get the scores of the importance of renewable energy usage of different states, which actually stands for the state's proportion of renewable energy usage in all states under the influence of five sectors. On this occasion, we can get the biggest proportion, which represents the state that uses the most renewable energy in the year.
-\par Let $\phi$ represents the proportion of each state in 2009, then we can get the result as follows from the calculation of Problem B
+\par Based on the result of Problem B, we can get the scores of the importance of renewable energy usage of different states, which actually stands for the state's proportion of renewable energy usage in all states under the influence of five sectors. On this occasion, we can get the biggest proportion, which represents the state that uses the most renewable energy in the year. We can get the result as follows from the calculation of Problem B
 
 \begin{equation}
-    \phi_{CA} = 55.65557290,~~ \phi_{TX} = 38.04528274,~~ \phi_{NM} = 0.99719276,~~ \phi_{AZ} = 5.30195160
+    \phi_{1} = 55.65557290,~~ \phi_{2} = 38.04528274,~~ \phi_{3} = 0.99719276,~~ \phi_{4} = 5.30195160
 \end{equation}
 
-\par $\phi_{max} = \phi_{CA}$, so the biggest proportion is $\phi_{CA}$, which means that \textbf{California} has the biggest energy usage amount in 2009.
+\par $\phi_{max} = \phi_{1}$, so the biggest proportion is $\phi_{1}$, which means that \textbf{California} has the biggest energy usage amount in 2009.
 
-\par But other governors may have different opinions, they may hold the view that it is unfair since California has the biggest population. On this occasion, we will take the result of per capita usage for analysis. Let $\Phi$ represents the per capita renewable energy usage proportion of each state in 2009, then we can get the data
+\par But other governors may have different opinions, they may hold the view that it is unfair since California has the biggest population. On this occasion, we will take the result of per capita usage for analysis. Then we can get the data
 
 \begin{equation}
-    \Phi_{CA} = 4.05334714,~~ \Phi_{TX} = 8.00804230,~~ \Phi_{NM} = 44.55708957,~~ \Phi_{AZ} = 43.38152098
+    \Phi_{1} = 4.05334714,~~ \Phi_{2} = 8.00804230,~~ \Phi_{3} = 44.55708957,~~ \Phi_{4} = 43.38152098
 \end{equation}
-\par $\Phi_{max} = \Phi_{NM}$, so the biggest per capita proportion is $\Phi_{NM}$, which means that \textbf{New Mexico} has the biggest per capita energy usage amount in 2009.
+\par $\Phi_{max} = \Phi_{3}$, so the biggest per capita proportion is $\Phi_{3}$, which means that \textbf{New Mexico} has the biggest per capita energy usage amount in 2009.
 
 \subsection{Best profile in increase of renewable energy usage}
 
-\par Besides total amount of renewable energy usage, we think that it is also indispensable to take usage increase rate into consideration because increase rate can reflect a state's growing concern about the renewable energy and can represent the progress in renewable energy usage. It is also an important factor when judging the "best" profile.
+\par Besides total amount of renewable energy usage, we think that it is also indispensable to take usage increase rate into consideration, because increase rate can reflect a state's growing concern about the renewable energy and can represent the progress in renewable energy usage. It is also an important factor when judging the "best" profile.
 
-\par The best description of the increase of renewable energy usage is its gradient in the line chart. Let $\kappa$ be the gradient of every state, then 
-
+\par The best description of the increase of renewable energy usage is its gradient in the line chart. So we take $\kappa$ into consideration and bring data into the formula, then we get results
 \begin{equation}
-    \kappa = \frac{\Delta \phi}{\Delta year}
+    \kappa_{1} = -4.36938978,~~ \kappa_{2} = 6.07795471,~~ \kappa_{3} = -0.10693533,~~ \kappa_{4} = -1.60162960
 \end{equation}
+\par $\kappa_{max} = \kappa_{2}$, so \textbf{Texas} has the biggest increase rate in 2009.
+
+\par Similarly, we take population into consideration and get the gradient of the  proportion of per capita renewable energy usage. 
 
 \par Then we bring data into the formula and get results
 \begin{equation}
-    \kappa_{CA} = -4.36938978,~~ \kappa_{TX} = 6.07795471,~~ \kappa_{NM} = -0.10693533,~~ \kappa_{AZ} = -1.60162960
+    \mu_{1} = -0.23615508,~~ \mu_{2} = -1.21046745,~~ \mu_{3} = 0.93103726,~~ \mu_{4} = 0.51558527
 \end{equation}
-\par $\kappa_{max} = \kappa_{TX}$, so \textbf{Texas} has the biggest increase rate in 2009.
-
-\par Similarly, we take population into consideration and get the gradient of the proportion of per capita renewable energy usage. Let $\mu$ be the gradient of every state, then 
-\begin{equation}
-    \mu = \frac{\Delta \Phi}{\Delta year}
-\end{equation}
-
-\par Then we bring data into the formula and get results
-\begin{equation}
-    \mu_{CA} = -0.23615508,~~ \mu_{TX} = -1.21046745,~~ \mu_{NM} = 0.93103726,~~ \mu_{AZ} = 0.51558527
-\end{equation}
-\par $\mu_{max} = \mu_{NM}$, so \textbf{New Mexico} has the biggest per capita increase rate in 2009.
+\par $\mu_{max} = \mu_{3}$, so \textbf{New Mexico} has the biggest per capita increase rate in 2009.
 
 \subsection{Best profile choice}
 \par In summary, there are a variety of perspectives to choose the best profile among the four state. Different states have their own best performance in different perspectives, but after taking various factors into consideration,  \textbf{New Mexico} has the best performance in renewable energy usage.
 So the best profile of 2009 belongs to \textbf{New Mexico}.
 
+% \subsection{The reasons for not considering economic factors}
+% \par Some people may think that economy is an essential factor when choosing the best profile. However, after analysis, we are able to prove that economic fatcors do not need to be considered.
+% \par It is 
 
 % Chapter 7
 \section{Prediction Model}
@@ -836,7 +866,7 @@ Arizona & 85817.10767 & 130949.4257 \\
 
 
 \newpage%另起一页书写正文
-\thispagestyle{empty}%本页不遍页码
+% \thispagestyle{empty}%本页不遍页码
 %以下是参考文献
 \phantomsection%生成该页的链接
 \addcontentsline{toc}{section}{\refname}
@@ -881,26 +911,25 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
 
 \newpage%另起一页书写
 \begin{appendices} 
-    \pagestyle{empty}
+    % \pagestyle{empty}
     \section*{Figures}
 \begin{figure}[h]%[!hptb] 
     \centering
     \includegraphics[width=0.7\textwidth]{./Pic/1-3.png}
     % 图片标题
     \caption{The weights of variables of the four states in 2009.}
-    \label{fig:part-2-AZ}  
 \end{figure}
 \begin{figure}[h]%[!hptb] 
     \centering
-    \includegraphics[width=0.7\textwidth]{./Pic/part-2-AZ.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/B-classify-AZ.png}
     % 图片标题
     \caption{Evolution of energy profile of AZ (1960-2009).}
-    \label{fig:part-2-AZ}  
+    \label{fig:part-2-AZ}
 \end{figure}
 
 \begin{figure}[h]%[!hptb] 
     \centering 
-    \includegraphics[width=0.7\textwidth]{./Pic/part-2-NM.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/B-classify-NM.png}
     % 图片标题
     \caption{Evolution of energy profile of NM (1960-2009).}
     \label{fig:part-2-NM}  
@@ -908,7 +937,7 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
 
 \begin{figure}[h]%[!hptb] 
     \centering 
-    \includegraphics[width=0.7\textwidth]{./Pic/part-2-TX.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/B-classify-TX.png}
     % 图片标题
     \caption{Evolution of energy profile of TX (1960-2009).}
     \label{fig:part-2-TX}  
@@ -1312,7 +1341,7 @@ if __name__ == '__main__':
             df_final.loc[len(df_final)] = [year, state] + list(df_weight['weight'])
     df_final = df_final.rename(columns={
         "Million cubic feet": "natural gas", "Million kilowatthours": "electricity",
-        "Thousand barrels": "fuel oil", "Thousand short tons": "coal coke"})
+        "Thousand barrels": "petroleum products", "Thousand short tons": "coal"})
     df_final.to_csv('./data/A-final.csv', index=False)
     df_final.drop(['year'], axis=1).plot(x='state', kind='bar', rot=0)
     plt.title('Weights of energy classification in 2009', fontweight='bold')
