@@ -102,9 +102,6 @@
     \item In factor analysis, we suppose the corresponding valuables as the main factors when cumulative percentage is over 0.65 .
     \item When we do regression analysis, we suppose that F-test or t-test is passed if the Pr of them is less than 0.05.
     \item When we do regression analysis, we suppose that effect of regression is good if $R^{2}$ is greater than 0.65.
-    \item In the process of information dissemination, we assume that the network edge is directed.
-    \item It is assumed that only the neighboring nodes will be affected.
-    \item Information can only be transmitted from the source to the spread point, and it will not produce cross dissemination.
 \end{enumerate}
 
 %这里写模型假设
@@ -544,28 +541,27 @@ Then we calculate the scores of the four states in every year, and draw a line c
 % TODO: which diffs?
 
 % 5.3.1
-\subsubsection{Result of per capita usage}
-\par We have built the AHP model and finished a whole process of calculating with the model. Now we let $P_i$ take the place of $X_i$ like the following figure and execute the subsequent process.
-
-% 5.3.2
 \subsubsection{Differences among the four states}
 
 \begin{itemize}
-    \item Different states account for different proportion of the renewable energy usage. California always accounts for the most while New Mexico always accounts for the least.
+    \item Different states account for different proportion of the total renewable energy usage. California always accounts for the most while New Mexico always accounts for the least.
+    \item Different states have different level of the pre capita renewable energy usage. California and Texas always accounts for the least while New Mexico and Arizona always accounts for the most.
     \item The fluctuation of the proportion of New Mexico is not so obvious, but other three states have changed a lot.
-    \item After 2000, AZ has a steady trend of declining, while other states keep fluctuating.
-    \item Different state has different major usage of renewable energy. CA and AZ use renewable energy mainly in electric power, new Mexico mainly in resident sector and Texas mainly in industry.
-    \item The distribution of renewable energy usage has changed a lot in all of the four states, but the changing trend of each state is different from others.
+    \item After 2000, the score based on the total renewable energy of Arizona has a steady trend of declining, while other states keep fluctuating.
+    \item Different state has different major usage of renewable energy. California and Arizona use renewable energy mainly in electric power, New Mexico mainly in resident sector and Texas mainly in industry.
+    \item The distribution of tatal renewable energy usage has changed a lot in all of the four states, but the changing trend of each state is different from others.
+    
 \end{itemize}
 
-% 5.3.3
+% 5.3.2
 \subsubsection{Similarities among the four states}
 
 \begin{itemize}
     \item All of the states can be easily affected by policy change, which can be infered from the sharp rise and fall in the figure.
-    \item All of the states have different distribution of renewable energy usage.
+    \item All of the states have different distribution of total renewable energy usage.
     \item All of the states have little renewable energy usage in commercial sector.
     \item All of the states have a trend of increasing proportion of transportation, while it was almost zero at first.
+    \item All of the states do not have a huge change in the level of per capita renewable energy usage from 1960 to 2009.
 \end{itemize}
 
 
@@ -645,7 +641,7 @@ So the best profile of 2009 belongs to \textbf{New Mexico}.
 
 
 
-\section{Problem D : Prediction of energy profile in 2025 and 2050}
+\section{Part \uppercase\expandafter{\romannumeral1} Problem D : Prediction of energy profile in 2025 and 2050}
 \par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the socres of the four states in 2025 and 2050.
 \subsection{Regression analysis model}  
 \subsubsection{Regression equations}
@@ -678,13 +674,13 @@ AZ=e^{-0.10513 \times year+213.24602}
 \hline
 State & Score-Total in 2025 & Score-Total in 2050 \\
 \hline
-California & 50.04186 & 50.00001 \\
+California & 50.04186\% & 50.00001\% \\
 \hline
-Texas & 46.76163 & 47.29053 \\
+Texas & 46.76163\% & 47.29053\% \\
 \hline
-New Mexico & 1.59588 & 2.56588 \\
+New Mexico & 1.59588\% & 2.56588\% \\
 \hline
-Arizona & 1.60063 & 0.14358 \\
+Arizona & 1.60063\% & 0.14358\% \\
 \hline
 \end{tabular}
 \caption{Scores of four states in 2025 and 2050}
@@ -702,6 +698,7 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 \]
 
 \subsection{Analysis of the results}
+\subsubsection{Level of total renewable energy usage}
 \par From 2025 to 2050, based on the total renewable energy usage, socre of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the socre of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows with a slow rate.
 \par Therefore, comparing to other states, the levels of total renewable energy usage of the four states are as follows.
 \begin{itemize}
@@ -710,7 +707,8 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
     \item New Mexico: get better than Arizona and also keeps growing.
     \item Arizona: is not good and need to change.
 \end{itemize}
-\par However, the socres based on the per capita renewable energy usage do not have a huge change, they are still in the region.
+\subsubsection{Level of pre capita renewable energy usage}
+\par The socres based on the per capita renewable energy usage do not have a huge change, they are still in the region.
 \par Therefore, comparing to other states, the level of per capita renewable energy usage are as follows.
 \begin{itemize}
     \item California and Texas: are still the lowest.
@@ -788,8 +786,8 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 \text{\\}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
-    \item The information network model established by us has good universality, which is suitable for all kinds of information dissemination media, and has a good time-adaptability.
-    \item In our paper, we have simulated the most of the models we have built, and have been optimized to improve the stability and reliability of the model.
+    \item In Problem A, we used factor analysis to obtain the energy profile of the four kines of energy, besides the energy profile of renewable energy.
+    \item In Problem B, we considered the influence of the total population of each state, which made our model base on the situation of each state fully.
     \item There are many different factors that affect the complicated problem. We classify the influencing factors and put forward the quantitative indexes. At the same time, we use of examples to test the quantitative indicators which are screened out. Only in this way, can we select out the well-founded indicators.
 \end{enumerate}
 
