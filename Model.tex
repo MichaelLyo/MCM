@@ -554,13 +554,14 @@ Then we calculate the scores of the four states in every year, and draw a line c
 
 
 % 6
-\section{Problem C: "Best" profile for use of cleaner, renewable energy in 2009}
+\section{Best Profile Analysis Model}
 
 \par The governors are interested at forming a realistic new energy compact focused on increased usage of cleaner, renewable energy sources. But before building the compact, it is of great significance to compare the renewable energy use profile among four states and get the best profile to encourage states to accelerate the development of renewable energy.
 
 \par We have compared the profile of four states in previous section a lot, so in this part, we foucs on setting up a series of criteria and choosing a best profile of them. 
 
 \subsection{Best profile in renewable energy usage amount}
+
 \par Based on the result of Problem B, we can get the scores of the importance of renewable energy usage of different states, which actually stands for the state's proportion of renewable energy usage in all states under the influence of five sectors. On this occasion, we can get the biggest proportion, which represents the state that uses the most renewable energy in the year.
 \par Let $\phi$ represents the proportion of each state in 2009, then we can get the result as follows from the calculation of Problem B
 
@@ -568,54 +569,61 @@ Then we calculate the scores of the four states in every year, and draw a line c
     \phi_{CA} = 55.65557290,~~ \phi_{TX} = 38.04528274,~~ \phi_{NM} = 0.99719276,~~ \phi_{AZ} = 5.30195160
 \end{equation}
 
-\par So the biggest proportion is $\phi_{CA}$, which means that California has the biggest energy usage amount 
+\par $\phi_{max} = \phi_{CA}$, so the biggest proportion is $\phi_{CA}$, which means that \textbf{California} has the biggest energy usage amount in 2009.
+
+\par But other governors may have different opinions, they may hold the view that it is unfair since California has the biggest population. On this occasion, we will take the result of per capita usage for analysis. Let $\Phi$ represents the per capita renewable energy usage proportion of each state in 2009, then we can get the data
+
+\begin{equation}
+    \Phi_{CA} = 4.05334714,~~ \Phi_{TX} = 8.00804230,~~ \Phi_{NM} = 44.55708957,~~ \Phi_{AZ} = 43.38152098
+\end{equation}
+\par $\Phi_{max} = \Phi_{NM}$, so the biggest per capita proportion is $\Phi_{NM}$, which means that \textbf{New Mexico} has the biggest per capita energy usage amount in 2009.
 
 \subsection{Best profile in increase of renewable energy usage}
 
-\par We collect the data of the proportion of various media frome 1990 to 2015, and bring them into our model to solve. The result are as follows.
+\par Besides total amount of renewable energy usage, we think that it is also indispensable to take usage increase rate into consideration, because increase rate can reflect a state's growing concern about the renewable energy and can represent the progress in renewable energy usage. It is also an important factor when judging the "best" profile.
 
-\par The lift figure above is the fitting result of date from 1990 to 2015\cite{RK} of the network effciency. The right pie chart is the proportion of different information dissemination media (around 2050), from which the phone and the internet will become the most popular information dissemination media. Meanwhile, the radio, TVs and newspaper will gradually die out.
+\par The best description of the increase of renewable energy usage is its gradient in the line chart. Let $\kappa$ be the gradient of every state, then 
 
+\begin{equation}
+    \kappa = \frac{\Delta \phi}{\Delta year}
+\end{equation}
 
-\begin{figure}[!h]
-  \centering %使得插入的照片居中显示
-  \begin{minipage}[t]{.49\linewidth}
-   % \framebox{Text}
-  \includegraphics[width=1\textwidth]{./Pic/P3_.png}
-  \caption{The Network Effciency in Different Years (1990-2015)}
-  \end{minipage}
-  \begin{minipage}[t]{.49\linewidth}
-  \includegraphics[width=1\textwidth]{./Pic/P3.png}
-   %\framebox{Text}
-  \caption{The Proportion of Different Information Dissemination Media Pie Chart (around 2050).}
-  \end{minipage}
-\end{figure}
+\par Then we bring data into the formula and get results
+\begin{equation}
+    \kappa_{CA} = -4.36938978,~~ \kappa_{TX} = 6.07795471,~~ \kappa_{NM} = -0.10693533,~~ \kappa_{AZ} = -1.60162960
+\end{equation}
+\par $\kappa_{max} = \kappa_{TX}$, so \textbf{Texas} has the biggest increase rate in 2009.
 
+\par Similarly, we take population into consideration and get the gradient of the  proportion of per capita renewable energy usage. Let $\mu$ be the gradient of every state, then 
+\begin{equation}
+    \mu = \frac{\Delta \Phi}{\Delta year}
+\end{equation}
 
-\par The life line graph is the proportion of different information dissemination media around 2050 (\textbf{\emph{assume there is no new information dissemination technology appearing}}).  Left of the Dashed Line shows the real data collected online,while right display the predicted data.
+\par Then we bring data into the formula and get results
+\begin{equation}
+    \mu_{CA} = -0.23615508,~~ \mu_{TX} = -1.21046745,~~ \mu_{NM} = 0.93103726,~~ \mu_{AZ} = 0.51558527
+\end{equation}
+\par $\mu_{max} = \mu_{NM}$, so \textbf{New Mexico} has the biggest per capita increase rate in 2009.
 
-\begin{figure}[!h]
-  \centering %使得插入的照片居中显示
-  \begin{minipage}[t]{.49\linewidth}
-   % \framebox{Text}
-  \includegraphics[width=1\textwidth]{./Pic/P3_21.jpg}
-  \caption{The Forecast Curve of Different Media Using Proportion (No New Technology)}
-  \end{minipage}
-  \begin{minipage}[t]{.47\linewidth}
-  \includegraphics[width=1\textwidth]{./Pic/P3_22.jpg}
-   %\framebox{Text}
-  \caption{The Forecast Curve of Different Media Using Proportion (Invent New Technology)}
-  \end{minipage}
-\end{figure}
-
-
-\par The right line graph is the proportion of different information dissemination media around 2050 (\textbf{\emph{assume there has new information dissemination technology appearing}}). Left part chart of the Dashed Line shows the real data collected online, while the right one displays the predicted data. The line which is pointed represents the time that the new technology turning up in the future which tends to influence the society.
-
-\par We use the data obtained from the ITU to predict the condition of information dissemination media in 2050, as the same time, we also get the data verify the reliability of the model. Not only did we obtain the data based on the prediction of the emergence of new technology, but also through access to relevant information, we can boldly gain the date based on have a new technology coming into being. The model is comprehensive and accurate.
+\subsection{Best profile choice}
+\par In summary, there are a variety of perspectives to choose a best profile among the four state. Different states have their own best performance in different perspectives, but after taking various factors into consideration,  \textbf{New Mexico} has the most best performance in renewable energy usage.
+So the best profile of 2009 belongs to \textbf{New Mexico}.
 
 
 
-
+% \begin{figure}[!h]
+%   \centering %使得插入的照片居中显示
+%   \begin{minipage}[t]{.49\linewidth}
+%    % \framebox{Text}
+%   \includegraphics[width=1\textwidth]{./Pic/P3_.png}
+%   \caption{The Network Effciency in Different Years (1990-2015)}
+%   \end{minipage}
+%   \begin{minipage}[t]{.49\linewidth}
+%   \includegraphics[width=1\textwidth]{./Pic/P3.png}
+%    %\framebox{Text}
+%   \caption{The Proportion of Different Information Dissemination Media Pie Chart (around 2050).}
+%   \end{minipage}
+% \end{figure}
 
 
 
