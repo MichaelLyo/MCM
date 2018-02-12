@@ -27,7 +27,6 @@
 \makeatother
 
 %设置参考文献的小上标
-
 \begin{document}
 %摘要
 \begin{abstract}
@@ -66,10 +65,10 @@
 %In reference \cite{RefB}.%引用参考文献
 
 \subsection{Background}
- 
-\par Nowadays, with the development of technology and the deterioration of environment, many countries, especially the Uinted States, began to value the renewable energy, such as wind energy and geothermal energy. Meanwhile, traditional energy, such as gasoline and coal, still plays an important role in economics. And it is obvious that the usage of the clean and renewable energy will support the future of mankind.
+    
+\par Nowadays, with the development of technology and the deterioration of the environment, many countries, especially the United States, began to value the renewable energy, such as wind energy and geothermal energy. Meanwhile, traditional energy, such as gasoline and coal, still plays an important role in economics. And it is obvious that the usage of the clean and renewable energy will support the future of mankind.
 \par In the United States, an interstate compact is an agreement between two or more states. Frequently, these agreements create a new governmental agency which is responsible for administering or improving some shared resource such as a seaport or public transportation infrastructure.\cite{1} In 1970, the Western Interstate Energy Compact was formed, which was devoted to foster cooperation to develop and manage the nuclear technology. Recently, California, Arizona, New Mexico, and Texas wish to form a new interstate energy compact focused on increased usage of renewable energy sources. 
-\par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. In order to inform a set of goals for the new interstate energy compact, we will analysize the given data and model.
+\par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. In order to inform a set of goals for the new interstate energy compact, we will analyze the given data and model.
 
 
 
@@ -78,13 +77,13 @@
 \subsection{Problem Restatement and Analysis}
 %这一部分写问题分析以及我们要解决的问题
 \subsubsection{Part \uppercase\expandafter{\romannumeral1}}
-\par For Problem A, in order to lay the foundation of analyzing , we are required to create an energy profile for each of the four states. Meanwhile, the profiles should be created on the analysis of the given data.
+\par For Problem A, in order to lay the foundation of analyzing, we are required to create an energy profile for each of the four states. Meanwhile, the profiles should be created on the analysis of the given data.
 
-\par In regard with Problem B, 
+\par In regard to Problem B, 
 
 \par For problem C, 
 
-\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B,C and the given data to establish regression equations or other models.
+\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B, C and the given data to establish regression equations or other models.
 
 \subsubsection{Part \uppercase\expandafter{\romannumeral2}}
 \par It is suggested in the Problem A that,
@@ -98,7 +97,7 @@
 \section{Assumption}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
-    \item In factor analysis, we suppose the corresponding valuables as the main factors when cumulative percentage is over 0.65 .
+    \item In factor analysis, we suppose the corresponding valuables as the main factors when the cumulative percentage is over 0.65.
     \item When we do regression analysis, we suppose that F-test or t-test is passed if the Pr of them is less than 0.05.
     \item When we do regression analysis, we suppose that effect of regression is good if $R^{2}$ is greater than 0.65.
 \end{enumerate}
@@ -173,7 +172,7 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 \begin{itemize}
     \item First and second characters: describes an energy source (for example, NG for natural gas, MG for motor gasoline);
     \item Third and fourth characters: describes an energy sector or an energy activity (for example, RC for residential consumption, PR for production);
-    \item Fifth character: describes a type of data (for example, P for data in physical unit, B for data in billion Btu).	\cite{3}
+    \item Fifth character: describes a type of data (for example, P for data in physical unit, B for data in billion Btu).    \cite{3}
 \end{itemize}
 
 \par As described above, the first part and the second part of the MSN code represent for certain specific meanings. However, in our analysis process, we are more concerned about the general classification of these MSN codes. 
@@ -198,11 +197,11 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 
 
 
-\par In order to classify the 215 MSNs more clearly, we look into everyone of the division and find that a large percent of the kinds have the suffix P, which represents the standardized physical units. Physical units naturally represents for the energy classification in the real physical world, and there are mainly \textbf{4 kinds of standardized physical units} in the data set as can be seen in figure \ref{fig:classification_by_unit}, so it is reasonable to classify the data into 4 groups according to the units.
+\par In order to classify the 215 MSNs more clearly, we look into everyone of the division and find that a large percent of the kinds have the suffix P, which represents the standardized physical units. Physical units naturally represent for the energy classification in the real physical world, and there are mainly \textbf{4 kinds of standardized physical units} in the data set as can be seen in figure \ref{fig:classification_by_unit}, so it is reasonable to classify the data into 4 groups according to the units.
 \par According to the analysis above, we suppose the four units as the following representatives.
 \par \textbf{fule oil}: Thousand barrels;
-\textbf{coal coke}: Thouesand short tons;
-\textbf{electricity}: Million kilowatthours;
+\textbf{coal coke}: Thousand short tons;
+\textbf{electricity}: Million kilowatt-hours;
 \textbf{natural gas}: Million cubic feet.
 
 \begin{figure}[!h]%[!hptb] 
@@ -217,7 +216,7 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 
 \par There are many relationships among MSNs. To simplify the complex dependencies between the four energy classification, we used factor analysis to establish an optimal model to analyze the actual weights of the four types of energy sources by following steps\cite{2}:
 
-% \par According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables, so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
+% \par According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
 \begin{enumerate}[Step 1:]
 \item Standardize data samples.
 
@@ -297,7 +296,7 @@ the second row of A is
 \end{equation}
 \begin{equation}
     \centering
- \text{electricity}=a_{21} \times f_1+a_{22} \times f_2
+    \text{electricity}=a_{21} \times f_1+a_{22} \times f_2
 \end{equation}
 \begin{equation}
     \centering
@@ -317,7 +316,7 @@ w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i } \times 100\%
 \theta_i=A[i,1] \times \lambda_1+A[i,2] \times \lambda_2+A[i,3] \times \lambda_3+A[i,4] \times \lambda_4
 \end{equation}
 
-\par Therefore, we can obtain the the weight of natural gas, electricity, fuel oil and coal coke, which are between 0\% and 100\%.
+\par Therefore, we can obtain the weight of natural gas, electricity, fuel oil and coal coke, which are between 0\% and 100\%.
 
 \[
 w_1, w_2, w_3, w_4.
@@ -327,7 +326,7 @@ w_1, w_2, w_3, w_4.
 \subsubsection{Profiles of four kinds of energy}
 
 \par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, fuel oil, coal coke, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal coke, and a negative factor for natural gas, electricity, fuel oil. 
- So we can obtain the weights of variables of the four states in 2009 as following figure:
+    So we can obtain the weights of variables of the four states in 2009 as the following figure:
 
 \begin{figure}[H] 
     \centering 
@@ -341,15 +340,15 @@ w_1, w_2, w_3, w_4.
 % 4.3
 \subsection{Renewable energy profile}
 
-\par In the previous section, we have set up a good factor analysis model for energy classification. It dose help us build the profile of the states' energy, but it dosen't pay much attention to the difference between renewable energy and non-renewable energy. So in this part, we analyze the data set and give the profile of renewable energy in four states.
+\par In the previous section, we have set up a good factor analysis model for energy classification. It doses help us build the profile of the states' energy, but it dosesn't pay much attention to the difference between renewable energy and non-renewable energy. So in this part, we analyze the data set and give the profile of renewable energy in four states.
 
 % 4.3.1
 \subsubsection{Renewable energy usage percentage}
 \par To get a preliminary understanding of the renewable energy usage in four states, we decide to get the proportion of renewable energy in total energy in the first step.
 
-\par What's important is that, we find that there are some specific MSNs and formulas in the reference \cite{4} which can describe the usage of renewable energy clearly and precisely. MSN RETCB is a good example, which represents renewable energy sources total consumed in a state.
-\par Then we search for the MSN in the given data and find every state have have this MSN. 
-So this is indeed the representative MSN variable of the usage of renewable energy in every states. And then we find the \textbf{TETCB} MSN stands for the total energy consumed in a state. So we get the equation:
+\par What's important is that we find that there are some specific MSNs and formulas in the reference \cite{4} which can describe the usage of renewable energy clearly and precisely. MSN RETCB is a good example, which represents renewable energy sources total consumed in a state.
+\par Then we search for the MSN in the given data and find every state have this MSN. 
+So this is indeed the representative MSN variable of the usage of renewable energy in every state. And then we find the \textbf{TETCB} MSN stands for the total energy consumed in a state. So we get the equation:
 
 \begin{equation}
     \eta_1=\frac{\text{RETCB}}{\text{TETCB}}
@@ -366,15 +365,15 @@ So this is indeed the representative MSN variable of the usage of renewable ener
 \end{figure}
 % 4.3.2
 \subsubsection{Renewable energy usage in different sectors}
-\par There are many factors that influence the usage of energy in a state. So it is reasonable to search for the situation of renewable energy usage in different sector in every state.
-\par Similar to the previous section, we find that there are some MSNs that describe the renewable energy in certain sector and formulas that calculate for the value of it. 
-Take transportation sector for example, MSN \textbf{REACB} stands for renewable energy sources consumed by the transportation sector, so the sector's percentage in renewable energy consumption can be calculated through the formula. 
+\par There are many factors that influence the usage of energy in a state. So it is reasonable to search for the situation of renewable energy usage in the different sector in every state.
+\par Similar to the previous section, we find that there are some MSNs that describe the renewable energy in certain sector and formulas that calculate the value of it. 
+Take transportation sector, for example, MSN \textbf{REACB} stands for renewable energy sources consumed by the transportation sector, so the sector's percentage in renewable energy consumption can be calculated through the formula. 
 
 \begin{equation}
     \eta_2=\frac{REACB}{RETCB} \times 100\%
 \end{equation}
 
-\par After calculating with formulas, we get the results of $\eta_2$ , which can be seen in table \ref{tab:1-3}.
+\par After calculating with formulas, we get the results of $\eta_2 $, which can be seen in table \ref{tab:1-3}.
 
 \begin{table}[!htb]
     \centering
@@ -402,7 +401,7 @@ Take transportation sector for example, MSN \textbf{REACB} stands for renewable 
 \section{Profile Evolution Model \& Energy Usage Comparison Model}
 
 
-\par We have set up a good model for energy profile evaluation (State Energy Analysis Model) to analyze the energy profile of each state at a given year. 
+\par We have set up a good model for energy profile evaluation (State Energy Analysis Model) to analyze the energy profile of each state in a given year. 
 \par The profile evolution model takes \textbf{time factor} into consideration to get the energy profile evolution results of four states. Besides,
 we will use a new model Analytic Hierarchy Process (AHP) to deal with the analysis of possible influential factors of similarities and differences among the four states.
 
@@ -414,8 +413,8 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 \subsubsection{Model improvement with time factor}
 \par Along with how to bring time factor into the model, we have a basic solution of calculating the result of the model of each year and then displaying the result in a line chart. 
 
-\par Take California as an example, we firstly use the factor analysis model to classify the energy into 4 kinds and divide them by 5 sectors, and according to step-counting principle, we get 4$\times$5 groups of basic energy profile unit. For everyone in the 20 units, we build a line chart to describe the trend as the year changes and put all of them into one diagram to have a more intuitive comparison, as can been seen in figure \ref{fig:part-2-CA}.  
-\par Results of other states can been seen in the Appendix. % TODO: which appendix?
+\par Take California as an example, we firstly use the factor analysis model to classify the energy into 4 kinds and divide them by 5 sectors, and according to step-counting principle, we get 4$\times$5 groups of basic energy profile unit. For everyone in the 20 units, we build a line chart to describe the trend as the year changes and put all of them into one diagram to have a more intuitive comparison, as can be seen in figure \ref{fig:part-2-CA}.  
+\par Results of other states can be seen in the Appendix. % TODO: which appendix?
 
 % TODO: 图片错位
 \begin{figure}[H]%[!hptb] 
@@ -430,7 +429,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 \subsubsection{Brief analysis of the evolution above}
 \par There are indeed some advantages of this model evolution, which are as follows
 \begin{itemize}
-    \item Comparison between different classification of energy is well organized and can be seen directly and clearly.
+    \item Comparison between the different classification of energy is well organized and can be seen directly and clearly.
     \item Different sectors have different impacts on energy usage, and this model can show the difference obviously.
     \item It is intelligible to see the trend of the energy usage changes over time.
     \item We can easily get to the conclusion that some sharp changes in the line chart are possibly caused by policy reform.  
@@ -438,7 +437,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 \par However, we have to say it is undeniable that this evolution model has its disadvantages, which are as follows
 \begin{itemize}
     \item It is hard to compare the influence of different factors in different states in this model, in other words, we can not see the comprehensive effect of all the factors together in energy usage influence.
-    \item Governors are more care about the interstate difference on energy usage, but this model is not intuitively enough.
+    \item Governors are more care about the interstate difference in energy usage, but this model is not intuitively enough.
     \item The model doesn't pay much attention to the usage of renewable energy, which is an important part of our problem.
 \end{itemize}
 \par In order to improve the shortcomings, we build a new model, named Analytic Hierarchy Process (AHP), to satisfy the demand of the governors.
@@ -447,16 +446,16 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 % 5.2
 \subsection{Energy Usage Comparison Model}
 
-\par With analytic hierarchy process(AHP) model, we can obtain scores of the usage of renewable energy of the four states, through which we can analysize the similarities and differences between the four states. 
+\par With analytic hierarchy process(AHP) model, we can obtain scores of the usage of renewable energy of the four states, through which we can analyze the similarities and differences between the four states. 
 % TODO: 使用摘要中的语句
 % 5.2.1
 \subsubsection{Analytic hierarchy and factor origin}
 
-\par The first step to build the model is to find key factors influencing the state comparison. There is no doubt that the target comparing object is the usage of renewable energy and the bottom layer is four states. Then we find that there are mainly five sectors in which all the energy be produced or consumed, so these sectors are the best fatcors to describe the influence of energy usage similarities and differences between the four states.
+\par The first step to build the model is to find key factors influencing the state comparison. There is no doubt that the target comparing object is the usage of renewable energy and the bottom layer is four states. Then we find that there are mainly five sectors in which all the energy be produced or consumed, so these sectors are the best factors to describe the influence of energy usage similarities and differences between the four states.
 
 \par The five sectors are transportation, commerce, electricity, industry, and resident. Resident naturally represents population, and transportation is closely linked with geography \cite{L1}. So our factors contain some of the possible influential factors of the similarities and differences described in the question, but they are more detailed and energy-concerned.
 
-\par After getting the comparison results of total renewable energy usage, we start to focus on the per capita renewable energy usage. It is reasonable that different population of a state results in different energy usage. So we divide the renewable energy usage of every sectors by population and calculate its result of AHP.
+\par After getting the comparison results of total renewable energy usage, we start to focus on the per capita renewable energy usage. It is reasonable that different population of a state results in different energy usage. So we divide the renewable energy usage of every sector by population and calculate its result of AHP.
 
 % 5.2.2
 \subsubsection{Establishment of AHP model}
@@ -470,7 +469,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 & \text{residential} = \text{WDRCB} + \text{GERCB} + \text{SORCB} \\
 \end{align*}
 
-\par We suppose Y, which is the use level of renewable energy as the target, and $X_i$, which represents the five sectors as the standard. Therefore, we have the analytic hierarchy model based on total renewable energy usage as follows.\cite{6}
+\par We suppose Y, which is the usage level of renewable energy as the target, and $X_i$, which represents the five sectors as the standard. Therefore, we have the analytic hierarchy model based on total renewable energy usage as follows.\cite{6}
 
 \begin{figure}[H] 
     \centering 
@@ -478,7 +477,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
     \caption{AHP model}
 \end{figure}
 
-\par In order to analysize the closeness between each of the sectors and Y, we analysize the given data to obtain and then use the total of the renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, which is the pairwise comparison matrix of the five sectors under Y. Simply, we can calculate $\lambda_m$(C), which is the maximum of the eigenvalues of C. Here, n is equal to 4 and RI is equal to 1.12.\cite{6} If C can not pass the check equation of consistency:
+\par In order to analyze the closeness between each of the sectors and Y, we analyze the given data to obtain and then use the total of the renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, which is the pairwise comparison matrix of the five sectors under Y. Simply, we can calculate $\lambda_m$(C), which is the maximum of the eigenvalues of C. Here, n is equal to 4 and RI is equal to 1.12.\cite{6} If C can not pass the check equation for consistency:
 \begin{equation}
     \centering
     CI=\frac{ \lambda_m(C)-n }{ n-1 }
@@ -488,7 +487,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
     CR=\frac{ CI }{ RI }<0.1 
 \end{equation}
 
-\par We will recalculate C until C pass the check of consistency. Then we calculate $\beta$, the eigenvector of $\lambda_m$(C), which meets the conditions that the sum of the coordinates of the eigenvector is 1 and the coordinates is greater than 0, called weight vector.
+\par We will recalculate C until C pass the check of consistency. Then we calculate $\beta$, the eigenvector of $\lambda_m$(C), which meets the conditions that the sum of the coordinates of the eigenvector is 1 and the coordinates are greater than 0, called weight vector.
 \par Similarly, we can also obtain $B_i$, which is the pairwise comparison matrix of the four states under $X_i$, and $\beta_i$, which is the weight vector of $X_i$.
 \par We define W as follows: % TODO: follows?
 \begin{equation}
@@ -515,12 +514,12 @@ U=\begin{pmatrix} \beta_1 & \beta_2 & \beta_3 & \beta_4\end{pmatrix}
 
 % 5.2.3
 \subsubsection{Calculation results of AHP model}
-\par Firstly, we divide the given data by year, and calculate the the scores of the four states in 2009 as follows:
+\par Firstly, we divide the given data by year, and calculate the scores of the four states in 2009 as follows:
 \[
     \text{CA}=55.6555729\%, \text{TX}=38.04528274\%, \text{NM}=0.997192757\%, \text{AZ}=5.301951596\%
 \]
 Clearly, the score of California and Texas is much greater than New Mexico and Arizona.
-Then we calculate the scores of the four states in every year, and draw a line chart as follows.
+Then we calculate the scores of the four states in every year and draw a line chart as follows.
 \begin{figure}[!hptb] 
     \centering 
     \includegraphics[width=0.8\textwidth]{./Pic/B-level-predict.png}
@@ -530,8 +529,8 @@ Then we calculate the scores of the four states in every year, and draw a line c
 
 % 5.2.4
 \subsubsection{Result of per capita usage}
-\par In order to have a more detailed and more comprehensive comparison of the similaritiesand differences of the states, we hold the view that it is not enough to compare the proportionof the renewable energy usage among states, sector usage difference within the state is also an important comparing factor.
-\par When we talk about the analytic hierarchy model based on per capita renewable energyusage, we just need to change CA, TX, NM, AZ to CA, TX, NM, AZ divided by the total population of each state. Therefore, similarly we can obtain the scores based on the per capita energy usage of the four states in each year from 1960 to 2009, and draw the line chart as follows.
+\par In order to have a more detailed and more comprehensive comparison of the similarities and differences of the states, we hold the view that it is not enough to compare the proportion of the renewable energy usage among states, sector usage difference within the state is also an important comparing factor.
+\par When we talk about the analytic hierarchy model based on per capita renewable energy usage, we just need to change CA, TX, NM, AZ to CA, TX, NM, AZ divided by the total population of each state. Therefore, similarly, we can obtain the scores based on the per capita energy usage of the four states in each year from 1960 to 2009, and draw the line chart as follows.
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.8\textwidth]{./Pic/B-level-percapita.png}
@@ -552,7 +551,7 @@ Then we calculate the scores of the four states in every year, and draw a line c
     \label{fig:B-percent}  
 \end{figure}
 
-\par We have take the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and get figure \ref{fig:B-percent}. According to figure \ref{fig:B-level-predict} and figure \ref{fig:B-percent} we can conclude the similarities and differences.
+\par We have to take the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and get figure \ref{fig:B-percent}. According to figure \ref{fig:B-level-predict} and figure \ref{fig:B-percent} we can conclude the similarities and differences.
 
 % TODO: which diffs?
 
@@ -560,12 +559,12 @@ Then we calculate the scores of the four states in every year, and draw a line c
 \subsubsection{Differences among the four states}
 
 \begin{itemize}
-    \item Different states account for different proportion of the total renewable energy usage. California always accounts for the most while New Mexico always accounts for the least.
-    \item Different states have different level of the pre capita renewable energy usage. California and Texas always accounts for the least while New Mexico and Arizona always accounts for the most.
+    \item Different states account for a different proportion of the total renewable energy usage. California always accounts for the most while New Mexico always accounts for the least.
+    \item Different states have a different level of the p capita renewable energy usage. California and Texas always account for the least while New Mexico and Arizona always account for the most.
     \item The fluctuation of the proportion of New Mexico is not so obvious, but other three states have changed a lot.
     \item After 2000, the score based on the total renewable energy of Arizona has a steady trend of declining, while other states keep fluctuating.
     \item Different state has different major usage of renewable energy. California and Arizona use renewable energy mainly in electric power, New Mexico mainly in resident sector and Texas mainly in industry.
-    \item The distribution of tatal renewable energy usage has changed a lot in all of the four states, but the changing trend of each state is different from others.
+    \item The distribution of total renewable energy usage has changed a lot in all of the four states, but the changing trend of each state is different from others.
     
 \end{itemize}
 
@@ -573,9 +572,9 @@ Then we calculate the scores of the four states in every year, and draw a line c
 \subsubsection{Similarities among the four states}
 
 \begin{itemize}
-    \item All of the states can be easily affected by policy change, which can be infered from the sharp rise and fall in the figure.
-    \item All of the states have different distribution of total renewable energy usage.
-    \item All of the states have little renewable energy usage in commercial sector.
+    \item All of the states can be easily affected by the policy change, which can be inferred from the sharp rise and fall in the figure.
+    \item All of the states have a different distribution of total renewable energy usage.
+    \item All of the states have little renewable energy usage in the commercial sector.
     \item All of the states have a trend of increasing proportion of transportation, while it was almost zero at first.
     \item All of the states do not have a huge change in the level of per capita renewable energy usage from 1960 to 2009.
 \end{itemize}
@@ -584,9 +583,9 @@ Then we calculate the scores of the four states in every year, and draw a line c
 % 6
 \section{Best Profile Analysis Model}
 
-\par The governors are interested at forming a realistic new energy compact focused on increased usage of cleaner, renewable energy sources. But before building the compact, it is of great significance to compare the renewable energy use profile among four states and get the best profile to encourage states to accelerate the development of renewable energy.
+\par The governors are interested in forming a realistic new energy compact focused on increased usage of cleaner, renewable energy sources. But before building the compact, it is of great significance to compare the renewable energy use profile among four states and get the best profile to encourage states to accelerate the development of renewable energy.
 
-\par We have compared the profile of four states in previous section a lot, so in this part, we foucs on setting up a series of criteria and choosing a best profile of them. 
+\par We have compared the profile of four states in the previous section a lot, so in this part, we focus on setting up a series of criteria and choosing the best profile of them. 
 
 \subsection{Best profile in renewable energy usage amount}
 
@@ -608,7 +607,7 @@ Then we calculate the scores of the four states in every year, and draw a line c
 
 \subsection{Best profile in increase of renewable energy usage}
 
-\par Besides total amount of renewable energy usage, we think that it is also indispensable to take usage increase rate into consideration, because increase rate can reflect a state's growing concern about the renewable energy and can represent the progress in renewable energy usage. It is also an important factor when judging the "best" profile.
+\par Besides total amount of renewable energy usage, we think that it is also indispensable to take usage increase rate into consideration because increase rate can reflect a state's growing concern about the renewable energy and can represent the progress in renewable energy usage. It is also an important factor when judging the "best" profile.
 
 \par The best description of the increase of renewable energy usage is its gradient in the line chart. Let $\kappa$ be the gradient of every state, then 
 
@@ -622,7 +621,7 @@ Then we calculate the scores of the four states in every year, and draw a line c
 \end{equation}
 \par $\kappa_{max} = \kappa_{TX}$, so \textbf{Texas} has the biggest increase rate in 2009.
 
-\par Similarly, we take population into consideration and get the gradient of the  proportion of per capita renewable energy usage. Let $\mu$ be the gradient of every state, then 
+\par Similarly, we take population into consideration and get the gradient of the proportion of per capita renewable energy usage. Let $\mu$ be the gradient of every state, then 
 \begin{equation}
     \mu = \frac{\Delta \Phi}{\Delta year}
 \end{equation}
@@ -634,7 +633,7 @@ Then we calculate the scores of the four states in every year, and draw a line c
 \par $\mu_{max} = \mu_{NM}$, so \textbf{New Mexico} has the biggest per capita increase rate in 2009.
 
 \subsection{Best profile choice}
-\par In summary, there are a variety of perspectives to choose a best profile among the four state. Different states have their own best performance in different perspectives, but after taking various factors into consideration,  \textbf{New Mexico} has the most best performance in renewable energy usage.
+\par In summary, there are a variety of perspectives to choose the best profile among the four state. Different states have their own best performance in different perspectives, but after taking various factors into consideration,  \textbf{New Mexico} has the best performance in renewable energy usage.
 So the best profile of 2009 belongs to \textbf{New Mexico}.
 
 
@@ -658,10 +657,10 @@ So the best profile of 2009 belongs to \textbf{New Mexico}.
 
 
 \section{Part \uppercase\expandafter{\romannumeral1} Problem D : Prediction of energy profile in 2025 and 2050}
-\par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the socres of the four states in 2025 and 2050.
+\par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the scores of the four states in 2025 and 2050.
 \subsection{Regression analysis model}  
 \subsubsection{Regression equations}
-\par In problem D, the policy about energy of each state will not change until 2050. At first, we consider the levels of total renewable energy usage of the four states.  According to Figure \ref{fig:B-level-predict}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores have a sudden chaneg after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the socres  of California and Texas from 2005 to 2009 to build the regression equations.
+\par In problem D, the policy about the energy of each state will not change until 2050. At first, we consider the levels of total renewable energy usage of the four states.  According to Figure \ref{fig:B-level-predict}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores have a sudden change after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the scores  of California and Texas from 2005 to 2009 to build the regression equations.
 \par The regression equations are
 \begin{equation}
     \centering
@@ -681,7 +680,7 @@ AZ:   Z_4=e^{-0.10513 \times year+213.24602}
 \end{equation}
 \par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
-\par In order to obtain S, which is the amount of the total renewable energy usage of each states in future, we need to predict the total renewable energy usage of the four states.
+\par In order to obtain S, which is the amount of the total renewable energy usage of each state in future, we need to predict the total renewable energy usage of the four states.
 \par According to Figure \ref{fig:D-total-energy} as follows,
 \begin{figure}[h]%[!hptb] 
     \centering 
@@ -701,7 +700,7 @@ S=14466 \times year-27896894
 \end{equation}
 
 \subsubsection{Scores of the four states in future}
-\par According to the regression equations, we can obtain the socre based on the total renewable energy usage and amount of the total renewable energy usage of each of the four states in 2025 and 2050 as follows.
+\par According to the regression equations, we can obtain the score based on the total renewable energy usage and amount of the total renewable energy usage of each of the four states in 2025 and 2050 as follows.
 \begin{table}[!hbp]
     \centering 
     \begin{tabular}{|c|c|c|c|c|}
@@ -736,16 +735,16 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 
 \subsection{Analysis of the results}
 \subsubsection{Level and amount of total renewable energy usage}
-\par From 2025 to 2050, based on the total renewable energy usage, score of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the socre of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows with a slow rate.
+\par From 2025 to 2050, based on the total renewable energy usage, score of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the score of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows at a slow rate.
 \par Therefore, comparing to other states, the levels and amounts of total renewable energy usage of the four states are as follows.
 \begin{itemize}
     \item California: level declines but still is the best, meanwhile, amount keeps growing.
-    \item Texas: both of level and amount keeps growing and gets colse to California.
+    \item Texas: both of level and amount keeps growing and gets close to California.
     \item New Mexico: both of level and amount gets better than Arizona and also keeps growing.
     \item Arizona: both of level and amount keeps declining.
 \end{itemize}
 \subsubsection{Level of pre capita renewable energy usage}
-\par The socres based on the per capita renewable energy usage do not have a huge change, they are still in the region.
+\par The scores based on the per capita renewable energy usage do not have a huge change, they are still in the region.
 \par Therefore, comparing to other states, the level of per capita renewable energy usage are as follows.
 \begin{itemize}
     \item California and Texas: are still the lowest.
@@ -764,18 +763,18 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 
 
 \section{Renewable energy usage targets for 2025 and 2050}
-\par According to the results of Problem D, we have predicted value of the amounts of total renewable energy when the policy dose not change. Therefore, we can build target model, which can give renewable energy usage targets for then four states in 2025 and 2050.
+\par According to the results of Problem D, we have predicted the value of the amounts of total renewable energy when the policy dose not change. Therefore, we can build target model, which can give renewable energy usage targets for than four states in 2025 and 2050.
 \subsection{Target model}
-\par For California, Texas, and New Mexico in any year, we define the target is the predicted value of amount of total renewable energy, because the amounts of total renewable energy of them keep growing.
-\par For Arizona, its predicted value of amount of total renewable energy keeps declining and will get less than New Mexico. Therefore, we define the target is
+\par For California, Texas, and New Mexico in any year, we define the target is the predicted value of the amount of total renewable energy because the amounts of total renewable energy of them keep growing.
+\par For Arizona, its predicted value of the amount of total renewable energy keeps declining and will get less than New Mexico. Therefore, we define the target is
 \begin{equation}
     \centering
     Target=0.01*(5.30195+0.05263 \times (year-2009))*S
 \end{equation}
-which means from 2009, the score based on the total energy usage keep growing with the same rate of New Mexico.
+which means from 2009, the score based on the total energy usage keep growing at the same rate of New Mexico.
 \par If the real amount total renewable energy usage is not less than the predicted value of amount of total renewable energy, we consider it as the goal of the new four-state energy compact.
 \subsection{Results of target model in 2025 and 2050}
-\par According to table \ref{tab:Scores and amounts} and target model, we have the target of each date in 2025 and 2050 as follows.
+\par According to table \ref{tab:Scores and amounts} and the target model, we have the target of each date in 2025 and 2050 as follows.
 \begin{table}[!hbp]
     \centering 
     \begin{tabular}{|c|c|c|}
@@ -796,17 +795,17 @@ Arizona & 85817.10767 & 130949.4257 \\
 \section{Actions for meeting goal}
 \par In order to meet the goals above, the four states need to take some actions, especially Arizona. Here, we list four actions.
 \begin{itemize}
-    \item Increase the economic input to exploit technology about renewable energy. 
+    \item Increase the economic input to exploit technology for renewable energy. 
     \item Strengthen people's awareness of using renewable energy.
     \item Establish more renewable energy facilities, such as wind power plants and solar power plants to make more use of renewable energy.
-    \item In the presime of no influence with overall economy, limit the usage of non-renewable energy.
+    \item In the prime of no influence with the overall economy, limit the usage of non-renewable energy.
 \end{itemize}
 
-  
+    
 
 
 
- 
+    
 
 
 
@@ -817,7 +816,7 @@ Arizona & 85817.10767 & 130949.4257 \\
 \text{\\}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
-    \item We used factor analysis to obtain the energy profile of the four kines of energy, besides the energy profile of renewable energy.
+    \item We used factor analysis to obtain the energy profile of the four kinds of energy, besides the energy profile of renewable energy.
     \item We considered the influence of the total population of each state, which made our model base on the situation of each state fully.
     \item Our models are effective when we deal with the data of other states or countries.
 \end{enumerate}
@@ -826,8 +825,8 @@ Arizona & 85817.10767 & 130949.4257 \\
 \paragraph{Weaknesses}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
-    \item In factor analysis, we supposed that the corresponding valuables as the main factors when cumulative percentage is over 0.65, which may not enough.
-    \item Due to the amount of the data of scores is not enough, so that thre results of regressions may not match future very much.
+    \item In factor analysis, we supposed that the corresponding valuables as the main factors when the cumulative percentage is over 0.65, which may not enough.
+    \item Due to the amount of the data of scores is not enough, so that the results of regressions may not match future very much.
 \end{enumerate}
 
 
@@ -857,7 +856,7 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
 U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-2015 (complete). \url{https://www.eia.gov/state/seds/sep_use/notes/use_a.pdf}. 2017.
 
 \bibitem{5}
-Tang Mengling, Wang zhanling, and Li Zhijian. Using Model of Fcator Analysis to Calculate Weight and to Evaluate Water Quality[J]. Xingtai Vocational and Technical College, 2005.
+Tang Mengling, Wang zhanling, and Li Zhijian. Using Model of Factor Analysis to Calculate Weight and to Evaluate Water Quality[J]. Xingtai Vocational and Technical College, 2005.
 
 \bibitem{RC}
 U.S. Energy Information Administration, Renewable Energy Explained. \url{https://www.eia.gov/energyexplained/?page=renewable_home}. 2017
@@ -996,10 +995,10 @@ def create_scores(years, filename, df_data, df_people=None):
         options = STATES
         option_scores = states_sectors_matrix
         lorry_decision = analytical_hierarchy_process(criteria=tuple(criteria),
-                                                      criteria_scores=criteria_scores,
-                                                      options=tuple(options),
-                                                      option_scores=option_scores,
-                                                      quantitative_criteria=())
+                                                        criteria_scores=criteria_scores,
+                                                        options=tuple(options),
+                                                        option_scores=option_scores,
+                                                        quantitative_criteria=())
         # res = lorry_decision['cost_benefit_ratios']
         lorry_decision['year'] = year
         df_score = df_score.append(lorry_decision, ignore_index=True)
@@ -1048,10 +1047,10 @@ def total():
         title = 'Prediction based on regression results (2025 - 2050)'
         plt.axvspan(2025, 2050, facecolor='#2ca02c', alpha=0.2)
         plt.annotate('2025', xy=(2025, 70), xycoords='data',
-                     xytext=(0.8, 0.95), textcoords='axes fraction',
-                     arrowprops=dict(facecolor='black', shrink=0.05),
-                     horizontalalignment='right', verticalalignment='top',
-                     )
+                        xytext=(0.8, 0.95), textcoords='axes fraction',
+                        arrowprops=dict(facecolor='black', shrink=0.05),
+                        horizontalalignment='right', verticalalignment='top',
+                        )
         plt.axvline(x=2025, color="#333333", linewidth=1)
 
     plt.title(title, fontweight='bold')
@@ -1089,10 +1088,10 @@ def person():
         title = 'Prediction based on regression results (2025 - 2050)'
         plt.axvspan(2025, 2050, facecolor='#2ca02c', alpha=0.2)
         plt.annotate('2025', xy=(2025, 70), xycoords='data',
-                     xytext=(0.8, 0.95), textcoords='axes fraction',
-                     arrowprops=dict(facecolor='black', shrink=0.05),
-                     horizontalalignment='right', verticalalignment='top',
-                     )
+                        xytext=(0.8, 0.95), textcoords='axes fraction',
+                        arrowprops=dict(facecolor='black', shrink=0.05),
+                        horizontalalignment='right', verticalalignment='top',
+                        )
         plt.axvline(x=2025, color="#333333", linewidth=1)
 
     plt.title(title, fontweight='bold')
@@ -1157,7 +1156,7 @@ def load_df(years, state):
     for year in years:
         filename = './data/{}-{}.csv'.format(year, state)
         dfs.append(pd.read_csv(filename) if \\
-         os.path.exists(filename) else create_purify(year, state, filename))
+            os.path.exists(filename) else create_purify(year, state, filename))
     return pd.concat(dfs)
 \end{lstlisting}
 
