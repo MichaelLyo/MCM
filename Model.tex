@@ -68,9 +68,9 @@
 
 \subsection{Background}
  
-\par Nowadays, with the development of technology and the deterioration of environment, many countries, especially the Uinted States, began to value the clean and renewable energy, such as natural gas and electricity. Meanwhile, traditional energy, such as gasoline and coal, still plays an important role in economics. And it is obvious that the usage of the clean and renewable energy will support the future of mankind.
-\par In the United States, an interstate compact is an agreement between two or more states. Frequently, these agreements create a new governmental agency which is responsible for administering or improving some shared resource such as a seaport or public transportation infrastructure.\cite{1} In 1970, the Western Interstate Energy Compact was formed, which was devoted to foster cooperation to develop and manage the nuclear technology. Recently, California, Arizona, New Mexico, and Texas wish to form a new interstate energy compact focused on increased usage of cleaner, renewable energy sources. 
-\par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. In order to inform a set of goals for the new interstate energy compact, we will analysize the data file and model.
+\par Nowadays, with the development of technology and the deterioration of environment, many countries, especially the Uinted States, began to value the renewable energy, such as wind energy and geothermal energy. Meanwhile, traditional energy, such as gasoline and coal, still plays an important role in economics. And it is obvious that the usage of the clean and renewable energy will support the future of mankind.
+\par In the United States, an interstate compact is an agreement between two or more states. Frequently, these agreements create a new governmental agency which is responsible for administering or improving some shared resource such as a seaport or public transportation infrastructure.\cite{1} In 1970, the Western Interstate Energy Compact was formed, which was devoted to foster cooperation to develop and manage the nuclear technology. Recently, California, Arizona, New Mexico, and Texas wish to form a new interstate energy compact focused on increased usage of renewable energy sources. 
+\par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. In order to inform a set of goals for the new interstate energy compact, we will analysize the given data and model.
 
 
 
@@ -231,22 +231,25 @@ $\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\
 \item Based on the above calculation results, the system is analyzed.
 \end{enumerate}
 
-\par By using the data processed, we obtain R, which is the correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.
+\par By using the given data, we can obtain R, which is the correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.
 \begin{equation}
     \centering
-R=\begin{pmatrix} 1 & -0.389890 & 0.432474 & -0.004734 \\ -0.389890 & 1 & -0.094940 &-0.158034 \\ 0.432474 & -0.094940 & 1 & -0.016881 \\ -0.004734 & -0.158034 & -0.016881 & 1\end{pmatrix}
+R=\begin{pmatrix} 1 & r_{12} & r_{13} & r_{14} \\ r_{21} & 1 & r_{23} & r_{24} \\ r_{31} & r_{32} & 1 & r_{34} \\ r_{41} & r_{42} & r_{43} & 1\end{pmatrix}
 \end{equation}
 
 
 \par Then we can obtain 
 \[
-\lambda_1=1.638729, \lambda_2=0.454611, \lambda_3=1.089176, \lambda_4=0.817484
+\lambda_1, \lambda_2, \lambda_3, \lambda_4
 \]
-which are the eigenvalue of R.
-\par Meanwhile, we obtain the eigenvector matrix for the eigenvalues of R.
+which are the eigenvalue of R, and
+\[
+    \lambda_1 \geqslant \lambda_2 \geqslant \lambda_3 \geqslant \lambda_4
+\]
+\par Meanwhile, we obtain the eigenvector matrix for the eigenvalues of R, U[ ,i] is the eigenvector of $\lambda_i$.
 \begin{equation}
     \centering
-U=\begin{pmatrix} -0.666575 & 0.728151 & -0.131346 & -0.090683 \\ 0.281798 & 0.050295 & -0.698391 & -0.655981 \\ -0.423756 & -0.393132 & 0.443861 & -0.684737 \\ -0.544701 & -0.559209 & -0.545881 & 0.304303\end{pmatrix}
+U=\begin{pmatrix} U[ ,1] & U[ ,2] & U[ ,3] & U[ ,4]\end{pmatrix}
 \end{equation}
 \par Simply, the overall percentage and cumulative percentage of eigenvalues are as follows.
 \begin{table}[!hbp]
@@ -255,22 +258,21 @@ U=\begin{pmatrix} -0.666575 & 0.728151 & -0.131346 & -0.090683 \\ 0.281798 & 0.0
 \hline
 Eigenvalue & Overall percentage & Cumulative percentage \\
 \hline
-$\lambda_1$=1.638729 & 0.409682 & 0.409682 \\
+$\lambda_1$ & a1 & a2 \\
 \hline
-$\lambda_3$=1.089176 & 0.272294 & 0.681976 \\
+$\lambda_3$ & b1 & b2 \\
 \hline
-$\lambda_4$=0.817484 & 0.204371 & 0.886347 \\
+$\lambda_4$ & c1 & c2 \\
 \hline
-$\lambda_2$=0.454611 & 0.113653 & 1.000000 \\
+$\lambda_2$ & d1 & d2 \\
 \hline
 \end{tabular}
 \caption{Percentage}
 \end{table}
-\par Therefore, the cumulative percentage of $\lambda_1$ and $\lambda_3$ is 0.681976 colse to 0.7.
-\par According to assumption 1, the main factors are natural gas and fuel oil, the corresponding eigenvalues are $\lambda_1$ and $\lambda_3$. Then we take out their corresponding eigenvectors from U, and we can obtain the factor loading matrix
+\par We choose the two main factors that are satisfied with assumption 1. Then we take out their corresponding eigenvectors from U, and we can obtain the factor loading matrix
 \begin{equation}
     \centering
-A=\begin{pmatrix} 0.856438 & -0.145463 \\ -0.657207 & -0.429761 \\ 0.673909 & -0.408171 \\ 0.138447 & 0.846592\end{pmatrix}
+A=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ a_{31} & a_{32} \\ a_{41} & a_{42}\end{pmatrix}
 \end{equation}
 the first row of A is
 \begin{equation}
@@ -288,19 +290,19 @@ the second row of A is
 \par According to the factor loading matrix A, we can get the factor analysis model is
 \begin{equation}
     \centering
-    \text{natural gas}=0.856438 \times f_1-0.145463 \times f_2
+    \text{natural gas}=a_{11} \times f_1+a_{12} \times f_2
 \end{equation}
 \begin{equation}
     \centering
- \text{electricity}=-0.657207 \times f_1-0.429761 \times f_2
+ \text{electricity}=a_{21} \times f_1+a_{22} \times f_2
 \end{equation}
 \begin{equation}
     \centering
-    \text{fuel oil}=0.673909 \times f_1-0.408171 \times f_2
+    \text{fuel oil}=a_{31} \times f_1+a_{32} \times f_2
 \end{equation}
 \begin{equation}
     \centering
-    \text{coal coke}=0.138447 \times f_1+0.846592 \times f_2
+    \text{coal coke}=a_{41} \times f_1+a_{42} \times f_2
 \end{equation}
 \par The definition of the weight of variables is\cite{5}
 \begin{equation}
@@ -309,13 +311,13 @@ w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i } \times 100\%
 \end{equation}
 \begin{equation}
     \centering
-\theta_i=A[i,1] \times 0.409682+A[i,2] \times 0.272294+A[i,3] \times 0.204371+A[i,4] \times 0.113653
+\theta_i=A[i,1] \times \lambda_1+A[i,2] \times \lambda_2+A[i,3] \times \lambda_3+A[i,4] \times \lambda_4
 \end{equation}
 
-\par Therefore, we can obtain the the weight of natural gas, electricity, fuel oil and coal coke.
+\par Therefore, we can obtain the the weight of natural gas, electricity, fuel oil and coal coke, which are between 0\% and 100\%.
 
 \[
-w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
+w_1, w_2, w_3, w_4.
 \]
 
 % 4.2.2
@@ -665,25 +667,41 @@ AZ=e^{-0.10513 \times year+213.24602}
 \end{equation}
 \par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
+\par In order to obtain the amount of the total renewable energy usage of each states, we need to predict the total renewable energy usage of the four states.
+\par According to Figure \ref{fig:D-total-energy} as follows,
+\begin{figure}[h]%[!hptb] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{./Pic/D-total-energy.png}
+    \caption{Total renewable energy usage of the four states from 1960 to 2009}
+    \label{fig:D-total-energy}  
+\end{figure}
+we can find that we should bulid linear regression equation.
+\begin{equation}
+    \centering
+Totalamount=14466 \times year-27896894
+\end{equation}
+
 
 \subsubsection{Scores of the four states in future}
-\par According to the regression equations, we can obtain the socres based on the total renewable energy usage of the four states in 2025 and 2050 are as follows.
+\par According to the regression equations, we can obtain the socre based on the total renewable energy usage and amount of the total renewable energy usage of each of the four states in 2025 and 2050 as follows.
 \begin{table}[!hbp]
     \centering 
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|}
 \hline
-State & Score-Total in 2025 & Score-Total in 2050 \\
+State & Score-Total in 2025 & Amount in 2025 & Score-Total in 2050 & Amount in 2050\\
 \hline
-California & 50.04186\% & 50.00001\% \\
+California & 50.04186\% & 698962.6821 & 50.00001\% & 879203.1758 \\
 \hline
-Texas & 46.76163\% & 47.29053\% \\
+Texas & 46.76163\% & 653145.8727 & 47.29053\% & 831559.5170 \\
 \hline
-New Mexico & 1.59588\% & 2.56588\% \\
+New Mexico & 1.59588\% & 222290.54965 & 2.56588\% & 45118.58787 \\
 \hline
-Arizona & 1.60063\% & 0.14358\% \\
+Arizona & 1.60063\% & 22356.89556 & 0.14358\% &2524.719335 \\
+\hline
+States Total & 100\% & 1396756 & 100\% & 1758406 \\
 \hline
 \end{tabular}
-\caption{Scores of four states in 2025 and 2050}
+\caption{Scores and amount of four states in 2025 and 2050}
 \end{table}
 \par Besides, we draw the graph of the regression equations as follows.
 \begin{figure}[h]%[!hptb] 
@@ -698,14 +716,14 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 \]
 
 \subsection{Analysis of the results}
-\subsubsection{Level of total renewable energy usage}
-\par From 2025 to 2050, based on the total renewable energy usage, socre of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the socre of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows with a slow rate.
-\par Therefore, comparing to other states, the levels of total renewable energy usage of the four states are as follows.
+\subsubsection{Level and amount of total renewable energy usage}
+\par From 2025 to 2050, based on the total renewable energy usage, score of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the socre of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows with a slow rate.
+\par Therefore, comparing to other states, the levels and amounts of total renewable energy usage of the four states are as follows.
 \begin{itemize}
-    \item California: declines but still is the best.
-    \item Texas: keeps growing and gets colse to California.
-    \item New Mexico: get better than Arizona and also keeps growing.
-    \item Arizona: is not good and need to change.
+    \item California: level declines but still is the best, meanwhile, amount keeps growing.
+    \item Texas: both of level and amount keeps growing and gets colse to California.
+    \item New Mexico: both of level and amount gets better than Arizona and also keeps growing.
+    \item Arizona: both of level and amount keeps declining.
 \end{itemize}
 \subsubsection{Level of pre capita renewable energy usage}
 \par The socres based on the per capita renewable energy usage do not have a huge change, they are still in the region.
@@ -727,55 +745,15 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 
 
 \section{Part \uppercase\expandafter{\romannumeral2}, Problem A}
-\par In the first question, we set up a model of public opinion dissemination. In this chapter, we will analyze the factors that influence the spread of public opinion. At the same time, a real society is analyzed.
-\subsection{Influence Factors of Public Opinion Disseminate}
-\par There are many factors that affect the spread of public opinion, and we choose the following ~$4$~ factors as the main factors.
+\par 
 
 
-\begin{enumerate}%[(1)]
-\renewcommand{\labelenumi}{(\theenumi)}
-    \item Information value
-
-    The formula for calculating the value of information has been given in the first question. Information value can influence not only the speed of information dissemination, but also the public opinion. value of information is high, the probability of people receiving information and the degree of acceptance will be improved.
-
-
-    \item People's initial opinions and prejudices
-
-    Psychologists believe that humans are "cognitive misers"\cite{RE}. People always simplify the cognitive process as much as possible. It is very difficult for people to change their ideas once they have produced a view or bias towards an event.
-    \item Form and source of information
+  
 
     The form and source of the information can impact the value of the message, which would also affect the public opinion. The evaluation formula of information's source and form have been given in the previous paper.
 
 
-    \item Network topology structure and strength
-
-    We will use several indexes of network topology to measure the efficiency of information dissemination
-    The topology or strength of the information network in a region, country, or worldwide is depended on the three index: Average Degree ~$AD$~, Average Path Length ~$L$~, and Average Path Length ~$L$~.
-\end{enumerate}
-\par Taking into account the indexes of the public opinion Dissemination are difficult to be quantified, for simplicity, we do not consider quantitative analysis of the spread of public opinion model, we only evaluate it subjectively.
-
-\subsection{Analysis One Historical Event based on Public Opinion Dissemination Model}
-\par In order to express more vivid description of the model we build, we look for a historical event, and analyze the historical events on the basis of our model.
-
-
-
-\begin{figure}[!h]
-  \centering %使得插入的照片居中显示
-  \begin{minipage}[t]{.49\linewidth}
-   % \framebox{Text}
-  \includegraphics[width=1\textwidth]{./Pic/obama.png}
-  \caption{President Obama gets his own Twitter account.}
-  \end{minipage}
-  \begin{minipage}[t]{.49\linewidth}
-  \includegraphics[width=1\textwidth]{./Pic/p5.jpg}
-   %\framebox{Text}
-  \caption{Graph of President Obama's follower growth.\cite{RG}}
-  \label{fig:p5}
-  \end{minipage}
-\end{figure}
-\par "Hello, Twitter! It's Barack. Really! Six years in, they're finally giving me my own account.". After President Obama opened his Facebook account, he opened his Twitter account on May 18, 2015.
-\par From Figure \ref{fig:p5}, President Obama's followers has been growing rapidly over time. In our model, President Obama is one of the \textbf{\emph{Opinion Leader}}, the news that he has released is a hot and authoritative topic of concern.
-\par The analysis results of this case are very consistent with our expectations, therefore, this example verifies the accuracy of our model.
+ 
 
 
 
@@ -788,7 +766,7 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 \renewcommand{\labelenumi}{(\theenumi)}
     \item In Problem A, we used factor analysis to obtain the energy profile of the four kines of energy, besides the energy profile of renewable energy.
     \item In Problem B, we considered the influence of the total population of each state, which made our model base on the situation of each state fully.
-    \item There are many different factors that affect the complicated problem. We classify the influencing factors and put forward the quantitative indexes. At the same time, we use of examples to test the quantitative indicators which are screened out. Only in this way, can we select out the well-founded indicators.
+    \item In Problem D, the effects of regressions are very good.
 \end{enumerate}
 
 
@@ -839,14 +817,7 @@ Thomas L. Satty. How to make a decision: The Analytic Hierarchy Process[J]. Univ
 Wikipedia, Transport geography. \url{https://en.wikipedia.org/wiki/Transport_geography}. 2017
 
 
-\bibitem{RF}
-Pewresearch, State of the News Media 2012. \url{http://www.pewresearch.org/2012/03/19/state-of-the-news-media-2012/}. 2012
 
-\bibitem{RK}
-International Telecommunication Union, ICT Data and Statistics (IDS). \url{http://www.itu.int/ITU-D/ict/statistics/explorer/index.html}. 2016
-
-\bibitem{RH}
-Wikipedia, Quantum information science. \url{https://en.wikipedia.org/wiki/Quantum_information_science}. 2016
 % etc
 \end{thebibliography}
 
