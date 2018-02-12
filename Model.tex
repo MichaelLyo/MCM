@@ -12,7 +12,7 @@
 %\usepackage[XXX,nosheet]{MCMPackage}%这个参数形式可去掉summary sheet首页。
 \problem{C}  %选题
 
-\title{Energy Production}%在此插入论文标题
+\title{Energy Compact Focused On Interstate Energy Structure}%在此插入论文标题
 \date{\today}
 
 %设置段落之间的距离，若不需要删除或者注释掉即可。
@@ -33,7 +33,7 @@
 \begin{abstract}
 
 
-\par With the depletion of existing energy on the planet, the usage of energy especially renewable energy (REU) has become a more and more widespread concern. This paper establishes a series of models to help govenors understand the usage of renewable energy and build interstate energy compact.
+\par With the depletion of existing energy on the planet, the usage of energy especially renewable energy (REU) has become a more and more widespread concern. This paper establishes a series of models to help govenors understand the REU among four states and build interstate energy compact.
 
 \par In the \textbf{\emph{Energy Profile Model}}, we analyze each state's own energy profile based on factors such as the proportion of renewable energy and the weight of the primary energy, along with the main sectors in which energy be consumed. Through analyzing the classification criteria of MSN, we \textbf{\emph{dig into the data}} and get production and consumption of each kind of energy, which represent the energy's usage in sectors or in total, and the correlation coefficient between them is taken as a factor of factor analysis method, then we calculate and simulate the whole model and get the results.
 
@@ -490,27 +490,21 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 
 \par We will recalculate C until C pass the check of consistency. Then we calculate $\beta$, the eigenvector of $\lambda_m$(C), which meets the conditions that the sum of the coordinates of the eigenvector is 1 and the coordinates is greater than 0, called weight vector.
 \par Similarly, we can also obtain $B_i$, which is the pairwise comparison matrix of the four states under $X_i$, and $\beta_i$, which is the weight vector of $X_i$.
-\par We define W as follows: % TODO: follows?
+\par We define U as follows: % TODO: follows?
 \begin{equation}
     \centering
 U=\begin{pmatrix} \beta_1 & \beta_2 & \beta_3 & \beta_4\end{pmatrix}
 \end{equation}
 \par Finally, we can obtain the scores based on the total energy usage of the four states:
+
 \begin{equation}
-    \centering
-    CA=\sum_{i=1}^{5}\beta[i] \times U[i,1]
-\end{equation}
-\begin{equation}
-    \centering
-    TX=\sum_{i=1}^{5}\beta[i] \times U[i,2]
-\end{equation}
-\begin{equation}
-    \centering
-    NM=\sum_{i=1}^{5}\beta[i] \times U[i,3]
-\end{equation}
-\begin{equation}
-    \centering
-    AZ=\sum_{i=1}^{5}\beta[i] \times U[i,4]
+    \label{AHP_result}
+    \begin{array}{l}
+    \displaystyle CA=\sum_{i=1}^{5}\beta[i] \times U[i,1] \\
+    \displaystyle TX=\sum_{i=1}^{5}\beta[i] \times U[i,2] \\
+    \displaystyle NM=\sum_{i=1}^{5}\beta[i] \times U[i,3] \\
+    \displaystyle AZ=\sum_{i=1}^{5}\beta[i] \times U[i,4]
+    \end{array}
 \end{equation}
 
 % 5.2.3
@@ -588,55 +582,75 @@ Then we calculate the scores of the four states in every year, and draw a line c
 
 \par We have compared the profile of four states in previous section a lot, so in this part, we foucs on setting up a series of criteria and choosing a best profile of them. 
 
+\subsection{Model Construction}
+\par Let $\phi_i$ represents the proportion of each state , $\Phi_i$ represents the per capita renewable energy usage proportion of each state in 2009, then the biggest value of them can be described as
+
+\begin{equation}
+    \phi_{max} = MAX({\phi_i|i=1,2,3,4})
+\end{equation}
+\begin{equation}
+    \Phi_{max} = MAX({\Phi_i|i=1,2,3,4})
+\end{equation}
+
+\par Let $\kappa_i$ be the gradient of every state, then 
+
+\begin{equation}
+    \kappa = \frac{\Delta \phi_i}{\Delta year}
+\end{equation}
+\begin{equation}
+    \kappa_{max} = MAX({\kappa_i | i=1,2,3,4})
+\end{equation}
+
+\par Let $\mu_i$ be the gradient of every state, then 
+\begin{equation}
+    \mu = \frac{\Delta \Phi_i}{\Delta year}
+\end{equation}
+\begin{equation}
+    \mu_{max} = MAX({\mu_i | i=1,2,3,4})
+\end{equation}
+
 \subsection{Best profile in renewable energy usage amount}
 
-\par Based on the result of Problem B, we can get the scores of the importance of renewable energy usage of different states, which actually stands for the state's proportion of renewable energy usage in all states under the influence of five sectors. On this occasion, we can get the biggest proportion, which represents the state that uses the most renewable energy in the year.
-\par Let $\phi$ represents the proportion of each state in 2009, then we can get the result as follows from the calculation of Problem B
+\par Based on the result of Problem B, we can get the scores of the importance of renewable energy usage of different states, which actually stands for the state's proportion of renewable energy usage in all states under the influence of five sectors. On this occasion, we can get the biggest proportion, which represents the state that uses the most renewable energy in the year. We can get the result as follows from the calculation of Problem B
 
 \begin{equation}
-    \phi_{CA} = 55.65557290,~~ \phi_{TX} = 38.04528274,~~ \phi_{NM} = 0.99719276,~~ \phi_{AZ} = 5.30195160
+    \phi_{1} = 55.65557290,~~ \phi_{2} = 38.04528274,~~ \phi_{3} = 0.99719276,~~ \phi_{4} = 5.30195160
 \end{equation}
 
-\par $\phi_{max} = \phi_{CA}$, so the biggest proportion is $\phi_{CA}$, which means that \textbf{California} has the biggest energy usage amount in 2009.
+\par $\phi_{max} = \phi_{1}$, so the biggest proportion is $\phi_{1}$, which means that \textbf{California} has the biggest energy usage amount in 2009.
 
-\par But other governors may have different opinions, they may hold the view that it is unfair since California has the biggest population. On this occasion, we will take the result of per capita usage for analysis. Let $\Phi$ represents the per capita renewable energy usage proportion of each state in 2009, then we can get the data
+\par But other governors may have different opinions, they may hold the view that it is unfair since California has the biggest population. On this occasion, we will take the result of per capita usage for analysis. Then we can get the data
 
 \begin{equation}
-    \Phi_{CA} = 4.05334714,~~ \Phi_{TX} = 8.00804230,~~ \Phi_{NM} = 44.55708957,~~ \Phi_{AZ} = 43.38152098
+    \Phi_{1} = 4.05334714,~~ \Phi_{2} = 8.00804230,~~ \Phi_{3} = 44.55708957,~~ \Phi_{4} = 43.38152098
 \end{equation}
-\par $\Phi_{max} = \Phi_{NM}$, so the biggest per capita proportion is $\Phi_{NM}$, which means that \textbf{New Mexico} has the biggest per capita energy usage amount in 2009.
+\par $\Phi_{max} = \Phi_{3}$, so the biggest per capita proportion is $\Phi_{3}$, which means that \textbf{New Mexico} has the biggest per capita energy usage amount in 2009.
 
 \subsection{Best profile in increase of renewable energy usage}
 
 \par Besides total amount of renewable energy usage, we think that it is also indispensable to take usage increase rate into consideration, because increase rate can reflect a state's growing concern about the renewable energy and can represent the progress in renewable energy usage. It is also an important factor when judging the "best" profile.
 
-\par The best description of the increase of renewable energy usage is its gradient in the line chart. Let $\kappa$ be the gradient of every state, then 
-
+\par The best description of the increase of renewable energy usage is its gradient in the line chart. So we take $\kappa$ into consideration and bring data into the formula, then we get results
 \begin{equation}
-    \kappa = \frac{\Delta \phi}{\Delta year}
+    \kappa_{1} = -4.36938978,~~ \kappa_{2} = 6.07795471,~~ \kappa_{3} = -0.10693533,~~ \kappa_{4} = -1.60162960
 \end{equation}
+\par $\kappa_{max} = \kappa_{2}$, so \textbf{Texas} has the biggest increase rate in 2009.
 
-\par Then we bring data into the formula and get results
-\begin{equation}
-    \kappa_{CA} = -4.36938978,~~ \kappa_{TX} = 6.07795471,~~ \kappa_{NM} = -0.10693533,~~ \kappa_{AZ} = -1.60162960
-\end{equation}
-\par $\kappa_{max} = \kappa_{TX}$, so \textbf{Texas} has the biggest increase rate in 2009.
-
-\par Similarly, we take population into consideration and get the gradient of the  proportion of per capita renewable energy usage. Let $\mu$ be the gradient of every state, then 
-\begin{equation}
-    \mu = \frac{\Delta \Phi}{\Delta year}
-\end{equation}
+\par Similarly, we take population into consideration and get the gradient of the  proportion of per capita renewable energy usage. 
 
 \par Then we bring data into the formula and get results
 \begin{equation}
-    \mu_{CA} = -0.23615508,~~ \mu_{TX} = -1.21046745,~~ \mu_{NM} = 0.93103726,~~ \mu_{AZ} = 0.51558527
+    \mu_{1} = -0.23615508,~~ \mu_{2} = -1.21046745,~~ \mu_{3} = 0.93103726,~~ \mu_{4} = 0.51558527
 \end{equation}
-\par $\mu_{max} = \mu_{NM}$, so \textbf{New Mexico} has the biggest per capita increase rate in 2009.
+\par $\mu_{max} = \mu_{3}$, so \textbf{New Mexico} has the biggest per capita increase rate in 2009.
 
 \subsection{Best profile choice}
 \par In summary, there are a variety of perspectives to choose a best profile among the four state. Different states have their own best performance in different perspectives, but after taking various factors into consideration,  \textbf{New Mexico} has the most best performance in renewable energy usage.
 So the best profile of 2009 belongs to \textbf{New Mexico}.
 
+% \subsection{The reasons for not considering economic factors}
+% \par Some people may think that economy is an essential factor when choosing the best profile. However, after analysis, we are able to prove that economic fatcors do not need to be considered.
+% \par It is 
 
 
 % \begin{figure}[!h]
