@@ -66,28 +66,29 @@
 
 \subsection{Background}
     
-\par Nowadays, with the development of technology and the deterioration of the environment, many countries, especially the United States, began to value the renewable energy, such as wind energy and geothermal energy. Meanwhile, traditional energy, such as gasoline and coal, still plays an important role in economics. And it is obvious that the usage of the clean and renewable energy will support the future of mankind.
+\par Nowadays, with the development of technology and the deterioration of the environment, many countries, especially the United States, began to value the renewable energy, such as wind energy and geothermal energy. Meanwhile, traditional energy, such as gasoline and coal, still plays an important role in economics. And it is obvious that the usage of the renewable energy will support the future of mankind.
 \par In the United States, an interstate compact is an agreement between two or more states. Frequently, these agreements create a new governmental agency which is responsible for administering or improving some shared resource such as a seaport or public transportation infrastructure.\cite{1} In 1970, the Western Interstate Energy Compact was formed, which was devoted to foster cooperation to develop and manage the nuclear technology. Recently, California, Arizona, New Mexico, and Texas wish to form a new interstate energy compact focused on increased usage of renewable energy sources. 
 \par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. In order to inform a set of goals for the new interstate energy compact, we will analyze the given data and model.
 
 
 \subsection{Problem Restatement}
 %这一部分写问题分析以及我们要解决的问题
-% \subsubsection{Part \uppercase\expandafter{\romannumeral1}}
-\par For Problem A, in order to lay the foundation of analyzing, we are required to create an energy profile for each of the four states. Meanwhile, the profiles should be created on the analysis of the given data.
+\subsubsection{Part \uppercase\expandafter{\romannumeral1}}
+\par For Problem 1.A, in order to lay the foundation of analyzing, we are required to create an energy profile for each of the four states. Meanwhile, the profiles should be created on the analysis of the given data.
 
-\par In regard to Problem B, 
+\par For Problem 1.B, it adds a factor of consideration to the time dimension based on question A. Especially, the type of energy that needs to be analyzed becomes renewable energy, and the focus shifted from within a single state to between states. Explaining briefly the similarities and differences.
 
-\par For problem C, 
+\par For problem 1.C. To determine the best performing profile among the REU profiles in each state in 2009, we need to inspect the comprehensive factors based on the calculation and comparison of previous model.
 
-\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B, C and the given data to establish regression equations or other models.
+\par For Problem 1.D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B, C and the given data to establish regression equations or other models.
 
-% \subsubsection{Part \uppercase\expandafter{\romannumeral2}}
-\par It is suggested in the Problem A that, we should determine targets of the renewable energy usage for the four states in 2025 and 2050, which is based on the problems of Part \uppercase\expandafter{\romannumeral1}. 
+\subsubsection{Part \uppercase\expandafter{\romannumeral2}}
 
-\par As for Problem B, we are supposed to give some suggestions to the governors, so that they will know that the actions they should take to meet the goals.
+\par It is suggested in the Problem 2.A that, we should determine targets of the renewable energy usage for the four states in 2025 and 2050, which is based on the problems of Part \uppercase\expandafter{\romannumeral1}. 
 
-% \subsubsection{Part \uppercase\expandafter{\romannumeral3}}
+\par As for Problem 2.B, we are supposed to give some suggestions to the governors, so that they will know that the actions they should take to meet the goals.
+
+\subsubsection{Part \uppercase\expandafter{\romannumeral3}}
 \par On the basis of the analysis and models in the two parts before, we prepare the state profiles of 2009, our predictions towards energy usage and some recommendations on adopting goals for the energy compact.
 
 
@@ -98,8 +99,6 @@
     \item When we do regression analysis, we suppose that F-test or t-test is passed if the Pr of them is less than 0.05.
     \item When we do regression analysis, we suppose that effect of regression is good if $R^{2}$ is greater than 0.65.
 \end{enumerate}
-
-%这里写模型假设
 
 
 \section{Symbol Description}
@@ -364,7 +363,7 @@ w_1, w_2, w_3, w_4.
 \subsubsection{Renewable energy usage percentage}
 \par To get a preliminary understanding of the renewable energy usage in four states, we decide to get the proportion of renewable energy in total energy in the first step.
 
-\par What's important is that we find that there are some specific MSNs and formulas in the reference \cite{4} which can describe the usage of renewable energy clearly and precisely. MSN RETCB is a good example, which represents renewable energy sources total consumed in a state.
+\par What's important is that we find that there are some specific MSNs and formulas in the reference \cite{4} which can describe the usage of renewable energy clearly and precisely. MSN \textbf{RETCB} is a good example, which represents renewable energy sources total consumed in a state.
 \par Then we search for the MSN in the given data and find every state have this MSN. 
 So this is indeed the representative MSN variable of the usage of renewable energy in every state. And then we find the \textbf{TETCB} MSN stands for the total energy consumed in a state. So we get the equation:
 
@@ -388,7 +387,7 @@ So this is indeed the representative MSN variable of the usage of renewable ener
 Take transportation sector, for example, MSN \textbf{REACB} stands for renewable energy sources consumed by the transportation sector, so the sector's percentage in renewable energy consumption can be calculated through the formula. 
 
 \begin{equation}
-    \eta_2=\frac{REACB}{RETCB} \times 100\%
+    \eta_2=\frac{\text{REACB}}{\text{RETCB}} \times 100\%
 \end{equation}
 
 \par After calculating with formulas, we get the results of $\eta_2 $, which can be seen in table \ref{tab:1-3}.
@@ -435,7 +434,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 
 \begin{figure}[H]%[!hptb] 
     \centering 
-    \includegraphics[width=0.9\textwidth]{./Pic/B-classify-CA.png}
+    \includegraphics[width=0.85\textwidth]{./Pic/B-classify-CA.png}
     % 图片标题
     \caption{Evolution of energy profile of CA (1960-2009).}
     \label{fig:part-2-CA}  
@@ -482,7 +481,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1.0\textwidth]{./Pic/AHP.pdf}
+    \includegraphics[width=0.8\textwidth]{./Pic/AHP.pdf}
     \caption{AHP model}
 \end{figure}
 
@@ -517,14 +516,30 @@ U=\begin{pmatrix} \beta_1 & \beta_2 & \beta_3 & \beta_4\end{pmatrix}
 
 % 5.2.3
 \subsubsection{Calculation results of AHP model}
-\par Firstly, we can get the renewable energy comsumption of each sector by MSN formulas \cite{4}
-\begin{align*}
-    & \text{transportation} = \text{EMACB} \\
-    & \text{commercial} = \text{EMCCB} + \text{GECCB} + \text{HYCCB} + \text{SOCCB} + \text{WWCCB} + \text{WYCCB} \\
-    & \text{electric power} = \text{HYEGB} + \text{GEEGB} + \text{SOEGB} + \text{WWEIB} + \text{WYEGB} \\
-    & \text{industrial} = \text{EMICB} + \text{EMLCB} + \text{GEICB} + \text{HYICB} + \text{SOICB} + \text{WWICB} + \text{WYICB} \\
-    & \text{residential} = \text{WDRCB} + \text{GERCB} + \text{SORCB} \\
-\end{align*}
+\par Firstly, we can get the renewable energy comsumption of each sector by MSN formulas \cite{4} as following table:
+
+\begin{table}[!hbp]
+    \centering 
+    \begin{tabular}{|c|c|}
+    \hline Comsumption & MSNs \\
+    \hline transportation & \text{EMACB} \\
+    \hline commercial &  \text{EMCCB} + \text{GECCB} + \text{HYCCB} + \text{SOCCB} + \text{WWCCB} + \text{WYCCB} \\
+    \hline electric power & \text{HYEGB} + \text{GEEGB} + \text{SOEGB} + \text{WWEIB} + \text{WYEGB} \\
+    \hline industrial & \text{EMICB} + \text{EMLCB} + \text{GEICB} + \text{HYICB} + \text{SOICB} + \text{WWICB} + \text{WYICB} \\
+    \hline residential & \text{WDRCB} + \text{GERCB} + \text{SORCB} \\
+    \hline
+    \end{tabular}
+    \caption{The various sectors renewable energy consumption and MSN relationship table}
+    \label{tab:sector-msn}
+\end{table}
+
+% \begin{align*}
+%     & \text{transportation} = \text{EMACB} \\
+%     & \text{commercial} = \text{EMCCB} + \text{GECCB} + \text{HYCCB} + \text{SOCCB} + \text{WWCCB} + \text{WYCCB} \\
+%     & \text{electric power} = \text{HYEGB} + \text{GEEGB} + \text{SOEGB} + \text{WWEIB} + \text{WYEGB} \\
+%     & \text{industrial} = \text{EMICB} + \text{EMLCB} + \text{GEICB} + \text{HYICB} + \text{SOICB} + \text{WWICB} + \text{WYICB} \\
+%     & \text{residential} = \text{WDRCB} + \text{GERCB} + \text{SORCB} \\
+% \end{align*}
 
 \par Then, we divide the given data by year, and calculate the scores of the four states in 2009 as follows:
 \[
@@ -555,15 +570,17 @@ Then we calculate the scores of the four states in every year(1960 - 2009) and d
 
 
 \par We have taken the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and obtain figure \ref{fig:B-percent}.
+
+
+\par We have to take the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and get figure \ref{fig:B-percent}. According to figure \ref{fig:B-level-predict} and figure \ref{fig:B-percent} we can conclude the similarities and differences.
+
 \begin{figure}[H]%[!hptb] 
     \centering 
-    \includegraphics[width=0.8\textwidth]{./Pic/B-percent.png}
+    \includegraphics[width=1\textwidth]{./Pic/B-percent.png}
     % 图片标题
     \caption{The proportion of renewable energy usage of different sectors of four states in 2009}
     \label{fig:B-percent}  
 \end{figure}
-
-\par We have to take the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and get figure \ref{fig:B-percent}. According to figure \ref{fig:B-level-predict} and figure \ref{fig:B-percent} we can conclude the similarities and differences.
 
 % TODO: which diffs?
 
@@ -813,7 +830,7 @@ which means from 2009, the score based on the total energy usage keep growing at
     \centering 
     \begin{tabular}{|c|c|c|}
 \hline
-State & Target in 2025 & Target in 2050\\
+State & Target in 2025 (Billion Btu) & Target in 2050 (Billion Btu)\\
 \hline
 California & 698962.6821 & 879203.1758 \\
 \hline
