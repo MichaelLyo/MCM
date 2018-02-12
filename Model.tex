@@ -878,14 +878,19 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
 
 
 \newpage%另起一页书写
-\begin{appendices}  
-    \section*{Simulation Code}  
-    some text in Appendix A  
-    \section*{Other figures}
-
+\begin{appendices} 
+    \pagestyle{empty}
+    \section*{Figures}
 \begin{figure}[h]%[!hptb] 
-    \centering 
-    \includegraphics[width=0.9\textwidth]{./Pic/part-2-AZ.png}
+    \centering
+    \includegraphics[width=0.7\textwidth]{./Pic/1-3.png}
+    % 图片标题
+    \caption{The weights of variables of the four states in 2009.}
+    \label{fig:part-2-AZ}  
+\end{figure}
+\begin{figure}[h]%[!hptb] 
+    \centering
+    \includegraphics[width=0.7\textwidth]{./Pic/part-2-AZ.png}
     % 图片标题
     \caption{Evolution of energy profile of AZ (1960-2009).}
     \label{fig:part-2-AZ}  
@@ -893,7 +898,7 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
 
 \begin{figure}[h]%[!hptb] 
     \centering 
-    \includegraphics[width=0.9\textwidth]{./Pic/part-2-NM.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/part-2-NM.png}
     % 图片标题
     \caption{Evolution of energy profile of NM (1960-2009).}
     \label{fig:part-2-NM}  
@@ -901,13 +906,419 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
 
 \begin{figure}[h]%[!hptb] 
     \centering 
-    \includegraphics[width=0.9\textwidth]{./Pic/part-2-TX.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/part-2-TX.png}
     % 图片标题
     \caption{Evolution of energy profile of TX (1960-2009).}
     \label{fig:part-2-TX}  
 \end{figure}
-    some text in Appendix B  
-\end{appendices}  
+\section*{Codes}
+
+\begin{lstlisting}[language=SAS, caption=regression.sas]
+    data score1;
+    set score;
+    AZ1=log(AZ);
+    CA1=log(CA-50);
+    run;
+    data score2;
+    set score1;
+    if year>=2005;
+    run;
+    proc reg data=score1;
+    model NM=year;
+    model AZ1=year;
+    run;
+    proc reg data=score2;
+    model CA1=year;
+    run;
+    proc reg data=total;
+    model total_renewable=year;
+    run;
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=score.py]
+
+    def judge(a, b):
+    x = [a, b] if a > b else [b, a]
+    if x[1] == 0:
+        x[1] = 0.000000001
+    c = x[0] / x[1]
+    p = 0
+    if 1 < c <= 2.5:
+        p = 2
+    elif 2.5 < c <= 4.5:
+        p = 3
+    elif 4.5 < c <= 6:
+        p = 4
+    elif 6 < c <= 8:
+        p = 5
+    elif 8 < c <= 9.5:
+        p = 6
+    elif 9.5 < c <= 11.5:
+        p = 7
+    elif 11.5 < c <= 13:
+        p = 8
+    elif c == 1:
+        p = 1
+    else:
+        p = 9
+    return p if a > b else 1 / p
 
 
+def get_matrix(l):
+    matrix = [([1] * len(l)) for i in range(len(l))]
+    for i in range(len(l)):
+        for j in range(i, len(l)):
+            matrix[i][j] = judge(l[i], l[j])
+            matrix[j][i] = 1 / matrix[i][j]
+    return matrix
+
+
+def create_scores(years, filename, df_data, df_people=None):
+    sectors = [msn for msn in SECTOR_MSN]
+    df_score = pd.DataFrame(columns=['year'] + STATES)
+    for year in years:
+        df = create_clean_sector(year, df_data, True)
+        clean_sectors_l = list(df[sectors].sum() / df['total'].sum() * 100)
+        clean_sectors_matrix = get_matrix(clean_sectors_l)
+        states_sectors_matrix = {}
+
+
+        for sector in sectors:
+            if df_people is not None:
+                df = df[sectors].divide(df_people[str(year)], axis=0)
+            sp = list(df[sector])
+            states_sectors_matrix[sector] = get_matrix(sp)
+
+        # lorry_cost = {'CA': 50000, 'TX': 25000, 'NM': 5000, 'AZ': 15000}
+        criteria = sectors
+        criteria_scores = clean_sectors_matrix
+
+        options = STATES
+        option_scores = states_sectors_matrix
+        lorry_decision = analytical_hierarchy_process(criteria=tuple(criteria),
+                                                      criteria_scores=criteria_scores,
+                                                      options=tuple(options),
+                                                      option_scores=option_scores,
+                                                      quantitative_criteria=())
+        # res = lorry_decision['cost_benefit_ratios']
+        lorry_decision['year'] = year
+        df_score = df_score.append(lorry_decision, ignore_index=True)
+    df_score['year'] = df_score['year'].astype(int)
+    df_score[STATES] = df_score[STATES] * 100
+    df_score.to_csv(filename)
+    return df_score
+
+
+def predict(year):
+    result = {
+        'NM': 0.05263 * year - 104.64807,
+        'AZ': exp(-0.10513 * year + 213.24602),
+        'CA': exp(-0.34649 * year + 697.98712) + 50
+    }
+    result['TX'] = 100 - result['NM'] - result['AZ'] - result['CA']
+    result['year'] = year
+    return result
+
+
+def total():
+    fig = plt.figure(figsize=(15, 15))
+    open_prediction = True
+    filename = './data/B-total-level.csv'
+
+    years = range(1995, 2010)
+    future_years = range(2010, 2051)
+    if not os.path.exists(filename):
+        df_data = pd.read_excel(DATA_SOURCE, "seseds", 
+            names=['MSN_data', 'state', 'year', 'data'])
+        df_score = create_scores(years, filename, df_data)
+    else:
+        df_score = pd.read_csv(filename, header=0, names=['year'] + STATES)
+
+        # for state in STATES:
+    pic_path = "./notebooks/B-level.png"
+    title = "Interstate difference of AHP result (1960 - 2009)"
+    if open_prediction:
+        for year in future_years:
+            df_score = df_score.append(predict(year), ignore_index=True)
+
+    df_score.plot(x='year', kind='line')
+
+    if open_prediction:
+        pic_path = "./notebooks/D-predict.png"
+        title = 'Prediction based on regression results (2025 - 2050)'
+        plt.axvspan(2025, 2050, facecolor='#2ca02c', alpha=0.2)
+        plt.annotate('2025', xy=(2025, 70), xycoords='data',
+                     xytext=(0.8, 0.95), textcoords='axes fraction',
+                     arrowprops=dict(facecolor='black', shrink=0.05),
+                     horizontalalignment='right', verticalalignment='top',
+                     )
+        plt.axvline(x=2025, color="#333333", linewidth=1)
+
+    plt.title(title, fontweight='bold')
+    plt.ylabel("AHP result(%)")
+    plt.xlabel("year")
+    # plt.show()
+    plt.savefig(pic_path)
+    plt.show()
+
+def person():
+    fig = plt.figure(figsize=(15, 15))
+    open_prediction = False
+    df_people = pd.read_csv('./models/people-min.csv')
+    filename = './data/B-total-level-percapita.csv'
+    years = range(1960, 2010)
+    future_years = range(2010, 2051)
+    if not os.path.exists(filename):
+        df_data = pd.read_excel(DATA_SOURCE, "seseds", 
+            names=['MSN_data', 'state', 'year', 'data'])
+        df_score = create_scores(years, filename, df_data, df_people)
+    else:
+        df_score = pd.read_csv(filename, header=0, names=['year'] + STATES)
+
+        # for state in STATES:
+    pic_path = "./notebooks/B-level-percapita.png"
+    title = "Interstate difference of AHP result per capita (1960 - 2009)"
+    if open_prediction:
+        for year in future_years:
+            df_score = df_score.append(predict(year), ignore_index=True)
+
+    df_score.plot(x='year', kind='line')
+
+    if open_prediction:
+        pic_path = "./notebooks/D-predict-percapita.png"
+        title = 'Prediction based on regression results (2025 - 2050)'
+        plt.axvspan(2025, 2050, facecolor='#2ca02c', alpha=0.2)
+        plt.annotate('2025', xy=(2025, 70), xycoords='data',
+                     xytext=(0.8, 0.95), textcoords='axes fraction',
+                     arrowprops=dict(facecolor='black', shrink=0.05),
+                     horizontalalignment='right', verticalalignment='top',
+                     )
+        plt.axvline(x=2025, color="#333333", linewidth=1)
+
+    plt.title(title, fontweight='bold')
+    plt.ylabel("AHP result(%)")
+    plt.xlabel("year")
+    # plt.show()
+    plt.savefig(pic_path)
+    plt.show()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=classify.py]
+def add_suffix_b_names(x):
+    return MSN_SECTOR[x['MSN_data'][2:4]]
+
+
+def paint(df, state):
+    fig, axes = plt.subplots(nrows=4, ncols=5, figsize=(16, 12))
+    # df_groups = df.groupby(['unit', 'sector'])
+    units = df['unit'].unique()
+    sectors = df['sector'].unique()
+    r = -1
+    c = -1
+    years = df['year'].unique()
+    for unit in units:
+        r = r + 1
+        c = -1
+        for sector in sectors:
+            c = c + 1
+            df1 = df[(df['unit'] == unit) & (df['sector'] == sector)]
+            if (len(df1) > 0):
+                df1[['year', 'data']].set_index('year').plot(
+                    xticks=range(years[0], years[-1], 10),
+                    title='{}-{}'.format(sector, RENAMES[unit]), ax=axes[r, c],
+                    legend=False)
+            else:
+                df_empty = pd.DataFrame()
+                df_empty['year'] = df['year']
+                df_empty['data'] = 0
+                df_empty.set_index('year').plot( \\
+                        xticks=range(years[0], years[-1], 10),
+                        title='{}-{}'.format(sector, RENAMES[unit]), ax=axes[r, c],
+                        legend=False)
+    plt.ylabel("Billion Btu")
+    fig.tight_layout()
+    plt.subplots_adjust(top=0.9)
+    plt.suptitle("Evolution of energy profile of {} (1960 - 2009)".format(state))
+    plt.savefig('./notebooks/B-classify-{}.png'.format(state))
+
+
+def create_classification(df):
+    df_classification = df[df['MSN_data'].str.slice(2, 4).isin(MSN_SECTOR)]
+    df_classification = df_classification.reset_index(drop=True)
+    df_classification['sector'] = df_classification.apply(add_suffix_b_names, axis=1)
+    sectors = list(df_classification['sector'].unique())
+    groups = df_classification.groupby(['year', 'sector', 'unit'])['data'].sum()
+    groups = groups.to_frame()
+    return groups
+
+
+def load_df(years, state):
+    dfs = []
+    for year in years:
+        filename = './data/{}-{}.csv'.format(year, state)
+        dfs.append(pd.read_csv(filename) if \\
+         os.path.exists(filename) else create_purify(year, state, filename))
+    return pd.concat(dfs)
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=Python, caption=sectorPercent.py]
+years = range(1960, 2010)
+fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(20, 15))
+df_data = pd.read_excel(DATA_SOURCE, "seseds", names=['MSN_data', 'state', 'year', 'data'])
+df_total_years = []
+for year in years:
+    df = create_clean_sector(year, df_data, True)
+    df['year'] = year
+    df_total_years.append(df)
+df_total_years = pd.concat(df_total_years)
+df_total_years = df_total_years[[sector + '_sp' for sector in SECTOR_MSN] \\
+    + ['year', 'state']]
+df_total_years = df_total_years.rename(
+    columns={sector + '_sp': sector for sector in SECTOR_MSN})
+
+df_groups = df_total_years.groupby('state')
+for (state, group), ax in zip(df_groups, axes.flatten()):
+    group.plot(x='year', ax=ax,
+        title=\\
+        "The proportion of different sector of \\
+        {} state in renewable energy usage".format(state),
+        kind='area')
+    plt.ylabel("percent(%)")
+plt.xlabel("year")
+fig.tight_layout()
+plt.savefig('./notebooks/B-percent.png')
+# plt.show()
+plt.show()
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=Python, caption=profile.py]
+DATA_SOURCE = "./models/ds.xlsx"
+FACTOR_NUMBER = 2
+EXCLUDE_MSN = [
+    "CLHCB", "CLICB", "CLTCB", "CLTXB", "DFTCB",
+    "DFTXB", "DKEIB", "ELISB", "ELISB", "ELNIB", 
+    "ESTXB", "FFTCB", "GETCB", "GETXB", "HYTCB",
+    "HYTXB", "JFACB", "JFTCB", "KSTCB", "KSTXB", 
+    "LGTCB", "LGTXB", "LOTCB", "LOTXB", "LUTCB", 
+    "LUTXB", "MGTCB", "MGTXB", "MMTCB", "NGTXB", 
+    "NNCCB", "NNEIB", "NNICB", "NNRCB", "NNTCB", 
+    "P1ICB", "P1TCB", "P1TXB", "PAACB", "PACCB", 
+    "PAEIB", "PAICB", "PARCB", "PATCB", "PATXB", 
+    "PCICB", "PCTCB", "PMTCB", "POICB", "POTCB", 
+    "POTXB", "RECCB", "REEIB", "REICB", "RERCB",
+    "RETCB", "RFTCB", "RFTXB", "SFTCB", "SOCCB", 
+    "SOICB", "SORCB", "SOTCB", "SOTXB", "TEACB", 
+    "TECCB", "TEEIB", "TEESB", "TEICB", "TERCB", 
+    "TETCB", "TETXB", "TNACB", "TNCCB", "TNICB", 
+    "TNRCB", "TNTXB", "WDCCB", "WDICB", "WDTCB", 
+    "WSICB", "WSTCB", "WWCCB", "WWEIB", "WWI4B", 
+    "WWICB", "WWTCB", "WWTXB", "WYTCB", "WYTXB", 
+    "TEACB", "TECCB", "TEEIB", "TEICB", "TEPFB", 
+    "TEPRB", "TERCB", "TERFB", "TETCB", "TETPB", 
+    "TETXB", "TNACB", "TNCCB", "TNICB", "TNRCB", 
+    "TNSCB", "TNTXB"]
+
+df_msn = pd.read_excel(DATA_SOURCE, "msncodes", names=['MSN', 'desc', 'unit'])
+df_data = pd.read_excel(DATA_SOURCE, "seseds", 
+    names=['MSN_data', 'state', 'year', 'data'])
+
+
+def create_purify(year: int, state: str, filename):
+    def add_suffix_b_names(x):
+        x['MSN_data'] = x['MSN'].str.slice(0, 4) + 'B'
+        return x
+
+    # Specify a year and state
+    df_data_2005_CA = df_data[(df_data['state'] == state) & (df_data['year'] == year)]
+
+    # Get suffix names of the MSN node are end with 'P'
+    df_msn_suffix_p = df_msn[df_msn['MSN'].str.contains('P$')]
+
+    # Using groupBy to purify the group
+    df_purify = df_msn_suffix_p.groupby('unit').filter(lambda x: len(x) > 1)
+    df_msn_group = df_purify.groupby('unit').apply(add_suffix_b_names)
+    df_msn_group = df_msn_group[~df_msn_group['MSN_data'].isin(EXCLUDE_MSN)]
+    # Get the handled dataframe
+    df_data_2005_CA_plus = df_msn_group.set_index('MSN_data')
+        .join(df_data_2005_CA.set_index('MSN_data'), how="inner")
+    df_data_2005_CA_plus.to_csv(filename)
+    return df_data_2005_CA_plus
+
+
+def get_corr(df1, df2) -> float:
+    cov = df1['data'].cov(df2['data'])
+    std1 = df1['data'].std()
+    std2 = df2['data'].std()
+    return cov / (std1 * std2)
+
+
+def get_loading_matrix(groups: list):
+    corrMatrix = [([1] * len(groups)) for i in range(len(groups))]
+    for i in range(len(groups)):
+        for j in range(i + 1, len(groups)):
+            group_i = groups[i]['group'].reset_index()
+            group_j = groups[j]['group'].reset_index()
+            corrMatrix[i][j] = get_corr(group_i, group_j)
+            corrMatrix[j][i] = corrMatrix[i][j]
+    print(corrMatrix)
+    # np.linalg.eig return a tuple, 0 is eigenvalues
+    eigvalMatrix = pd.DataFrame(np.linalg.eig(corrMatrix)[0], columns=['value'])
+    print(eigvalMatrix)
+    eigvalMatrix['name'] = [group['name'] for group in groups]
+
+    factor_eigval_matrix = eigvalMatrix.nlargest(FACTOR_NUMBER, 'value')
+    print(factor_eigval_matrix)
+    factor_eigval_matrix['percent'] = pd.DataFrame(
+        factor_eigval_matrix['value'] / eigvalMatrix['value'].sum() * 100)
+    eigvecMatrix = pd.DataFrame(np.linalg.eig(corrMatrix)[1])
+    print("-===-=-=-=-=-=")
+    print(eigvecMatrix)
+    loading_matrix = eigvecMatrix * np.sqrt(factor_eigval_matrix['value'])
+    print(loading_matrix)
+    loading_matrix['name'] = [group['name'] for group in groups]
+    return loading_matrix, factor_eigval_matrix
+
+
+def get_weights(loading_matrix: pd.DataFrame, factor_eigval_matrix):
+    df = loading_matrix[
+        loading_matrix.columns.difference(['name'])].abs() * \\
+        factor_eigval_matrix['percent']
+    df['name'] = loading_matrix['name']
+    df['sum'] = df.sum(axis=1)
+    df['weight'] = df['sum'] / df['sum'].sum() * 100
+    return df
+
+
+if __name__ == '__main__':
+    df_final = pd.DataFrame()
+    STATES = ['CA', 'TX', 'NM', 'AZ']
+    for state in STATES:
+        for year in range(2009, 2010):
+            filename = './data/{}-{}.csv'.format(year, state)
+            df = pd.read_csv(filename) if os.path.exists(filename) \\
+                else create_purify(year, state, filename)
+            unit_list = list(df['unit'].unique())
+            groups = [{"name": name, "group": group} \\
+                for name, group in df.groupby(['unit'])]
+            loading_matrix, factor_eigval_matrix = get_loading_matrix(groups)
+            df_weight = get_weights(loading_matrix, factor_eigval_matrix)
+            if len(df_final) == 0:
+                df_final = pd.DataFrame(columns=['year', 'state'] + list(df_weight['name']))
+            df_final.loc[len(df_final)] = [year, state] + list(df_weight['weight'])
+    df_final = df_final.rename(columns={
+        "Million cubic feet": "natural gas", "Million kilowatthours": "electricity",
+        "Thousand barrels": "fuel oil", "Thousand short tons": "coal coke"})
+    df_final.to_csv('./data/A-final.csv', index=False)
+    df_final.drop(['year'], axis=1).plot(x='state', kind='bar', rot=0)
+    plt.title('Weights of energy classification in 2009', fontweight='bold')
+    plt.ylabel("percent(%)")
+    plt.xlabel("state")
+    plt.savefig('./notebooks/1-1.png')
+    # plt.show()
+
+\end{lstlisting}
+\end{appendices}
 \end{document}
