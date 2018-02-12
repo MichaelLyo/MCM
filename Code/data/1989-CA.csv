@@ -1,0 +1,83 @@
+MSN_data,MSN,desc,unit,state,year,data
+ABICB,ABICP,Aviation gasoline blending components consumed by the industrial sector.,Thousand barrels,CA,1989,15.26505
+ARICB,ARICP,Asphalt and road oil consumed by the industrial sector.,Thousand barrels,CA,1989,99513.65754
+ARTCB,ARTCP,Asphalt and road oil total consumption.,Thousand barrels,CA,1989,99513.65754
+ARTXB,ARTXP,Asphalt and road oil total end-use consumption.,Thousand barrels,CA,1989,99513.65754
+AVACB,AVACP,Aviation gasoline consumed by the transportation sector.,Thousand barrels,CA,1989,6575.02464
+AVTCB,AVTCP,Aviation gasoline total consumption.,Thousand barrels,CA,1989,6575.02464
+AVTXB,AVTXP,Aviation gasoline total end-use consumption.,Thousand barrels,CA,1989,6575.02464
+CLACB,CLACP,Coal consumed by the transportation sector.,Thousand short tons,CA,1989,0.0
+CLCCB,CLCCP,Coal consumed by the commercial sector.,Thousand short tons,CA,1989,194.4192
+CLEIB,CLEIP,Coal consumed by the electric power sector.,Thousand short tons,CA,1989,8508.00103
+CLKCB,CLKCP,Coal consumed at coke plants (coking coal).,Thousand short tons,CA,1989,0.0
+CLOCB,CLOCP,Coal consumed by industrial users other than coke plants.,Thousand short tons,CA,1989,57672.53559
+CLPRB,CLPRP,Coal production.,Thousand short tons,CA,1989,492.0
+CLRCB,CLRCP,Coal consumed by the residential sector.,Thousand short tons,CA,1989,51.68105
+COICB,COICP,Crude oil consumed by the industrial sector.,Thousand barrels,CA,1989,48658.984
+DFACB,DFACP,Distillate fuel oil consumed by the transportation sector.,Thousand barrels,CA,1989,342517.6048
+DFCCB,DFCCP,Distillate fuel oil consumed by the commercial sector.,Thousand barrels,CA,1989,27197.73368
+DFICB,DFICP,Distillate fuel oil consumed by the industrial sector.,Thousand barrels,CA,1989,95876.08498
+DFRCB,DFRCP,Distillate fuel oil consumed by the residential sector.,Thousand barrels,CA,1989,1418.83702
+ELEXB,ELEXP,Electricity exported from the United States.,Million kilowatthours,CA,1989,1906.38335
+ELIMB,ELIMP,Electricity imported into the United States.,Million kilowatthours,CA,1989,16330.43592
+EMTCB,EMTCP,"Fuel ethanol, excluding denaturant, total consumption.",Thousand barrels,CA,1989,3703.1042
+ESACB,ESACP,"Electricity consumed by (i.e., sold to) the transportation sector.",Million kilowatthours,CA,1989,938.36653
+ESCCB,ESCCP,"Electricity consumed by (i.e., sold to) the commercial sector.",Million kilowatthours,CA,1989,286337.0719
+ESICB,ESICP,"Electricity consumed by (i.e., sold to) the industrial sector.",Million kilowatthours,CA,1989,189693.3951
+ESRCB,ESRCP,"Electricity consumed by (i.e., sold to) the residential sector.",Million kilowatthours,CA,1989,219552.6498
+ESTCB,ESTCP,"Electricity total consumption (i.e., sold).",Million kilowatthours,CA,1989,696521.4832
+FNICB,FNICP,"Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.",Thousand barrels,CA,1989,9270.39824
+FOICB,FOICP,"Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, consumed by the industrial sector.",Thousand barrels,CA,1989,13012.83814
+FSICB,FSICP,"Petrochemical feedstocks, still gas, consumed by the industrial sector.",Thousand barrels,CA,1989,0.0
+GEEGB,GEEGP,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthours,CA,1989,142696.9078
+HYCCB,HYCCP,Hydroelectricity produced in the commercial sector.,Million kilowatthours,CA,1989,0.0
+HYEGB,HYEGP,Hydroelectricity produced by the electric power sector.,Million kilowatthours,CA,1989,321317.5759
+HYICB,HYICP,Hydroelectricity produced in the industrial sector.,Million kilowatthours,CA,1989,0.0
+JFTXB,JFTXP,Jet fuel total end-use consumption.,Thousand barrels,CA,1989,507760.8905
+JKACB,JKACP,Kerosene-type jet fuel consumed by the transportation sector.,Thousand barrels,CA,1989,436582.4607
+JKTCB,JKTCP,Kerosene-type jet fuel total consumption.,Thousand barrels,CA,1989,436582.4607
+JNACB,JNACP,Naphtha-type jet fuel consumed by the transportation sector.,Thousand barrels,CA,1989,71178.42979
+JNTCB,JNTCP,Naphtha-type jet fuel total consumption.,Thousand barrels,CA,1989,71178.42979
+KSCCB,KSCCP,Kerosene consumed by the commercial sector.,Thousand barrels,CA,1989,234.48824
+KSICB,KSICP,Kerosene consumed by the industrial sector.,Thousand barrels,CA,1989,242.58806
+KSRCB,KSRCP,Kerosene consumed by the residential sector.,Thousand barrels,CA,1989,612.61243
+LGACB,LGACP,LPG consumed by the transportation sector.,Thousand barrels,CA,1989,3267.1942
+LGCCB,LGCCP,LPG consumed by the commercial sector.,Thousand barrels,CA,1989,6981.02669
+LGICB,LGICP,LPG consumed by the industrial sector.,Thousand barrels,CA,1989,60529.7318
+LGRCB,LGRCP,LPG consumed by the residential sector.,Thousand barrels,CA,1989,20182.50135
+LUACB,LUACP,Lubricants consumed by the transportation sector.,Thousand barrels,CA,1989,16920.87851
+LUICB,LUICP,Lubricants consumed by the industrial sector.,Thousand barrels,CA,1989,12690.65891
+MBICB,MBICP,Motor gasoline blending components consumed by the industrial sector.,Thousand barrels,CA,1989,8211.00611
+MGACB,MGACP,Motor gasoline consumed by the transportation sector.,Thousand barrels,CA,1989,1606907.104
+MGCCB,MGCCP,Motor gasoline consumed by the commercial sector.,Thousand barrels,CA,1989,9366.74486
+MGICB,MGICP,Motor gasoline consumed by the industrial sector.,Thousand barrels,CA,1989,16979.9914
+MSICB,MSICP,Miscellaneous petroleum products consumed by the industrial sector.,Thousand barrels,CA,1989,3655.29458
+NAICB,NAICP,Natural gasoline consumed by the industrial sector.,Thousand barrels,CA,1989,0.0
+NGACB,NGACP,Natural gas consumed by the transportation sector.,Million cubic feet,CA,1989,19962.67068
+NGCCB,NGCCP,Natural gas consumed by (delivered to) the commercial sector (including supplemental gaseous fuels).,Million cubic feet,CA,1989,269368.26
+NGEIB,NGEIP,Natural gas consumed by the electric power sector (including supplemental gaseous fuels).,Million cubic feet,CA,1989,675485.451
+NGICB,NGICP,Natural gas consumed by (delivered to) the industrial sector (including supplemental gaseous fuels).,Million cubic feet,CA,1989,548403.245
+NGLPB,NGLPP,Natural gas consumed as lease and plant fuel.,Million cubic feet,CA,1989,20360.82216
+NGMPB,NGMPP,Natural gas marketed production.,Million cubic feet,CA,1989,404557.6604
+NGPZB,NGPZP,Natural gas consumed as pipeline fuel.,Million cubic feet,CA,1989,19962.67068
+NGRCB,NGRCP,Natural gas consumed by (delivered to) the residential sector (including supplemental gaseous fuels).,Million cubic feet,CA,1989,534620.428
+NGTCB,NGTCP,Natural gas total consumption (including supplemental gaseous fuels).,Million cubic feet,CA,1989,2047845.051
+NGVHB,NGVHP,Natural gas consumed as vehicle fuel.,Million cubic feet,CA,1989,0.0
+NUEGB,NUEGP,Electricity produced from nuclear power by the electric power sector.,Million kilowatthours,CA,1989,344145.6032
+NUETB,NUETP,Electricity produced from nuclear power.,Million kilowatthours,CA,1989,344145.6032
+PAPRB,PAPRP,Crude oil production (including lease condensate).,Thousand barrels,CA,1989,2112650.0
+PCCCB,PCCCP,Petroleum coke consumed by the commercial sector.,Thousand barrels,CA,1989,0.0
+PCEIB,PCEIP,Petroleum coke consumed by the electric power sector.,Thousand barrels,CA,1989,0.0
+PLICB,PLICP,Plant condensate consumed by the industrial sector.,Thousand barrels,CA,1989,0.0
+PPICB,PPICP,Pentanes plus consumed by the industrial sector.,Thousand barrels,CA,1989,4893.06459
+RFACB,RFACP,Residual fuel oil consumed by the transportation sector.,Thousand barrels,CA,1989,306294.1114
+RFCCB,RFCCP,Residual fuel oil consumed by the commercial sector.,Thousand barrels,CA,1989,4681.40695
+RFEIB,RFEIP,Residual fuel oil consumed by the electric power sector.,Thousand barrels,CA,1989,94755.69617
+RFICB,RFICP,Residual fuel oil consumed by the industrial sector,Thousand barrels,CA,1989,16898.95511
+SGICB,SGICP,Still gas consumed by the industrial sector.,Thousand barrels,CA,1989,214838.8575
+SNICB,SNICP,Special naphthas consumed by the industrial sector.,Thousand barrels,CA,1989,12905.20954
+SOEGB,SOEGP,Electricity produced from photovoltaic and solar thermal energy by the electric power sector.,Million kilowatthours,CA,1989,2609.36659
+UOICB,UOICP,Unfinished oils consumed by the industrial sector.,Thousand barrels,CA,1989,-55404.82972
+USICB,USICP,Unfractionated stream consumed by the industrial sector.,Thousand barrels,CA,1989,0.0
+WXICB,WXICP,Waxes consumed by the industrial sector.,Thousand barrels,CA,1989,3263.9383
+WYEGB,WYEGP,Electricity produced from wind energy by the electric power sector.,Million kilowatthours,CA,1989,21684.89408

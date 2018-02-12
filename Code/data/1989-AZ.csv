@@ -1,0 +1,83 @@
+MSN_data,MSN,desc,unit,state,year,data
+ABICB,ABICP,Aviation gasoline blending components consumed by the industrial sector.,Thousand barrels,AZ,1989,0.06754
+ARICB,ARICP,Asphalt and road oil consumed by the industrial sector.,Thousand barrels,AZ,1989,15832.11233
+ARTCB,ARTCP,Asphalt and road oil total consumption.,Thousand barrels,AZ,1989,15832.11233
+ARTXB,ARTXP,Asphalt and road oil total end-use consumption.,Thousand barrels,AZ,1989,15832.11233
+AVACB,AVACP,Aviation gasoline consumed by the transportation sector.,Thousand barrels,AZ,1989,1060.83634
+AVTCB,AVTCP,Aviation gasoline total consumption.,Thousand barrels,AZ,1989,1060.83634
+AVTXB,AVTXP,Aviation gasoline total end-use consumption.,Thousand barrels,AZ,1989,1060.83634
+CLACB,CLACP,Coal consumed by the transportation sector.,Thousand short tons,AZ,1989,0.0
+CLCCB,CLCCP,Coal consumed by the commercial sector.,Thousand short tons,AZ,1989,0.0
+CLEIB,CLEIP,Coal consumed by the electric power sector.,Thousand short tons,AZ,1989,338880.9459
+CLKCB,CLKCP,Coal consumed at coke plants (coking coal).,Thousand short tons,AZ,1989,0.0
+CLOCB,CLOCP,Coal consumed by industrial users other than coke plants.,Thousand short tons,AZ,1989,14263.10305
+CLPRB,CLPRP,Coal production.,Thousand short tons,AZ,1989,263538.2866
+CLRCB,CLRCP,Coal consumed by the residential sector.,Thousand short tons,AZ,1989,0.0
+COICB,COICP,Crude oil consumed by the industrial sector.,Thousand barrels,AZ,1989,0.0
+DFACB,DFACP,Distillate fuel oil consumed by the transportation sector.,Thousand barrels,AZ,1989,43636.19806
+DFCCB,DFCCP,Distillate fuel oil consumed by the commercial sector.,Thousand barrels,AZ,1989,2205.82597
+DFICB,DFICP,Distillate fuel oil consumed by the industrial sector.,Thousand barrels,AZ,1989,18140.76168
+DFRCB,DFRCP,Distillate fuel oil consumed by the residential sector.,Thousand barrels,AZ,1989,39.7053
+ELEXB,ELEXP,Electricity exported from the United States.,Million kilowatthours,AZ,1989,7.04578
+ELIMB,ELIMP,Electricity imported into the United States.,Million kilowatthours,AZ,1989,0.0
+EMTCB,EMTCP,"Fuel ethanol, excluding denaturant, total consumption.",Thousand barrels,AZ,1989,0.0
+ESACB,ESACP,"Electricity consumed by (i.e., sold to) the transportation sector.",Million kilowatthours,AZ,1989,0.0
+ESCCB,ESCCP,"Electricity consumed by (i.e., sold to) the commercial sector.",Million kilowatthours,AZ,1989,53834.75437
+ESICB,ESICP,"Electricity consumed by (i.e., sold to) the industrial sector.",Million kilowatthours,AZ,1989,33171.56977
+ESRCB,ESRCP,"Electricity consumed by (i.e., sold to) the residential sector.",Million kilowatthours,AZ,1989,52024.47
+ESTCB,ESTCP,"Electricity total consumption (i.e., sold).",Million kilowatthours,AZ,1989,139030.7941
+FNICB,FNICP,"Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.",Thousand barrels,AZ,1989,0.0
+FOICB,FOICP,"Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, consumed by the industrial sector.",Thousand barrels,AZ,1989,0.0
+FSICB,FSICP,"Petrochemical feedstocks, still gas, consumed by the industrial sector.",Thousand barrels,AZ,1989,0.0
+GEEGB,GEEGP,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthours,AZ,1989,0.0
+HYCCB,HYCCP,Hydroelectricity produced in the commercial sector.,Million kilowatthours,AZ,1989,0.0
+HYEGB,HYEGP,Hydroelectricity produced by the electric power sector.,Million kilowatthours,AZ,1989,82170.81933
+HYICB,HYICP,Hydroelectricity produced in the industrial sector.,Million kilowatthours,AZ,1989,0.0
+JFTXB,JFTXP,Jet fuel total end-use consumption.,Thousand barrels,AZ,1989,45292.06745
+JKACB,JKACP,Kerosene-type jet fuel consumed by the transportation sector.,Thousand barrels,AZ,1989,29025.28821
+JKTCB,JKTCP,Kerosene-type jet fuel total consumption.,Thousand barrels,AZ,1989,29025.28821
+JNACB,JNACP,Naphtha-type jet fuel consumed by the transportation sector.,Thousand barrels,AZ,1989,16266.77924
+JNTCB,JNTCP,Naphtha-type jet fuel total consumption.,Thousand barrels,AZ,1989,16266.77924
+KSCCB,KSCCP,Kerosene consumed by the commercial sector.,Thousand barrels,AZ,1989,14.44461
+KSICB,KSICP,Kerosene consumed by the industrial sector.,Thousand barrels,AZ,1989,264.72742
+KSRCB,KSRCP,Kerosene consumed by the residential sector.,Thousand barrels,AZ,1989,2.42994
+LGACB,LGACP,LPG consumed by the transportation sector.,Thousand barrels,AZ,1989,233.85894
+LGCCB,LGCCP,LPG consumed by the commercial sector.,Thousand barrels,AZ,1989,863.08317
+LGICB,LGICP,LPG consumed by the industrial sector.,Thousand barrels,AZ,1989,2120.89345
+LGRCB,LGRCP,LPG consumed by the residential sector.,Thousand barrels,AZ,1989,2703.37618
+LUACB,LUACP,Lubricants consumed by the transportation sector.,Thousand barrels,AZ,1989,2093.47188
+LUICB,LUICP,Lubricants consumed by the industrial sector.,Thousand barrels,AZ,1989,1595.79896
+MBICB,MBICP,Motor gasoline blending components consumed by the industrial sector.,Thousand barrels,AZ,1989,36.34193
+MGACB,MGACP,Motor gasoline consumed by the transportation sector.,Thousand barrels,AZ,1989,210644.4248
+MGCCB,MGCCP,Motor gasoline consumed by the commercial sector.,Thousand barrels,AZ,1989,674.98991
+MGICB,MGICP,Motor gasoline consumed by the industrial sector.,Thousand barrels,AZ,1989,2205.58168
+MSICB,MSICP,Miscellaneous petroleum products consumed by the industrial sector.,Thousand barrels,AZ,1989,0.0
+NAICB,NAICP,Natural gasoline consumed by the industrial sector.,Thousand barrels,AZ,1989,0.0
+NGACB,NGACP,Natural gas consumed by the transportation sector.,Million cubic feet,AZ,1989,19248.1077
+NGCCB,NGCCP,Natural gas consumed by (delivered to) the commercial sector (including supplemental gaseous fuels).,Million cubic feet,AZ,1989,29869.85896
+NGEIB,NGEIP,Natural gas consumed by the electric power sector (including supplemental gaseous fuels).,Million cubic feet,AZ,1989,52423.15064
+NGICB,NGICP,Natural gas consumed by (delivered to) the industrial sector (including supplemental gaseous fuels).,Million cubic feet,AZ,1989,21639.7608
+NGLPB,NGLPP,Natural gas consumed as lease and plant fuel.,Million cubic feet,AZ,1989,36.55365
+NGMPB,NGMPP,Natural gas marketed production.,Million cubic feet,AZ,1989,1414.4
+NGPZB,NGPZP,Natural gas consumed as pipeline fuel.,Million cubic feet,AZ,1989,19248.1077
+NGRCB,NGRCP,Natural gas consumed by (delivered to) the residential sector (including supplemental gaseous fuels).,Million cubic feet,AZ,1989,28286.66503
+NGTCB,NGTCP,Natural gas total consumption (including supplemental gaseous fuels).,Million cubic feet,AZ,1989,151467.8402
+NGVHB,NGVHP,Natural gas consumed as vehicle fuel.,Million cubic feet,AZ,1989,0.0
+NUEGB,NUEGP,Electricity produced from nuclear power by the electric power sector.,Million kilowatthours,AZ,1989,83079.97889
+NUETB,NUETP,Electricity produced from nuclear power.,Million kilowatthours,AZ,1989,83079.97889
+PAPRB,PAPRP,Crude oil production (including lease condensate).,Thousand barrels,AZ,1989,794.6
+PCCCB,PCCCP,Petroleum coke consumed by the commercial sector.,Thousand barrels,AZ,1989,0.0
+PCEIB,PCEIP,Petroleum coke consumed by the electric power sector.,Thousand barrels,AZ,1989,0.0
+PLICB,PLICP,Plant condensate consumed by the industrial sector.,Thousand barrels,AZ,1989,0.0
+PPICB,PPICP,Pentanes plus consumed by the industrial sector.,Thousand barrels,AZ,1989,0.0
+RFACB,RFACP,Residual fuel oil consumed by the transportation sector.,Thousand barrels,AZ,1989,0.0
+RFCCB,RFCCP,Residual fuel oil consumed by the commercial sector.,Thousand barrels,AZ,1989,0.0
+RFEIB,RFEIP,Residual fuel oil consumed by the electric power sector.,Thousand barrels,AZ,1989,922.37834
+RFICB,RFICP,Residual fuel oil consumed by the industrial sector,Thousand barrels,AZ,1989,36.13082
+SGICB,SGICP,Still gas consumed by the industrial sector.,Thousand barrels,AZ,1989,950.87736
+SNICB,SNICP,Special naphthas consumed by the industrial sector.,Thousand barrels,AZ,1989,0.0
+SOEGB,SOEGP,Electricity produced from photovoltaic and solar thermal energy by the electric power sector.,Million kilowatthours,AZ,1989,0.0
+UOICB,UOICP,Unfinished oils consumed by the industrial sector.,Thousand barrels,AZ,1989,-245.22196
+USICB,USICP,Unfractionated stream consumed by the industrial sector.,Thousand barrels,AZ,1989,0.0
+WXICB,WXICP,Waxes consumed by the industrial sector.,Thousand barrels,AZ,1989,0.0
+WYEGB,WYEGP,Electricity produced from wind energy by the electric power sector.,Million kilowatthours,AZ,1989,0.0

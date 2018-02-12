@@ -1,0 +1,83 @@
+MSN_data,MSN,desc,unit,state,year,data
+ABICB,ABICP,Aviation gasoline blending components consumed by the industrial sector.,Thousand barrels,TX,1983,195.95735
+ARICB,ARICP,Asphalt and road oil consumed by the industrial sector.,Thousand barrels,TX,1983,77779.97323
+ARTCB,ARTCP,Asphalt and road oil total consumption.,Thousand barrels,TX,1983,77779.97323
+ARTXB,ARTXP,Asphalt and road oil total end-use consumption.,Thousand barrels,TX,1983,77779.97323
+AVACB,AVACP,Aviation gasoline consumed by the transportation sector.,Thousand barrels,TX,1983,3848.01054
+AVTCB,AVTCP,Aviation gasoline total consumption.,Thousand barrels,TX,1983,3848.01054
+AVTXB,AVTXP,Aviation gasoline total end-use consumption.,Thousand barrels,TX,1983,3848.01054
+CLACB,CLACP,Coal consumed by the transportation sector.,Thousand short tons,TX,1983,0.0
+CLCCB,CLCCP,Coal consumed by the commercial sector.,Thousand short tons,TX,1983,0.0
+CLEIB,CLEIP,Coal consumed by the electric power sector.,Thousand short tons,TX,1983,950869.6048
+CLKCB,CLKCP,Coal consumed at coke plants (coking coal).,Thousand short tons,TX,1983,294.81233
+CLOCB,CLOCP,Coal consumed by industrial users other than coke plants.,Thousand short tons,TX,1983,65593.5769
+CLPRB,CLPRP,Coal production.,Thousand short tons,TX,1983,493047.9886
+CLRCB,CLRCP,Coal consumed by the residential sector.,Thousand short tons,TX,1983,0.0
+COICB,COICP,Crude oil consumed by the industrial sector.,Thousand barrels,TX,1983,1418.5872
+DFACB,DFACP,Distillate fuel oil consumed by the transportation sector.,Thousand barrels,TX,1983,312874.1247
+DFCCB,DFCCP,Distillate fuel oil consumed by the commercial sector.,Thousand barrels,TX,1983,52144.62935
+DFICB,DFICP,Distillate fuel oil consumed by the industrial sector.,Thousand barrels,TX,1983,187401.4509
+DFRCB,DFRCP,Distillate fuel oil consumed by the residential sector.,Thousand barrels,TX,1983,2005.54674
+ELEXB,ELEXP,Electricity exported from the United States.,Million kilowatthours,TX,1983,28.64715
+ELIMB,ELIMP,Electricity imported into the United States.,Million kilowatthours,TX,1983,185.99836
+EMTCB,EMTCP,"Fuel ethanol, excluding denaturant, total consumption.",Thousand barrels,TX,1983,2275.26288
+ESACB,ESACP,"Electricity consumed by (i.e., sold to) the transportation sector.",Million kilowatthours,TX,1983,0.0
+ESCCB,ESCCP,"Electricity consumed by (i.e., sold to) the commercial sector.",Million kilowatthours,TX,1983,174791.5465
+ESICB,ESICP,"Electricity consumed by (i.e., sold to) the industrial sector.",Million kilowatthours,TX,1983,271692.7866
+ESRCB,ESRCP,"Electricity consumed by (i.e., sold to) the residential sector.",Million kilowatthours,TX,1983,205832.5713
+ESTCB,ESTCP,"Electricity total consumption (i.e., sold).",Million kilowatthours,TX,1983,652316.9044
+FNICB,FNICP,"Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.",Thousand barrels,TX,1983,116910.1848
+FOICB,FOICP,"Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, consumed by the industrial sector.",Thousand barrels,TX,1983,210842.9092
+FSICB,FSICP,"Petrochemical feedstocks, still gas, consumed by the industrial sector.",Thousand barrels,TX,1983,15122.8188
+GEEGB,GEEGP,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthours,TX,1983,0.0
+HYCCB,HYCCP,Hydroelectricity produced in the commercial sector.,Million kilowatthours,TX,1983,0.0
+HYEGB,HYEGP,Hydroelectricity produced by the electric power sector.,Million kilowatthours,TX,1983,11648.20688
+HYICB,HYICP,Hydroelectricity produced in the industrial sector.,Million kilowatthours,TX,1983,0.0
+JFTXB,JFTXP,Jet fuel total end-use consumption.,Thousand barrels,TX,1983,266029.8204
+JKACB,JKACP,Kerosene-type jet fuel consumed by the transportation sector.,Thousand barrels,TX,1983,232180.6589
+JKTCB,JKTCP,Kerosene-type jet fuel total consumption.,Thousand barrels,TX,1983,232180.6589
+JNACB,JNACP,Naphtha-type jet fuel consumed by the transportation sector.,Thousand barrels,TX,1983,33849.16149
+JNTCB,JNTCP,Naphtha-type jet fuel total consumption.,Thousand barrels,TX,1983,33849.16149
+KSCCB,KSCCP,Kerosene consumed by the commercial sector.,Thousand barrels,TX,1983,66790.53623
+KSICB,KSICP,Kerosene consumed by the industrial sector.,Thousand barrels,TX,1983,13521.26748
+KSRCB,KSRCP,Kerosene consumed by the residential sector.,Thousand barrels,TX,1983,635.17205
+LGACB,LGACP,LPG consumed by the transportation sector.,Thousand barrels,TX,1983,5136.28702
+LGCCB,LGCCP,LPG consumed by the commercial sector.,Thousand barrels,TX,1983,5571.74381
+LGICB,LGICP,LPG consumed by the industrial sector.,Thousand barrels,TX,1983,680908.7322
+LGRCB,LGRCP,LPG consumed by the residential sector.,Thousand barrels,TX,1983,18341.31975
+LUACB,LUACP,Lubricants consumed by the transportation sector.,Thousand barrels,TX,1983,10603.48917
+LUICB,LUICP,Lubricants consumed by the industrial sector.,Thousand barrels,TX,1983,19051.43331
+MBICB,MBICP,Motor gasoline blending components consumed by the industrial sector.,Thousand barrels,TX,1983,-39636.20357
+MGACB,MGACP,Motor gasoline consumed by the transportation sector.,Thousand barrels,TX,1983,1008867.094
+MGCCB,MGCCP,Motor gasoline consumed by the commercial sector.,Thousand barrels,TX,1983,12765.16916
+MGICB,MGICP,Motor gasoline consumed by the industrial sector.,Thousand barrels,TX,1983,2808.21876
+MSICB,MSICP,Miscellaneous petroleum products consumed by the industrial sector.,Thousand barrels,TX,1983,67951.32848
+NAICB,NAICP,Natural gasoline consumed by the industrial sector.,Thousand barrels,TX,1983,19728.57094
+NGACB,NGACP,Natural gas consumed by the transportation sector.,Million cubic feet,TX,1983,109171.9243
+NGCCB,NGCCP,Natural gas consumed by (delivered to) the commercial sector (including supplemental gaseous fuels).,Million cubic feet,TX,1983,162504.6439
+NGEIB,NGEIP,Natural gas consumed by the electric power sector (including supplemental gaseous fuels).,Million cubic feet,TX,1983,1219223.78
+NGICB,NGICP,Natural gas consumed by (delivered to) the industrial sector (including supplemental gaseous fuels).,Million cubic feet,TX,1983,1623292.209
+NGLPB,NGLPP,Natural gas consumed as lease and plant fuel.,Million cubic feet,TX,1983,317533.1723
+NGMPB,NGMPP,Natural gas marketed production.,Million cubic feet,TX,1983,6722393.488
+NGPZB,NGPZP,Natural gas consumed as pipeline fuel.,Million cubic feet,TX,1983,109171.9243
+NGRCB,NGRCP,Natural gas consumed by (delivered to) the residential sector (including supplemental gaseous fuels).,Million cubic feet,TX,1983,221320.8801
+NGTCB,NGTCP,Natural gas total consumption (including supplemental gaseous fuels).,Million cubic feet,TX,1983,3335519.164
+NGVHB,NGVHP,Natural gas consumed as vehicle fuel.,Million cubic feet,TX,1983,0.0
+NUEGB,NUEGP,Electricity produced from nuclear power by the electric power sector.,Million kilowatthours,TX,1983,0.0
+NUETB,NUETP,Electricity produced from nuclear power.,Million kilowatthours,TX,1983,0.0
+PAPRB,PAPRP,Crude oil production (including lease condensate).,Thousand barrels,TX,1983,5235520.8
+PCCCB,PCCCP,Petroleum coke consumed by the commercial sector.,Thousand barrels,TX,1983,0.0
+PCEIB,PCEIP,Petroleum coke consumed by the electric power sector.,Thousand barrels,TX,1983,0.0
+PLICB,PLICP,Plant condensate consumed by the industrial sector.,Thousand barrels,TX,1983,53.57676
+PPICB,PPICP,Pentanes plus consumed by the industrial sector.,Thousand barrels,TX,1983,0.0
+RFACB,RFACP,Residual fuel oil consumed by the transportation sector.,Thousand barrels,TX,1983,161675.9699
+RFCCB,RFCCP,Residual fuel oil consumed by the commercial sector.,Thousand barrels,TX,1983,6401.51632
+RFEIB,RFEIP,Residual fuel oil consumed by the electric power sector.,Thousand barrels,TX,1983,13006.11808
+RFICB,RFICP,Residual fuel oil consumed by the industrial sector,Thousand barrels,TX,1983,90501.07649
+SGICB,SGICP,Still gas consumed by the industrial sector.,Thousand barrels,TX,1983,316417.9343
+SNICB,SNICP,Special naphthas consumed by the industrial sector.,Thousand barrels,TX,1983,11554.45569
+SOEGB,SOEGP,Electricity produced from photovoltaic and solar thermal energy by the electric power sector.,Million kilowatthours,TX,1983,0.0
+UOICB,UOICP,Unfinished oils consumed by the industrial sector.,Thousand barrels,TX,1983,-53232.72141
+USICB,USICP,Unfractionated stream consumed by the industrial sector.,Thousand barrels,TX,1983,0.0
+WXICB,WXICP,Waxes consumed by the industrial sector.,Thousand barrels,TX,1983,2202.11019
+WYEGB,WYEGP,Electricity produced from wind energy by the electric power sector.,Million kilowatthours,TX,1983,0.0

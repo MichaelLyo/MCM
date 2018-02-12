@@ -15,16 +15,17 @@ EXCLUDE_MSN = ["CLHCB", "CLICB", "CLTCB", "CLTXB", "DFTCB", "DFTXB", "DKEIB", "E
                "RETCB", "RFTCB", "RFTXB", "SFTCB", "SOCCB", "SOICB", "SORCB", "SOTCB", "SOTXB", "TEACB", "TECCB",
                "TEEIB", "TEESB", "TEICB", "TERCB", "TETCB", "TETXB", "TNACB", "TNCCB", "TNICB", "TNRCB", "TNTXB",
                "WDCCB", "WDICB", "WDTCB", "WSICB", "WSTCB", "WWCCB", "WWEIB", "WWI4B", "WWICB", "WWTCB", "WWTXB",
-               "WYTCB", "WYTXB"]
+               "WYTCB", "WYTXB", "TEACB", "TECCB", "TEEIB", "TEICB", "TEPFB", "TEPRB", "TERCB", "TERFB", "TETCB",
+               "TETPB", "TETXB", "TNACB", "TNCCB", "TNICB", "TNRCB", "TNSCB", "TNTXB"]
+
+df_msn = pd.read_excel(DATA_SOURCE, "msncodes", names=['MSN', 'desc', 'unit'])
+df_data = pd.read_excel(DATA_SOURCE, "seseds", names=['MSN_data', 'state', 'year', 'data'])
 
 
 def create_purify(year: int, state: str, filename):
     def add_suffix_b_names(x):
         x['MSN_data'] = x['MSN'].str.slice(0, 4) + 'B'
         return x
-
-    df_msn = pd.read_excel(DATA_SOURCE, "msncodes", names=['MSN', 'desc', 'unit'])
-    df_data = pd.read_excel(DATA_SOURCE, "seseds", names=['MSN_data', 'state', 'year', 'data'])
 
     # Specify a year and state
     df_data_2005_CA = df_data[(df_data['state'] == state) & (df_data['year'] == year)]
@@ -57,15 +58,20 @@ def get_loading_matrix(groups: list):
             group_j = groups[j]['group'].reset_index()
             corrMatrix[i][j] = get_corr(group_i, group_j)
             corrMatrix[j][i] = corrMatrix[i][j]
-
+    print(corrMatrix)
     # np.linalg.eig return a tuple, 0 is eigenvalues
     eigvalMatrix = pd.DataFrame(np.linalg.eig(corrMatrix)[0], columns=['value'])
+    print(eigvalMatrix)
     eigvalMatrix['name'] = [group['name'] for group in groups]
+
     factor_eigval_matrix = eigvalMatrix.nlargest(FACTOR_NUMBER, 'value')
+    print(factor_eigval_matrix)
     factor_eigval_matrix['percent'] = pd.DataFrame(factor_eigval_matrix['value'] / eigvalMatrix['value'].sum() * 100)
     eigvecMatrix = pd.DataFrame(np.linalg.eig(corrMatrix)[1])
-
+    print("-===-=-=-=-=-=")
+    print(eigvecMatrix)
     loading_matrix = eigvecMatrix * np.sqrt(factor_eigval_matrix['value'])
+    print(loading_matrix)
     loading_matrix['name'] = [group['name'] for group in groups]
     return loading_matrix, factor_eigval_matrix
 
@@ -121,3 +127,9 @@ if __name__ == '__main__':
     df_final = df_final.rename(columns={"Million cubic feet": "natural gas", "Million kilowatthours": "electricity",
                                         "Thousand barrels": "fuel oil", "Thousand short tons": "coal coke"})
     df_final.to_csv('./data/A-final.csv', index=False)
+    df_final.drop(['year'], axis=1).plot(x='state', kind='bar', rot=0)
+    plt.title('Weights of energy classification in 2009', fontweight='bold')
+    plt.ylabel("percent(%)")
+    plt.xlabel("state")
+    plt.savefig('./notebooks/1-1.png')
+    # plt.show()

@@ -3,3 +3,6 @@ numpy
 xlrd
 factor_analyzer
 matplotlib
+PyYAML
+Cython
+supplychainpy==0.0.5

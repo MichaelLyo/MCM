@@ -1,0 +1,83 @@
+MSN_data,MSN,desc,unit,state,year,data
+ABICB,ABICP,Aviation gasoline blending components consumed by the industrial sector.,Thousand barrels,CA,2008,11.0474
+ARICB,ARICP,Asphalt and road oil consumed by the industrial sector.,Thousand barrels,CA,2008,82940.51795
+ARTCB,ARTCP,Asphalt and road oil total consumption.,Thousand barrels,CA,2008,82940.51795
+ARTXB,ARTXP,Asphalt and road oil total end-use consumption.,Thousand barrels,CA,2008,82940.51795
+AVACB,AVACP,Aviation gasoline consumed by the transportation sector.,Thousand barrels,CA,2008,2056.82936
+AVTCB,AVTCP,Aviation gasoline total consumption.,Thousand barrels,CA,2008,2056.82936
+AVTXB,AVTXP,Aviation gasoline total end-use consumption.,Thousand barrels,CA,2008,2056.82936
+CLACB,CLACP,Coal consumed by the transportation sector.,Thousand short tons,CA,2008,0.0
+CLCCB,CLCCP,Coal consumed by the commercial sector.,Thousand short tons,CA,2008,0.0
+CLEIB,CLEIP,Coal consumed by the electric power sector.,Thousand short tons,CA,2008,23629.83989
+CLKCB,CLKCP,Coal consumed at coke plants (coking coal).,Thousand short tons,CA,2008,0.0
+CLOCB,CLOCP,Coal consumed by industrial users other than coke plants.,Thousand short tons,CA,2008,39420.32868
+CLPRB,CLPRP,Coal production.,Thousand short tons,CA,2008,0.0
+CLRCB,CLRCP,Coal consumed by the residential sector.,Thousand short tons,CA,2008,0.0
+COICB,COICP,Crude oil consumed by the industrial sector.,Thousand barrels,CA,2008,0.0
+DFACB,DFACP,Distillate fuel oil consumed by the transportation sector.,Thousand barrels,CA,2008,460817.0581
+DFCCB,DFCCP,Distillate fuel oil consumed by the commercial sector.,Thousand barrels,CA,2008,15398.05052
+DFICB,DFICP,Distillate fuel oil consumed by the industrial sector.,Thousand barrels,CA,2008,68526.89512
+DFRCB,DFRCP,Distillate fuel oil consumed by the residential sector.,Thousand barrels,CA,2008,852.0563
+ELEXB,ELEXP,Electricity exported from the United States.,Million kilowatthours,CA,2008,2301.86486
+ELIMB,ELIMP,Electricity imported into the United States.,Million kilowatthours,CA,2008,18320.85001
+EMTCB,EMTCP,"Fuel ethanol, excluding denaturant, total consumption.",Thousand barrels,CA,2008,83142.32967
+ESACB,ESACP,"Electricity consumed by (i.e., sold to) the transportation sector.",Million kilowatthours,CA,2008,2957.56937
+ESCCB,ESCCP,"Electricity consumed by (i.e., sold to) the commercial sector.",Million kilowatthours,CA,2008,426589.7936
+ESICB,ESICP,"Electricity consumed by (i.e., sold to) the industrial sector.",Million kilowatthours,CA,2008,174118.6932
+ESRCB,ESRCP,"Electricity consumed by (i.e., sold to) the residential sector.",Million kilowatthours,CA,2008,311279.551
+ESTCB,ESTCP,"Electricity total consumption (i.e., sold).",Million kilowatthours,CA,2008,914945.6072
+FNICB,FNICP,"Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.",Thousand barrels,CA,2008,3884.25462
+FOICB,FOICP,"Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, consumed by the industrial sector.",Thousand barrels,CA,2008,5272.86794
+FSICB,FSICP,"Petrochemical feedstocks, still gas, consumed by the industrial sector.",Thousand barrels,CA,2008,0.0
+GEEGB,GEEGP,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthours,CA,2008,126949.082
+HYCCB,HYCCP,Hydroelectricity produced in the commercial sector.,Million kilowatthours,CA,2008,0.0
+HYEGB,HYEGP,Hydroelectricity produced by the electric power sector.,Million kilowatthours,CA,2008,237755.436
+HYICB,HYICP,Hydroelectricity produced in the industrial sector.,Million kilowatthours,CA,2008,0.0
+JFTXB,JFTXP,Jet fuel total end-use consumption.,Thousand barrels,CA,2008,571738.7391
+JKACB,JKACP,Kerosene-type jet fuel consumed by the transportation sector.,Thousand barrels,CA,2008,571738.7391
+JKTCB,JKTCP,Kerosene-type jet fuel total consumption.,Thousand barrels,CA,2008,571738.7391
+JNACB,JNACP,Naphtha-type jet fuel consumed by the transportation sector.,Thousand barrels,CA,2008,0.0
+JNTCB,JNTCP,Naphtha-type jet fuel total consumption.,Thousand barrels,CA,2008,0.0
+KSCCB,KSCCP,Kerosene consumed by the commercial sector.,Thousand barrels,CA,2008,83.53934
+KSICB,KSICP,Kerosene consumed by the industrial sector.,Thousand barrels,CA,2008,68.00598
+KSRCB,KSRCP,Kerosene consumed by the residential sector.,Thousand barrels,CA,2008,522.54391
+LGACB,LGACP,LPG consumed by the transportation sector.,Thousand barrels,CA,2008,4753.50667
+LGCCB,LGCCP,LPG consumed by the commercial sector.,Thousand barrels,CA,2008,9361.46981
+LGICB,LGICP,LPG consumed by the industrial sector.,Thousand barrels,CA,2008,16013.46848
+LGRCB,LGRCP,LPG consumed by the residential sector.,Thousand barrels,CA,2008,30138.40274
+LUACB,LUACP,Lubricants consumed by the transportation sector.,Thousand barrels,CA,2008,13982.64104
+LUICB,LUICP,Lubricants consumed by the industrial sector.,Thousand barrels,CA,2008,10486.98076
+MBICB,MBICP,Motor gasoline blending components consumed by the industrial sector.,Thousand barrels,CA,2008,0.0
+MGACB,MGACP,Motor gasoline consumed by the transportation sector.,Thousand barrels,CA,2008,1879842.272
+MGCCB,MGCCP,Motor gasoline consumed by the commercial sector.,Thousand barrels,CA,2008,1446.24577
+MGICB,MGICP,Motor gasoline consumed by the industrial sector.,Thousand barrels,CA,2008,20506.32256
+MSICB,MSICP,Miscellaneous petroleum products consumed by the industrial sector.,Thousand barrels,CA,2008,1156.14858
+NAICB,NAICP,Natural gasoline consumed by the industrial sector.,Thousand barrels,CA,2008,0.0
+NGACB,NGACP,Natural gas consumed by the transportation sector.,Million cubic feet,CA,2008,20017.10529
+NGCCB,NGCCP,Natural gas consumed by (delivered to) the commercial sector (including supplemental gaseous fuels).,Million cubic feet,CA,2008,258378.0245
+NGEIB,NGEIP,Natural gas consumed by the electric power sector (including supplemental gaseous fuels).,Million cubic feet,CA,2008,882428.1982
+NGICB,NGICP,Natural gas consumed by (delivered to) the industrial sector (including supplemental gaseous fuels).,Million cubic feet,CA,2008,810604.7668
+NGLPB,NGLPP,Natural gas consumed as lease and plant fuel.,Million cubic feet,CA,2008,68964.27447
+NGMPB,NGMPP,Natural gas marketed production.,Million cubic feet,CA,2008,331492.569
+NGPZB,NGPZP,Natural gas consumed as pipeline fuel.,Million cubic feet,CA,2008,7970.20224
+NGRCB,NGRCP,Natural gas consumed by (delivered to) the residential sector (including supplemental gaseous fuels).,Million cubic feet,CA,2008,503596.5698
+NGTCB,NGTCP,Natural gas total consumption (including supplemental gaseous fuels).,Million cubic feet,CA,2008,2475017.122
+NGVHB,NGVHP,Natural gas consumed as vehicle fuel.,Million cubic feet,CA,2008,12046.90305
+NUEGB,NUEGP,Electricity produced from nuclear power by the electric power sector.,Million kilowatthours,CA,2008,339538.015
+NUETB,NUETP,Electricity produced from nuclear power.,Million kilowatthours,CA,2008,339538.015
+PAPRB,PAPRP,Crude oil production (including lease condensate).,Thousand barrels,CA,2008,1384407.8
+PCCCB,PCCCP,Petroleum coke consumed by the commercial sector.,Thousand barrels,CA,2008,0.0
+PCEIB,PCEIP,Petroleum coke consumed by the electric power sector.,Thousand barrels,CA,2008,18404.826
+PLICB,PLICP,Plant condensate consumed by the industrial sector.,Thousand barrels,CA,2008,0.0
+PPICB,PPICP,Pentanes plus consumed by the industrial sector.,Thousand barrels,CA,2008,1245.81811
+RFACB,RFACP,Residual fuel oil consumed by the transportation sector.,Thousand barrels,CA,2008,258255.4277
+RFCCB,RFCCP,Residual fuel oil consumed by the commercial sector.,Thousand barrels,CA,2008,0.0
+RFEIB,RFEIP,Residual fuel oil consumed by the electric power sector.,Thousand barrels,CA,2008,56.23093
+RFICB,RFICP,Residual fuel oil consumed by the industrial sector,Thousand barrels,CA,2008,2559.06004
+SGICB,SGICP,Still gas consumed by the industrial sector.,Thousand barrels,CA,2008,169352.8321
+SNICB,SNICP,Special naphthas consumed by the industrial sector.,Thousand barrels,CA,2008,6041.48222
+SOEGB,SOEGP,Electricity produced from photovoltaic and solar thermal energy by the electric power sector.,Million kilowatthours,CA,2008,6606.91977
+UOICB,UOICP,Unfinished oils consumed by the industrial sector.,Thousand barrels,CA,2008,-6187.3909
+USICB,USICP,Unfractionated stream consumed by the industrial sector.,Thousand barrels,CA,2008,0.0
+WXICB,WXICP,Waxes consumed by the industrial sector.,Thousand barrels,CA,2008,2515.53346
+WYEGB,WYEGP,Electricity produced from wind energy by the electric power sector.,Million kilowatthours,CA,2008,53063.34549

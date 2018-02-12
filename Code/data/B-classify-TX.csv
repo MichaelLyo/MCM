@@ -1,0 +1,901 @@
+year,sector,unit,data
+1960,Commercial,Million cubic feet,61818.48
+1960,Commercial,Million kilowatthours,33439.73117
+1960,Commercial,Thousand barrels,22952.56193
+1960,Commercial,Thousand short tons,106.94627
+1960,Electric power,Million cubic feet,421566.0011
+1960,Electric power,Thousand barrels,267.20378999999997
+1960,Electric power,Thousand short tons,0.0
+1960,Industrial,Million cubic feet,2100294.299
+1960,Industrial,Million kilowatthours,49821.6555
+1960,Industrial,Thousand barrels,669000.84198
+1960,Residential,Million cubic feet,177678.45
+1960,Residential,Million kilowatthours,38608.62248
+1960,Residential,Thousand barrels,37088.47655
+1960,Residential,Thousand short tons,153.89827
+1960,Transportation,Million cubic feet,54125.325
+1960,Transportation,Million kilowatthours,27.966079999999998
+1960,Transportation,Thousand barrels,743500.6586399999
+1960,Transportation,Thousand short tons,295.12098
+1961,Commercial,Million cubic feet,64515.69
+1961,Commercial,Million kilowatthours,35919.93205
+1961,Commercial,Thousand barrels,19884.12297
+1961,Commercial,Thousand short tons,65.34781
+1961,Electric power,Million cubic feet,434774.9568
+1961,Electric power,Thousand barrels,249.9334
+1961,Electric power,Thousand short tons,0.0
+1961,Industrial,Million cubic feet,2095699.648
+1961,Industrial,Million kilowatthours,52136.11064
+1961,Industrial,Thousand barrels,674914.0823499999
+1961,Residential,Million cubic feet,172004.58
+1961,Residential,Million kilowatthours,39655.76869
+1961,Residential,Thousand barrels,36889.22144
+1961,Residential,Thousand short tons,94.03702
+1961,Transportation,Million cubic feet,64998.0
+1961,Transportation,Million kilowatthours,25.31052
+1961,Transportation,Thousand barrels,749386.48346
+1961,Transportation,Thousand short tons,57.250769999999996
+1962,Commercial,Million cubic feet,70243.38
+1962,Commercial,Million kilowatthours,39125.00858
+1962,Commercial,Thousand barrels,21143.40341
+1962,Commercial,Thousand short tons,67.91089000000001
+1962,Electric power,Million cubic feet,509372.5621
+1962,Electric power,Thousand barrels,461.45950999999997
+1962,Electric power,Thousand short tons,0.0
+1962,Industrial,Million cubic feet,2113288.458
+1962,Industrial,Million kilowatthours,58758.881120000005
+1962,Industrial,Thousand barrels,719435.5869
+1962,Residential,Million cubic feet,203308.155
+1962,Residential,Million kilowatthours,48297.73006
+1962,Residential,Thousand barrels,37282.31727
+1962,Residential,Thousand short tons,97.72546
+1962,Transportation,Million cubic feet,63350.28
+1962,Transportation,Million kilowatthours,21.17108
+1962,Transportation,Thousand barrels,772536.8860599999
+1962,Transportation,Thousand short tons,54.03937
+1963,Commercial,Million cubic feet,77749.075
+1963,Commercial,Million kilowatthours,43460.59979
+1963,Commercial,Thousand barrels,22347.89417
+1963,Commercial,Thousand short tons,52.776430000000005
+1963,Electric power,Million cubic feet,574622.2077
+1963,Electric power,Thousand barrels,380.3635
+1963,Electric power,Thousand short tons,0.0
+1963,Industrial,Million cubic feet,2118448.126
+1963,Industrial,Million kilowatthours,65137.8949
+1963,Industrial,Thousand barrels,800975.81331
+1963,Residential,Million cubic feet,205598.73100000003
+1963,Residential,Million kilowatthours,55061.04764
+1963,Residential,Thousand barrels,38342.894089999994
+1963,Residential,Thousand short tons,72.88173
+1963,Transportation,Million cubic feet,68009.571
+1963,Transportation,Million kilowatthours,20.05161
+1963,Transportation,Thousand barrels,792824.0669
+1963,Transportation,Thousand short tons,46.80343
+1964,Commercial,Million cubic feet,84034.55
+1964,Commercial,Million kilowatthours,46526.98736
+1964,Commercial,Thousand barrels,25216.670329999997
+1964,Commercial,Thousand short tons,44.02053
+1964,Electric power,Million cubic feet,625563.8239
+1964,Electric power,Thousand barrels,225.96735
+1964,Electric power,Thousand short tons,0.0
+1964,Industrial,Million cubic feet,2062988.0880000002
+1964,Industrial,Million kilowatthours,72124.60294
+1964,Industrial,Thousand barrels,871304.7138299999
+1964,Residential,Million cubic feet,199465.069
+1964,Residential,Million kilowatthours,58784.91126
+1964,Residential,Thousand barrels,46482.772450000004
+1964,Residential,Thousand short tons,60.79019
+1964,Transportation,Million cubic feet,68440.382
+1964,Transportation,Million kilowatthours,17.06
+1964,Transportation,Thousand barrels,820428.42636
+1964,Transportation,Thousand short tons,63.677730000000004
+1965,Commercial,Million cubic feet,83594.644
+1965,Commercial,Million kilowatthours,50511.480019999995
+1965,Commercial,Thousand barrels,25521.39022
+1965,Commercial,Thousand short tons,38.72657
+1965,Electric power,Million cubic feet,663206.4508
+1965,Electric power,Thousand barrels,207.77906000000002
+1965,Electric power,Thousand short tons,0.0
+1965,Industrial,Million cubic feet,2175278.245
+1965,Industrial,Million kilowatthours,80812.38747
+1965,Industrial,Thousand barrels,873692.3517300001
+1965,Residential,Million cubic feet,189345.83
+1965,Residential,Million kilowatthours,63956.44554
+1965,Residential,Thousand barrels,47697.548259999996
+1965,Residential,Thousand short tons,51.33538
+1965,Transportation,Million cubic feet,70030.68400000001
+1965,Transportation,Million kilowatthours,13.648
+1965,Transportation,Thousand barrels,850250.66634
+1965,Transportation,Thousand short tons,61.185359999999996
+1966,Commercial,Million cubic feet,92274.21
+1966,Commercial,Million kilowatthours,54413.07131
+1966,Commercial,Thousand barrels,31073.134639999997
+1966,Commercial,Thousand short tons,44.46102
+1966,Electric power,Million cubic feet,732300.7394
+1966,Electric power,Thousand barrels,276.16276
+1966,Electric power,Thousand short tons,0.0
+1966,Industrial,Million cubic feet,2304407.32
+1966,Industrial,Million kilowatthours,93072.88743999999
+1966,Industrial,Thousand barrels,925058.3692699999
+1966,Residential,Million cubic feet,204798.265
+1966,Residential,Million kilowatthours,69280.92955
+1966,Residential,Thousand barrels,43498.23597
+1966,Residential,Thousand short tons,58.936780000000006
+1966,Transportation,Million cubic feet,70481.768
+1966,Transportation,Million kilowatthours,0.0
+1966,Transportation,Thousand barrels,881133.10192
+1966,Transportation,Thousand short tons,52.367909999999995
+1967,Commercial,Million cubic feet,145874.988
+1967,Commercial,Million kilowatthours,59454.20236
+1967,Commercial,Thousand barrels,29621.91648
+1967,Commercial,Thousand short tons,35.5727
+1967,Electric power,Million cubic feet,808229.8531
+1967,Electric power,Thousand barrels,217.14668999999998
+1967,Electric power,Thousand short tons,0.0
+1967,Industrial,Million cubic feet,2398686.048
+1967,Industrial,Million kilowatthours,101819.7473
+1967,Industrial,Thousand barrels,941678.5197799999
+1967,Residential,Million cubic feet,210268.908
+1967,Residential,Million kilowatthours,76841.76801
+1967,Residential,Thousand barrels,42510.51666
+1967,Residential,Thousand short tons,47.15455
+1967,Transportation,Million cubic feet,75536.532
+1967,Transportation,Million kilowatthours,0.0
+1967,Transportation,Thousand barrels,927184.54794
+1967,Transportation,Thousand short tons,35.73292
+1968,Commercial,Million cubic feet,144740.796
+1968,Commercial,Million kilowatthours,64157.777429999995
+1968,Commercial,Thousand barrels,40735.12553
+1968,Commercial,Thousand short tons,17.32904
+1968,Electric power,Million cubic feet,883973.1916
+1968,Electric power,Thousand barrels,307.9687
+1968,Electric power,Thousand short tons,0.0
+1968,Industrial,Million cubic feet,2500035.456
+1968,Industrial,Million kilowatthours,114638.1264
+1968,Industrial,Thousand barrels,999792.8948400001
+1968,Residential,Million cubic feet,219809.99399999998
+1968,Residential,Million kilowatthours,86202.83226
+1968,Residential,Thousand barrels,48772.155119999996
+1968,Residential,Thousand short tons,22.05503
+1968,Transportation,Million cubic feet,88299.546
+1968,Transportation,Million kilowatthours,0.0
+1968,Transportation,Thousand barrels,1007819.8854799999
+1968,Transportation,Thousand short tons,34.46481
+1969,Commercial,Million cubic feet,146206.452
+1969,Commercial,Million kilowatthours,71425.21118
+1969,Commercial,Thousand barrels,45709.90341
+1969,Commercial,Thousand short tons,12.52727
+1969,Electric power,Million cubic feet,1010430.088
+1969,Electric power,Thousand barrels,409.80552
+1969,Electric power,Thousand short tons,0.0
+1969,Industrial,Million cubic feet,2549383.014
+1969,Industrial,Million kilowatthours,128808.7731
+1969,Industrial,Thousand barrels,1115444.34108
+1969,Residential,Million cubic feet,229115.664
+1969,Residential,Million kilowatthours,103079.9013
+1969,Residential,Thousand barrels,57632.41875999999
+1969,Residential,Thousand short tons,15.94387
+1969,Transportation,Million cubic feet,89581.476
+1969,Transportation,Million kilowatthours,0.0
+1969,Transportation,Thousand barrels,1069701.63405
+1969,Transportation,Thousand short tons,25.271079999999998
+1970,Commercial,Million cubic feet,150034.43
+1970,Commercial,Million kilowatthours,78029.74452000001
+1970,Commercial,Thousand barrels,45336.976
+1970,Commercial,Thousand short tons,10.71251
+1970,Electric power,Million cubic feet,1090288.591
+1970,Electric power,Thousand barrels,655.87241
+1970,Electric power,Thousand short tons,0.0
+1970,Industrial,Million cubic feet,2626269.048
+1970,Industrial,Million kilowatthours,137415.7785
+1970,Industrial,Thousand barrels,1152875.89386
+1970,Residential,Million cubic feet,238458.103
+1970,Residential,Million kilowatthours,111201.1062
+1970,Residential,Thousand barrels,53476.714179999995
+1970,Residential,Thousand short tons,13.63403
+1970,Transportation,Million cubic feet,98827.183
+1970,Transportation,Million kilowatthours,0.0
+1970,Transportation,Thousand barrels,1112865.43694
+1970,Transportation,Thousand short tons,28.57098
+1971,Commercial,Million cubic feet,146268.421
+1971,Commercial,Million kilowatthours,86422.08397
+1971,Commercial,Thousand barrels,41489.688819999996
+1971,Commercial,Thousand short tons,7.6558399999999995
+1971,Electric power,Million cubic feet,1199508.344
+1971,Electric power,Thousand barrels,1838.5702800000001
+1971,Electric power,Thousand short tons,129.626
+1971,Industrial,Million cubic feet,2791236.058
+1971,Industrial,Million kilowatthours,144356.9705
+1971,Industrial,Thousand barrels,1187710.9690200002
+1971,Residential,Million cubic feet,243796.449
+1971,Residential,Million kilowatthours,122763.8009
+1971,Residential,Thousand barrels,51403.914020000004
+1971,Residential,Thousand short tons,7.35572
+1971,Transportation,Million cubic feet,101766.457
+1971,Transportation,Million kilowatthours,0.0
+1971,Transportation,Thousand barrels,1156008.14636
+1971,Transportation,Thousand short tons,18.172629999999998
+1972,Commercial,Million cubic feet,145227.7684
+1972,Commercial,Million kilowatthours,96576.88519
+1972,Commercial,Thousand barrels,48326.90485
+1972,Commercial,Thousand short tons,7.743930000000001
+1972,Electric power,Million cubic feet,1313047.74
+1972,Electric power,Thousand barrels,10994.40382
+1972,Electric power,Thousand short tons,25912.264
+1972,Industrial,Million cubic feet,2718425.9489999996
+1972,Industrial,Million kilowatthours,157861.6836
+1972,Industrial,Thousand barrels,1355956.73108
+1972,Residential,Million cubic feet,247653.2311
+1972,Residential,Million kilowatthours,139886.1757
+1972,Residential,Thousand barrels,53591.272580000004
+1972,Residential,Thousand short tons,5.8419099999999995
+1972,Transportation,Million cubic feet,107410.1809
+1972,Transportation,Million kilowatthours,0.0
+1972,Transportation,Thousand barrels,1252875.7068100001
+1972,Transportation,Thousand short tons,14.264420000000001
+1973,Commercial,Million cubic feet,159725.2014
+1973,Commercial,Million kilowatthours,102707.8636
+1973,Commercial,Thousand barrels,58412.91087
+1973,Commercial,Thousand short tons,9.53459
+1973,Electric power,Million cubic feet,1289980.366
+1973,Electric power,Thousand barrels,39129.96736
+1973,Electric power,Thousand short tons,66236.576
+1973,Industrial,Million cubic feet,2940001.5360000003
+1973,Industrial,Million kilowatthours,169877.5397
+1973,Industrial,Thousand barrels,1468360.6899599996
+1973,Residential,Million cubic feet,248727.1696
+1973,Residential,Million kilowatthours,145461.3632
+1973,Residential,Thousand barrels,49092.16562000001
+1973,Residential,Thousand short tons,5.59974
+1973,Transportation,Million cubic feet,107726.7017
+1973,Transportation,Million kilowatthours,0.0
+1973,Transportation,Thousand barrels,1378034.8402900002
+1973,Transportation,Thousand short tons,34.47748
+1974,Commercial,Million cubic feet,138677.7064
+1974,Commercial,Million kilowatthours,105047.6461
+1974,Commercial,Thousand barrels,54020.58339000001
+1974,Commercial,Thousand short tons,12.83268
+1974,Electric power,Million cubic feet,1356194.524
+1974,Electric power,Thousand barrels,32153.78642
+1974,Electric power,Thousand short tons,72747.584
+1974,Industrial,Million cubic feet,2762691.4639999997
+1974,Industrial,Million kilowatthours,176110.8952
+1974,Industrial,Thousand barrels,1476323.78063
+1974,Residential,Million cubic feet,229657.2891
+1974,Residential,Million kilowatthours,148514.3048
+1974,Residential,Thousand barrels,43616.87792
+1974,Residential,Thousand short tons,6.0389
+1974,Transportation,Million cubic feet,96771.49031000001
+1974,Transportation,Million kilowatthours,0.0
+1974,Transportation,Thousand barrels,1412156.05622
+1974,Transportation,Thousand short tons,25.66094
+1975,Commercial,Million cubic feet,120211.7753
+1975,Commercial,Million kilowatthours,115612.9962
+1975,Commercial,Thousand barrels,52983.88145
+1975,Commercial,Thousand short tons,0.0
+1975,Electric power,Million cubic feet,1379009.334
+1975,Electric power,Thousand barrels,10936.50684
+1975,Electric power,Thousand short tons,118508.6227
+1975,Industrial,Million cubic feet,2223952.337
+1975,Industrial,Million kilowatthours,186732.83294
+1975,Industrial,Thousand barrels,1364306.4560900002
+1975,Residential,Million cubic feet,239210.6112
+1975,Residential,Million kilowatthours,139521.9072
+1975,Residential,Thousand barrels,40072.10046
+1975,Residential,Thousand short tons,0.0
+1975,Transportation,Million cubic feet,84556.70886
+1975,Transportation,Million kilowatthours,0.0
+1975,Transportation,Thousand barrels,1476833.86684
+1975,Transportation,Thousand short tons,11.41271
+1976,Commercial,Million cubic feet,139342.1814
+1976,Commercial,Million kilowatthours,119796.8213
+1976,Commercial,Thousand barrels,52166.28151000001
+1976,Commercial,Thousand short tons,0.0
+1976,Electric power,Million cubic feet,1403347.836
+1976,Electric power,Thousand barrels,23460.16055
+1976,Electric power,Thousand short tons,163430.7741
+1976,Industrial,Million cubic feet,2215578.953
+1976,Industrial,Million kilowatthours,205674.72209
+1976,Industrial,Thousand barrels,1538031.7108899998
+1976,Residential,Million cubic feet,242404.4946
+1976,Residential,Million kilowatthours,140474.4216
+1976,Residential,Thousand barrels,41188.186910000004
+1976,Residential,Thousand short tons,0.0
+1976,Transportation,Million cubic feet,74026.6912
+1976,Transportation,Million kilowatthours,0.0
+1976,Transportation,Thousand barrels,1539646.7936200001
+1976,Transportation,Thousand short tons,4.56681
+1977,Commercial,Million cubic feet,163056.3035
+1977,Commercial,Million kilowatthours,129254.8068
+1977,Commercial,Thousand barrels,61859.6607
+1977,Commercial,Thousand short tons,21.97895
+1977,Electric power,Million cubic feet,1527527.515
+1977,Electric power,Thousand barrels,30325.1999
+1977,Electric power,Thousand short tons,232415.7376
+1977,Industrial,Million cubic feet,2218541.087
+1977,Industrial,Million kilowatthours,233021.67866
+1977,Industrial,Thousand barrels,1742338.0142499998
+1977,Residential,Million cubic feet,277404.2078
+1977,Residential,Million kilowatthours,159787.8599
+1977,Residential,Thousand barrels,39230.557830000005
+1977,Residential,Thousand short tons,8.547369999999999
+1977,Transportation,Million cubic feet,68353.2912
+1977,Transportation,Million kilowatthours,0.0
+1977,Transportation,Thousand barrels,1658908.08504
+1977,Transportation,Thousand short tons,3.10317
+1978,Commercial,Million cubic feet,173240.6073
+1978,Commercial,Million kilowatthours,138124.584
+1978,Commercial,Thousand barrels,67439.66592999999
+1978,Commercial,Thousand short tons,0.0
+1978,Electric power,Million cubic feet,1539878.249
+1978,Electric power,Thousand barrels,42457.726760000005
+1978,Electric power,Thousand short tons,357201.6559
+1978,Industrial,Million cubic feet,2257742.07
+1978,Industrial,Million kilowatthours,246462.408
+1978,Industrial,Thousand barrels,1853190.04916
+1978,Residential,Million cubic feet,281835.6616
+1978,Residential,Million kilowatthours,174370.26
+1978,Residential,Thousand barrels,43474.2861
+1978,Residential,Thousand short tons,0.0
+1978,Transportation,Million cubic feet,77089.02476
+1978,Transportation,Million kilowatthours,0.0
+1978,Transportation,Thousand barrels,1748472.0052300002
+1978,Transportation,Thousand short tons,0.0
+1979,Commercial,Million cubic feet,240663.2113
+1979,Commercial,Million kilowatthours,139666.80800000002
+1979,Commercial,Thousand barrels,102632.31124000001
+1979,Commercial,Thousand short tons,0.0
+1979,Electric power,Million cubic feet,1453582.22
+1979,Electric power,Thousand barrels,27857.05573
+1979,Electric power,Thousand short tons,504022.9254
+1979,Industrial,Million cubic feet,2031802.3380000002
+1979,Industrial,Million kilowatthours,260741.628
+1979,Industrial,Thousand barrels,2144374.46199
+1979,Residential,Million cubic feet,325187.4158
+1979,Residential,Million kilowatthours,171906.796
+1979,Residential,Thousand barrels,25106.33122
+1979,Residential,Thousand short tons,0.0
+1979,Transportation,Million cubic feet,80167.19118
+1979,Transportation,Million kilowatthours,0.0
+1979,Transportation,Thousand barrels,1800425.79356
+1979,Transportation,Thousand short tons,0.0
+1980,Commercial,Million cubic feet,173711.6261
+1980,Commercial,Million kilowatthours,150339.544
+1980,Commercial,Thousand barrels,74645.33705999999
+1980,Commercial,Thousand short tons,12.008389999999999
+1980,Electric power,Million cubic feet,1482937.505
+1980,Electric power,Thousand barrels,4150.01098
+1980,Electric power,Thousand short tons,670790.7076
+1980,Industrial,Million cubic feet,2229659.483
+1980,Industrial,Million kilowatthours,266784.28
+1980,Industrial,Thousand barrels,2160203.8153899997
+1980,Residential,Million cubic feet,231735.08
+1980,Residential,Million kilowatthours,195091.336
+1980,Residential,Thousand barrels,21496.413109999998
+1980,Residential,Thousand short tons,3.1921
+1980,Transportation,Million cubic feet,108059.8821
+1980,Transportation,Million kilowatthours,0.0
+1980,Transportation,Thousand barrels,1693886.60926
+1980,Transportation,Thousand short tons,0.0
+1981,Commercial,Million cubic feet,162399.1429
+1981,Commercial,Million kilowatthours,161225.82
+1981,Commercial,Thousand barrels,86601.44283
+1981,Commercial,Thousand short tons,79.18592
+1981,Electric power,Million cubic feet,1419582.1830000002
+1981,Electric power,Thousand barrels,3688.19311
+1981,Electric power,Thousand short tons,766999.7873
+1981,Industrial,Million cubic feet,2149257.856
+1981,Industrial,Million kilowatthours,272637.1702
+1981,Industrial,Thousand barrels,2003325.5642500005
+1981,Residential,Million cubic feet,215960.2086
+1981,Residential,Million kilowatthours,196602.3504
+1981,Residential,Thousand barrels,21216.77073
+1981,Residential,Thousand short tons,17.38216
+1981,Transportation,Million cubic feet,105137.5847
+1981,Transportation,Million kilowatthours,0.0
+1981,Transportation,Thousand barrels,1720816.0276300004
+1981,Transportation,Thousand short tons,0.0
+1982,Commercial,Million cubic feet,195393.7413
+1982,Commercial,Million kilowatthours,168337.1275
+1982,Commercial,Thousand barrels,56454.08339
+1982,Commercial,Thousand short tons,109.00783999999999
+1982,Electric power,Million cubic feet,1328744.508
+1982,Electric power,Thousand barrels,5745.48812
+1982,Electric power,Thousand short tons,847168.2535
+1982,Industrial,Million cubic feet,1644583.3280000002
+1982,Industrial,Million kilowatthours,259498.169
+1982,Industrial,Thousand barrels,1816133.68475
+1982,Residential,Million cubic feet,228332.2124
+1982,Residential,Million kilowatthours,207221.4123
+1982,Residential,Thousand barrels,17614.23195
+1982,Residential,Thousand short tons,22.32695
+1982,Transportation,Million cubic feet,105971.1969
+1982,Transportation,Million kilowatthours,0.0
+1982,Transportation,Thousand barrels,1776662.70399
+1982,Transportation,Thousand short tons,0.0
+1983,Commercial,Million cubic feet,162504.6439
+1983,Commercial,Million kilowatthours,174791.5465
+1983,Commercial,Thousand barrels,143673.59487
+1983,Commercial,Thousand short tons,0.0
+1983,Electric power,Million cubic feet,1219223.78
+1983,Electric power,Thousand barrels,13006.11808
+1983,Electric power,Thousand short tons,950869.6048
+1983,Industrial,Million cubic feet,1623292.209
+1983,Industrial,Million kilowatthours,271692.7866
+1983,Industrial,Thousand barrels,1741501.6611
+1983,Residential,Million cubic feet,221320.8801
+1983,Residential,Million kilowatthours,205832.5713
+1983,Residential,Thousand barrels,20982.038539999998
+1983,Residential,Thousand short tons,0.0
+1983,Transportation,Million cubic feet,109171.9243
+1983,Transportation,Million kilowatthours,0.0
+1983,Transportation,Thousand barrels,1769034.7957199998
+1983,Transportation,Thousand short tons,0.0
+1984,Commercial,Million cubic feet,172245.15
+1984,Commercial,Million kilowatthours,194999.1984
+1984,Commercial,Thousand barrels,65767.33562
+1984,Commercial,Thousand short tons,0.0
+1984,Electric power,Million cubic feet,1303346.138
+1984,Electric power,Thousand barrels,2039.6536899999999
+1984,Electric power,Thousand short tons,981788.4383
+1984,Industrial,Million cubic feet,1729022.18
+1984,Industrial,Million kilowatthours,282316.4239
+1984,Industrial,Thousand barrels,1942784.5839599997
+1984,Residential,Million cubic feet,239408.2845
+1984,Residential,Million kilowatthours,233253.4369
+1984,Residential,Thousand barrels,18537.3507
+1984,Residential,Thousand short tons,0.0
+1984,Transportation,Million cubic feet,112169.3265
+1984,Transportation,Million kilowatthours,0.0
+1984,Transportation,Thousand barrels,1846109.63734
+1984,Transportation,Thousand short tons,0.0
+1985,Commercial,Million cubic feet,157706.8457
+1985,Commercial,Million kilowatthours,205232.2606
+1985,Commercial,Thousand barrels,59924.74315
+1985,Commercial,Thousand short tons,122.90833
+1985,Electric power,Million cubic feet,1240703.711
+1985,Electric power,Thousand barrels,5541.53155
+1985,Electric power,Thousand short tons,1063433.603
+1985,Industrial,Million cubic feet,1799324.612
+1985,Industrial,Million kilowatthours,277173.3184
+1985,Industrial,Thousand barrels,1833772.2743800003
+1985,Residential,Million cubic feet,220989.5048
+1985,Residential,Million kilowatthours,244776.9482
+1985,Residential,Thousand barrels,24408.44187
+1985,Residential,Thousand short tons,34.66649
+1985,Transportation,Million cubic feet,95637.8436
+1985,Transportation,Million kilowatthours,0.0
+1985,Transportation,Thousand barrels,1929036.43948
+1985,Transportation,Thousand short tons,0.0
+1986,Commercial,Million cubic feet,153241.8255
+1986,Commercial,Million kilowatthours,209326.1556
+1986,Commercial,Thousand barrels,43476.16838
+1986,Commercial,Thousand short tons,269.06772
+1986,Electric power,Million cubic feet,1145564.799
+1986,Electric power,Thousand barrels,2346.13236
+1986,Electric power,Thousand short tons,1090162.437
+1986,Industrial,Million cubic feet,1725973.487
+1986,Industrial,Million kilowatthours,271346.9258
+1986,Industrial,Thousand barrels,1830175.4879500002
+1986,Residential,Million cubic feet,202903.7213
+1986,Residential,Million kilowatthours,247002.5958
+1986,Residential,Thousand barrels,22063.15847
+1986,Residential,Thousand short tons,80.37088
+1986,Transportation,Million cubic feet,85240.58297999999
+1986,Transportation,Million kilowatthours,0.0
+1986,Transportation,Thousand barrels,1985419.0572699998
+1986,Transportation,Thousand short tons,0.0
+1987,Commercial,Million cubic feet,163134.02599999998
+1987,Commercial,Million kilowatthours,213111.6912
+1987,Commercial,Thousand barrels,52814.193230000004
+1987,Commercial,Thousand short tons,527.18764
+1987,Electric power,Million cubic feet,1086547.504
+1987,Electric power,Thousand barrels,3582.3766100000003
+1987,Electric power,Thousand short tons,1141356.539
+1987,Industrial,Million cubic feet,1881722.5180000002
+1987,Industrial,Million kilowatthours,270358.8993
+1987,Industrial,Thousand barrels,1914137.5666499997
+1987,Residential,Million cubic feet,219606.423
+1987,Residential,Million kilowatthours,253748.2734
+1987,Residential,Thousand barrels,23899.1841
+1987,Residential,Thousand short tons,157.47163
+1987,Transportation,Million cubic feet,84403.71407999999
+1987,Transportation,Million kilowatthours,0.0
+1987,Transportation,Thousand barrels,1944462.8813299998
+1987,Transportation,Thousand short tons,0.0
+1988,Commercial,Million cubic feet,182400.2568
+1988,Commercial,Million kilowatthours,223524.9582
+1988,Commercial,Thousand barrels,43337.13753
+1988,Commercial,Thousand short tons,861.5305300000001
+1988,Electric power,Million cubic feet,1078359.326
+1988,Electric power,Thousand barrels,4589.67346
+1988,Electric power,Thousand short tons,1210838.297
+1988,Industrial,Million cubic feet,2074215.265
+1988,Industrial,Million kilowatthours,278348.9265
+1988,Industrial,Thousand barrels,2074929.5327099997
+1988,Residential,Million cubic feet,218376.2757
+1988,Residential,Million kilowatthours,263594.2101
+1988,Residential,Thousand barrels,20904.81051
+1988,Residential,Thousand short tons,242.99579
+1988,Transportation,Million cubic feet,111838.8327
+1988,Transportation,Million kilowatthours,0.0
+1988,Transportation,Thousand barrels,2031393.70192
+1988,Transportation,Thousand short tons,0.0
+1989,Commercial,Million cubic feet,189891.1904
+1989,Commercial,Million kilowatthours,230056.6215
+1989,Commercial,Thousand barrels,39055.98716
+1989,Commercial,Thousand short tons,246.11192000000003
+1989,Electric power,Million cubic feet,1183529.243
+1989,Electric power,Thousand barrels,12178.15791
+1989,Electric power,Thousand short tons,1273332.5729999999
+1989,Industrial,Million cubic feet,2162082.063
+1989,Industrial,Million kilowatthours,281881.643
+1989,Industrial,Thousand barrels,2095964.00015
+1989,Residential,Million cubic feet,239194.6326
+1989,Residential,Million kilowatthours,271662.3891
+1989,Residential,Thousand barrels,22047.525569999998
+1989,Residential,Thousand short tons,65.42215999999999
+1989,Transportation,Million cubic feet,111427.2207
+1989,Transportation,Million kilowatthours,0.0
+1989,Transportation,Thousand barrels,2036434.04874
+1989,Transportation,Thousand short tons,0.0
+1990,Commercial,Million cubic feet,179596.4285
+1990,Commercial,Million kilowatthours,241503.4481
+1990,Commercial,Thousand barrels,31686.43784
+1990,Commercial,Thousand short tons,215.55897000000002
+1990,Electric power,Million cubic feet,1174038.837
+1990,Electric power,Thousand barrels,1595.07477
+1990,Electric power,Thousand short tons,1271920.101
+1990,Industrial,Million cubic feet,2194145.736
+1990,Industrial,Million kilowatthours,286904.6495
+1990,Industrial,Thousand barrels,2138632.0777
+1990,Residential,Million cubic feet,219534.547
+1990,Residential,Million kilowatthours,281652.3157
+1990,Residential,Thousand barrels,20220.471
+1990,Residential,Thousand short tons,53.88974
+1990,Transportation,Million cubic feet,110526.1135
+1990,Transportation,Million kilowatthours,0.0
+1990,Transportation,Thousand barrels,2042654.12607
+1990,Transportation,Thousand short tons,0.0
+1991,Commercial,Million cubic feet,188218.6483
+1991,Commercial,Million kilowatthours,246145.9552
+1991,Commercial,Thousand barrels,26905.693909999998
+1991,Commercial,Thousand short tons,225.31205
+1991,Electric power,Million cubic feet,1166832.8329999999
+1991,Electric power,Thousand barrels,652.18195
+1991,Electric power,Thousand short tons,1269987.633
+1991,Industrial,Million cubic feet,2152803.991
+1991,Industrial,Million kilowatthours,287025.7073
+1991,Industrial,Thousand barrels,2207754.8818099997
+1991,Residential,Million cubic feet,231096.4595
+1991,Residential,Million kilowatthours,286908.6347
+1991,Residential,Thousand barrels,13384.27355
+1991,Residential,Thousand short tons,49.45874
+1991,Transportation,Million cubic feet,85246.84532000001
+1991,Transportation,Million kilowatthours,0.0
+1991,Transportation,Thousand barrels,2015984.56832
+1991,Transportation,Thousand short tons,0.0
+1992,Commercial,Million cubic feet,193919.4889
+1992,Commercial,Million kilowatthours,245924.3288
+1992,Commercial,Thousand barrels,25132.291780000003
+1992,Commercial,Thousand short tons,175.40354
+1992,Electric power,Million cubic feet,1134447.71
+1992,Electric power,Thousand barrels,1111.42215
+1992,Electric power,Thousand short tons,1263384.396
+1992,Industrial,Million cubic feet,2129380.03
+1992,Industrial,Million kilowatthours,291456.9945
+1992,Industrial,Thousand barrels,2334808.70048
+1992,Residential,Million cubic feet,225431.3367
+1992,Residential,Million kilowatthours,279557.3784
+1992,Residential,Thousand barrels,11415.44833
+1992,Residential,Thousand short tons,38.50322
+1992,Transportation,Million cubic feet,85138.01087
+1992,Transportation,Million kilowatthours,0.0
+1992,Transportation,Thousand barrels,2062121.36451
+1992,Transportation,Thousand short tons,0.0
+1993,Commercial,Million cubic feet,180982.1507
+1993,Commercial,Million kilowatthours,257489.7424
+1993,Commercial,Thousand barrels,16002.73317
+1993,Commercial,Thousand short tons,93.99369
+1993,Electric power,Million cubic feet,1243646.4309999999
+1993,Electric power,Thousand barrels,19351.79817
+1993,Electric power,Thousand short tons,1359679.2030000002
+1993,Industrial,Million cubic feet,2177425.078
+1993,Industrial,Million kilowatthours,296614.5737
+1993,Industrial,Thousand barrels,2280615.15703
+1993,Residential,Million cubic feet,238377.5646
+1993,Residential,Million kilowatthours,299183.6869
+1993,Residential,Thousand barrels,12141.81654
+1993,Residential,Thousand short tons,20.63276
+1993,Transportation,Million cubic feet,84732.94297
+1993,Transportation,Million kilowatthours,0.014159999999999999
+1993,Transportation,Thousand barrels,2058330.5365600004
+1993,Transportation,Thousand short tons,0.0
+1994,Commercial,Million cubic feet,187938.3397
+1994,Commercial,Million kilowatthours,266332.8792
+1994,Commercial,Thousand barrels,17523.71172
+1994,Commercial,Thousand short tons,1.55305
+1994,Electric power,Million cubic feet,1217139.274
+1994,Electric power,Thousand barrels,16284.310869999998
+1994,Electric power,Thousand short tons,1306565.203
+1994,Industrial,Million cubic feet,2157410.55
+1994,Industrial,Million kilowatthours,308203.6842
+1994,Industrial,Thousand barrels,2458686.68667
+1994,Residential,Million cubic feet,222559.2428
+1994,Residential,Million kilowatthours,306372.6992
+1994,Residential,Thousand barrels,12041.879149999999
+1994,Residential,Thousand short tons,0.27407
+1994,Transportation,Million cubic feet,100020.0642
+1994,Transportation,Million kilowatthours,0.0
+1994,Transportation,Thousand barrels,2100272.20889
+1994,Transportation,Thousand short tons,0.0
+1995,Commercial,Million cubic feet,218453.6366
+1995,Commercial,Million kilowatthours,274169.0047
+1995,Commercial,Thousand barrels,19961.29535
+1995,Commercial,Thousand short tons,0.0
+1995,Electric power,Million cubic feet,1237655.048
+1995,Electric power,Thousand barrels,15204.01706
+1995,Electric power,Thousand short tons,1301126.244
+1995,Industrial,Million cubic feet,2280598.886
+1995,Industrial,Million kilowatthours,307397.7118
+1995,Industrial,Thousand barrels,2481346.72602
+1995,Residential,Million cubic feet,215150.0586
+1995,Residential,Million kilowatthours,316739.8394
+1995,Residential,Thousand barrels,11011.26835
+1995,Residential,Thousand short tons,0.0
+1995,Transportation,Million cubic feet,85689.76028999999
+1995,Transportation,Million kilowatthours,0.0
+1995,Transportation,Thousand barrels,2082077.0483500003
+1995,Transportation,Thousand short tons,0.0
+1996,Commercial,Million cubic feet,185094.7618
+1996,Commercial,Million kilowatthours,284824.745
+1996,Commercial,Thousand barrels,18963.39364
+1996,Commercial,Thousand short tons,0.0
+1996,Electric power,Million cubic feet,1235133.992
+1996,Electric power,Thousand barrels,17388.05564
+1996,Electric power,Thousand short tons,1411826.3
+1996,Industrial,Million cubic feet,2531929.864
+1996,Industrial,Million kilowatthours,325192.4314
+1996,Industrial,Thousand barrels,2729405.6217000005
+1996,Residential,Million cubic feet,237724.4402
+1996,Residential,Million kilowatthours,340026.777
+1996,Residential,Thousand barrels,7756.18688
+1996,Residential,Thousand short tons,0.0
+1996,Transportation,Million cubic feet,78794.92165
+1996,Transportation,Million kilowatthours,26.02384
+1996,Transportation,Thousand barrels,2261401.49248
+1996,Transportation,Thousand short tons,0.0
+1997,Commercial,Million cubic feet,222841.9851
+1997,Commercial,Million kilowatthours,290573.5783
+1997,Commercial,Thousand barrels,18578.10335
+1997,Commercial,Thousand short tons,1.58979
+1997,Electric power,Million cubic feet,1259989.876
+1997,Electric power,Thousand barrels,15041.17351
+1997,Electric power,Thousand short tons,1449080.8869999999
+1997,Industrial,Million cubic feet,2421833.9590000003
+1997,Industrial,Million kilowatthours,342662.5879
+1997,Industrial,Thousand barrels,2983530.1815
+1997,Residential,Million cubic feet,242058.6406
+1997,Residential,Million kilowatthours,344932.8201
+1997,Residential,Thousand barrels,11686.46937
+1997,Residential,Thousand short tons,0.19643
+1997,Transportation,Million cubic feet,84836.52291
+1997,Transportation,Million kilowatthours,63.38633000000001
+1997,Transportation,Thousand barrels,2319654.2090999996
+1997,Transportation,Thousand short tons,0.0
+1998,Commercial,Million cubic feet,178048.5164
+1998,Commercial,Million kilowatthours,312362.0655
+1998,Commercial,Thousand barrels,23553.353000000003
+1998,Commercial,Thousand short tons,314.77522
+1998,Electric power,Million cubic feet,1475569.029
+1998,Electric power,Thousand barrels,15257.58655
+1998,Electric power,Thousand short tons,1425306.5659999999
+1998,Industrial,Million cubic feet,2445036.359
+1998,Industrial,Million kilowatthours,350419.7256
+1998,Industrial,Thousand barrels,2921153.94807
+1998,Residential,Million cubic feet,209377.2889
+1998,Residential,Million kilowatthours,376800.1529
+1998,Residential,Thousand barrels,15020.028379999998
+1998,Residential,Thousand short tons,38.9047
+1998,Transportation,Million cubic feet,69913.86365
+1998,Transportation,Million kilowatthours,70.71077
+1998,Transportation,Thousand barrels,2456400.47312
+1998,Transportation,Thousand short tons,0.0
+1999,Commercial,Million cubic feet,178185.6433
+1999,Commercial,Million kilowatthours,318994.9765
+1999,Commercial,Thousand barrels,26911.09201
+1999,Commercial,Thousand short tons,119.32838000000001
+1999,Electric power,Million cubic feet,1476355.0580000002
+1999,Electric power,Thousand barrels,14719.05338
+1999,Electric power,Thousand short tons,1467722.98
+1999,Industrial,Million cubic feet,2226967.161
+1999,Industrial,Million kilowatthours,340316.9369
+1999,Industrial,Thousand barrels,2850209.690360001
+1999,Residential,Million cubic feet,182536.9753
+1999,Residential,Million kilowatthours,370514.0888
+1999,Residential,Thousand barrels,29854.164769999996
+1999,Residential,Thousand short tons,16.27205
+1999,Transportation,Million cubic feet,74044.99691
+1999,Transportation,Million kilowatthours,66.33995999999999
+1999,Transportation,Thousand barrels,2438074.60193
+1999,Transportation,Thousand short tons,0.0
+2000,Commercial,Million cubic feet,196820.2014
+2000,Commercial,Million kilowatthours,340341.751
+2000,Commercial,Thousand barrels,44730.605659999994
+2000,Commercial,Thousand short tons,181.22277
+2000,Electric power,Million cubic feet,1610708.021
+2000,Electric power,Thousand barrels,19610.03082
+2000,Electric power,Thousand short tons,1474882.695
+2000,Industrial,Million cubic feet,2477370.909
+2000,Industrial,Million kilowatthours,346619.689
+2000,Industrial,Thousand barrels,2668763.477169999
+2000,Residential,Million cubic feet,200025.2739
+2000,Residential,Million kilowatthours,398846.6988
+2000,Residential,Thousand barrels,35191.883460000005
+2000,Residential,Thousand short tons,22.39835
+2000,Transportation,Million cubic feet,65176.802
+2000,Transportation,Million kilowatthours,103.61016
+2000,Transportation,Thousand barrels,2500328.9438199997
+2000,Transportation,Thousand short tons,0.0
+2001,Commercial,Million cubic feet,175921.9367
+2001,Commercial,Million kilowatthours,349590.4697
+2001,Commercial,Thousand barrels,34693.15297
+2001,Commercial,Thousand short tons,386.37277
+2001,Electric power,Million cubic feet,1551626.846
+2001,Electric power,Thousand barrels,16233.305010000002
+2001,Electric power,Thousand short tons,1417078.976
+2001,Industrial,Million cubic feet,2375970.09
+2001,Industrial,Million kilowatthours,335087.0881
+2001,Industrial,Thousand barrels,2545448.0499799997
+2001,Residential,Million cubic feet,213391.3166
+2001,Residential,Million kilowatthours,400373.56200000003
+2001,Residential,Thousand barrels,40172.8775
+2001,Residential,Thousand short tons,47.75403
+2001,Transportation,Million cubic feet,73004.11582
+2001,Transportation,Million kilowatthours,115.60193999999998
+2001,Transportation,Thousand barrels,2603710.42584
+2001,Transportation,Thousand short tons,0.0
+2002,Commercial,Million cubic feet,233776.7355
+2002,Commercial,Million kilowatthours,331357.4917
+2002,Commercial,Thousand barrels,25727.498659999994
+2002,Commercial,Thousand short tons,1074.9226099999998
+2002,Electric power,Million cubic feet,1579375.4019999998
+2002,Electric power,Thousand barrels,18005.45417
+2002,Electric power,Thousand short tons,1477476.16
+2002,Industrial,Million cubic feet,2325339.889
+2002,Industrial,Million kilowatthours,348880.5963
+2002,Industrial,Thousand barrels,2647010.185410001
+2002,Residential,Million cubic feet,216912.5257
+2002,Residential,Million kilowatthours,414336.5953
+2002,Residential,Thousand barrels,35797.32756
+2002,Residential,Thousand short tons,146.5803
+2002,Transportation,Million cubic feet,93795.17954
+2002,Transportation,Million kilowatthours,151.35356000000002
+2002,Transportation,Thousand barrels,2677025.3159599993
+2002,Transportation,Thousand short tons,0.0
+2003,Commercial,Million cubic feet,224901.1397
+2003,Commercial,Million kilowatthours,329920.7264
+2003,Commercial,Thousand barrels,28866.947989999997
+2003,Commercial,Thousand short tons,2350.3326399999996
+2003,Electric power,Million cubic feet,1483821.5219999999
+2003,Electric power,Thousand barrels,10748.1889
+2003,Electric power,Thousand short tons,1528775.616
+2003,Industrial,Million cubic feet,2198742.5069999998
+2003,Industrial,Million kilowatthours,356714.0057
+2003,Industrial,Thousand barrels,2769332.7281299997
+2003,Residential,Million cubic feet,212685.9788
+2003,Residential,Million kilowatthours,414062.6663
+2003,Residential,Thousand barrels,30889.29266
+2003,Residential,Thousand short tons,351.19914
+2003,Transportation,Million cubic feet,60103.47877
+2003,Transportation,Million kilowatthours,307.08
+2003,Transportation,Thousand barrels,2595580.13441
+2003,Transportation,Thousand short tons,0.0
+2004,Commercial,Million cubic feet,198859.8975
+2004,Commercial,Million kilowatthours,339888.3521
+2004,Commercial,Thousand barrels,18655.872319999995
+2004,Commercial,Thousand short tons,252.49629
+2004,Electric power,Million cubic feet,1426117.004
+2004,Electric power,Thousand barrels,17024.93895
+2004,Electric power,Thousand short tons,1554811.4209999999
+2004,Industrial,Million cubic feet,2160830.536
+2004,Industrial,Million kilowatthours,343206.3788
+2004,Industrial,Thousand barrels,2906910.8086199993
+2004,Residential,Million cubic feet,197422.645
+2004,Residential,Million kilowatthours,410565.5506
+2004,Residential,Thousand barrels,25118.10961
+2004,Residential,Thousand short tons,28.055229999999998
+2004,Transportation,Million cubic feet,59866.04098
+2004,Transportation,Million kilowatthours,277.55255
+2004,Transportation,Thousand barrels,2642718.89812
+2004,Transportation,Thousand short tons,0.0
+2005,Commercial,Million cubic feet,164445.1193
+2005,Commercial,Million kilowatthours,377996.0725
+2005,Commercial,Thousand barrels,26512.587560000004
+2005,Commercial,Thousand short tons,284.35451
+2005,Electric power,Million cubic feet,1507392.086
+2005,Electric power,Thousand barrels,16602.47358
+2005,Electric power,Thousand short tons,1557476.345
+2005,Industrial,Million cubic feet,1677572.358
+2005,Industrial,Million kilowatthours,330422.9626
+2005,Industrial,Thousand barrels,2775009.7477999995
+2005,Residential,Million cubic feet,190300.3528
+2005,Residential,Million kilowatthours,431829.2472
+2005,Residential,Thousand barrels,28925.145969999998
+2005,Residential,Thousand short tons,24.72638
+2005,Transportation,Million cubic feet,85397.40693
+2005,Transportation,Million kilowatthours,240.90767000000002
+2005,Transportation,Thousand barrels,2643328.74143
+2005,Transportation,Thousand short tons,0.0
+2006,Commercial,Million cubic feet,151231.2439
+2006,Commercial,Million kilowatthours,379176.802
+2006,Commercial,Thousand barrels,23808.59095
+2006,Commercial,Thousand short tons,2.47688
+2006,Electric power,Million cubic feet,1501245.22
+2006,Electric power,Thousand barrels,17972.68816
+2006,Electric power,Thousand short tons,1539379.165
+2006,Industrial,Million cubic feet,1637042.645
+2006,Industrial,Million kilowatthours,357198.4244
+2006,Industrial,Thousand barrels,3080372.4959700005
+2006,Residential,Million cubic feet,170585.1721
+2006,Residential,Million kilowatthours,432789.0837
+2006,Residential,Thousand barrels,21870.08741
+2006,Residential,Thousand short tons,0.24497
+2006,Transportation,Million cubic feet,89413.13038
+2006,Transportation,Million kilowatthours,210.70465
+2006,Transportation,Thousand barrels,2773186.4568099994
+2006,Transportation,Thousand short tons,0.0
+2007,Commercial,Million cubic feet,166316.5913
+2007,Commercial,Million kilowatthours,377162.6608
+2007,Commercial,Thousand barrels,18984.806169999996
+2007,Commercial,Thousand short tons,0.499
+2007,Electric power,Million cubic feet,1507800.3469999998
+2007,Electric power,Thousand barrels,12743.35988
+2007,Electric power,Thousand short tons,1568720.657
+2007,Industrial,Million cubic feet,1667674.665
+2007,Industrial,Million kilowatthours,369520.61
+2007,Industrial,Thousand barrels,3080174.9753
+2007,Residential,Million cubic feet,206073.7745
+2007,Residential,Million kilowatthours,426231.1822
+2007,Residential,Thousand barrels,23801.43249
+2007,Residential,Thousand short tons,0.055439999999999996
+2007,Transportation,Million cubic feet,94407.26051000001
+2007,Transportation,Million kilowatthours,228.66882999999999
+2007,Transportation,Thousand barrels,2812628.14755
+2007,Transportation,Thousand short tons,0.0
+2008,Commercial,Million cubic feet,171572.9601
+2008,Commercial,Million kilowatthours,387168.8149
+2008,Commercial,Thousand barrels,23289.332789999997
+2008,Commercial,Thousand short tons,287.34103
+2008,Electric power,Million cubic feet,1472659.698
+2008,Electric power,Thousand barrels,11150.562450000001
+2008,Electric power,Thousand short tons,1566630.075
+2008,Industrial,Million cubic feet,1700716.381
+2008,Industrial,Million kilowatthours,361011.3413
+2008,Industrial,Thousand barrels,2749087.21286
+2008,Residential,Million cubic feet,197875.2225
+2008,Residential,Million kilowatthours,435752.0543
+2008,Residential,Thousand barrels,22579.25597
+2008,Residential,Thousand short tons,31.926840000000002
+2008,Transportation,Million cubic feet,114417.5619
+2008,Transportation,Million kilowatthours,233.87212999999997
+2008,Transportation,Thousand barrels,2755298.75391
+2008,Transportation,Thousand short tons,0.0
+2009,Commercial,Million cubic feet,171497.4122
+2009,Commercial,Million kilowatthours,404310.4845
+2009,Commercial,Thousand barrels,28421.75638
+2009,Commercial,Thousand short tons,337.60647
+2009,Electric power,Million cubic feet,1415849.6709999999
+2009,Electric power,Thousand barrels,15359.272319999998
+2009,Electric power,Thousand short tons,1480416.4009999998
+2009,Industrial,Million cubic feet,1579792.971
+2009,Industrial,Million kilowatthours,330728.1557
+2009,Industrial,Thousand barrels,2677322.26146
+2009,Residential,Million cubic feet,196980.6465
+2009,Residential,Million kilowatthours,442867.8792
+2009,Residential,Thousand barrels,19095.281809999997
+2009,Residential,Thousand short tons,37.51174
+2009,Transportation,Million cubic feet,98081.96436
+2009,Transportation,Million kilowatthours,241.93468
+2009,Transportation,Thousand barrels,2625373.66986
+2009,Transportation,Thousand short tons,0.0

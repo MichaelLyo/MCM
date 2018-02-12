@@ -1,0 +1,83 @@
+MSN_data,MSN,desc,unit,state,year,data
+ABICB,ABICP,Aviation gasoline blending components consumed by the industrial sector.,Thousand barrels,CA,1982,765.58594
+ARICB,ARICP,Asphalt and road oil consumed by the industrial sector.,Thousand barrels,CA,1982,65153.73579
+ARTCB,ARTCP,Asphalt and road oil total consumption.,Thousand barrels,CA,1982,65153.73579
+ARTXB,ARTXP,Asphalt and road oil total end-use consumption.,Thousand barrels,CA,1982,65153.73579
+AVACB,AVACP,Aviation gasoline consumed by the transportation sector.,Thousand barrels,CA,1982,5778.98447
+AVTCB,AVTCP,Aviation gasoline total consumption.,Thousand barrels,CA,1982,5778.98447
+AVTXB,AVTXP,Aviation gasoline total end-use consumption.,Thousand barrels,CA,1982,5778.98447
+CLACB,CLACP,Coal consumed by the transportation sector.,Thousand short tons,CA,1982,0.0
+CLCCB,CLCCP,Coal consumed by the commercial sector.,Thousand short tons,CA,1982,38.65506
+CLEIB,CLEIP,Coal consumed by the electric power sector.,Thousand short tons,CA,1982,0.0
+CLKCB,CLKCP,Coal consumed at coke plants (coking coal).,Thousand short tons,CA,1982,34705.48115
+CLOCB,CLOCP,Coal consumed by industrial users other than coke plants.,Thousand short tons,CA,1982,34662.62792
+CLPRB,CLPRP,Coal production.,Thousand short tons,CA,1982,0.0
+CLRCB,CLRCP,Coal consumed by the residential sector.,Thousand short tons,CA,1982,7.9174
+COICB,COICP,Crude oil consumed by the industrial sector.,Thousand barrels,CA,1982,0.0
+DFACB,DFACP,Distillate fuel oil consumed by the transportation sector.,Thousand barrels,CA,1982,243405.2214
+DFCCB,DFCCP,Distillate fuel oil consumed by the commercial sector.,Thousand barrels,CA,1982,25613.04319
+DFICB,DFICP,Distillate fuel oil consumed by the industrial sector.,Thousand barrels,CA,1982,120549.7333
+DFRCB,DFRCP,Distillate fuel oil consumed by the residential sector.,Thousand barrels,CA,1982,418.17215
+ELEXB,ELEXP,Electricity exported from the United States.,Million kilowatthours,CA,1982,0.0
+ELIMB,ELIMP,Electricity imported into the United States.,Million kilowatthours,CA,1982,19.92608
+EMTCB,EMTCP,"Fuel ethanol, excluding denaturant, total consumption.",Thousand barrels,CA,1982,3826.58875
+ESACB,ESACP,"Electricity consumed by (i.e., sold to) the transportation sector.",Million kilowatthours,CA,1982,872.00484
+ESCCB,ESCCP,"Electricity consumed by (i.e., sold to) the commercial sector.",Million kilowatthours,CA,1982,226607.649
+ESICB,ESICP,"Electricity consumed by (i.e., sold to) the industrial sector.",Million kilowatthours,CA,1982,161388.2312
+ESRCB,ESRCP,"Electricity consumed by (i.e., sold to) the residential sector.",Million kilowatthours,CA,1982,176988.5094
+ESTCB,ESTCP,"Electricity total consumption (i.e., sold).",Million kilowatthours,CA,1982,565856.3945
+FNICB,FNICP,"Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.",Thousand barrels,CA,1982,7541.87041
+FOICB,FOICP,"Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, consumed by the industrial sector.",Thousand barrels,CA,1982,12449.3284
+FSICB,FSICP,"Petrochemical feedstocks, still gas, consumed by the industrial sector.",Thousand barrels,CA,1982,6916.86888
+GEEGB,GEEGP,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthours,CA,1982,50627.30966
+HYCCB,HYCCP,Hydroelectricity produced in the commercial sector.,Million kilowatthours,CA,1982,0.0
+HYEGB,HYEGP,Hydroelectricity produced by the electric power sector.,Million kilowatthours,CA,1982,525064.7575
+HYICB,HYICP,Hydroelectricity produced in the industrial sector.,Million kilowatthours,CA,1982,0.0
+JFTXB,JFTXP,Jet fuel total end-use consumption.,Thousand barrels,CA,1982,316702.4396
+JKACB,JKACP,Kerosene-type jet fuel consumed by the transportation sector.,Thousand barrels,CA,1982,250659.915
+JKTCB,JKTCP,Kerosene-type jet fuel total consumption.,Thousand barrels,CA,1982,250659.915
+JNACB,JNACP,Naphtha-type jet fuel consumed by the transportation sector.,Thousand barrels,CA,1982,66042.52453
+JNTCB,JNTCP,Naphtha-type jet fuel total consumption.,Thousand barrels,CA,1982,66042.52453
+KSCCB,KSCCP,Kerosene consumed by the commercial sector.,Thousand barrels,CA,1982,1837.27562
+KSICB,KSICP,Kerosene consumed by the industrial sector.,Thousand barrels,CA,1982,1088.75589
+KSRCB,KSRCP,Kerosene consumed by the residential sector.,Thousand barrels,CA,1982,102.07089
+LGACB,LGACP,LPG consumed by the transportation sector.,Thousand barrels,CA,1982,3552.96194
+LGCCB,LGCCP,LPG consumed by the commercial sector.,Thousand barrels,CA,1982,4849.64498
+LGICB,LGICP,LPG consumed by the industrial sector.,Thousand barrels,CA,1982,36393.62768
+LGRCB,LGRCP,LPG consumed by the residential sector.,Thousand barrels,CA,1982,14020.56895
+LUACB,LUACP,Lubricants consumed by the transportation sector.,Thousand barrels,CA,1982,14873.06019
+LUICB,LUICP,Lubricants consumed by the industrial sector.,Thousand barrels,CA,1982,11154.79519
+MBICB,MBICP,Motor gasoline blending components consumed by the industrial sector.,Thousand barrels,CA,1982,-31604.75855
+MGACB,MGACP,Motor gasoline consumed by the transportation sector.,Thousand barrels,CA,1982,1298556.677
+MGCCB,MGCCP,Motor gasoline consumed by the commercial sector.,Thousand barrels,CA,1982,7613.74406
+MGICB,MGICP,Motor gasoline consumed by the industrial sector.,Thousand barrels,CA,1982,6619.27567
+MSICB,MSICP,Miscellaneous petroleum products consumed by the industrial sector.,Thousand barrels,CA,1982,4389.3956
+NAICB,NAICP,Natural gasoline consumed by the industrial sector.,Thousand barrels,CA,1982,4004.03771
+NGACB,NGACP,Natural gas consumed by the transportation sector.,Million cubic feet,CA,1982,13516.48312
+NGCCB,NGCCP,Natural gas consumed by (delivered to) the commercial sector (including supplemental gaseous fuels).,Million cubic feet,CA,1982,247336.5623
+NGEIB,NGEIP,Natural gas consumed by the electric power sector (including supplemental gaseous fuels).,Million cubic feet,CA,1982,562125.3687
+NGICB,NGICP,Natural gas consumed by (delivered to) the industrial sector (including supplemental gaseous fuels).,Million cubic feet,CA,1982,379674.1155
+NGLPB,NGLPP,Natural gas consumed as lease and plant fuel.,Million cubic feet,CA,1982,23325.0435
+NGMPB,NGMPP,Natural gas marketed production.,Million cubic feet,CA,1982,432487.2135
+NGPZB,NGPZP,Natural gas consumed as pipeline fuel.,Million cubic feet,CA,1982,13516.48312
+NGRCB,NGRCP,Natural gas consumed by (delivered to) the residential sector (including supplemental gaseous fuels).,Million cubic feet,CA,1982,562517.3252
+NGTCB,NGTCP,Natural gas total consumption (including supplemental gaseous fuels).,Million cubic feet,CA,1982,1765171.454
+NGVHB,NGVHP,Natural gas consumed as vehicle fuel.,Million cubic feet,CA,1982,0.0
+NUEGB,NUEGP,Electricity produced from nuclear power by the electric power sector.,Million kilowatthours,CA,1982,41357.33388
+NUETB,NUETP,Electricity produced from nuclear power.,Million kilowatthours,CA,1982,41357.33388
+PAPRB,PAPRP,Crude oil production (including lease condensate).,Thousand barrels,CA,1982,2329117.6
+PCCCB,PCCCP,Petroleum coke consumed by the commercial sector.,Thousand barrels,CA,1982,0.0
+PCEIB,PCEIP,Petroleum coke consumed by the electric power sector.,Thousand barrels,CA,1982,0.0
+PLICB,PLICP,Plant condensate consumed by the industrial sector.,Thousand barrels,CA,1982,3.2314
+PPICB,PPICP,Pentanes plus consumed by the industrial sector.,Thousand barrels,CA,1982,0.0
+RFACB,RFACP,Residual fuel oil consumed by the transportation sector.,Thousand barrels,CA,1982,327574.3153
+RFCCB,RFCCP,Residual fuel oil consumed by the commercial sector.,Thousand barrels,CA,1982,34519.45683
+RFEIB,RFEIP,Residual fuel oil consumed by the electric power sector.,Thousand barrels,CA,1982,99504.89597
+RFICB,RFICP,Residual fuel oil consumed by the industrial sector,Thousand barrels,CA,1982,51782.21486
+SGICB,SGICP,Still gas consumed by the industrial sector.,Thousand barrels,CA,1982,181168.1859
+SNICB,SNICP,Special naphthas consumed by the industrial sector.,Thousand barrels,CA,1982,18648.69411
+SOEGB,SOEGP,Electricity produced from photovoltaic and solar thermal energy by the electric power sector.,Million kilowatthours,CA,1982,0.0
+UOICB,UOICP,Unfinished oils consumed by the industrial sector.,Thousand barrels,CA,1982,-52110.43253
+USICB,USICP,Unfractionated stream consumed by the industrial sector.,Thousand barrels,CA,1982,29.9876
+WXICB,WXICP,Waxes consumed by the industrial sector.,Thousand barrels,CA,1982,2779.45169
+WYEGB,WYEGP,Electricity produced from wind energy by the electric power sector.,Million kilowatthours,CA,1982,0.0

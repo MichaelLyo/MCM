@@ -1,0 +1,83 @@
+MSN_data,MSN,desc,unit,state,year,data
+ABICB,ABICP,Aviation gasoline blending components consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+ARICB,ARICP,Asphalt and road oil consumed by the industrial sector.,Thousand barrels,NM,1976,9699.06492
+ARTCB,ARTCP,Asphalt and road oil total consumption.,Thousand barrels,NM,1976,9699.06492
+ARTXB,ARTXP,Asphalt and road oil total end-use consumption.,Thousand barrels,NM,1976,9699.06492
+AVACB,AVACP,Aviation gasoline consumed by the transportation sector.,Thousand barrels,NM,1976,399.00169
+AVTCB,AVTCP,Aviation gasoline total consumption.,Thousand barrels,NM,1976,399.00169
+AVTXB,AVTXP,Aviation gasoline total end-use consumption.,Thousand barrels,NM,1976,399.00169
+CLACB,CLACP,Coal consumed by the transportation sector.,Thousand short tons,NM,1976,0.01312
+CLCCB,CLCCP,Coal consumed by the commercial sector.,Thousand short tons,NM,1976,0.0
+CLEIB,CLEIP,Coal consumed by the electric power sector.,Thousand short tons,NM,1976,137331.9327
+CLKCB,CLKCP,Coal consumed at coke plants (coking coal).,Thousand short tons,NM,1976,0.0
+CLOCB,CLOCP,Coal consumed by industrial users other than coke plants.,Thousand short tons,NM,1976,160.24967
+CLPRB,CLPRP,Coal production.,Thousand short tons,NM,1976,175430.2416
+CLRCB,CLRCP,Coal consumed by the residential sector.,Thousand short tons,NM,1976,0.0
+COICB,COICP,Crude oil consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+DFACB,DFACP,Distillate fuel oil consumed by the transportation sector.,Thousand barrels,NM,1976,27166.32377
+DFCCB,DFCCP,Distillate fuel oil consumed by the commercial sector.,Thousand barrels,NM,1976,1146.39064
+DFICB,DFICP,Distillate fuel oil consumed by the industrial sector.,Thousand barrels,NM,1976,14091.78752
+DFRCB,DFRCP,Distillate fuel oil consumed by the residential sector.,Thousand barrels,NM,1976,30.65855
+ELEXB,ELEXP,Electricity exported from the United States.,Million kilowatthours,NM,1976,0.0
+ELIMB,ELIMP,Electricity imported into the United States.,Million kilowatthours,NM,1976,0.0
+EMTCB,EMTCP,"Fuel ethanol, excluding denaturant, total consumption.",Thousand barrels,NM,1976,0.0
+ESACB,ESACP,"Electricity consumed by (i.e., sold to) the transportation sector.",Million kilowatthours,NM,1976,0.0
+ESCCB,ESCCP,"Electricity consumed by (i.e., sold to) the commercial sector.",Million kilowatthours,NM,1976,10195.13106
+ESICB,ESICP,"Electricity consumed by (i.e., sold to) the industrial sector.",Million kilowatthours,NM,1976,7391.76362
+ESRCB,ESRCP,"Electricity consumed by (i.e., sold to) the residential sector.",Million kilowatthours,NM,1976,7003.3279
+ESTCB,ESTCP,"Electricity total consumption (i.e., sold).",Million kilowatthours,NM,1976,24590.22258
+FNICB,FNICP,"Petrochemical feedstocks, naphtha less than 401 degrees F, consumed by the industrial sector.",Thousand barrels,NM,1976,0.0
+FOICB,FOICP,"Petrochemical feedstocks, other oils equal to or greater than 401 degrees F, consumed by the industrial sector.",Thousand barrels,NM,1976,0.0
+FSICB,FSICP,"Petrochemical feedstocks, still gas, consumed by the industrial sector.",Thousand barrels,NM,1976,768.83142
+GEEGB,GEEGP,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthours,NM,1976,0.0
+HYCCB,HYCCP,Hydroelectricity produced in the commercial sector.,Million kilowatthours,NM,1976,0.0
+HYEGB,HYEGP,Hydroelectricity produced by the electric power sector.,Million kilowatthours,NM,1976,790.47447
+HYICB,HYICP,Hydroelectricity produced in the industrial sector.,Million kilowatthours,NM,1976,0.0
+JFTXB,JFTXP,Jet fuel total end-use consumption.,Thousand barrels,NM,1976,13350.26906
+JKACB,JKACP,Kerosene-type jet fuel consumed by the transportation sector.,Thousand barrels,NM,1976,5073.09188
+JKTCB,JKTCP,Kerosene-type jet fuel total consumption.,Thousand barrels,NM,1976,5073.09188
+JNACB,JNACP,Naphtha-type jet fuel consumed by the transportation sector.,Thousand barrels,NM,1976,8277.17718
+JNTCB,JNTCP,Naphtha-type jet fuel total consumption.,Thousand barrels,NM,1976,8277.17718
+KSCCB,KSCCP,Kerosene consumed by the commercial sector.,Thousand barrels,NM,1976,45.6545
+KSICB,KSICP,Kerosene consumed by the industrial sector.,Thousand barrels,NM,1976,2989.56539
+KSRCB,KSRCP,Kerosene consumed by the residential sector.,Thousand barrels,NM,1976,174.29988
+LGACB,LGACP,LPG consumed by the transportation sector.,Thousand barrels,NM,1976,757.01572
+LGCCB,LGCCP,LPG consumed by the commercial sector.,Thousand barrels,NM,1976,1026.74887
+LGICB,LGICP,LPG consumed by the industrial sector.,Thousand barrels,NM,1976,8167.02767
+LGRCB,LGRCP,LPG consumed by the residential sector.,Thousand barrels,NM,1976,4348.89971
+LUACB,LUACP,Lubricants consumed by the transportation sector.,Thousand barrels,NM,1976,1330.62698
+LUICB,LUICP,Lubricants consumed by the industrial sector.,Thousand barrels,NM,1976,806.61904
+MBICB,MBICP,Motor gasoline blending components consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+MGACB,MGACP,Motor gasoline consumed by the transportation sector.,Thousand barrels,NM,1976,90313.69393
+MGCCB,MGCCP,Motor gasoline consumed by the commercial sector.,Thousand barrels,NM,1976,498.17629
+MGICB,MGICP,Motor gasoline consumed by the industrial sector.,Thousand barrels,NM,1976,709.14817
+MSICB,MSICP,Miscellaneous petroleum products consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+NAICB,NAICP,Natural gasoline consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+NGACB,NGACP,Natural gas consumed by the transportation sector.,Million cubic feet,NM,1976,29751.39432
+NGCCB,NGCCP,Natural gas consumed by (delivered to) the commercial sector (including supplemental gaseous fuels).,Million cubic feet,NM,1976,35943.51456
+NGEIB,NGEIP,Natural gas consumed by the electric power sector (including supplemental gaseous fuels).,Million cubic feet,NM,1976,71683.72812
+NGICB,NGICP,Natural gas consumed by (delivered to) the industrial sector (including supplemental gaseous fuels).,Million cubic feet,NM,1976,118604.641
+NGLPB,NGLPP,Natural gas consumed as lease and plant fuel.,Million cubic feet,NM,1976,52420.2912
+NGMPB,NGMPP,Natural gas marketed production.,Million cubic feet,NM,1976,1405146.429
+NGPZB,NGPZP,Natural gas consumed as pipeline fuel.,Million cubic feet,NM,1976,29751.39432
+NGRCB,NGRCP,Natural gas consumed by (delivered to) the residential sector (including supplemental gaseous fuels).,Million cubic feet,NM,1976,38895.08832
+NGTCB,NGTCP,Natural gas total consumption (including supplemental gaseous fuels).,Million cubic feet,NM,1976,294878.1468
+NGVHB,NGVHP,Natural gas consumed as vehicle fuel.,Million cubic feet,NM,1976,0.0
+NUEGB,NUEGP,Electricity produced from nuclear power by the electric power sector.,Million kilowatthours,NM,1976,0.0
+NUETB,NUETP,Electricity produced from nuclear power.,Million kilowatthours,NM,1976,0.0
+PAPRB,PAPRP,Crude oil production (including lease condensate).,Thousand barrels,NM,1976,534354.0
+PCCCB,PCCCP,Petroleum coke consumed by the commercial sector.,Thousand barrels,NM,1976,0.0
+PCEIB,PCEIP,Petroleum coke consumed by the electric power sector.,Thousand barrels,NM,1976,0.0
+PLICB,PLICP,Plant condensate consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+PPICB,PPICP,Pentanes plus consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+RFACB,RFACP,Residual fuel oil consumed by the transportation sector.,Thousand barrels,NM,1976,0.0
+RFCCB,RFCCP,Residual fuel oil consumed by the commercial sector.,Thousand barrels,NM,1976,0.0
+RFEIB,RFEIP,Residual fuel oil consumed by the electric power sector.,Thousand barrels,NM,1976,6142.26069
+RFICB,RFICP,Residual fuel oil consumed by the industrial sector,Thousand barrels,NM,1976,9285.9774
+SGICB,SGICP,Still gas consumed by the industrial sector.,Thousand barrels,NM,1976,7960.89522
+SNICB,SNICP,Special naphthas consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+SOEGB,SOEGP,Electricity produced from photovoltaic and solar thermal energy by the electric power sector.,Million kilowatthours,NM,1976,0.0
+UOICB,UOICP,Unfinished oils consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+USICB,USICP,Unfractionated stream consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+WXICB,WXICP,Waxes consumed by the industrial sector.,Thousand barrels,NM,1976,0.0
+WYEGB,WYEGP,Electricity produced from wind energy by the electric power sector.,Million kilowatthours,NM,1976,0.0
