@@ -124,8 +124,8 @@ if __name__ == '__main__':
             if len(df_final) == 0:
                 df_final = pd.DataFrame(columns=['year', 'state'] + list(df_weight['name']))
             df_final.loc[len(df_final)] = [year, state] + list(df_weight['weight'])
-    df_final = df_final.rename(columns={"Million cubic feet": "natural gas", "Million kilowatthours": "electricity",
-                                        "Thousand barrels": "fuel oil", "Thousand short tons": "coal coke"})
+    df_final = df_final.rename(columns={"Million cubic feet": "Natural gas", "Million kilowatthours": "Electricity",
+                                        "Thousand barrels": "Petroleum product", "Thousand short tons": "Coal"})
     df_final.to_csv('./data/A-final.csv', index=False)
     df_final.drop(['year'], axis=1).plot(x='state', kind='bar', rot=0)
     plt.title('Weights of energy classification in 2009', fontweight='bold')
