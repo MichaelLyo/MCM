@@ -5,6 +5,7 @@
 \usepackage{tikz}
 \usetikzlibrary{mindmap,trees}
 \usepackage{verbatim}
+\usepackage{float}
 \usepackage[section]{placeins}
 \usepackage{setspace}%使用间距宏包
 \usepackage[76620]{MCMPackage}  %队号在这里填写
@@ -155,12 +156,8 @@ $\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\
 \emph{P.S: Other symbol instructions will be given in the paper.}
 
 
-
-
-
-
 % 4
-\section{State Energy Analysis Model}
+\section{Energy Analysis Model}
 
 % \par We divide 
 % \par Factor Analysis is a multivariate statistical analysis method, which is based on the internal dependencies of the correlation matrix of the indicator. It attributes some of the variables that have complex relationship to a few irrelevant factors.\cite{2} We will use this method to deal with problem A in the section.
@@ -345,7 +342,6 @@ w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
 
 \par According to table \ref{tab:factors}, the contribution rates of the four kinds of energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
 
-
 % 4.3
 \subsection{Renewable energy profile}
 
@@ -390,30 +386,32 @@ w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
 
 
 % 5
-\section{Problem B: Profile evolution \& Energy usage comparison among four states}
+\section{Profile Evolution Model \& Energy Usage Comparison Model}
 
 
-\par We have set up a good model for energy profile evaluation at one certain year, and now in this part, we will improve the model and take time factor into consideration to get the energy profile evolution results of four states. Besides,
-we introduce a new model Analytic Hierarchy Process (AHP) to deal with the analysis of possible influential factors of similarities and differences among the four states.
+\par We have set up a good model for energy profile evaluation (State Energy Analysis Model) to analyze the energy profile of each state at a given year. 
+\par The profile evolution model takes \textbf{time factor} into consideration to get the energy profile evolution results of four states. Besides,
+we will use a new model Analytic Hierarchy Process (AHP) to deal with the analysis of possible influential factors of similarities and differences among the four states.
 
 % 5.1
-\subsection{Evolution of energy profile}
-\par On the basis of the model of Problem A, we try to bring time factor into the model and get the evolution result of the profile. 
+\subsection{Profile Evolution Model}
+\par On the basis of the energy profile model, we try to bring time factor into the model and get the evolution result of the profile. 
 
 % 5.1.1
 \subsubsection{Model improvement with time factor}
 \par Along with how to bring time factor into the model, we have a basic solution of calculating the result of the model of each year and then displaying the result in a line chart. 
 
-\begin{figure}[h]%[!hptb] 
+\par Take California as an example, we firstly use the factor analysis model to classify the energy into 4 kinds and divide them by 5 sectors, and according to step-counting principle, we get 4$\times$5 groups of basic energy profile unit. For everyone in the 20 units, we build a line chart to describe the trend as the year changes and put all of them into one diagram to have a more intuitive comparison, as can been seen in figure \ref{fig:part-2-CA}.  
+\par Results of other states can been seen in the Appendix. % TODO: which appendix?
+
+% TODO: 图片错位
+\begin{figure}[H]%[!hptb] 
     \centering 
     \includegraphics[width=0.9\textwidth]{./Pic/part-2-CA.png}
     % 图片标题
     \caption{Evolution of energy profile of CA (1960-2009).}
     \label{fig:part-2-CA}  
 \end{figure}
-
-\par Take California as an example, we firstly use the factor analysis model to classify the energy into 4 kinds and divide them by 5 sectors, and according to step-counting principle, we get 4$\times$5 groups of basic energy profile unit. For everyone in the 20 units, we build a line chart to describe the trend as the year changes and put all of them into one diagram to have a more intuitive comparison, as can been seen in figure \ref{fig:part-2-CA}.  
-\par Results of other states can been seen in the Appendix. % TODO: which appendix?
 
 % 5.1.2
 \subsubsection{Brief analysis of the evolution above}
@@ -434,9 +432,10 @@ we introduce a new model Analytic Hierarchy Process (AHP) to deal with the analy
 
 
 % 5.2
-\subsection{AHP model}
-\par With analytic hierarchy process(AHP) model, we can obtain scores of the usage of renewable energy of the four states, through which we can analysize the similarities and differences between the four states. 
+\subsection{Energy Usage Comparison Model}
 
+\par With analytic hierarchy process(AHP) model, we can obtain scores of the usage of renewable energy of the four states, through which we can analysize the similarities and differences between the four states. 
+% TODO: 使用摘要中的语句
 % 5.2.1
 \subsubsection{Analytic hierarchy and factor origin}
 
@@ -449,21 +448,23 @@ we introduce a new model Analytic Hierarchy Process (AHP) to deal with the analy
 % 5.2.2
 \subsubsection{Establishment of AHP model}
 
-% \par For obtaining the renewable energy proportion of each sector, we need renewable energy total comsumption values of each sector which can be computed by formula in the MSN refercence:
-% \begin{align*}
-% & transportation = EMACB \\
-% & commercial = EMCCB + GECCB + HYCCB + SOCCB + WWCCB + WYCCB \\
-% & electric power = HYEGB + GEEGB + SOEGB + WWEIB + WYEGB \\
-% & industrial = EMICB + EMLCB + GEICB + HYICB + SOICB + WWICB + WYICB \\
-% & residential = WDRCB + GERCB + SORCB \\
-% \end{align*}
+\par For obtaining the renewable energy proportion of each sector, we need renewable energy total comsumption values of each sector which can be computed by formula in the MSN refercence:
+\begin{align*}
+& \text{transportation} = \text{EMACB} \\
+& \text{commercial} = \text{EMCCB} + \text{GECCB} + \text{HYCCB} + \text{SOCCB} + \text{WWCCB} + \text{WYCCB} \\
+& \text{electric power} = \text{HYEGB} + \text{GEEGB} + \text{SOEGB} + \text{WWEIB} + \text{WYEGB} \\
+& \text{industrial} = \text{EMICB} + \text{EMLCB} + \text{GEICB} + \text{HYICB} + \text{SOICB} + \text{WWICB} + \text{WYICB} \\
+& \text{residential} = \text{WDRCB} + \text{GERCB} + \text{SORCB} \\
+\end{align*}
 
 \par We suppose Y, which is the use level of renewable energy as the target, and $X_i$, which represents the five sectors as the standard. Therefore, we have the analytic hierarchy model based on total renewable energy usage as follows.\cite{6}
-\begin{figure}[!hptb] 
+
+\begin{figure}[H] 
     \centering 
     \includegraphics[width=1.0\textwidth]{./Pic/AHP.pdf}
     \caption{AHP model}
 \end{figure}
+
 \par In order to analysize the closeness between each of the sectors and Y, we analysize the given data to obtain and then use the total of the renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, which is the pairwise comparison matrix of the five sectors under Y. Simply, we can calculate $\lambda_m$(C), which is the maximum of the eigenvalues of C. Here, n is equal to 4 and RI is equal to 1.12.\cite{6} If C can not pass the check equation of consistency:
 \begin{equation}
     \centering
@@ -473,6 +474,7 @@ we introduce a new model Analytic Hierarchy Process (AHP) to deal with the analy
         \centering
     CR=\frac{ CI }{ RI }<0.1 
 \end{equation}
+
 \par We will recalculate C until C pass the check of consistency. Then we calculate $\beta$, the eigenvector of $\lambda_m$(C), which meets the conditions that the sum of the coordinates of the eigenvector is 1 and the coordinates is greater than 0, called weight vector.
 \par Similarly, we can also obtain $B_i$, which is the pairwise comparison matrix of the four states under $X_i$, and $\beta_i$, which is the weight vector of $X_i$.
 \par We define W as follows: % TODO: follows?
@@ -517,33 +519,27 @@ Then we calculate the scores of the four states in every year, and draw a line c
 \subsubsection{Result of per capita usage}
 \par In order to have a more detailed and more comprehensive comparison of the similaritiesand differences of the states, we hold the view that it is not enough to compare the proportionof the renewable energy usage among states, sector usage difference within the state is also an important comparing factor.
 \par When we talk about the analytic hierarchy model based on per capita renewable energyusage, we just need to change CA, TX, NM, AZ to CA, TX, NM, AZ divided by the total population of each state. Therefore, similarly we can obtain the scores based on the per capita energy usage of the four states in each year from 1960 to 2009, and draw the line chart as follows.
-\begin{figure}[!hptb] 
+\begin{figure}[H] 
     \centering 
     \includegraphics[width=0.8\textwidth]{./Pic/B-level-percapita.png}
     \caption{Scores based on the per capita renewable energy usage from 1960 to 2009}
     \label{fig:B-level-percapita}
 \end{figure}
 
-
-
 \subsection{Similarities and differences analysis}
 
 
 
-
-
-
 \par We have taken the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and obtain figure \ref{fig:B-percent}.
-\begin{figure}[h]%[!hptb] 
+\begin{figure}[H]%[!hptb] 
     \centering 
-    \includegraphics[width=0.8\textwidth]{./Pic/B-percent.png}
+    \includegraphics[width=0.7\textwidth]{./Pic/B-percent.png}
     % 图片标题
-    \caption{The proportion of renewable energy usage of different sectors in four states in the year of 2009.}
+    \caption{The proportion of renewable energy usage of different sectors of four states in 2009}
     \label{fig:B-percent}  
 \end{figure}
 
-\par We have take the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and get figure \ref{fig:B-percent}.
-\par From figure \ref{fig:B-level-predict} and figure \ref{fig:B-percent} we can conclude the similarities and differences
+\par We have take the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and get figure \ref{fig:B-percent}. According to figure \ref{fig:B-level-predict} and figure \ref{fig:B-percent} we can conclude the similarities and differences.
 
 % TODO: which diffs?
 
