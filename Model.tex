@@ -200,13 +200,14 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
     \centering
     \begin{tabular}{|c|c|}
         \hline Energy name & Unit\\
-        \hline Petroleum product & Thousand barrels\\
+        \hline Petroleum products & Thousand barrels\\
         \hline Coal & Thousand short tons\\
         \hline Electricity & Million kilowatthours\\
         \hline Natural gas & Million cubic feet\\
         \hline
     \end{tabular}
-    \caption{Energy name and unit reference table}\label{tab:energy-unit}
+    \caption{Energy name and unit reference table}
+    \label{tab:energy-unit}
 \end{table}
 
 
@@ -476,13 +477,6 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 \subsubsection{Establishment of AHP model}
 
 \par For obtaining the renewable energy proportion of each sector, we need renewable energy total comsumption values of each sector which can be computed by formula in the MSN refercence:
-\begin{align*}
-& \text{transportation} = \text{EMACB} \\
-& \text{commercial} = \text{EMCCB} + \text{GECCB} + \text{HYCCB} + \text{SOCCB} + \text{WWCCB} + \text{WYCCB} \\
-& \text{electric power} = \text{HYEGB} + \text{GEEGB} + \text{SOEGB} + \text{WWEIB} + \text{WYEGB} \\
-& \text{industrial} = \text{EMICB} + \text{EMLCB} + \text{GEICB} + \text{HYICB} + \text{SOICB} + \text{WWICB} + \text{WYICB} \\
-& \text{residential} = \text{WDRCB} + \text{GERCB} + \text{SORCB} \\
-\end{align*}
 
 \par We suppose Y, which is the usage level of renewable energy as the target, and $X_i$, which represents the five sectors as the standard. Therefore, we have the analytic hierarchy model based on total renewable energy usage as follows.\cite{6}
 
@@ -523,12 +517,21 @@ U=\begin{pmatrix} \beta_1 & \beta_2 & \beta_3 & \beta_4\end{pmatrix}
 
 % 5.2.3
 \subsubsection{Calculation results of AHP model}
-\par Firstly, we divide the given data by year, and calculate the scores of the four states in 2009 as follows:
+\par Firstly, we can get the renewable energy comsumption of each sector by MSN formulas \cite{4}
+\begin{align*}
+    & \text{transportation} = \text{EMACB} \\
+    & \text{commercial} = \text{EMCCB} + \text{GECCB} + \text{HYCCB} + \text{SOCCB} + \text{WWCCB} + \text{WYCCB} \\
+    & \text{electric power} = \text{HYEGB} + \text{GEEGB} + \text{SOEGB} + \text{WWEIB} + \text{WYEGB} \\
+    & \text{industrial} = \text{EMICB} + \text{EMLCB} + \text{GEICB} + \text{HYICB} + \text{SOICB} + \text{WWICB} + \text{WYICB} \\
+    & \text{residential} = \text{WDRCB} + \text{GERCB} + \text{SORCB} \\
+\end{align*}
+
+\par Then, we divide the given data by year, and calculate the scores of the four states in 2009 as follows:
 \[
     \text{CA}=55.6555729\%, \text{TX}=38.04528274\%, \text{NM}=0.997192757\%, \text{AZ}=5.301951596\%
 \]
 Clearly, the score of California and Texas is much greater than New Mexico and Arizona.
-Then we calculate the scores of the four states in every year and draw a line chart as follows.
+Then we calculate the scores of the four states in every year(1960 - 2009) and draw a line chart as follows.
 \begin{figure}[!hptb] 
     \centering 
     \includegraphics[width=0.7\textwidth]{./Pic/B-level-predict.png}
