@@ -83,9 +83,9 @@
 \par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B, C and the given data to establish regression equations or other models.
 
 % \subsubsection{Part \uppercase\expandafter{\romannumeral2}}
-\par It is suggested in the Problem A that, we should determine targets of the renewable energy usage for the four states in 2025 and 2050, which is based on the problems of Part \uppercase\expandafter{\romannumeral1}. 
+\par For Problem A that, we should determine targets of the renewable energy usage for the four states in 2025 and 2050, which is based on the problems of Part \uppercase\expandafter{\romannumeral1}. 
 
-\par As for Problem B, we are supposed to give some suggestions to the governors, so that they will know that the actions they should take to meet the goals.
+\par For Problem B, we are supposed to give some suggestions to the governors, so that they will know the actions they should take to meet the goals.
 
 % \subsubsection{Part \uppercase\expandafter{\romannumeral3}}
 \par On the basis of the analysis and models in the two parts before, we prepare the state profiles of 2009, our predictions towards energy usage and some recommendations on adopting goals for the energy compact.
@@ -126,7 +126,7 @@ $Y$&The level of renewable energy usage.\\
 $X_i$&Transportation(i=1), commerce(i=2), electricity(i=3), industry(i=4), resident(i=5), i=1,2,3,4,5.\\ 
 $C,B_i$&The pairwise comparison matrixs, i=1,2,3,4,5.\\
 $\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\
-$Z_i$&The score based on the total renewable energy use of the four states, i=1,2,3,4.\\
+$Z_i$&The score based on the total renewable energy usage of the four states, i=1,2,3,4.\\
 $S$&The amount of the total renewable energy usage of the four states.\\ 
 $S_i$&The amount of the total renewable energy usage of each of the four states, i=1,2,3,4.\\
 
@@ -232,7 +232,7 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 % 4.2
 \subsection{Factor analysis function}
 
-\par There are many relationships among MSNs. To simplify the complex dependencies between the four energy classification, we used factor analysis to establish an optimal model to analyze the actual weights of the four types of energy sources.
+\par There are many relationships among MSNs. In order to simplify the complex dependencies between the four energy classification, we used factor analysis to establish an optimal model to analyze the actual weights of the four types of energy sources.
 
 % \par According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
 % \begin{enumerate}[Step 1:]
@@ -462,7 +462,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 % 5.2
 \subsection{Energy Usage Comparison Model}
 
-\par With analytic hierarchy process(AHP) model, we can obtain scores of the usage of renewable energy of the four states, through which we can analyze the similarities and differences between the four states. 
+\par With analytic hierarchy process(AHP) model, we can obtain scores of the total renewable energy usage of the four states, through which we can analyze the similarities and differences between the four states. 
 % TODO: 使用摘要中的语句
 % 5.2.1
 \subsubsection{Analytic hierarchy and factor origin}
@@ -486,7 +486,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
     \caption{AHP model}
 \end{figure}
 
-\par In order to analyze the closeness between each of the sectors and Y, we analyze the given data to obtain and then use the total of the renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, which is the pairwise comparison matrix of the five sectors under Y. Simply, we can calculate $\lambda_m$(C), which is the maximum of the eigenvalues of C. Here, n is equal to 4 and RI is equal to 1.12.\cite{6} If C can not pass the check equation for consistency:
+\par In order to analyze the closeness between each of the sectors and Y, we analyze the given data to obtain and then use the total renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, which is the pairwise comparison matrix of the five sectors under Y. Simply, we can calculate $\lambda_m$(C), which is the maximum of the eigenvalues of C. Here, n is equal to 4 and RI is equal to 1.12.\cite{6} If C can not pass the check equation for consistency:
 \begin{equation}
     \centering
     CI=\frac{ \lambda_m(C)-n }{ n-1 }
@@ -542,7 +542,7 @@ Then we calculate the scores of the four states in every year(1960 - 2009) and d
 % 5.2.4
 \subsubsection{Result of per capita usage}
 \par In order to have a more detailed and more comprehensive comparison of the similarities and differences of the states, we hold the view that it is not enough to compare the proportion of the renewable energy usage among states, sector usage difference within the state is also an important comparing factor.
-\par When we talk about the analytic hierarchy model based on per capita renewable energy usage, we just need to change CA, TX, NM, AZ to CA, TX, NM, AZ divided by the total population of each state. Therefore, similarly, we can obtain the scores based on the per capita energy usage of the four states in each year from 1960 to 2009, and draw the line chart as follows.
+\par When we talk about the analytic hierarchy model based on per capita renewable energy usage, we just need to change the values of CA, TX, NM, AZ to the values of CA, TX, NM, AZ divided by the total population of each state. Therefore, similarly, we can obtain the scores based on the per capita energy usage of the four states in each year from 1960 to 2009, and draw the line chart as follows.
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{./Pic/B-level-percapita.png}
@@ -674,7 +674,7 @@ So the best profile of 2009 belongs to \textbf{New Mexico}.
 \par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the scores of the four states in 2025 and 2050.
 \subsection{Regression analysis model}  
 \subsubsection{Establishment of regression equations}
-\par In problem D, the policy about the energy of each state will not change until 2050. At first, we consider the levels of total renewable energy usage of the four states.  According to Figure \ref{fig:B-level-predict}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores have a sudden change after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the scores  of California and Texas from 2005 to 2009 to build the regression equations.
+\par In problem D, the policy about the energy of each state will not change until 2050. At first, we consider the levels of the total renewable energy usage of the four states.  According to Figure \ref{fig:B-level-predict}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy change. Meanwhile, for California and Texas, their scores have a sudden change after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the scores of California and Texas from 2005 to 2009 to build the regression equations.
 \par For California and Arizona, we use exponential function to fit curves. And for New Mexico, we use linear regression.
 \par We suppose the linear regression equation is
 \begin{equation}
@@ -712,8 +712,8 @@ which is a linear regression equation, so that we can use generalized least squa
     \centering
 \text{AZ}:   Z_4=e^{-0.10513 \times year+213.24602}
 \end{equation}
-\par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
+\par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
 \par In order to obtain S, which is the amount of the total renewable energy usage of each state in future, we need to predict the total renewable energy usage of the four states.
 \par According to Figure \ref{fig:D-total-energy} as follows,
 \begin{figure}[h]%[!hptb] 
@@ -734,7 +734,7 @@ S=14466 \times year-27896894
 \end{equation}
 
 \subsubsection{Scores of the four states in future}
-\par According to the regression equations, we can obtain the score based on the total renewable energy usage and amount of the total renewable energy usage of each of the four states in 2025 and 2050 as follows.
+\par According to the regression equations, we can obtain the score based on the total renewable energy usage and amount of the total renewable energy usage of each state in 2025 and 2050 as follows.
 \begin{table}[!hbp]
     \centering 
     \begin{tabular}{|c|c|c|c|c|}
@@ -762,23 +762,23 @@ Total amount & 100\% & 1396756 & 100\% & 1758406 \\
     \caption{Scores based on total renewable energy of the four states from 1960 to 2050}
     \label{fig:D-scores}  
 \end{figure}
-\par Besides, we also need to consider the levels of per capita renewable energy usage of the four states. According to figure \ref{fig:B-level-percapita}, we can find that each of the score based on per capita renewable energy usage are in a approximate region.
+\par Besides, we also need to consider the levels of per capita renewable energy usage of the four states. According to figure \ref{fig:B-level-percapita}, we can find that each score based on per capita renewable energy usage is in a approximate region.
 \[
 CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 \]
 
 \subsection{Analysis of the results}
 \subsubsection{Level and amount of total renewable energy usage}
-\par From 2025 to 2050, based on the total renewable energy usage, score of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the score of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows at a slow rate.
+\par From 2025 to 2050, based on the total renewable energy usage, score of California is very close to 50.00000 and continues to decline, score of Arizona will begin to be less than the score of New Mexico and will be close to 0 in 2050. On the contrary, score of Texas keeps growing but is not greater than the score of California, and the score of New Mexico grows at a slow rate.
 \par Therefore, comparing to other states, the levels and amounts of total renewable energy usage of the four states are as follows.
 \begin{itemize}
     \item California: level declines but still is the best, meanwhile, amount keeps growing.
-    \item Texas: both of level and amount keeps growing and gets close to California.
-    \item New Mexico: both of level and amount gets better than Arizona and also keeps growing.
-    \item Arizona: both of level and amount keeps declining.
+    \item Texas: both of level and amount keep growing and gets close to California.
+    \item New Mexico: both of level and amount get better than Arizona and also keep growing.
+    \item Arizona: both of level and amount keep declining.
 \end{itemize}
 \subsubsection{Level of pre capita renewable energy usage}
-\par The scores based on the per capita renewable energy usage do not have a huge change, they are still in the region.
+\par The scores based on the per capita renewable energy usage do not have a huge change, they will be still in the region in 2025 and 2050.
 \par Therefore, comparing to other states, the level of per capita renewable energy usage are as follows.
 \begin{itemize}
     \item California and Texas: are still the lowest.
@@ -797,18 +797,18 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 
 
 \section{Renewable energy usage targets for 2025 and 2050}
-\par According to the results of Problem D, we have predicted the value of the amounts of total renewable energy when the policy dose not change. Therefore, we can build target model, which can give renewable energy usage targets for than four states in 2025 and 2050.
+\par According to the results of Problem D, we have predicted the amounts of total renewable energy when the policy dose not change. Therefore, we can build target model, which can give renewable energy usage targets for the four states in 2025 and 2050.
 \subsection{Target model}
-\par For California, Texas, and New Mexico in any year, we define the target is the predicted value of the amount of total renewable energy because the amounts of total renewable energy of them keep growing.
+\par For California, Texas, and New Mexico in any year, we define the target is the predicted value of the amount of total renewable energy because the amounts of the total renewable energy usage of them keep growing.
 \par For Arizona, its predicted value of the amount of total renewable energy keeps declining and will get less than New Mexico. Therefore, we define the target is
 \begin{equation}
     \centering
     Target=0.01*(5.30195+0.05263 \times (year-2009))*S
 \end{equation}
 which means from 2009, the score based on the total energy usage keep growing at the same rate of New Mexico.
-\par If the real amount total renewable energy usage is not less than the predicted value of amount of total renewable energy, we consider it as the goal of the new four-state energy compact.
+\par If the real amount of the total renewable energy usage is not less than the predicted value of amount of the total renewable energy, we consider it as the goal of the new four-state energy compact.
 \subsection{Results of target model in 2025 and 2050}
-\par According to table \ref{tab:Scores and amounts} and the target model, we have the target of each date in 2025 and 2050 as follows.
+\par According to table \ref{tab:Scores and amounts} and the target model, we have the target of each state in 2025 and 2050 as follows.
 \begin{table}[H]
     \centering 
     \begin{tabular}{|c|c|c|}
@@ -834,7 +834,7 @@ Arizona & 85817.10767 & 130949.4257 \\
     \item Increase the economic input to exploit technology for renewable energy. 
     \item Strengthen people's awareness of using renewable energy.
     \item Establish more renewable energy facilities, such as wind power plants and solar power plants to make more use of renewable energy.
-    \item In the prime of no influence with the overall economy, limit the usage of non-renewable energy.
+    \item In the premise of no influence with the overall economy, limit the usage of non-renewable energy.
 \end{itemize}
 
     
@@ -861,7 +861,7 @@ Arizona & 85817.10767 & 130949.4257 \\
 \paragraph{Weaknesses}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
-    \item In factor analysis, we supposed that the corresponding valuables as the main factors when the cumulative percentage is over 0.65, which may not enough.
+    \item In factor analysis, we supposed that the corresponding valuables as the main factors when the cumulative percentage is over 0.65, it may not enough.
     \item Due to the amount of the data of scores is not enough, so that the results of regressions may not match future very much.
 \end{enumerate}
 
