@@ -74,19 +74,19 @@
 \subsection{Problem Restatement}
 %这一部分写问题分析以及我们要解决的问题
 \subsubsection{Part \uppercase\expandafter{\romannumeral1}}
-\par For Problem 1.A, in order to lay the foundation of analyzing, we are required to create an energy profile for each of the four states. Meanwhile, the profiles should be created on the analysis of the given data.
+\par For Problem A, in order to lay the foundation of analyzing, we are required to create an energy profile for each of the four states. Meanwhile, the profiles should be created on the analysis of the given data.
 
-\par For Problem 1.B, it adds a factor of consideration to the time dimension based on question A. Especially, the type of energy that needs to be analyzed becomes renewable energy, and the focus shifted from within a single state to between states. Explaining briefly the similarities and differences.
+\par For Problem B, it adds a factor of consideration to the time dimension based on question A. Especially, the type of energy that needs to be analyzed becomes renewable energy, and the focus shifted from within a single state to between states. Explaining briefly the similarities and differences.
 
-\par For problem 1.C. To determine the best performing profile among the REU profiles in each state in 2009, we need to inspect the comprehensive factors based on the calculation and comparison of previous model.
+\par For problem C. To determine the best performing profile among the REU profiles in each state in 2009, we need to inspect the comprehensive factors based on the calculation and comparison of previous model.
 
-\par For Problem 1.D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B, C and the given data to establish regression equations or other models.
+\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B, C and the given data to establish regression equations or other models.
 
 \subsubsection{Part \uppercase\expandafter{\romannumeral2}}
 
-\par It is suggested in the Problem 2.A that, we should determine targets of the renewable energy usage for the four states in 2025 and 2050, which is based on the problems of Part \uppercase\expandafter{\romannumeral1}. 
+\par It is suggested in the Problem A that we should determine targets based on the problems of Part \uppercase\expandafter{\romannumeral1} of the renewable energy usage for the four states in the year of 2025 and 2050. 
 
-\par As for Problem 2.B, we are supposed to give some suggestions to the governors, so that they will know that the actions they should take to meet the goals.
+\par As for Problem B, we are supposed to give some suggestions to the governors, so that they will know that the actions they should take to meet the goals.
 
 \subsubsection{Part \uppercase\expandafter{\romannumeral3}}
 \par On the basis of the analysis and models in the two parts before, we prepare the state profiles of 2009, our predictions towards energy usage and some recommendations on adopting goals for the energy compact.
@@ -250,18 +250,18 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 % \item Based on the above calculation results, the system is analyzed.
 % \end{enumerate}
 
-\par By using the given data, we can obtain R, which is the correlation coefficient matrix of natural gas, electricity, petroleum products and coal.
+\par Through analyzing the given data and calculation, we can obtain R, the correlation coefficient matrix of natural gas, electricity, petroleum products and coal.
 \begin{equation}
     \centering
 R=\begin{pmatrix} 1 & r_{12} & r_{13} & r_{14} \\ r_{21} & 1 & r_{23} & r_{24} \\ r_{31} & r_{32} & 1 & r_{34} \\ r_{41} & r_{42} & r_{43} & 1\end{pmatrix}
 \end{equation}
 
 
-\par Then we can obtain 
+\par Then we can obtain the eigenvalues of R
 \[
 \lambda_1, \lambda_2, \lambda_3, \lambda_4
 \]
-which are the eigenvalue of R, and
+and they must under the limit of
 \[
     \lambda_1 \geqslant \lambda_2 \geqslant \lambda_3 \geqslant \lambda_4
 \]
@@ -333,7 +333,7 @@ w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i } \times 100\%
 \theta_i=A[i,1] \times \lambda_1+A[i,2] \times \lambda_2+A[i,3] \times \lambda_3+A[i,4] \times \lambda_4
 \end{equation}
 
-\par Therefore, we can obtain the weight of natural gas, electricity, petroleum products and coal, which are between 0\% and 100\%.
+\par Therefore, we can obtain the weights of natural gas, electricity, petroleum products and coal, which are between 0\% and 100\%.
 
 \[
 w_1, w_2, w_3, w_4.
@@ -477,7 +477,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
 
 \par For obtaining the renewable energy proportion of each sector, we need renewable energy total comsumption values of each sector which can be computed by formula in the MSN refercence:
 
-\par We suppose Y, which is the usage level of renewable energy as the target, and $X_i$, which represents the five sectors as the standard. Therefore, we have the analytic hierarchy model based on total renewable energy usage as follows.\cite{6}
+\par We make Y be the usage level of renewable energy as the target, and $X_i$ represent the five sectors which means the standard of comparison. Therefore, we have the analytic hierarchy model based on total renewable energy usage as follows.\cite{6}
 
 \begin{figure}[H] 
     \centering 
@@ -485,7 +485,7 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
     \caption{AHP model}
 \end{figure}
 
-\par In order to analyze the closeness between each of the sectors and Y, we analyze the given data to obtain and then use the total of the renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, which is the pairwise comparison matrix of the five sectors under Y. Simply, we can calculate $\lambda_m$(C), which is the maximum of the eigenvalues of C. Here, n is equal to 4 and RI is equal to 1.12.\cite{6} If C can not pass the check equation for consistency:
+\par In order to analyze the closeness between each of the sectors and Y, we analyze the given data to obtain the total renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, the pairwise comparison matrix of the five sectors under Y. We then calculate $\lambda_m$(C) , the maximum of the eigenvalues of C. Here, n is equal to 4 and RI is equal to 1.12.\cite{6} If C can not pass the check equation for consistency:
 \begin{equation}
     \centering
     CI=\frac{ \lambda_m(C)-n }{ n-1 }
@@ -495,8 +495,8 @@ we will use a new model Analytic Hierarchy Process (AHP) to deal with the analys
     CR=\frac{ CI }{ RI }<0.1 
 \end{equation}
 
-\par We will recalculate C until C pass the check of consistency. Then we calculate $\beta$, the eigenvector of $\lambda_m$(C), which meets the conditions that the sum of the coordinates of the eigenvector is 1 and the coordinates are greater than 0, called weight vector.
-\par Similarly, we can also obtain $B_i$, which is the pairwise comparison matrix of the four states under $X_i$, and $\beta_i$, which is the weight vector of $X_i$.
+\par We will recalculate C until C pass the check of consistency. Then we calculate $\beta$, the eigenvector of $\lambda_m$(C), which must meet the conditions that the sum of the coordinates of the eigenvector is 1 and the coordinates are greater than 0, and we call it weight vector.
+\par Similarly, we can also obtain $B_i$, the pairwise comparison matrix of the four states under $X_i$, and $\beta_i$, the weight vector of $X_i$.
 \par We define U as follows: % TODO: follows?
 \begin{equation}
     \centering
