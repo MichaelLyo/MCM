@@ -6,6 +6,7 @@
 \usetikzlibrary{mindmap,trees}
 \usepackage{verbatim}
 \usepackage{float}
+\usepackage{pdfpages}
 \usepackage[section]{placeins}
 \usepackage{setspace}%使用间距宏包
 \usepackage[76620]{MCMPackage}  %队号在这里填写
@@ -157,7 +158,6 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 % \par We divide 
 % \par Factor Analysis is a multivariate statistical analysis method, which is based on the internal dependencies of the correlation matrix of the indicator. It attributes some of the variables that have complex relationship to a few irrelevant factors.\cite{2} We will use this method to deal with problem A in the section.
 
-% Problem A: Energy profile for each of the four states
 % 4.1
 \subsection{Distinction approach of energy construction}
 % 4.1.1
@@ -884,14 +884,16 @@ Arizona & 85817.10767 & 130949.4257 \\
 
 
 
+\includepdf[pages=-]{memo.pdf}
 
-\newpage%另起一页书写正文
+% \newpage%另起一页书写正文
+
 % \thispagestyle{empty}%本页不遍页码
 %以下是参考文献
 \phantomsection%生成该页的链接
 \addcontentsline{toc}{section}{\refname}
 \begin{thebibliography}{}
-%
+
 % 使用指令\bibitem 构造一条参考文献.
 % 具体构造方式，参考以下参考文献格式说明以及示例
 % 应尽可能使用英文格式
