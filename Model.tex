@@ -640,8 +640,28 @@ So the best profile of 2009 belongs to \textbf{New Mexico}.
 \section{Prediction Model}
 \par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the scores of the four states in 2025 and 2050.
 \subsection{Regression analysis model}  
-\subsubsection{Regression equations}
+\subsubsection{Establishment of regression equations}
 \par In problem D, the policy about the energy of each state will not change until 2050. At first, we consider the levels of total renewable energy usage of the four states.  According to Figure \ref{fig:B-level-predict}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores have a sudden change after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the scores  of California and Texas from 2005 to 2009 to build the regression equations.
+\par For California and Arizona, we use exponential function to fit curves. And for New Mexico, we use linear regression.
+\par We suppose the linear regression equation is
+\begin{equation}
+    \centering
+\text   y=ax+b
+\end{equation}
+and we have ($x_i$, $y_i$), i=1 to n, which is paired data of x and y. By generalized least squares, we can obtain the value of a and b.
+\par When we want to obtain fitted curve by exponential function, we suppose the regression equation is
+\begin{equation}
+    \centering
+\text   y=be^{ax}
+\end{equation}
+The equation is equal to
+\begin{equation}
+    \centering
+\text   log(y)=log(b)+ax
+\end{equation}
+which is a linear regression equation, so that we can use generalized least squares to calculate the value of a and b.
+
+\subsubsection{Results of Regressions}
 \par The regression equations are
 \begin{equation}
     \centering
