@@ -85,7 +85,7 @@
 
 \par For problem C, 
 
-\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the Problem A, B, and C to establish regression equations. 
+\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B,C and the given data to establish regression equations.
 
 \subsubsection{Part \uppercase\expandafter{\romannumeral2}}
 \par It is suggested in the Problem A that,
@@ -101,7 +101,7 @@
 \renewcommand{\labelenumi}{(\theenumi)}
     \item In factor analysis, we suppose the corresponding valuables as the main factors when cumulative percentage is over 0.65 .
     \item When we do regression analysis, we suppose that F-test or t-test is passed if the Pr of them is less than 0.05.
-    \item The information network is affected  only by the factors that have been recognized.
+    \item When we do regression analysis, we suppose that effect of regression is good if $R^{2}$ is greater than 0.65.
     \item In the process of information dissemination, we assume that the network edge is directed.
     \item It is assumed that only the neighboring nodes will be affected.
     \item Information can only be transmitted from the source to the spread point, and it will not produce cross dissemination.
@@ -604,7 +604,7 @@ NM=0.05263 \times year-104.64807
     \centering
 AZ=e^{-0.10513 \times year+213.24602}
 \end{equation}
-\par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, the results of the regressions are good.
+\par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
 \subsubsection{Scores of the four states in future}
 \par According to the regression equations, we can obtain the socres of the four states in 2025 and 2050 are as follows.
@@ -635,7 +635,7 @@ Arizona & 1.60063 & 0.14358 \\
 
 
 
-\subsubsection{Analysis of the results}
+\subsection{Analysis of the results}
 \par From 2025 to 2050, socre of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the socre of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows with a slow rate.
 \par Therefore, compare to other states, the levels of renewable energy usage of the four states are as follows.
 \begin{itemize}
@@ -657,7 +657,7 @@ Arizona & 1.60063 & 0.14358 \\
 
 
 
-\section{Problem E : Analyze the Factors that Influence the Public Opinion Dissemination}
+\section{Part \uppercase\expandafter{\romannumeral2}, Problem A}
 \par In the first question, we set up a model of public opinion dissemination. In this chapter, we will analyze the factors that influence the spread of public opinion. At the same time, a real society is analyzed.
 \subsection{Influence Factors of Public Opinion Disseminate}
 \par There are many factors that affect the spread of public opinion, and we choose the following ~$4$~ factors as the main factors.
