@@ -288,7 +288,7 @@ $\lambda_2$ & d1 & d2 \\
 \end{tabular}
 \caption{Percentage}
 \end{table}
-\par We choose the two main factors that are satisfied with assumption 1. Then we take out their corresponding eigenvectors from U, and we can obtain the factor loading matrix
+\par We choose the two main factors satisfied with assumption 1. Then we take out their corresponding eigenvectors from U, and we can obtain the factor loading matrix
 \begin{equation}
     \centering
 A=\begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ a_{31} & a_{32} \\ a_{41} & a_{42}\end{pmatrix}
@@ -698,18 +698,18 @@ So the best profile of 2009 belongs to \textbf{New Mexico}.
     \centering
 \text   y=ax+b
 \end{equation}
-and we have ($x_i$, $y_i$), i=1 to n, which is paired data of x and y. By generalized least squares, we can obtain the value of a and b.
+and we have ($x_i$, $y_i$), i=1 to n, paired data of x and y. By generalized least squares, we can obtain the values of a and b.
 \par When we want to obtain fitted curve by exponential function, we suppose the regression equation is
 \begin{equation}
     \centering
 \text   y=be^{ax}
 \end{equation}
-The equation is equal to
+The equation is equivalent to the linear regression equation
 \begin{equation}
     \centering
 \text   log(y)=log(b)+ax
 \end{equation}
-which is a linear regression equation, so that we can use generalized least squares to calculate the value of a and b.
+ so that we can use generalized least squares to calculate the values of a and b.
 
 \subsubsection{Results of Regressions}
 \par The regression equations are
@@ -731,7 +731,7 @@ which is a linear regression equation, so that we can use generalized least squa
 \end{equation}
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
 \par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
-\par In order to obtain S, which is the amount of the total renewable energy usage of each state in future, we need to predict the total renewable energy usage of the four states.
+\par In order to obtain S, the amount of the total renewable energy usage of each state in future, we need to predict the total renewable energy usage of the four states.
 \par According to Figure \ref{fig:D-total-energy} as follows,
 \begin{figure}[h]%[!hptb] 
     \centering 
@@ -739,7 +739,7 @@ which is a linear regression equation, so that we can use generalized least squa
     \caption{Total renewable energy usage of the four states from 1960 to 2009}
     \label{fig:D-total-energy}  
 \end{figure}
-we can find that we should bulid linear regression equation.
+we can find that we'd better bulid linear regression equation.
 \begin{equation}
     \centering
 S=14466 \times year-27896894
