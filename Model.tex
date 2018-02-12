@@ -5,7 +5,7 @@
 \usepackage{tikz}
 \usetikzlibrary{mindmap,trees}
 \usepackage{verbatim}
-
+\usepackage[section]{placeins}
 \usepackage{setspace}%使用间距宏包
 \usepackage[76620]{MCMPackage}  %队号在这里填写
 %\usepackage[XXX,nosheet]{MCMPackage}%这个参数形式可去掉summary sheet首页。
@@ -160,16 +160,18 @@ $\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\
 
 
 % 4
-\section{Problem A: Energy profile for each of the four states}
-\par Factor Analysis is a multivariate statistical analysis method, which is based on the internal dependencies of the correlation matrix of the indicator. It attributes some of the variables that have complex relationship to a few irrelevant factors.\cite{2} We will use this method to deal with problem A in the section.
+\section{State Energy Analysis Model}
 
+% \par We divide 
+% \par Factor Analysis is a multivariate statistical analysis method, which is based on the internal dependencies of the correlation matrix of the indicator. It attributes some of the variables that have complex relationship to a few irrelevant factors.\cite{2} We will use this method to deal with problem A in the section.
 
+% Problem A: Energy profile for each of the four states
 % 4.1
-\subsection{MSN Analysis}
+\subsection{Distinction approach of energy construction}
 % 4.1.1
 \subsubsection {MSN character analysis}
 
-\par  By observing the given data and acquiring knowledge from reference materials, we can conclude that the MSNs are usually five-character codes, and the three parts of the characters generally represent the following meanings.
+\par By observing the given data and acquiring knowledge from Appendix A. Mnemonic Series Names (MSN)\cite{3}, we can conclude that the MSNs are usually five-character codes, and the three parts of the characters generally represent the following meanings.
 
 \begin{itemize}
     \item First and second characters: describes an energy source (for example, NG for natural gas, MG for motor gasoline);
@@ -179,7 +181,7 @@ $\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\
 
 \par As described above, the first part and the second part of the MSN code represent for certain specific meanings. However, in our analysis process, we are more concerned about the general classification of these MSN codes. 
 
-\begin{figure}[h]%[!hptb] 
+\begin{figure}[h]%[!hptb]
     \centering 
     \includegraphics[width=0.8\textwidth]{./Pic/msn_5.png}
     % 图片标题
@@ -188,15 +190,24 @@ $\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\
 \end{figure}
 \par We also found that the fifth character has six values at most, which can be seen in figure \ref{fig:msn_5}. Thus we start to focus more on the analysis of the fifth character. After comparing the units of the six and calculating, we find the relationship between these six symbols are
 \begin{equation}
-    B=KP~~~~~,~~~~~V=BD
+    B=KP~~~~~,~~~~~V=BD / 1000
 \end{equation}
 
 \par From the equation we can get the conclusion that B is a key factor between the two equations and can build a connection between them. And we find that all MSNs whose fifth character is B have the same unit Billion Btu, which can be an excellent representative of the MSNs who have the same prefix. So we filter the 605 MSNs and find 215 MSNs' suffix is B. At this stage we have reduced the 605 kinds of MSNs into 215. Every kind of the 215 MSNs contains several MSNs with different suffix but the same prefix.
 
 
-
 % 4.1.2
-\subsubsection {MSN classification analysis} % TODO: by unit?
+\subsubsection {MSN classification analysis by energy unit}
+
+
+
+\par In order to classify the 215 MSNs more clearly, we look into everyone of the division and find that a large percent of the kinds have the suffix P, which represents the standardized physical units. Physical units naturally represents for the energy classification in the real physical world, and there are mainly \textbf{4 kinds of standardized physical units} in the data set as can be seen in figure \ref{fig:classification_by_unit}, so it is reasonable to classify the data into 4 groups according to the units.
+\par According to the analysis above, we suppose the four units as the following representatives.
+\par \textbf{fule oil}: Thousand barrels;
+\textbf{coal coke}: Thouesand short tons;
+\textbf{electricity}: Million kilowatthours;
+\textbf{natural gas}: Million cubic feet.
+
 \begin{figure}[!h]%[!hptb] 
     \centering 
     \includegraphics[width=0.8\textwidth]{./Pic/classification_by_unit.png}
@@ -204,21 +215,28 @@ $\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\
     \label{fig:classification_by_unit}  
 \end{figure}
 
-\par In order to classify the 215 MSNs more clearly, we look into everyone of the division and find that a large percent of the kinds have the suffix P, which represents the standardized physical units. Physical units naturally represents for the energy classification in the real physical world, and there are mainly 4 kinds of standardized physical units in the data set as can be seen in figure \ref{fig:classification_by_unit}, so it is reasonable to classify the data into 4 groups according to the units.
-\par According to the analysis above, we suppose the four units as the following representatives.
-Thousand barrels: fule oil
-Thouesand short tons: coal coke
-Million kilowatthours: electricity
-Million cubic feet: natural gas
-\par Besides, there are many relationships among MSNs. According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables, so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
-\par In probem A, we will analysize the data processed in 2009, and obtain the 2009 energy profile for each of the four states, which is based on usage and production.
-
 % 4.2
-\subsection{Profile of four kinds of energy}
-% 4.2.1
-\subsubsection{Factor analysis model}
+\subsection{Factor analysis function}
 
-\par Here, we take the data of California in 2009 as an example to show the process of modeling.
+\par There are many relationships among MSNs. To simplify the complex dependencies between the four energy classification, we used factor analysis to establish an optimal model to analyze the actual weights of the four types of energy sources.
+
+% \par According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables, so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
+\begin{enumerate}[Step 1:]
+\item Standardize data samples.
+
+\item Calculate the correlation matrix R of the sample.
+
+\item Find the eigenvalues and eigenvectors of the correlation matrix R.
+
+\item According to the cumulative contribution rate of the system to determine the number of the main factor.
+
+\item Calculate the factor load matrix A.
+
+\item Determine the factor model.
+
+\item Based on the above calculation results, the system is analyzed.
+\end{enumerate}
+
 \par By using the data processed, we obtain R, which is the correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.
 \begin{equation}
     \centering
@@ -271,9 +289,8 @@ the second row of A is
 \sqrt{\lambda_3} \times U[ ,3]
 \end{equation}
 
-% 4.2.2
-\subsubsection{Results of factor analysis}
-\textrm{\\}
+% 4.2.1
+
 \par According to the factor loading matrix A, we can get the factor analysis model is
 \begin{equation}
     \centering
@@ -307,23 +324,26 @@ w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i } \times 100\%
 w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
 \]
 
-% 4.2.3
+% 4.2.2
 \subsubsection{Profiles of four kinds of energy}
 
 \par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, fuel oil, coal coke, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal coke, and a negative factor for natural gas, electricity, fuel oil. 
-\par By the model above, we can obtain the weights of variables of the four states as follows.
-\begin{figure}[!hptb] 
-    \centering 
-    \includegraphics[width=1.0\textwidth]{./Pic/weights.jpg}
-    \caption{Weights of variables of the four states}
-\end{figure}
-\begin{figure}[!hptb] 
-    \centering 
-    \includegraphics[width=0.8\textwidth]{./Pic/1-1.png}
-    \caption{Weights of energy classification in 2009}
-    \label{fit:1-1}
-\end{figure}
-\par According to \ref{fit:1-1}, the contribution rates of the four kinds of energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
+ So we can obtain the weights of variables of the four states in 2009 as follows.
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline state & natural gas & electricity & fuel oil & coal coke\\
+        \hline CA & 25.64 & 25.77 & 23.68 & 24.90\\
+        \hline TX & 29.99 & 32.87 & 12.18 & 24.96\\
+        \hline NM & 35.43 & 20.15 & 10.55 & 33.87\\ 
+        \hline AZ & 27.53 & 19.36 & 27.08 & 26.02\\
+        \hline
+    \end{tabular}
+    \caption{The weights of variables of the four states in 2009}\label{tab:factors}
+\end{table}
+
+\par According to table \ref{tab:factors}, the contribution rates of the four kinds of energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
 
 
 % 4.3
@@ -339,7 +359,7 @@ w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
 \par Then we search for the MSN in the given data and find every state have have this MSN. So this is indeed the representative MSN variable of the usage of renewable energy in every states. And then we find the TETCB MSN stands for the total energy consumed in a state. So we get the equation like this
 
 \begin{equation}
-    \eta_1=\frac{RETCB}{TETCB}
+    \eta_1=\frac{\text{RETCB}}{\text{TETCB}}
 \end{equation}
 
 \begin{figure}[h]%[!hptb] 
