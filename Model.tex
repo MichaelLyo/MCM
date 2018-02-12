@@ -130,7 +130,11 @@ $\eta_2$&The proportion of different sector in renewable energy usage.\\
 $Y$&The level of renewable energy usage.\\ 
 $X_i$&Transportation(i=1), commerce(i=2), electricity(i=3), industry(i=4), resident(i=5), i=1,2,3,4,5.\\ 
 $C,B_i$&The pairwise comparison matrixs, i=1,2,3,4,5.\\
-$\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\ 
+$\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\
+$Z_i$&The score based on the total renewable energy use of the four states, i=1,2,3,4.\\
+$S$&The amount of the total renewable energy usage of the four states.\\ 
+$S_i$&The amount of the total renewable energy usage of each of the four states, i=1,2,3,4.\\
+
 % $T_n$&The discrete time series of the node checking information.\\ 
 % $p_{in}$& The probability of ~$Node~i$~ to check information at the moment of $T_n$.\\
 % $q_{in}$&The probability that information is able to continue to spread\\
@@ -503,7 +507,7 @@ U=\begin{pmatrix} \beta_1 & \beta_2 & \beta_3 & \beta_4\end{pmatrix}
 \subsubsection{Calculation results of AHP model}
 \par Firstly, we divide the given data by year, and calculate the the scores of the four states in 2009 as follows:
 \[
-    \text{CA}=57.47503267\%, \text{TX}=36.64666161\%, \text{NM}=0.575336357\%, \text{AZ}=5.302969359\%
+    \text{CA}=55.6555729\%, \text{TX}=38.04528274\%, \text{NM}=0.997192757\%, \text{AZ}=5.301951596\%
 \]
 Clearly, the score of California and Texas is much greater than New Mexico and Arizona.
 Then we calculate the scores of the four states in every year, and draw a line chart as follows.
@@ -651,23 +655,23 @@ So the best profile of 2009 belongs to \textbf{New Mexico}.
 \par The regression equations are
 \begin{equation}
     \centering
-CA=e^{-0.34649 \times year+697.98712}+50
+CA:   Z_1=e^{-0.34649 \times year+697.98712}+50
 \end{equation}
 \begin{equation}
     \centering
-TX=100-CA-NM-AZ
+TX:   Z_2=100-CA-NM-AZ
 \end{equation}
 \begin{equation}
     \centering
-NM=0.05263 \times year-104.64807
+NM:   Z_3=0.05263 \times year-104.64807
 \end{equation}
 \begin{equation}
     \centering
-AZ=e^{-0.10513 \times year+213.24602}
+AZ:   Z_4=e^{-0.10513 \times year+213.24602}
 \end{equation}
 \par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
-\par In order to obtain the amount of the total renewable energy usage of each states, we need to predict the total renewable energy usage of the four states.
+\par In order to obtain S, which is the amount of the total renewable energy usage of each states in future, we need to predict the total renewable energy usage of the four states.
 \par According to Figure \ref{fig:D-total-energy} as follows,
 \begin{figure}[h]%[!hptb] 
     \centering 
@@ -678,9 +682,13 @@ AZ=e^{-0.10513 \times year+213.24602}
 we can find that we should bulid linear regression equation.
 \begin{equation}
     \centering
-Totalamount=14466 \times year-27896894
+S=14466 \times year-27896894
 \end{equation}
-
+\par Amount of the renewable energy usage of each state in every year is:
+\begin{equation}
+    \centering
+    S_i=0.01 \times S \times Z_i
+\end{equation}
 
 \subsubsection{Scores of the four states in future}
 \par According to the regression equations, we can obtain the socre based on the total renewable energy usage and amount of the total renewable energy usage of each of the four states in 2025 and 2050 as follows.
@@ -688,7 +696,7 @@ Totalamount=14466 \times year-27896894
     \centering 
     \begin{tabular}{|c|c|c|c|c|}
 \hline
-State & Score-Total in 2025 & Amount in 2025 & Score-Total in 2050 & Amount in 2050\\
+State & Score-Total in 2025 & Amount in 2025 & Totalamount in 2050 & Amount in 2050\\
 \hline
 California & 50.04186\% & 698962.6821 & 50.00001\% & 879203.1758 \\
 \hline
@@ -701,7 +709,8 @@ Arizona & 1.60063\% & 22356.89556 & 0.14358\% &2524.719335 \\
 States Total & 100\% & 1396756 & 100\% & 1758406 \\
 \hline
 \end{tabular}
-\caption{Scores and amount of four states in 2025 and 2050}
+\caption{Scores and amounts of four states in 2025 and 2050}
+\label{tab:Scores and amounts}
 \end{table}
 \par Besides, we draw the graph of the regression equations as follows.
 \begin{figure}[h]%[!hptb] 
@@ -744,13 +753,47 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 
 
 
-\section{Part \uppercase\expandafter{\romannumeral2}, Problem A}
-\par 
+\section{Renewable energy usage targets for 2025 and 2050}
+\par According to the results of Problem D, we have predicted value of the amounts of total renewable energy when the policy dose not change. Therefore, we can build target model, which can give renewable energy usage targets for then four states in 2025 and 2050.
+\subsection{Target model}
+\par For California, Texas, and New Mexico in any year, we define the target is the predicted value of amount of total renewable energy, because the amounts of total renewable energy of them keep growing.
+\par For Arizona, its predicted value of amount of total renewable energy keeps declining and will get less than New Mexico. Therefore, we define the target is
+\begin{equation}
+    \centering
+    Target=0.01*(5.30195+0.05263 \times (year-2009))*S
+\end{equation}
+which means from 2009, the score based on the total energy usage keep growing with the same rate of New Mexico.
+\par If the real amount total renewable energy usage is not less than the predicted value of amount of total renewable energy, we consider it as the goal of the new four-state energy compact.
+\subsection{Results of target model in 2025 and 2050}
+\par According to table \ref{tab:Scores and amounts} and target model, we have the target of each date in 2025 and 2050 as follows.
+\begin{table}[!hbp]
+    \centering 
+    \begin{tabular}{|c|c|c|}
+\hline
+State & Target in 2025 & Target in 2050\\
+\hline
+California & 698962.6821 & 879203.1758 \\
+\hline
+Texas & 653145.8727 & 831559.5170 \\
+\hline
+New Mexico & 22290.54965 & 45118.58787 \\
+\hline
+Arizona & 85817.10767 & 130949.4257 \\
+\hline
+\end{tabular}
+\end{table}
 
+\section{Actions for meeting goal}
+\par In order to meet the goals above, the four states need to take some actions, especially Arizona. Here, we list four actions.
+\begin{itemize}
+    \item Increase the economic input to exploit technology about renewable energy. 
+    \item Strengthen people's awareness of using renewable energy.
+    \item Establish more renewable energy facilities, such as wind power plants and solar power plants to make more use of renewable energy.
+    \item In the presime of no influence with overall economy, limit the usage of non-renewable energy.
+\end{itemize}
 
   
 
-    The form and source of the information can impact the value of the message, which would also affect the public opinion. The evaluation formula of information's source and form have been given in the previous paper.
 
 
  
@@ -764,9 +807,9 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 \text{\\}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
-    \item In Problem A, we used factor analysis to obtain the energy profile of the four kines of energy, besides the energy profile of renewable energy.
-    \item In Problem B, we considered the influence of the total population of each state, which made our model base on the situation of each state fully.
-    \item In Problem D, the effects of regressions are very good.
+    \item We used factor analysis to obtain the energy profile of the four kines of energy, besides the energy profile of renewable energy.
+    \item We considered the influence of the total population of each state, which made our model base on the situation of each state fully.
+    \item Our models are effective when we deal with the data of other states or countries.
 \end{enumerate}
 
 
@@ -816,6 +859,8 @@ Thomas L. Satty. How to make a decision: The Analytic Hierarchy Process[J]. Univ
 \bibitem{L1}
 Wikipedia, Transport geography. \url{https://en.wikipedia.org/wiki/Transport_geography}. 2017
 
+\bibitem{7}
+U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-2015 (complete). \url{https://www.eia.gov/state/seds/sep_use/notes/use_c.pdf}. 2017
 
 
 % etc
