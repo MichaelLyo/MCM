@@ -637,26 +637,8 @@ Then we calculate the scores of the four states in every year and draw a line ch
 So the best profile of 2009 belongs to \textbf{New Mexico}.
 
 
-
-% \begin{figure}[!h]
-%   \centering %使得插入的照片居中显示
-%   \begin{minipage}[t]{.49\linewidth}
-%    % \framebox{Text}
-%   \includegraphics[width=1\textwidth]{./Pic/P3_.png}
-%   \caption{The Network Effciency in Different Years (1990-2015)}
-%   \end{minipage}
-%   \begin{minipage}[t]{.49\linewidth}
-%   \includegraphics[width=1\textwidth]{./Pic/P3.png}
-%    %\framebox{Text}
-%   \caption{The Proportion of Different Information Dissemination Media Pie Chart (around 2050).}
-%   \end{minipage}
-% \end{figure}
-
-
-
-
-
-\section{Part \uppercase\expandafter{\romannumeral1} Problem D : Prediction of energy profile in 2025 and 2050}
+% Chapter 7
+\section{Prediction Model}
 \par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the scores of the four states in 2025 and 2050.
 \subsection{Regression analysis model}  
 \subsubsection{Regression equations}
@@ -664,19 +646,19 @@ So the best profile of 2009 belongs to \textbf{New Mexico}.
 \par The regression equations are
 \begin{equation}
     \centering
-CA:   Z_1=e^{-0.34649 \times year+697.98712}+50
+\text{CA}:   Z_1=e^{-0.34649 \times year+697.98712}+50
 \end{equation}
 \begin{equation}
     \centering
-TX:   Z_2=100-CA-NM-AZ
+\text{TX}:   Z_2=100-CA-NM-AZ
 \end{equation}
 \begin{equation}
     \centering
-NM:   Z_3=0.05263 \times year-104.64807
+\text{NM}:   Z_3=0.05263 \times year-104.64807
 \end{equation}
 \begin{equation}
     \centering
-AZ:   Z_4=e^{-0.10513 \times year+213.24602}
+\text{AZ}:   Z_4=e^{-0.10513 \times year+213.24602}
 \end{equation}
 \par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
