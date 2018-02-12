@@ -132,7 +132,6 @@ $\eta_1$&The proportion of renewable energy in total energy.\\
 $\eta_2$&The proportion of different sector in renewable energy usage.\\
 $Y$&The level of renewable energy usage.\\ 
 $X_i$&Transportation(i=1), commerce(i=2), electricity(i=3), industry(i=4), resident(i=5), i=1,2,3,4,5.\\ 
-$P_i$&$X_i \div$ population.\\
 $C,B_i$&The pairwise comparison matrixs, i=1,2,3,4,5.\\
 $\beta,\beta_i$&weight vectors, i=1,2,3,4,5.\\ 
 % $T_n$&The discrete time series of the node checking information.\\ 
@@ -428,13 +427,13 @@ we introduce a new model Analytic Hierarchy Process (AHP) to deal with the analy
 % & residential = WDRCB + GERCB + SORCB \\
 % \end{align*}
 
-\par We suppose Y, which is the use level of renewable energy as the target, and $X_i$, which represents the five sectors as the standard. Therefore, we have the analytic hierarchy model as follows.\cite{6}
+\par We suppose Y, which is the use level of renewable energy as the target, and $X_i$, which represents the five sectors as the standard. Therefore, we have the analytic hierarchy model based on total renewable energy usage as follows.\cite{6}
 \begin{figure}[!hptb] 
     \centering 
     \includegraphics[width=1.0\textwidth]{./Pic/AHP.pdf}
     \caption{AHP model}
 \end{figure}
-\par In order to analysize the closeness between each of the sectors and Y, we analysize the given data to obtain and then use the total of the renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, which is the pairwise comparison matrix of the five sectors under Y. Simply, we can calculate $\lambda_m$(C), which is the maximum of the eigenvalues of C. Here, n is equal to 4 and RI is equal to 1.12.\cite{6} If C can not pass the check of consistency
+\par In order to analysize the closeness between each of the sectors and Y, we analysize the given data to obtain and then use the total of the renewable energy usage of each sector. According to the calculation method of the pairwise comparison matrix, we can obtain C, which is the pairwise comparison matrix of the five sectors under Y. Simply, we can calculate $\lambda_m$(C), which is the maximum of the eigenvalues of C. Here, n is equal to 5 and RI is equal to 1.12.\cite{6} If C can not pass the check of consistency
 \begin{equation}
     \centering
     CI=\frac{ \lambda_m(C)-n }{ n-1 }
@@ -450,7 +449,7 @@ we recalculate C until C pass the check of consistency. Then we calculate $\beta
     \centering
 U=\begin{pmatrix} \beta_1 & \beta_2 & \beta_3 & \beta_4\end{pmatrix}
 \end{equation}
-\par Finally, we can obtain the scores of the four states.
+\par Finally, we can obtain the scores based on the total energy usage of the four states.
 \begin{equation}
     \centering
     CA=\sum_{i=1}^{5}\beta[i] \times U[i,1]
@@ -478,14 +477,30 @@ Then we calculate the scores of the four states in every year, and draw a line c
 \begin{figure}[!hptb] 
     \centering 
     \includegraphics[width=0.8\textwidth]{./Pic/B-level-predict.png}
-    \caption{Line chart}
+    \caption{Scores based on the total renewable energy usage from 1960 to 2009}
     \label{fig:B-level-predict}
 \end{figure}
 
+\subsubsection{Result of per capita usage}
+\par In order to have a more detailed and more comprehensive comparison of the similaritiesand differences of the states, we hold the view that it is not enough to compare the proportionof the renewable energy usage among states, sector usage difference within the state is also an important comparing factor.
+\par When we talk about the analytic hierarchy model based on per capita renewable energyusage, we just need to change CA, TX, NM, AZ to CA, TX, NM, AZ divided by the total population of each state. Therefore, similarly we can obtain the scores based on the per capita energy usage of the four states in each year from 1960 to 2009, and draw the line chart as follows.
+\begin{figure}[!hptb] 
+    \centering 
+    \includegraphics[width=0.8\textwidth]{./Pic/B-level-percapita.png}
+    \caption{Scores based on the per capita renewable energy usage from 1960 to 2009}
+    \label{fig:B-level-percapita}
+\end{figure}
+
+
+
 \subsection{Similarities and differences analysis}
 
-\par In order to have a more detailed and more comprehensive comparison of the similarities and differences of the states, we hold the view that it is not  enough to compare the proportion of the renewable energy usage among states, sector usage difference within the state is also an important comparing factor.
 
+
+
+
+
+\par We have taken the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and obtain figure \ref{fig:B-percent}.
 \begin{figure}[h]%[!hptb] 
     \centering 
     \includegraphics[width=0.8\textwidth]{./Pic/B-percent.png}
@@ -493,13 +508,7 @@ Then we calculate the scores of the four states in every year, and draw a line c
     \caption{The proportion of renewable energy usage of different sectors in four states in the year of 2009.}
     \label{fig:B-percent}  
 \end{figure}
-
-\par We have take the five sectors' influence into consideration in the AHP model to get the renewable energy usage proportion, and it works well when comparing the sector influence among four states, but it can not describe the proportion of different sectors in a state. So we calculate the proportion of renewable energy usage of different sectors in every state in every year from 1960 to 2009 and get figure \ref{fig:B-percent}.
-\par From figure \ref{fig:B-level-predict} and figure \ref{fig:B-percent} we can conclude the similarities and differences
-
-
-\subsubsection{Result of per capita usage}
-\par We have built the AHP model and finished a whole process of calculating with the model. Now we let $P_i$ take the place of $X_i$ like the following figure and execute the subsequent process.
+\par From figure \ref{fig:B-level-predict}, figure \ref{fig:B-level-percapita}, and figure \ref{fig:B-percent}, we can conclude the similarities and differences.
 
 
 \subsubsection{Differences among the four states}
@@ -586,7 +595,7 @@ Then we calculate the scores of the four states in every year, and draw a line c
 \par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the socres of the four states in 2025 and 2050.
 \subsection{Regression analysis model}  
 \subsubsection{Regression equations}
-\par In problem D, the policy about energy of each state will not change until 2050. According to Figure \ref{fit:B-level}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores have a sudden chaneg after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the socres of California and Texas from 2005 to 2009 to build the regression equations.
+\par In problem D, the policy about energy of each state will not change until 2050. According to Figure \ref{fig:B-level-predict}, from 1995 to 2009, the scores based on the total renewable energy usage of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores based on the total renewable energy usage have a sudden chaneg after 2005, we consider it is because of policy change. Therefore, we use the scores based on the total renewable energy usage of New Mexico and Arizona from 1995 to 2009, and the socres based on the total renewable energy usage of California and Texas from 2005 to 2009 to build the regression equations.
 \par The regression equations are
 \begin{equation}
     \centering
@@ -606,6 +615,8 @@ AZ=e^{-0.10513 \times year+213.24602}
 \end{equation}
 \par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
+
+
 \subsubsection{Scores of the four states in future}
 \par According to the regression equations, we can obtain the socres of the four states in 2025 and 2050 are as follows.
 \begin{table}[!hbp]
@@ -629,7 +640,7 @@ Arizona & 1.60063 & 0.14358 \\
 \begin{figure}[h]%[!hptb] 
     \centering 
     \includegraphics[width=0.7\textwidth]{./Pic/D-scores.png}
-    \caption{Scores of the four states from 1960 to 2050}
+    \caption{Scores based on total renewable energy of the four states from 1960 to 2050}
     \label{fig:D-scores}  
 \end{figure}
 
