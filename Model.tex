@@ -83,9 +83,9 @@
 
 \par In regard with Problem B, 
 
-\par It's closely followed by Problem C that asks for the forecast about the communication networks' relationships and attributes around the year 2050. 
+\par For problem C, 
 
-\par Problem D requires us to explore how public interest and opinion can be change by applying the theories and concepts of information influence on networks. 
+\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the Problem A, B, and C to establish regression equations. 
 
 \subsubsection{Part \uppercase\expandafter{\romannumeral2}}
 \par It is suggested in the Problem A that,
@@ -100,7 +100,7 @@
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
     \item In factor analysis, we suppose the corresponding valuables as the main factors when cumulative percentage is over 0.65 .
-    \item Information network and evolution network are universal and suitable for each kind of media.
+    \item When we do regression analysis, we suppose that F-test or t-test is passed if the Pr of them is less than 0.05.
     \item The information network is affected  only by the factors that have been recognized.
     \item In the process of information dissemination, we assume that the network edge is directed.
     \item It is assumed that only the neighboring nodes will be affected.
@@ -209,11 +209,11 @@ Thouesand short tons: coal coke
 Million kilowatthours: electricity
 Million cubic feet: natural gas
 \par Besides, there are many relationships among MSNs. According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables, so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
-\par In probem A, we will analysize the data processed in 2009, and obtain the 2009 energy profile for each of the four states.
+\par In probem A, we will analysize the data processed in 2009, and obtain the 2009 energy profile for each of the four states, which is based on usage and production.
 
 \subsection{Profile of four kinds of energy}
 
-\subsubsection{Factor loading matrix}
+\subsubsection{Factor analysis model}
 \textrm{\\}
 \par Hear, we take California as an example to show the process of modeling. By using the data processed, we obtain R, which is the correlation coefficient matrix of natural gas, electricity, fuel oil and coal coke.
 \begin{equation}
@@ -267,7 +267,7 @@ the second row of A is
 \sqrt{\lambda_3} \times U[ ,3]
 \end{equation}
 
-\subsubsection{Factors and weights}
+\subsubsection{Results of factor analysis}
 \textrm{\\}
 \par According to the factor loading matrix A, we can get the factor analysis model is
 \begin{equation}
@@ -302,7 +302,7 @@ w_i=\frac{ \theta_i }{ \sum_{i=1}^{4}\theta_i } \times 100\%
 w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
 \]
 
-\subsubsection{Summary of the factor analysis model}
+\subsubsection{Profiles of four kinds of energy}
 
 \textrm{\\}
 \par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, fuel oil, coal coke, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal coke, and a negative factor for natural gas, electricity, fuel oil. 
@@ -316,8 +316,9 @@ w_1=25.640737\%, w_2=25.775307\%, w_3=23.682713\%, w_4=24.901242\%.
     \centering 
     \includegraphics[width=0.8\textwidth]{./Pic/1-1.png}
     \caption{Weights of energy classification in 2009}
+    \label{fit:1-1}
 \end{figure}
-According to Figure 4, the contribution rates of four energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
+\par According to \ref{fit:1-1}, the contribution rates of the four kinds of energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
 
 
 \subsection{Renewable energy profile}
@@ -470,7 +471,7 @@ U=\begin{pmatrix} \beta_1 & \beta_2 & \beta_3 & \beta_4\end{pmatrix}
 \subsubsection{Calculation results of AHP model}
 \par Firstly, we divide the given data by year, and calculate the the scores of the four states in 2009 as follows.
 \[
-    CA=36.38638038, TX=31.69066312, NM=15.07891825, AZ=16.84403825
+    CA=57.47503267, TX=36.64666161, NM=0.575336357, AZ=5.302969359
 \]
 Clearly, the score of California and Texas is much greater than New Mexico and Arizona.
 Then we calculate the scores of the four states in every year, and draw a line chart as follows.
@@ -581,46 +582,72 @@ Then we calculate the scores of the four states in every year, and draw a line c
 
 
 
-\section{Problem D : }
-\par  
+\section{Problem D : Prediction of energy profile in 2025 and 2050}
+\par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the socres of the four states in 2025 and 2050.
+\subsection{Regression analysis model}  
+\subsubsection{Regression equations}
+\par In problem D, the policy about energy of each state will not change until 2050. According to Figure \ref{fit:B-level}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores have a sudden chaneg after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the socres of California and Texas from 2005 to 2009 to build the regression equations.
+\par The regression equations are
+\begin{equation}
+    \centering
+CA=e^{-0.34649 \times year+697.98712}+50
+\end{equation}
+\begin{equation}
+    \centering
+TX=100-CA-NM-AZ
+\end{equation}
+\begin{equation}
+    \centering
+NM=0.05263 \times year-104.64807
+\end{equation}
+\begin{equation}
+    \centering
+AZ=e^{-0.10513 \times year+213.24602}
+\end{equation}
+\par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, the results of the regressions are good.
+\par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
+\subsubsection{Scores of the four states in future}
+\par According to the regression equations, we can obtain the socres of the four states in 2025 and 2050 are as follows.
+\begin{table}[!hbp]
+    \centering 
+    \begin{tabular}{|c|c|c|}
+\hline
+State & Score in 2025 & Score in 2050 \\
+\hline
+California & 50.04186 & 50.00001 \\
+\hline
+Texas & 46.76163 & 47.29053 \\
+\hline
+New Mexico & 1.59588 & 2.56588 \\
+\hline
+Arizona & 1.60063 & 0.14358 \\
+\hline
+\end{tabular}
+\caption{Scores of four states in 2025 and 2050}
+\end{table}
+\par Besides, we draw the graph of the regression equations as follows.
+\begin{figure}[h]%[!hptb] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{./Pic/D-scores.png}
+    \caption{Scores of the four states from 1960 to 2050}
+    \label{fig:D-scores}  
+\end{figure}
 
 
 
+\subsubsection{Analysis of the results}
+\par From 2025 to 2050, socre of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the socre of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows with a slow rate.
+\par Therefore, compare to other states, the levels of renewable energy usage of the four states are as follows.
 \begin{itemize}
-\item Individuals: People or group.
-\item Opinion Leader: Determine the nature of the event in the network, and predict the future trend of the event.
-\item Internet Marketer Group: Internet Marketer Group is a certain scale of the people. They have a certain influence on the event of large-scale nodes in the network. This kind of influence is not related to the distance.
+    \item California: declines but still is the best.
+    \item Texas: keeps growing and gets colse to California.
+    \item New Mexico: get better than Arizona and also keeps growing.
+    \item Arizona: is not good and need to change.
 \end{itemize}
 
 
 
-\par In a network of public opinion, the schematic map of different typical nodes is as follows.
 
-
-\begin{figure}[h]%[!hptb] 
-    \centering 
-    \includegraphics[width=0.7\textwidth]{./Pic/Unknown.png}
-    % 图片标题
-    \caption{Schematic diagram of different typical nodes distribution. The number of \textbf{Individuals} is the biggest, while the number of \textbf{Internet Marketer Groups} is smallest, but its influence is very big. Opinion leaders have a large influence and their quantity is not fixed.}
-    \label{fig:Unknown}  
-\end{figure}
-
-\par After analyzing the classification of the network nodes, we use the Twitter's data we find to simulate.
-\par On the basis of the network established in the first question, we select nodes with maximum degree, and take them as the \textbf{\emph{Internet Marketer Group}}. Meanwhile, we choose the nodes which have the second highest degree as the \textbf{\emph{Opinion Leader}}. We also define the other remaining nodes as the \textbf{\emph{Individuals}}.
-\par After defining the nature of the network nodes, we use the \textbf{\emph{Information Network Flow Model}} to simulate this chapter's model.
-\par After a period of time, we take the operation of \textbf{\emph{Push}} to network to improve the activity of the network information source, that is, to improve the success rate of information dissemination.
-\par The results are shown in Figure \ref{fig:P4} as follows.
-
-
-\begin{figure}[h]%[!hptb] 
-    \centering 
-    \includegraphics[width=0.5\textwidth]{./Pic/P4.jpg}
-    % 图片标题
-    \caption{Public opinion diffusion simulation figure.}
-    \label{fig:P4}  
-\end{figure}
-
-\par In Figure \ref{fig:P4}, after taking operation of \textbf{\emph{Push}}, the message dissemination speed and the efficiency is greatly improved, showing the logistic growth, from which we can find that the operation of the network has a significant impact on the network. \textbf{\emph{Internet Marketer Group}} and \textbf{\emph{Opinion Leaders}} play an important role in the network of public opinion. Therefore, our \textbf{\emph{Public Opinion Dissemination Model}} is reliable and stable.
 
 
 
@@ -737,7 +764,7 @@ U.S. Energy Information Administration, Renewable Energy Explained. \url{https:/
 
 
 \bibitem{6}
-Kevin Fasusi. Using Analytic Hierarchy With Supplychainpy. \url{https://www.ida.liu.se/~TDDD06/literature/saaty.pdf}. 2016.
+Thomas L. Satty. How to make a decision: The Analytic Hierarchy Process[J]. University of Pittsburgh, 1990.
 
 \bibitem{L1}
 Wikipedia, Transport geography. \url{https://en.wikipedia.org/wiki/Transport_geography}. 2017
