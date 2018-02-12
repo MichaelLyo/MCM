@@ -84,7 +84,7 @@
 
 \par For problem C, 
 
-\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B,C and the given data to establish regression equations.
+\par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B,C and the given data to establish regression equations or other models.
 
 \subsubsection{Part \uppercase\expandafter{\romannumeral2}}
 \par It is suggested in the Problem A that,
@@ -620,7 +620,7 @@ Then we calculate the scores of the four states in every year, and draw a line c
 \par Based on the results of problem B, we build regression equations, which show the relationships between the scores of the four states and years, so that we can predict the socres of the four states in 2025 and 2050.
 \subsection{Regression analysis model}  
 \subsubsection{Regression equations}
-\par In problem D, the policy about energy of each state will not change until 2050. According to Figure \ref{fig:B-level-predict}, from 1995 to 2009, the scores based on the total renewable energy usage of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores based on the total renewable energy usage have a sudden chaneg after 2005, we consider it is because of policy change. Therefore, we use the scores based on the total renewable energy usage of New Mexico and Arizona from 1995 to 2009, and the socres based on the total renewable energy usage of California and Texas from 2005 to 2009 to build the regression equations.
+\par In problem D, the policy about energy of each state will not change until 2050. At first, we consider the levels of total renewable energy usage of the four states.  According to Figure \ref{fig:B-level-predict}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy changes. Meanwhile, for California and Texas, their scores have a sudden chaneg after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the socres  of California and Texas from 2005 to 2009 to build the regression equations.
 \par The regression equations are
 \begin{equation}
     \centering
@@ -641,14 +641,13 @@ AZ=e^{-0.10513 \times year+213.24602}
 \par The $R^{2}$ of each regression are greater than 0.68, even over 0.8. Therefore, according to assumption 3, all of the effects of the regressions are good.
 \par The Pr of F-test and t-test are all less than 0.05. Therefore, according to assumption 2, all of the regressions are effective and the independences between the parameters are very good.
 
-
 \subsubsection{Scores of the four states in future}
-\par According to the regression equations, we can obtain the socres of the four states in 2025 and 2050 are as follows.
+\par According to the regression equations, we can obtain the socres based on the total renewable energy usage of the four states in 2025 and 2050 are as follows.
 \begin{table}[!hbp]
     \centering 
     \begin{tabular}{|c|c|c|}
 \hline
-State & Score in 2025 & Score in 2050 \\
+State & Score-Total in 2025 & Score-Total in 2050 \\
 \hline
 California & 50.04186 & 50.00001 \\
 \hline
@@ -668,19 +667,26 @@ Arizona & 1.60063 & 0.14358 \\
     \caption{Scores based on total renewable energy of the four states from 1960 to 2050}
     \label{fig:D-scores}  
 \end{figure}
-
-
+\par Besides, we also need to consider the levels of per capita renewable energy usage of the four states. According to figure \ref{fig:B-level-percapita}, we can find that each of the score based on per capita renewable energy usage are in a approximate region.
+\[
+CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
+\]
 
 \subsection{Analysis of the results}
-\par From 2025 to 2050, socre of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the socre of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows with a slow rate.
-\par Therefore, compare to other states, the levels of renewable energy usage of the four states are as follows.
+\par From 2025 to 2050, based on the total renewable energy usage, socre of California is very close to 50.00000 and continues to decline, score of Arizona begins to be less than the socre of New Mexico and is close to 0 in 2050. On the contrary, score of Texas continues to grow but is not greater than the score of California, and the score of New Mexico grows with a slow rate.
+\par Therefore, comparing to other states, the levels of total renewable energy usage of the four states are as follows.
 \begin{itemize}
     \item California: declines but still is the best.
     \item Texas: keeps growing and gets colse to California.
     \item New Mexico: get better than Arizona and also keeps growing.
     \item Arizona: is not good and need to change.
 \end{itemize}
-
+\par However, the socres based on the per capita renewable energy usage do not have a huge change, they are still in the region.
+\par Therefore, comparing to other states, the level of per capita renewable energy usage are as follows.
+\begin{itemize}
+    \item California and Texas: are still the lowest.
+    \item New Mexico and Arizona: are still the highest.
+\end{itemize}
 
 
 
