@@ -37,13 +37,15 @@ def create_clean_sector(year, df_data, percent: bool):
 
 if __name__ == '__main__':
     filename = './data/classification.csv'
-    df = pd.read_csv(filename) if os.path.exists(filename) else create_classification(filename)
+    df_data = pd.read_excel(DATA_SOURCE, "seseds", names=['MSN_data', 'state', 'year', 'data'])
+    df = pd.read_csv(filename) if os.path.exists(filename) else create_clean_sector(2009, df_data, True)
 
     fig = plt.figure()
-    df_data = pd.read_excel(DATA_SOURCE, "seseds", names=['MSN_data', 'state', 'year', 'data'])
+
     year = 2009
 
-    df.plot(x='state', kind='bar', rot=0)
+    df[['state'] + [sector + '_sp' for sector in SECTOR_MSN]].plot(x='state', kind='bar', rot=0)
+    df.to_csv('./notebooks/A-1-3.csv')
     plt.title('The proportion of different sector in renewable energy usage in 2009', fontweight='bold')
     plt.ylabel("percent(%)")
     plt.xlabel("state")
