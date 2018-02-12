@@ -216,7 +216,7 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 % 4.2
 \subsection{Factor analysis function}
 
-\par There are many relationships among MSNs. To simplify the complex dependencies between the four energy classification, we used factor analysis to establish an optimal model to analyze the actual weights of the four types of energy sources.
+\par There are many relationships among MSNs. To simplify the complex dependencies between the four energy classification, we used factor analysis to establish an optimal model to analyze the actual weights of the four types of energy sources by following steps\cite{2}:
 
 % \par According to the Formula in the Table A1.Consumption Variables,\cite{4} we remove variables that can be obtained by addition and subtraction of other variables, so that we can avoid the repeat of variables when we calculate the correlation coefficient matrix. 
 \begin{enumerate}[Step 1:]
@@ -328,22 +328,16 @@ w_1, w_2, w_3, w_4.
 \subsubsection{Profiles of four kinds of energy}
 
 \par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, fuel oil, coal coke, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal coke, and a negative factor for natural gas, electricity, fuel oil. 
- So we can obtain the weights of variables of the four states in 2009 as follows.
+ So we can obtain the weights of variables of the four states in 2009 as following figure:
 
-\begin{table}[!htb]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline state & natural gas & electricity & fuel oil & coal coke\\
-        \hline CA & 25.64 & 25.77 & 23.68 & 24.90\\
-        \hline TX & 29.99 & 32.87 & 12.18 & 24.96\\
-        \hline NM & 35.43 & 20.15 & 10.55 & 33.87\\ 
-        \hline AZ & 27.53 & 19.36 & 27.08 & 26.02\\
-        \hline
-    \end{tabular}
-    \caption{The weights of variables of the four states in 2009}\label{tab:factors}
-\end{table}
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.8\textwidth]{./Pic/1-1.png}
+    \caption{Weights of energy classification in 2009}
+    \label{fig:1-1}
+\end{figure}
 
-\par According to table \ref{tab:factors}, the contribution rates of the four kinds of energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
+\par According to figure \ref{fig:1-1}, the contribution rates of the four kinds of energy are very close in California. But in New Mexico and Texas, natural, electricity, and coal coke are main energy, because the addition of their contribution rates is over 85\%. And in Arizona, the contribution rate of electricity is less than the other energy. 
 
 % 4.3
 \subsection{Renewable energy profile}
@@ -355,37 +349,54 @@ w_1, w_2, w_3, w_4.
 \par To get a preliminary understanding of the renewable energy usage in four states, we decide to get the proportion of renewable energy in total energy in the first step.
 
 \par What's important is that, we find that there are some specific MSNs and formulas in the reference \cite{4} which can describe the usage of renewable energy clearly and precisely. MSN RETCB is a good example, which represents renewable energy sources total consumed in a state.
-\par Then we search for the MSN in the given data and find every state have have this MSN. So this is indeed the representative MSN variable of the usage of renewable energy in every states. And then we find the TETCB MSN stands for the total energy consumed in a state. So we get the equation like this
+\par Then we search for the MSN in the given data and find every state have have this MSN. 
+So this is indeed the representative MSN variable of the usage of renewable energy in every states. And then we find the \textbf{TETCB} MSN stands for the total energy consumed in a state. So we get the equation:
 
 \begin{equation}
     \eta_1=\frac{\text{RETCB}}{\text{TETCB}}
 \end{equation}
 
-\begin{figure}[h]%[!hptb] 
+\par After calculating with the formula, we get the results of $\eta_1$, which can be seen in figure \ref{fig:1-2}
+
+\begin{figure}[H]%[!hptb] 
     \centering 
     \includegraphics[width=0.6\textwidth]{./Pic/1-2.png}
     % 图片标题
-    \caption{The proportion of renewable energy in total energy in four states in the year of 2009.}
+    \caption{The proportion of renewable energy in total energy of four states in 2009.}
     \label{fig:1-2}  
 \end{figure}
-\par After calculating with the formula, we get the results of $\eta_1$, which can be seen in figure \ref{fig:1-2}
-
 % 4.3.2
 \subsubsection{Renewable energy usage in different sectors}
 \par There are many factors that influence the usage of energy in a state. So it is reasonable to search for the situation of renewable energy usage in different sector in every state.
-\par Similar to the previous section, we find that there are some MSNs that describe the renewable energy in certain sector and formulas that calculate for the value of it. Take transportation sector for example, MSN REACB stands for renewable energy sources consumed by the transportation sector, so the sector's percentage in renewable energy consumption can be calculated through the formula. After calculating with formulas, we get the results of $\eta_2$ , which can be seen in figure \ref{fig:1-3}.
+\par Similar to the previous section, we find that there are some MSNs that describe the renewable energy in certain sector and formulas that calculate for the value of it. 
+Take transportation sector for example, MSN \textbf{REACB} stands for renewable energy sources consumed by the transportation sector, so the sector's percentage in renewable energy consumption can be calculated through the formula. 
 
 \begin{equation}
     \eta_2=\frac{REACB}{RETCB} \times 100\%
 \end{equation}
 
-\begin{figure}[h]%[!hptb] 
-    \centering 
-    \includegraphics[width=0.6\textwidth]{./Pic/1-3.png}
-    % 图片标题
-    \caption{The proportion of different sector in renewable usage in four states in the year of 2009.}
-    \label{fig:1-3}  
-\end{figure}
+\par After calculating with formulas, we get the results of $\eta_2$ , which can be seen in table \ref{tab:1-3}.
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline state & transportation & commercial & electric power & industrial & residential\\
+        \hline CA & 1.433165353\% & 75.54688353\% & 4.482754103\% & 3.681370998\% & 11.33704864\%\\
+        \hline TX & 1.199750149\% & 58.85661983\% & 15.73747739\% & 5.531569236\% & 18.44472327\%\\
+        \hline NM & 4.3751358\% & 51.12013584\% & 6.997275293\% & 25.40469112\% & 11.30993476\%\\
+        \hline AZ & 1.45721187\% & 62.71113276\% & 4.796738813\% & 8.130332086\% & 18.46557951\%\\
+        \hline
+    \end{tabular}
+    \caption{The weights of variables of the four states in 2009}\label{tab:1-3}
+\end{table}
+
+% \begin{figure}[h]%[!hptb] 
+%     \centering 
+%     \includegraphics[width=0.6\textwidth]{./Pic/1-3.png}
+%     % 图片标题
+%     \caption{The proportion of different sector in renewable usage of four states in 2009.}
+%     \label{fig:1-3}  
+% \end{figure}
 
 
 % 5
