@@ -74,7 +74,7 @@
 
 \subsection{Problem Restatement}
 %这一部分写问题分析以及我们要解决的问题
-\subsubsection{Part \uppercase\expandafter{\romannumeral1}}
+\subsubsection*{Part \uppercase\expandafter{\romannumeral1}}
 \par For Problem A, in order to lay the foundation of analyzing, we are required to create an energy profile for each of the four states. Meanwhile, the profiles should be created on the analysis of the given data.
 
 \par For Problem B, it adds a factor of consideration to the time dimension based on question A. Especially, the type of energy that needs to be analyzed becomes renewable energy, and the focus shifted from within a single state to between states. Explaining briefly the similarities and differences.
@@ -83,19 +83,21 @@
 
 \par For Problem D, in order to predict energy profile of usage of each state in 2025 and 2050, we need to base on the results of Problem A, B, C and the given data to establish regression equations or other models.
 
-\subsubsection{Part \uppercase\expandafter{\romannumeral2}}
+\subsubsection*{Part \uppercase\expandafter{\romannumeral2}}
 
 \par It is suggested in the Problem A that we should determine targets based on the problems of Part \uppercase\expandafter{\romannumeral1} of the renewable energy usage for the four states in the year of 2025 and 2050. 
 
 \par For Problem B, we are supposed to give some suggestions to the governors, so that they will know the actions they should take to meet the goals.
 
-\subsubsection{Part \uppercase\expandafter{\romannumeral3}}
+\subsubsection*{Part \uppercase\expandafter{\romannumeral3}}
 \par On the basis of the analysis and models in the two parts before, we prepare the state profiles of 2009, our predictions towards energy usage and some recommendations on adopting goals for the energy compact.
 
 
 \section{Assumptions}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
+    \item Since the definition of clean and renewable energy is ambiguous, we assume that clean energy is renewable energy in the model.
+    \item Suppose that from 2010 to 2050, there are no such factors as policy changes.
     \item In factor analysis, we suppose the corresponding valuables as the main factors when the cumulative percentage is over 0.65.
     \item When we do regression analysis, we suppose that F-test or t-test is passed if the Pr of them is less than 0.05.
     \item When we do regression analysis, we suppose that effect of regression is good if $R^{2}$ is greater than 0.65.
@@ -168,7 +170,7 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 \begin{itemize}
     \item First and second characters: describes an energy source (for example, NG for natural gas, MG for motor gasoline);
     \item Third and fourth characters: describes an energy sector or an energy activity (for example, RC for residential consumption, PR for production);
-    \item Fifth character: describes a type of data (for example, P for data in physical unit, B for data in billion Btu).    \cite{3}
+    \item Fifth character: describes a type of data (for example, P for data in physical unit, B for data in billion Btu). \cite{3}
 \end{itemize}
 
 \par As described above, the first part and the second part of the MSN code represent for certain specific meanings. However, in our analysis process, we are more concerned about the general classification of these MSN codes. 
@@ -249,8 +251,7 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 
 % \item Based on the above calculation results, the system is analyzed.
 % \end{enumerate}
-
-\par Through analyzing the given data and calculation, we can obtain R, the correlation coefficient matrix of natural gas, electricity, petroleum products and coal.
+\par Through analyzing the given independent data and calculation, we can obtain R, the correlation coefficient matrix of natural gas, electricity, petroleum products and coal.
 \begin{equation}
     \centering
 R=\begin{pmatrix} 1 & r_{12} & r_{13} & r_{14} \\ r_{21} & 1 & r_{23} & r_{24} \\ r_{31} & r_{32} & 1 & r_{34} \\ r_{41} & r_{42} & r_{43} & 1\end{pmatrix}
@@ -305,7 +306,6 @@ the second row of A is
 \end{equation}
 
 % 4.2.1
-
 \par According to the factor loading matrix A, we can get the factor analysis model is
 \begin{equation}
     \centering
@@ -342,8 +342,10 @@ w_1, w_2, w_3, w_4.
 % 4.2.2
 \subsubsection{Profiles of four kinds of energy}
 
-\par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, petroleum products, coal, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal, and a negative factor for natural gas, electricity, petroleum products. 
-    So we can obtain the weights of variables of the four states in 2009 as the following figure:
+
+\par In order to find out the independent data among natural gas, petroleum products, coal and electricity energy, we use the comsumption and production MSN and the corresponding calculation formula \cite{4} to exclude non-independent variables. The excluded variables are all calculated from other variables which can be found in the appendix \ref{exclude}.
+
+\par From the point of the factor analysis model, we can easily find that $f_1$ is a positive factor for natural gas, petroleum products, coal, and a negative factor for electricity. Meanwhile, $f_2$ is a positive factor for coal, and a negative factor for natural gas, electricity, petroleum products. So we can obtain the weights of variables of the four states in 2009 as the following figure:
 
 \begin{figure}[H] 
     \centering 
@@ -692,8 +694,10 @@ So the best profile of 2009 belongs to \textbf{New Mexico}.
 \subsection{Regression analysis model}  
 \subsubsection{Establishment of regression equations}
 \par In problem D, the policy about the energy of each state will not change until 2050. At first, we consider the levels of the total renewable energy usage of the four states.  According to Figure \ref{fig:B-level-predict}, from 1995 to 2009, the scores of New Mexico and Arizona have a consistent trend, we consider it as the absence of any policy change. Meanwhile, for California and Texas, their scores have a sudden change after 2005, we consider it is because of policy change. Therefore, we use the scores of New Mexico and Arizona from 1995 to 2009, and the scores of California and Texas from 2005 to 2009 to build the regression equations.
-\par For California and Arizona, we use exponential function to fit curves. And for New Mexico, we use linear regression.
-\par We suppose the linear regression equation is
+
+\par According to the model of Problem B, we find that, for California and Arizona, using exponential function to fit curves. And for New Mexico, using linear regression. Intuitively, this fitting effect will be better.
+
+\par We suppose the linear regression equation is:
 \begin{equation}
     \centering
 \text   y=ax+b
@@ -806,13 +810,6 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 
 
 
-
-
-
-
-
-
-
 \section{Renewable energy usage targets for 2025 and 2050}
 \par According to the results of Problem D, we have predicted the amounts of total renewable energy when the policy dose not change. Therefore, we can build target model, which can give renewable energy usage targets for the four states in 2025 and 2050.
 \subsection{Target model}
@@ -854,14 +851,6 @@ Arizona & 85817.10767 & 130949.4257 \\
     \item In the premise of no influence with the overall economy, limit the usage of non-renewable energy.
 \end{itemize}
 
-    
-
-
-
-    
-
-
-
 
 \section{Strengths and Weaknesses}
 
@@ -869,19 +858,20 @@ Arizona & 85817.10767 & 130949.4257 \\
 \text{\\}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
-    \item We used factor analysis to obtain the energy profile of the four kinds of energy, besides the energy profile of renewable energy.
-    \item We considered the influence of the total population of each state, which made our model base on the situation of each state fully.
-    \item Our models are effective when we deal with the data of other states or countries.
+    \item We use factor analysis to obtain the energy profile of the four kinds of energy, along with the energy profile of renewable energy.
+    \item We take the influence of the total population of each state into consideration, and this makes our model have a better reflection of the situation of each state.
+    \item Our models are still effective when we deal with the data of other states or countries.
+    \item When choosing the best profile of states, we take as much factors as possible into consideration to get a more fair result.
+    \item Traditional AHP contains many subjective factors when comparing the influential factor or the method, but we have improved this by quantify the comparison between factors.
 \end{enumerate}
 
 
 \paragraph{Weaknesses}
 \begin{enumerate}%[(1)]
 \renewcommand{\labelenumi}{(\theenumi)}
-    \item In factor analysis, we supposed that the corresponding valuables as the main factors when the cumulative percentage is over 0.65, it may not enough.
-    \item Due to the amount of the data of scores is not enough, so that the results of regressions may not match future very much.
+    \item In factor analysis, we supposed that the corresponding valuables can be the main factors when the cumulative percentage is over 0.65, but this percentage may not enough.
+    \item The amount of the data of scores is not enough, so the results of regressions may not predict very well.
 \end{enumerate}
-
 
 
 \includepdf[pages=-]{memo.pdf}
@@ -930,7 +920,6 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
 % etc
 \end{thebibliography}
 
-
 \newpage%另起一页书写
 \begin{appendices} 
     % \pagestyle{empty}
@@ -948,6 +937,26 @@ U.S. Energy Information Administration, State Energy Data System (SEDS): 1960-20
     \caption{Evolution of energy profile of AZ (1960-2009).}
     \label{fig:part-2-AZ}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+        \hline CLHCB & CLICB & CLTCB & CLTXB & DFTCB & DFTXB & DKEIB & ELISB & ELISB & ELNIB & ESTXB \\
+        \hline FFTCB & GETCB & GETXB & HYTCB & HYTXB & JFACB & JFTCB & KSTCB & KSTXB & LGTCB & LGTXB\\
+        \hline LOTCB & LOTXB & LUTCB & LUTXB & MGTCB & MGTXB & MMTCB & NGTXB & NNCCB & NNEIB & NNICB\\
+        \hline NNRCB & NNTCB & P1ICB & P1TCB & P1TXB & PAACB & PACCB & PAEIB & PAICB & PARCB & PATCB\\
+        \hline PATXB & PCICB & PCTCB & PMTCB & POICB & POTCB & POTXB & RECCB & REEIB & REICB & RERCB\\
+        \hline RETCB & RFTCB & RFTXB & SFTCB & SOCCB & SOICB & SORCB & SOTCB & SOTXB & TEACB & TECCB\\
+        \hline TEEIB & TEESB & TEICB & TERCB & TETCB & TETXB & TNACB & TNCCB & TNICB & TNRCB & TNTXB\\
+        \hline WDCCB & WDICB & WDTCB & WSICB & WSTCB & WWCCB & WWEIB & WWI4B & WWICB & WWTCB & WWTXB\\
+        \hline WYTCB & WYTXB & TEACB & TECCB & TEEIB & TEICB & TEPFB & TEPRB & TERCB & TERFB & TETCB\\
+        \hline TETPB & TETXB & TNACB & TNCCB & TNICB & TNRCB & TNSCB & TNTXB \\
+        \hline
+    \end{tabular}
+    \label{exclude}
+\end{table}
+
+
 
 \begin{figure}[h]%[!hptb] 
     \centering 
