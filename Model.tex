@@ -69,7 +69,7 @@
     
 \par Nowadays, with the development of technology and the deterioration of the environment, many countries, especially the United States, began to value the renewable energy, such as wind energy and geothermal energy. Meanwhile, traditional energy, such as gasoline and coal, still plays an important role in economics. And it is obvious that the usage of the renewable energy will support the future of mankind.
 \par In the United States, an interstate compact is an agreement between two or more states. Frequently, these agreements create a new governmental agency which is responsible for administering or improving some shared resource such as a seaport or public transportation infrastructure.\cite{1} In 1970, the Western Interstate Energy Compact was formed, which was devoted to foster cooperation to develop and manage the nuclear technology. Recently, California, Arizona, New Mexico, and Texas wish to form a new interstate energy compact focused on increased usage of renewable energy sources. 
-\par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. In order to inform a set of goals for the new interstate energy compact, we will analyze the given data and model.
+\par A data file provides 50 years of data in 605 variables on each of these four states' energy production and consumption, along with some demographic and economic information. In order to inform a set of goals for the new interstate energy compact, we will analyze the given data and build a set of models.
 
 
 \subsection{Problem Restatement}
@@ -231,7 +231,7 @@ $S_i$&The amount of the total renewable energy usage of each of the four states,
 % \end{figure}
 
 % 4.2
-\subsection{Factor analysis function}
+\subsection{Factor analysis model}
 
 \par There are many relationships among MSNs. In order to simplify the complex dependencies between the four energy classification, we used factor analysis to establish an optimal model to analyze the actual weights of the four types of energy sources.
 
@@ -808,18 +808,18 @@ CA:[1,10], TX:[1,10], NM:[43,50], AZ:[40,50]
 
 
 
-\section{Renewable energy usage targets for 2025 and 2050}
+\section{REU Targets Determining Model}
 \par According to the results of Problem D, we have predicted the amounts of total renewable energy when the policy dose not change. Therefore, we can build target model, which can give renewable energy usage targets for the four states in 2025 and 2050.
-\subsection{Target model}
+\subsection{Model Construction}
 \par For California, Texas, and New Mexico in any year, we define the target is the predicted value of the amount of total renewable energy because the amounts of the total renewable energy usage of them keep growing.
-\par For Arizona, its predicted value of the amount of total renewable energy keeps declining and will get less than New Mexico. Therefore, we define the target is
+\par For Arizona, its predicted value of the amount of total renewable energy keeps declining and will be less than New Mexico. According to the data from the results of Problem B and Problem D, we can define that the target is
 \begin{equation}
     \centering
-    Target=0.01*(5.30195+0.05263 \times (year-2009))*S
+    Target=0.01*(5.30195+0.05263 \times (year-2009))*S, ~~year>2009
 \end{equation}
 which means from 2009, the score based on the total energy usage keep growing at the same rate of New Mexico.
 \par If the real amount of the total renewable energy usage is not less than the predicted value of amount of the total renewable energy, we consider it as the goal of the new four-state energy compact.
-\subsection{Results of target model in 2025 and 2050}
+\subsection{Renewable energy usage targets for 2025 and 2050}
 \par According to table \ref{tab:Scores and amounts} and the target model, we have the target of each state in 2025 and 2050 as follows.
 \begin{table}[H]
     \centering 
@@ -840,13 +840,13 @@ Arizona & 85817.10767 & 130949.4257 \\
 \end{table}
 
 
-\section{Actions for meeting goal}
-\par In order to meet the goals above, the four states need to take some actions, especially Arizona. Here, we list four actions.
+\section{Actions to meet energy compact goals}
+\par In order to meet the goals set above, the four states need to take some actions, especially Arizona. We list four actions here based on the model we used when setting the goal to help the governors meet their target easily and effectively.
 \begin{itemize}
-    \item Increase the economic input to exploit technology for renewable energy. 
-    \item Strengthen people's awareness of using renewable energy.
+    \item Increase the economic input to exploit technology for renewable energy.
+    \item Strengthen people's awareness of using renewable energy. Only in this way can a state increase the rate of REU and change the energy structure fundamentally.
     \item Establish more renewable energy facilities, such as wind power plants and solar power plants to make more use of renewable energy.
-    \item In the premise of no influence with the overall economy, limit the usage of non-renewable energy.
+    \item In the premise of no influence on the overall economy, limit the usage of non-renewable energy.
 \end{itemize}
 
 
